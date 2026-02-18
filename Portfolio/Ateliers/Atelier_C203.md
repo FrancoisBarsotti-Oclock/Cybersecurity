@@ -60,23 +60,23 @@
 ### Installation
 
 #### Ubuntu sur Proxmox
-![Ubuntu 24.04](image-2.png)
+![image-2.png](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/image-2.png)
 
 * Lors de l'installation d'Ubuntu 24.04, on peut installer **nextcloud** :
 
-![nextcloud installing](image-3.png)
+![image-3.png](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/image-3.png)
 
 * Une fois installé, on peut accéder à nextcloud avec l'IPv4 de la VM en http:
 
-![nextcloud http](image-4.png)
+![image-4.png](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/image-4.png)
 
 * Pour sécuriser le site sans avoir à acheter le domaine, on peut rajouter un `certificat auto-signé` en CLI : 
 
-![certificat auto-signé](image-5.png)
+![image-5](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/image-5.png)
 
 Et ainsi on pourra se reconnecter en `https` auto-signé: 
 
-![https auto-signé](image-6.png)
+![image-6.png](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/image-6.png)
 
 * Une fois la connexion admin fonctionnelle en https, on peut activer les services requis (directement sur le site de nextcloud):
 
@@ -86,7 +86,7 @@ Et ainsi on pourra se reconnecter en `https` auto-signé:
     * Calendrier et contacts
     * Gestion de tâches (Deck: pour Kanban)
 
-![services nextcloud](image-7.png)
+![image-7.png](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/image-7.png)
 
 
 
