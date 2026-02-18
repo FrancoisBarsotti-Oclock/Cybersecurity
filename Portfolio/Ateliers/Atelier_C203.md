@@ -60,7 +60,7 @@
 ### Installation
 
 #### Ubuntu sur Proxmox
-![Ubuntu 24.04](image-2.png)
+![image-2.png](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/image-2.png)
 
 * Lors de l'installation d'Ubuntu 24.04, on peut installer **nextcloud** :
 
