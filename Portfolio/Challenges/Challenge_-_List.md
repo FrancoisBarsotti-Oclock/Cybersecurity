@@ -1,4 +1,4 @@
-# 📜 Liste des Challenges et Ateliers réalisés pour valider les notions abordés en cours 
+# 📜 Liste des Challenges réalisés pour valider les notions abordés en cours 
 
 [Challenge A102](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A102.md) : Proposition d'achat de périphériques
 
