@@ -1,0 +1,141 @@
+# 📜 Liste des Challenges et Ateliers réalisés pour valider les notions abordés en cours 
+
+[Challenge A102](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A102.md) : Proposition d'achat de périphériques
+
+Challenge A103 : Description de notre Hardware
+
+Challenge A104 : Configuration de 3 Setups selon les besoins.
+
+Challenge A105 : Découverte de la Virtualisation, Virtualbox et VM Windows.
+
+Challenge A106 : Agents invités (Guest addition) pour la virtualisation et VM Linux.
+
+Challenge A107 : Gestionnaire de mots de passe.
+
+Challenge A108 : Création d'un Diagramme Réseau.
+
+Challenge A109 : Calculs d'adresses IP, réseau, broadcast, plage et masque.
+
+Challenge A201 : Test et comparatif de Microsoft / Libreoffice.
+
+Challenge A202 : Mise en réseau de VM.
+
+Challenge A203 : Memtest, Anydest, Teamviewer.
+
+Atelier A204 : Atelier "Mme Michu", dépannage d'une VM simulant un labtop en panne.
+
+Challenge A206 : Test BIOS, et partitions sur USB.
+
+Challenge A207 : QCM certification ITIL.
+
+Challenge A208 : Installation GLPI Agent et test de ticketing.
+
+Challenge A301 : Mise en place d'un réseau et ping sur Packet Tracer.
+
+Challenge A303 : Création d’un plan d’adressage
+
+Challenge A304 : Config de Routeurs et LANs sur Packet Tracer
+
+Atelier A305 : Atelier Packet Tracer, de la création du plan d'adressage, à la config switch, routeurs, routes, DHCP, etc.
+
+Challenge A306 : DNS et SSH dans Packet Tracer
+
+Challenge A307 : Self Hosting, NAT et redirection dans Packet Tracer.
+
+Atelier A308 : Installation de Proxmox sur un serveur OVH, configuration du NAT, installation et configuration du routeur pfSense, et VPN.
+
+Challenge A309 : Pratiquer les VLAN, Inter-VLAN et ACLs
+
+Challenge A401 : Installation de Windows Server 2022 sur VMware.
+
+Challenge A402 : Installation WS2025 sur Proxmox, AD DS Gestion d'utilisateurs.
+
+Challenge A403 : Utilisateurs, Groupes, et GPO Fond d'écran.
+
+Challenge A404 : Création de partages et droits.
+
+Challenge A405 : Mappage de lecteurs, ressources, quotas, filtres, et audit.
+
+Atelier A406 : Atelier de mise en place et gestion de GPO.
+
+Challenge A408 : Enregistrement DNS, IIS et index.html
+
+Challenge A409 : Supression et récupération utilisateur dans l'AD.
+
+Challenge A410 : Test de Windows Deployment Services (WDS) et boot PXE.
+
+Challenge A411 : Installation et test du RDS (Remote Desktop Services).
+
+Challenge A412 : Installation d'une VM sur Hyper-V.
+
+Challenge A501 : Installation d'une VM Linux sur VMware, et jeu Terminus Quest pour apprendre les commandes de base.
+
+Challenge A502 : Jouer à VIM Adventures et VIM Tutor pour se familiariser avec VIM.
+
+Challenge A503 : Création d'utilisateur, droits et dossiers sur Rocky Linux.
+
+Challenge A504 : Compilation d'un Binaire.
+
+Atelier A505 : Atelier mise en place d'une stack LAMP.
+
+Atelier A506 : Atelier mise en place de SAMBA (AD).
+
+Challenge A507 : Installation et test d'Arch Linux.
+
+Challenge A508 : Installation et configuration d'un serveur Asterisk.
+
+Challenge A509 : Atelier Installer et configurer un serveur Asterisk sur proxmox, fonctionnel via app VOIP du smartphone.
+
+Challenge B101 : Installation d'Hyperviseurs Types 1 é 2, imbrication.
+
+Challenge B102 : Installation ESXi (vSphere)
+
+Challenge B103 : Installation de vCenter et le configurer.
+
+Challenge B201 : Installation de TrueNAS (Proxmox), configuration ZFS, SMB et snapshots.
+
+Challenge B202 : Installation Veeam Backup & Replication, configuration, restauration.
+
+Challenge B204 : Installer Proxmox Backup Server, configurer, backup et restore.
+
+Challenge B301 : Installation de Zabbix
+
+Challenge B302 : Installation d'Agents Zabbix pour étendre la supervision à l’ensemble de l’infrastructure.
+
+Challenge B303 : Exploration plus en détail des paramètres, alertes de Zabbix avec les Agents, configuration d'une alerte pour fichiers.
+
+Challenge B304 : Installation de Nagios et de ses agents.
+
+Challenge B401 : Pratiquer sur Scratch en créant un jeu du Nombre Mystère (Plus/Moins).
+
+Challenge B402 : Pratiquer Git & Github
+
+Challenge B403 : Recréer le jeu du Nombre Mystère (Plus/Moins) en script python.
+
+Challenge B404 : Créer des Scripts batch et Powershell d'Administration Système.
+
+Atelier B405 : Atelier Powershell et AD.
+
+Challenge B406 : Jeu du Nombre Mystère Plus ou Moins en PowerShell.
+
+Challenge B407 : une série d'exercices pour créer une suite d'outils Admin en Bash.
+
+Atelier B408 : Atelier Bash - Automatisation de l'administration système.
+
+Challenge C101 : Effectuer la note de cadrage d'un projet.
+
+Challenge C102 : Créer le WBS, matrice RACI et diagramme Gantt.
+
+Challenge C103 : Analyser les risques pour notre projet.
+
+Challenge C104 : Définir un scénario d’incident majeur et les mesures, procédures, PRA-PCA type.
+
+Challenge C201 : Expérimenter les versions gratuites de Google Cloud, AWS et Azure.
+
+Challenge C202 : Proposition d'une stratégie cloud simple, cohérente et réaliste pour une PME.
+
+Atelier C203 : Déploiement Nextcloud
+
+Challenge C204 : Déploiement Openstack
+
+Challenge C301 :
