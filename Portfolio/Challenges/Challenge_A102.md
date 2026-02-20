@@ -1,5 +1,6 @@
 # 🏆 Challenge A102
-### 🎯 Pitch et Contexte du challenge
+### François BARSOTTI
+## 🎯 Pitch et Contexte du challenge
 
 >Votre chef vous demande de lui trouver (repérer les modèles/références sur internet) des nouveaux écrans, claviers & souris pour son parc de machines.
 >
