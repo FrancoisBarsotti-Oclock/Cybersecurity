@@ -10,7 +10,7 @@
 
 ## 🧮 Configuration bureautique à 700 € (environ) 
 <!-- -->
-Voir le panier de cet :point_right: [e-commerce spécialisé](https://www.materiel.net/configurateur-pc-sur-mesure/) 👈
+Voir le panier de cet 👉 [e-commerce spécialisé](https://www.materiel.net/configurateur-pc-sur-mesure/) 👈
 
 |**Composant nécessaire**|**Modèle/Référence**|**Prix**|
 |:--------------------|:-----------------|:----|
@@ -26,7 +26,7 @@ Voir le panier de cet :point_right: [e-commerce spécialisé](https://www.materi
 
 ## 🧮 Configuration « gamer »/station de travail à 2000€ (environ) 
 <!-- -->
-Voir le panier de cet :point_right: [autre e-commerce spécialisé](https://secure.materiel.net/Cart) 👈 
+Voir le panier de cet 👉 [autre e-commerce spécialisé](https://secure.materiel.net/Cart) 👈 
 
 |**Composant nécessaire**|**Modèle/Référence**|**Prix**|
 |:--------------------|:-----------------|:----|
