@@ -1,4 +1,5 @@
-# Atelier C203 – Nextcloud: Déploiement pour une startup EdTech
+# 🏅 Atelier C203 – Nextcloud: Déploiement pour une startup EdTech
+### François BARSOTTI
 
 ---
 
