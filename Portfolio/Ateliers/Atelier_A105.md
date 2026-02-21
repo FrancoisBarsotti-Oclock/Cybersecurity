@@ -19,18 +19,23 @@
 
 ## Screen & Tips
 * VM Windows 10 avec un user2 local
+
 ![win10](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier%20A105_VM%20Win10.png)
 
 * VM Windows 11 sans compte Microsoft
+
 ![Win11](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier%20A105_VM%20Win11.png)
 
 * VM Ubuntu
+
 ![Ubuntu](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier%20A105_VM%20Ubuntu.png)
 
 * VirtualBox avec les 3 VM intallées
+
 ![3VM](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier%20A105_3%20VM.png)
 
 * Les 3 VM lancées simultanément
+
 ![en simultané](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier%20A105_3%20VM%20simultan%C3%A9ment.png)
 
 Il y à eu plusieurs erreurs humaines et instabilités de Vbox me poussant à réinstaller plusieurs fois:
@@ -40,4 +45,5 @@ Il y à eu plusieurs erreurs humaines et instabilités de Vbox me poussant à r�
 * J'ai aussi revu les allocations de RAM et Coeurs car il y avait des Freeze en tentant de lancer/installer plusieurs VM à la fois. Win10 6144Mo et 4 coeurs, Win11 6144Mo et 4 coeurs, Ubuntu 4096mo et 4 coeurs.
 
 Pour l'installation de Win11 sans compte Microsoft j'ai été dans les paramètres de la VM Win11 et désactivé la carte réseau. Puis effectué cette commande
-![](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier%20A105_VM%20Win11%20commande.png)
+
+![Commande](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier%20A105_VM%20Win11%20commande.png)
