@@ -17,3 +17,21 @@
 
 ---
 
+## Screen & Tips
+* VM Windows 10 avec un user2 local
+
+* VM Windows 11 sans compte Microsoft
+
+* VM Ubuntu
+
+* VirtualBox avec les 3 VM intallées
+
+* Les 3 VM lancées simultanément
+
+Il y à eu plusieurs erreurs humaines et instabilités de Vbox me poussant à réinstaller plusieurs fois:
+
+* renommer une VM sur VirtualBox, ou oublier de retirer l'image disque d'installation.
+
+* J'ai aussi revu les allocations de RAM et Coeurs car il y avait des Freeze en tentant de lancer/installer plusieurs VM à la fois. Win10 6144Mo et 4 coeurs, Win11 6144Mo et 4 coeurs, Ubuntu 4096mo et 4 coeurs.
+
+Pour l'installation de Win11 sans compte Microsoft j'ai été dans les paramètres de la VM Win11 et désactivé la carte réseau. Puis effectué cette commande
