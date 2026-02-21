@@ -1,4 +1,4 @@
-# 🏆 Challenge A103
+# 🏆 Challenge A104
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 
@@ -22,7 +22,7 @@ Voir le panier de cet :point_right: [e-commerce spécialisé](https://www.materi
 |floppy_disk:ROM SSD|Kingston NV3 - 500 Go|52,95 €|
 |black_square_button:Boîtier|AeroCool Split|38,95 €|
 |electric_plug:Alimentation (PSU)|be quiet! System Power 11 650W|84,95€|
-|shopping_cart:Prix total|:arrow_right: :arrow_right: :arrow_right:|660,60 €|
+|shopping_cart:Prix total| 👉 👉 👉 |660,60 €|
 
 ## 🧮 Configuration « gamer »/station de travail à 2000€ (environ) 
 <!-- -->
