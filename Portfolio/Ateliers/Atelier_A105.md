@@ -19,14 +19,18 @@
 
 ## Screen & Tips
 * VM Windows 10 avec un user2 local
+![win10](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier%20A105_VM%20Win10.png)
 
 * VM Windows 11 sans compte Microsoft
+![Win11](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier%20A105_VM%20Win11.png)
 
 * VM Ubuntu
+![Ubuntu](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier%20A105_VM%20Ubuntu.png)
 
 * VirtualBox avec les 3 VM intallées
 
 * Les 3 VM lancées simultanément
+![en simultané](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier%20A105_3%20VM%20simultan%C3%A9ment.png)
 
 Il y à eu plusieurs erreurs humaines et instabilités de Vbox me poussant à réinstaller plusieurs fois:
 
