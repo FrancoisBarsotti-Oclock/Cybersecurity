@@ -6,6 +6,8 @@
 > - une config’ bureautique à 700€ (environ)
 > * une config’ « gamer »/station de travail à 2000€ (environ) 
 
+Voir 👉 Cours A104 👈
+
 ---
 
 ## 🧮 Configuration bureautique à 700 € (environ) 

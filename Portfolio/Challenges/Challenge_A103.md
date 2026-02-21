@@ -8,7 +8,7 @@
 >
 >* Bonus moins fun et un peu plus compliqué : Vous avez donc lu le challenge. Rien de trop compliqué, encore un travail de recherche et des notes à prendre. Alors ces notes, envoyez-les sur un repo Github que vous aurez créé pour l'occasion.
 
-Cours A103.
+Voir 👉 Cours A103 👈.
 
 ---
 

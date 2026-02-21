@@ -8,6 +8,8 @@
 >
 >* **En bonus** : un peu de veille techno ! Essayez de découvrir les différents composants d’un ordinateur, leur rôle, comment les choisir, comment les assembler ! À vous de trouver comment/où chercher de l’info à ce sujet 😉
 
+Voir 👉 Cours A102 👈
+
 ---
 
 ### 📎Mes questions:
