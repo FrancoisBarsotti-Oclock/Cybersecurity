@@ -188,7 +188,7 @@ Idem sans enlever les 2 adresses, soit (2^9) = **512**
 
 ### Si on le traite comme une adresse classful (Classe A ou < 126, ancien modèle)
 
-👉 Le masque est 255.0.0.0 (par défaut pour les IP de Classe A, car il y a 24 bits libres pour les hôtes). Ceci fermerait la possibilité à discusion pour un CIDR /8:
+👉 Le masque est 255.0.0.0 (par défaut pour les IP de Classe A, car il y a 24 bits libres pour les hôtes). Ceci fermerait la possibilité à discussion pour un CIDR /8:
 
 - [x] Masque:       255.0.0.0 (par défaut pour les IP de Classe A, car il y a 24 bits libres pour les hôtes)
 - [x] Nombre magique: 256-0 = 256
