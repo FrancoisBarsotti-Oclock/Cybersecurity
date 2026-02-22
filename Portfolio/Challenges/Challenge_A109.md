@@ -21,7 +21,7 @@ Voir 👉 Cours A109 👈
 
 ---
 
-## 🧠🧮 Let's make some math
+## 🧠🧮 Let's do some maths
 
 ### - Adresse IP ``192.168.13.67/24``
 
