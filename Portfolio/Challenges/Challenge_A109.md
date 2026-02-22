@@ -21,15 +21,15 @@ Voir 👉 Cours A109 👈
 
 ---
 
-## Place aux Maths 🧠🧮
+## 🧠🧮 Let's make some math
 
-### - ``192.168.13.67/24``
+### - Adresse IP ``192.168.13.67/24``
 
 /24 signifie qu'on a 24 "1" dans le masque réseau, ou 24/8 = 3 octets, traduit en binaire :
 
 1111 1111 . 1111 1111 . 1111 1111 . 0000 0000 qui correspond à **255.255.255.0** en décimal.
 
-- ### [Utilisons la méthode logique]
+- ### [Si nous utilisons la méthode logique](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A109_01-M%C3%A9thodeLogique.png)
 
 (adresse IP) ET (masque)=adresse réseau
 
@@ -91,20 +91,20 @@ Formule de calcul de la plage d'adresses disponibles : ``(2^b)``, ici (2^8) = **
 **Plage d'adresses** : 256, 192.168.13.0 à 192.168.13.255
 
 ---
-
-### - ``172.16.0.1 – 255.255.255.0``
-
-J'utiliserais la [méthode du "Nombre magique"](https://zestedesavoir.com/tutoriels/321/calculer-une-plage-dadresses-avec-la-methode-magique/#2-10258_quest-ce-que-la-methode-magique) à partir de maintenant car c'est plus rapide et surtout qu'il peut se calculer de tête et sans papier.
+### Si l'on utilise la [méthode du "Nombre magique"](https://zestedesavoir.com/tutoriels/321/calculer-une-plage-dadresses-avec-la-methode-magique/#2-10258_quest-ce-que-la-methode-magique) à partir de maintenant car c'est plus rapide et surtout qu'il peut se calculer de tête et sans papier.
+### - Adresse IP ``172.16.0.1 – 255.255.255.0``
 
 - ### **Calcul de l'adresse réseau**
 
-Le masque étant 255.255.255.**0**, l'**octet significatif** est donc le **dernier** octet
+Le masque étant 255.255.255.**0**, l'**octet significatif** est donc le **dernier** octet (on peut reconnaître l'octet significatif comme le premier qui n'est pas 255).
 
-256-0 = 256, les multiples de 256 sont 0, 256, 512...
+Si 256-0 = 256, les multiples de 256 sont 0, 256, 512...
 
 0 est le multiple inférieur/égal à 1 (dernier octet de l'adresse IP)
 
-L'adresse réseau est donc **172.16.0.0**
+Alors,
+
+L'adresse réseau est **172.16.0.0**
 
 - ### **Calcul de l'adresse de broadcast**
 
@@ -114,7 +114,7 @@ L'adresse broadcast est donc **172.16.0.255**
 
 - ### **Calcul du nombre d'adresses utilisables pour les machines**
 
-Le masque étant 255.255.255.0, il y a seulement un octet libre, soit (2^8)-2 = **254**
+Le masque étant 255.255.255.0, il y a seulement un octet libre, soit (2^8)-2 = **254** (car une est réservée pour l'AR et l'autre pour l'AB).
 
 - ### **Calcul de la plage d'adresses disponibles**
 
@@ -122,7 +122,7 @@ Idem sans enlever les 2 adresses, soit (2^8) = **256**
 
 - **Résultats**
 
-``172.16.0.1 – 255.255.255.0``
+``172.16.0.1 – 255.255.255.0`` (0 sur le dernier octet a été pris par l'AR et 255 sur le dernier octet a été pris par l'AB).
 
 **Masque sous-réseau** : 255.255.255.0
 
@@ -138,17 +138,19 @@ On peut aussi l'écrire : 172.16.0.1/24
 
 ---
 
-### - ``172.16.27.32/23``
+### - Adresse IP ``172.16.27.32/23``
 
 - ### **Calcul de l'adresse réseau**
 
 Le masque en /23 se traduit par 23 "1" puis 9 "0" en binaire :
 
-1111 1111 . 1111 1111 . 1111 1110 . 0000 0000 soit 255.255.**254**.0 et l'**octet significatif** est le **3ieme**.
+1111 1111 . 1111 1111 . 1111 1110 . 0000 0000 soit 255.255.**254**.0 et l'**octet significatif** est le **3ème**.
+Multiples: 0,2,4,6,...,26,28,30...
 
-256-254 = 2, les multiples sont 0 2 4 6 8 10 ... 24 26 28 30 ...
+256-254 = **2** (comme nombre magique).
+Multiples: 0 2 4 6 8 10 ... 24 26 28 30 ...
 
-26 est le multiple inférieur/égal à 27 (3ieme octet de l'adresse IP), et le dernier octet sera 0.
+26 est le multiple inférieur/égal à 27 (3ème octet de l'adresse IP), et le dernier octet sera 0.
 
 L'adresse réseau est donc **172.16.26.0**
 
@@ -182,11 +184,27 @@ Idem sans enlever les 2 adresses, soit (2^9) = **512**
 
 ---
 
-### - ``10.7.5.1 – 255.255.128.0``
+### - Adresse IP ``10.7.5.1`` 
+
+### Si on le traite comme une adresse classful (Classe A ou < 126, ancien modèle)
+
+👉 Le masque est 255.0.0.0 (par défaut pour les IP de Classe A, car il y a 24 bits libres pour les hôtes). Ceci fermerait la possibilité à discusion pour un CIDR /8:
+
+- [x] Masque:       255.0.0.0 (par défaut pour les IP de Classe A, car il y a 24 bits libres pour les hôtes)
+- [x] Nombre magique: 256-0 = 256
+- [x] Multiples: 0,2,4,6,...,256...
+
+Alors,
+- [x] Adresse réseau (AR):    10.0.0.0
+- [x] Adresse broadcast (AB): 10.255.255.255
+- [x] Nombre d'addresses utilisables par des machines: 256-2 = 254 (car une est réservée pour l'AR et l'autre pour l'AB)
+- [x] Plage d'adresses disponibles: 10.0.0.1 - 10.255.255.254 (0 sur le dernier octet a été pris par l'AR et 255 sur le dernier octet a été pris par l'AB)
+
+### Mais si l'on suit la méthode magique
 
 - ### **Calcul de l'adresse réseau**
 
-255.255.**128**.0, 3ieme **octet significatif**, Nbre magique : 256-128 = 128, ses multiples sont 0, 128, 256.
+255.255.**128**.0, 3ème **octet significatif**, Nbre magique : 256-128 = 128, ses multiples sont 0, 128, 256.
 
 0 <= 5 donc l'adresse réseau est **10.7.0.0**
 
@@ -224,7 +242,9 @@ Nous avons à faire à un réseau bien plus vaste.
 
 ---
 
-### - ``10.42.0.82/12``
+### - IP Adress ``10.42.0.82/12``
+
+👉 Le fait de nous donner le CIDR /12 nous dit qu'il ne s'agit pas d'un adressage classful (Class C).
 
 - ### **Calcul de l'adresse réseau**
 
@@ -260,11 +280,11 @@ Le masque étant /12 il reste (32-12) = 20 bits libres pour les hôtes, soit (2^
 
 **Plage d'adresses** : 1 048 576, 10.32.0.0 à 10.47.255.255
 
-
 ---
 
+### 📚 Ressources:
 ### - CIDR Calculator 🔣
 
-Aujourd'hui on peut aller plus vite avec les calculatrices en-line: 
+![CIDR Calculator](../images/CIDRcalc.png): Aujourd'hui on peut aller plus vite avec les calculatrices en-line.
 
-![CIDR Calculator](../images/CIDRcalc.png)
+[Qu'est-ce que la méthode magique?](https://zestedesavoir.com/tutoriels/321/calculer-une-plage-dadresses-avec-la-methode-magique/#2-10258_quest-ce-que-la-methode-magique)
