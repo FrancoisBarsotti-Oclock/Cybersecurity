@@ -1,4 +1,4 @@
-# 🏆 Challenge A107: Intro sEcuritE et bonnes pratiques
+# 🏆 Challenge A107: Intro sécurité et bonnes pratiques
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 
@@ -30,3 +30,10 @@ Voir 👉 Cours A107 👈
 
 ![Rapport](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A107_04-Rapport.png)
 
+---
+
+### 📚 Ressources:
+
+* [Getting started with KeePassXC](https://www.youtube.com/watch?v=qSHCbqwbWo8&t=1471s)
+
+* [KeePassXC: Tuto complet pour débutants](https://www.youtube.com/watch?v=9Pm8ShIvNKc&t=702s)
