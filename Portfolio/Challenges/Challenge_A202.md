@@ -1,4 +1,4 @@
-# 🏆 Challenge A202: Diagnostic Ping
+# 🏆 Challenge A202: Diagnostic Ping VM.
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 

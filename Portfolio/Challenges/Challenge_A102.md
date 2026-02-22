@@ -1,4 +1,4 @@
-# 🏆 Challenge A102
+# 🏆 Challenge A102: Proposition d'achat de périphériques
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 

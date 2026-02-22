@@ -1,4 +1,4 @@
-# 🏆 Challenge A201: Outils Bureautiques
+# 🏆 Challenge A201: Outils Bureautiques Microsoft / Libreoffice.
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 

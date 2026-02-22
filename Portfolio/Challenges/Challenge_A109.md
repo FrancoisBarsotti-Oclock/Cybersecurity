@@ -1,4 +1,4 @@
-# 🏆 Challenge A109: Intro Adressage IP
+# 🏆 Challenge A109: Intro Adressage IP, réseau, broadcast, plage et masque.
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 

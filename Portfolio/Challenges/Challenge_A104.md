@@ -1,4 +1,4 @@
-# 🏆 Challenge A104: Configuration des PC
+# 🏆 Challenge A104: Configuration de 2 PC selon besoins.
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 
