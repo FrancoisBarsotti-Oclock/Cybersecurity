@@ -1,4 +1,4 @@
-# 🏆 Challenge A106
+# 🏆 Challenge A106: Virtualisation sur VirtualBox
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 
@@ -52,3 +52,12 @@ Voir 👉 Cours A106 👈
 
 ![VérificationDebian](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A106_08-V%C3%A9rificationDebian.png)
 
+---
+
+### 📚 Ressources:
+
+* [How to use VirtualBox - Tutorial for Beginners](https://www.youtube.com/watch?v=nvdnQX9UkMY)
+
+* [Getting started with VirtualBox](https://www.youtube.com/watch?v=MBFE5ArVHIM)
+
+* [How to use VirtualBox](https://www.youtube.com/watch?v=VZJ6KZUc25M&list=PLS1QulWo1RIZy4TwTlF3lgxvUs5kDcOgE)
