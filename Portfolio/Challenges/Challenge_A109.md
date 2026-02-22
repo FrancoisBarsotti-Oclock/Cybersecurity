@@ -283,8 +283,16 @@ Le masque étant /12 il reste (32-12) = 20 bits libres pour les hôtes, soit (2^
 ---
 
 ### 📚 Ressources:
-### - CIDR Calculator 🔣
+### - Calculatrices enligne 🔣
 
-![CIDR Calculator](../images/CIDRcalc.png): Aujourd'hui on peut aller plus vite avec les calculatrices en-line.
+Aujourd'hui on peut aller plus vite avec les calculatrices en-line:
 
-[Qu'est-ce que la méthode magique?](https://zestedesavoir.com/tutoriels/321/calculer-une-plage-dadresses-avec-la-methode-magique/#2-10258_quest-ce-que-la-methode-magique)
+* [CRIC](https://cric.grenoble.cnrs.fr/Administrateurs/Outils/CalculMasque/)
+
+![CRIC](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A109_02-CRIC.png)
+
+* [Subnet](https://www.subnet-calculator.com/cidr.php)
+
+![Subnet](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A109_03-Subnet.png)
+
+* [Qu'est-ce que la méthode magique?](https://zestedesavoir.com/tutoriels/321/calculer-une-plage-dadresses-avec-la-methode-magique/#2-10258_quest-ce-que-la-methode-magique)
