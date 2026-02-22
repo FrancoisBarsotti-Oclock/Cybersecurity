@@ -47,7 +47,7 @@ Voir 👉 Cours A108 👈
 
 ## Bonus: IPv4 et calcul de sous-réseaux
 
-### 📚 Sources:
+### 📚 Ressources:
 * [Adresse IP et Masques de sous-réseaux en 5min](https://www.youtube.com/watch?v=dCWDq2Ty00g)
 
 * [Masques de sous-réseaux](https://www.youtube.com/watch?v=3Scbl-D5rpM)
