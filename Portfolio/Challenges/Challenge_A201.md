@@ -62,7 +62,7 @@ Collabora Online est une suite buteautique en ligne, open source et s'appuyant s
 
 Chez Microsoft, la co-édition a été mise en avant dans Miscrosoft365. C'est une solution solide et clef-en-main, mais pas open source.
 
-Collabora est une bonne option si on veux héberger sois-même la solution et garder le sontrôle des données.
+Collabora est une bonne option si on veux héberger soi-même la solution et garder le contrôle des données.
 
 Microsoft365 reste la solution de facilité, les intégrations cloud sont natives.
 

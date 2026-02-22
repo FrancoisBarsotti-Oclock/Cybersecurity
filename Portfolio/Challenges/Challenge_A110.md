@@ -2,7 +2,7 @@
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 
-Cette session a consisté à l'application d'un QCM sur la saison A1 (Savoirs de base), la discussion des doutes, la présentation du bilan de la saison et la présentation somère de ce qui sera traité à la saison suivante (A2).
+Cette session a consisté à l'application d'un QCM sur la saison A1 (Savoirs de base), la discussion des doutes, la présentation du bilan de la saison et la présentation sommaire de ce qui sera traité à la saison suivante (A2).
 
 Le résultat sur mon premier QCM a été moyen, pour commencer:
 
