@@ -43,7 +43,7 @@ Voir 👉 Cours A102 👈
 
 * Quelle est la deadline pour cette tâche ?
 
-* Quel budget on pour ceci ?
+* Quel budget on a pour ceci ?
 
 * Une marque de préférence ?
 
