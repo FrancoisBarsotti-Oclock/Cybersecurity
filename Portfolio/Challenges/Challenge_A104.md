@@ -1,4 +1,4 @@
-# 🏆 Challenge A104
+# 🏆 Challenge A104: Configuration des PC
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 
@@ -41,3 +41,13 @@ Voir le panier de cet 👉 [autre e-commerce spécialisé](https://secure.materi
 |black_square_button:Boîtier|AeroCool Player V1|44,95 €|
 |electric_plug:Alimentation (PSU)|MMSI MAG A850GL PCIE5|109,95€|
 |shopping_cart:Prix total|👉 👉 👉|2 037,60 €|
+
+---
+
+### 📚 Ressources:
+
+* [Tous les composants d'un PC expliqués](https://www.youtube.com/watch?v=-QDHiyoTcjs)
+
+* [Les composants de l'ordinateur - Technologie](https://www.youtube.com/watch?v=IOyUPUpZcWA)
+
+* [IT-Connect: Composants de PC Gamer](https://www.it-connect.fr/quels-criteres-pour-choisir-vos-composants-de-pc-gamer/)
