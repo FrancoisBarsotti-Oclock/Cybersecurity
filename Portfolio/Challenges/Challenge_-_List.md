@@ -1,24 +1,26 @@
 # 📜 Liste des Challenges réalisés pour valider les notions abordés en cours 
 
-[Challenge A102](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A102.md) : Proposition d'achat de périphériques
+👉 [Challenge A102](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A102.md) : Proposition d'achat de périphériques
 
-Challenge A103 : Description de notre Hardware
+👉 [Challenge A103](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A103.md) : Composants d'un ordinateur
 
-Challenge A104 : Configuration de 3 Setups selon les besoins.
+👉 [Challenge A104](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A104.md) : Configuration de 3 PC selon les besoins.
 
-Challenge A105 : Découverte de la Virtualisation, Virtualbox et VM Windows.
+👉 [Challenge A105](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A105.md) : Atelier pour découverte de la Virtualisation, Virtualbox et VM Windows.
 
-Challenge A106 : Agents invités (Guest addition) pour la virtualisation et VM Linux.
+👉 [Challenge A106](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A106.md) : Guest addition pour VirtualBox et VM Linux.
 
-Challenge A107 : Gestionnaire de mots de passe.
+👉 [Challenge A107](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A107.md) : Gestionnaire de mots de passe.
 
-Challenge A108 : Création d'un Diagramme Réseau.
+👉 [Challenge A108](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A108.md) : Diagramme Réseau.
 
-Challenge A109 : Calculs d'adresses IP, réseau, broadcast, plage et masque.
+👉 [Challenge A109](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A109.md) : Intro Adressage IP, réseau, broadcast, plage et masque.
 
-Challenge A201 : Test et comparatif de Microsoft / Libreoffice.
+👉 [Challenge A110](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A110.md) : QCM 1, Savoirs de base
 
-Challenge A202 : Mise en réseau de VM.
+👉 [Challenge A201](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A201.md) : Outils Bureautiques Microsoft / Libreoffice.
+
+👉 [Challenge A202](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A202.md) : Diagnostic Ping VM.
 
 Challenge A203 : Memtest, Anydest, Teamviewer.
 
