@@ -4,7 +4,7 @@
 
 👉 [Challenge A103](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A103.md) : Composants d'un ordinateur
 
-👉 [Challenge A104](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A104.md) : Configuration de 3 PC selon les besoins.
+👉 [Challenge A104](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A104.md) : Configuration de 2 PC selon besoins.
 
 👉 [Challenge A105](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A105.md) : Atelier pour découverte de la Virtualisation, Virtualbox et VM Windows.
 
