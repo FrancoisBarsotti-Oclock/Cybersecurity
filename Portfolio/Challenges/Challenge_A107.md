@@ -16,15 +16,17 @@ Voir 👉 Cours A107 👈
 
 ### 📖🔒 Une fois installé, j'ai créé des groupes (pour catégoriser les entrées) et j’y ai enregistré tous les sites avec des données sensibles :
  
-![Enregistrement]
+![Enregistrement](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A107_01-Enregistrement.png)
 
 ### ⚠️🫣 J’ai ensuite demandé un rapport de ma base de données, pour savoir si mes mots de passe ont déjà été compromis/violentés :
 
-![DemandeRapport]
+![DemandeRapport](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A107_02-DemandeRapport.png)
 
-### :pray: :see_no_evil: J’ai fait confiance à leur méthode :
+### 🙏 🙈 J’ai fait confiance à leur méthode (KeePass envoie tous mes enregistrement au site "HaveI Been Pwned" pour vérifier si j'ai des mdp compromis) :
 
-![Descriptionméthode]
-### :100: :trophy: Et j’ai bien aimé le résultat :
+![Descriptionméthode](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A107_03-DescritpionM%C3%A9thode.png)
 
-![Rapport]
+### 💯 🏆 Et j’ai bien aimé le résultat :
+
+![Rapport](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A107_04-Rapport.png)
+
