@@ -35,37 +35,37 @@ J'ai décidé de le faire avec la deuxième option, j’ai modifié les paramèt
 
 Cette solution va permettre aux VMs d'être sur le même réseau physique que l'hôte, avec une adresse IP du même réseau que lui, en utilisant la carte réseau de l'hôte.
 
-![01-Settings]
+![01-Settings](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A202_01-Settings.png)
 
 Ensuite, j’ai relancé le ping depuis le cmd. D’abord côté Machine Hôte :
 
 1.	Je lance le ping de ma machine hôte, pour tester la boucle locale et, selon les statistiques de la commande ping, mon ping a réussi (0 perdus) :
 
-![02-PingVersVM]
+![02-PingVersVM](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A202_02-PingVersVM.png)
 
 2.	Je cherche à avoir l’adresse IPv4 de ma carte Ethernet pour pouvoir y lancer le ping (`ipconfig /all`):
 
-![03-ipconfigAll]
+![03-ipconfigAll](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A202_03-ipconfigAll.png)
 
 Je lance le ping sur mon adresse IP (`ping [IPv4]`) pour m’assurer que mon Ethernet a bien une adresse IP Ethernet valide, et les statistiques le confirment (0 perdus):
 
-![04-PingOK1]
+![04-PingOK1](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A202_04-PingOK1.png)
 
 Je lance le ping sur mon routeur, et je constante que ça passe aussi (0 perdus) :
 
-![05-PingOK2]
+![05-PingOK2](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A202_05-PingOK2.png)
 
 ### Côté machine virtuelle
 
 Sous la commande ipconfig, j’ai aussi trouvé une adresse IP décrite en tant que VirtualBox Host-Only Ethernet Adapter, alors je l’ai pingué avec succès aussi (0 perdus) :
 
-![06-PingOK3]
+![06-PingOK3](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A202_06-PingOK3.png)
 
 Pour finir, j’ai configuré le pare-feu des deux machines :
 
 Panneau de configuration > Pare-feu > Paramètres avancés > Partage de fichiers et imprimantes entrant ICMpv4 et activer.
 
-![07-Parefeux]
+![07-Parefeux](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge%20A202_07-Parefeux.png)
 
 ---
 
