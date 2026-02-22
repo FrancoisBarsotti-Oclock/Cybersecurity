@@ -1,4 +1,4 @@
-# 🏆 Challenge A103
+# 🏆 Challenge A103: Composants d'un ordinateur
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 
@@ -45,3 +45,11 @@ J'ai trouvé un bon exemple sur le web juste [👉 ici 👈](https://www.reseaul
 ### Git add, commit & push
 
 ![git](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/images_challenges/Challenge_A103_Git.png)
+
+--- 
+
+### 📚 Ressources:
+
+* [Git Tutorial for Beginners](https://www.youtube.com/watch?v=8JJ101D3knE&t=2143s)
+
+* [How to Create Image Folder in GitHub](https://www.youtube.com/watch?v=p4Q4D_1bJ4k)
