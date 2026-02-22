@@ -38,7 +38,7 @@
 
 ![en simultané](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier%20A105_3%20VM%20simultan%C3%A9ment.png)
 
-Il y à eu plusieurs erreurs humaines et instabilités de Vbox me poussant à réinstaller plusieurs fois:
+Il y a eu plusieurs erreurs humaines et instabilités de Vbox me poussant à réinstaller plusieurs fois:
 
 * renommer une VM sur VirtualBox, ou oublier de retirer l'image disque d'installation.
 
