@@ -19,61 +19,53 @@ Voir 👉 Cours A202 👈
 
 ### - Premier Test Ping
 
-Pour ce test je vais chercher l'adresse IP de ma VM (ici la Win10), soit depuis le terminal en tapant ``ipconfig``, soit dans les paramètres réseaux.
-
-![01-Ip]
-
-#### Le ping échoue.
-
-![02-échec]
+Pour ce test j'ai cherché l'adresse IP de ma VM, en tapant ``ipconfig``. En effet le ping ne passait pas.
 
 VirtualBox fonctionnant en mode NAT (Network Address Translation), il donne juste accès à Internet aux machines virtuelles via un réseau privé isolé, mais elles ne sont pas sur mon réseau local physique.
 
 Il y a deux solutions pour permettre aux VM et à l'hôte de communiquer :
 
-- Réseau privé Hôte (Host-only Adapter) 🔗
+- 🔗 Réseau privé Hôte (Host-only Adapter) 
 
-- Accès par pont (Bridge) 🌉
+- 🌉 Accès par pont (Bridge) 
 
-## Réseau privé Hôte (Host-only Adapter) 🔗
-
-Cette solution va permettre de créer un réseau privé et isolé dans lequel il n'y aura que le PC hôte et les VMs. Pour garder la connexion à Internet on va garder l'interface réseau NAT, et on va ajouter une interface Host-Only puis démarrer la VM.
-
-![03-Settings]
-
-On récupère sa nouvelle adresse IP ``192.168.56.101``
-
-![04-NouvelleIP]
-
-Après un nouveau ping ne fonctionnant pas, j'ai cherché d'ou ça venait et il s'avère que le Firewall Windows peu bloquer la demande de ping. J'ai donc été activer les règles de traffic entrant (et sortant pour le faire dans l'autre sens) concernant le ping (Demande d'écho). Traffic entrant/sortant ICMPv4.
-
-![05-Parefeu]
-
-Une fois ces changement effectués, j'ai pu ping la VM depuis l'hôte et l'hôte depuis la VM.
-
-![06-PingVersVM]
-
-![07-PingVersHôte]
+J'ai décidé de le faire avec la deuxième option, j’ai modifié les paramètres de ma VM en activant l’option « Accès par pont » et en lui disant que la connexion se fait par Ethernet via dongle (tout cela sur la vérification du mode réseau) : 
 
 ## 🌉 Accès par pont (Bridge) 
 
-Cette solution va permettre aux VMs d'être sur le même réseau physique que l'hôte, avec une adresse IP du même réseau que lui.
+Cette solution va permettre aux VMs d'être sur le même réseau physique que l'hôte, avec une adresse IP du même réseau que lui, en utilisant la carte réseau de l'hôte.
 
-On change cette fois l'interface réseau en Accès par pont, en utilisant la carte réseau de l'hôte.
+![01-Settings]
 
-![08-Settings]
+Ensuite, j’ai relancé le ping depuis le cmd. D’abord côté Machine Hôte :
 
-On récupère la nouvelle IP ``192.168.1.17``, on voit déjà qu'on est sur le même masque (/24) sur l'hôte.
+1.	Je lance le ping de ma machine hôte, pour tester la boucle locale et, selon les statistiques de la commande ping, mon ping a réussi (0 perdus) :
 
-![09-NouvelleIP]
+![02-PingVersVM]
 
-On fait un Ping pour vérifier, et c'est OK cette fois-ci.
+2.	Je cherche à avoir l’adresse IPv4 de ma carte Ethernet pour pouvoir y lancer le ping (`ipconfig /all`):
 
-![10-LastPing]
+![03-ipconfigAll]
 
-Pour Ping l'hôte depuis la VM, je dois cette fois activer les règles de traffic entrant ICMPv4 sur l'hôte.
+Je lance le ping sur mon adresse IP (`ping [IPv4]`) pour m’assurer que mon Ethernet a bien une adresse IP Ethernet valide, et les statistiques le confirment (0 perdus):
 
-Sur la VM Win11, je suis passé directement en Accès par pont (Bridge). Aucun problème particulier.
+![04-PingOK1]
+
+Je lance le ping sur mon routeur, et je constante que ça passe aussi (0 perdus) :
+
+![05-PingOK2]
+
+### Côté machine virtuelle
+
+Sous la commande ipconfig, j’ai aussi trouvé une adresse IP décrite en tant que VirtualBox Host-Only Ethernet Adapter, alors je l’ai pingué avec succès aussi (0 perdus) :
+
+![06-PingOK3]
+
+Pour finir, j’ai configuré le pare-feu des deux machines :
+
+Panneau de configuration > Pare-feu > Paramètres avancés > Partage de fichiers et imprimantes entrant ICMpv4 et activer.
+
+![07-Parefeux]
 
 ---
 
