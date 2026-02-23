@@ -99,7 +99,7 @@ Et à partir de là, nos machines pourront communiquer même si dans des VLAN di
 
 On créé l'ACL standard pour le réseau de la Direction et on l'active en l'appliquant sur les lignes vty 0 4 du routeur
 
-![10-ACLstandard]
+![10-ACLstandard](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_10-ACLstandard.png)
 
 **Note 1**: La liste APL standard peut être numérotée de **1 à 99** et de **1300 à 1999**.
 
@@ -113,7 +113,7 @@ On créé l'ACL standard pour le réseau de la Direction et on l'active en l'app
 
 Et une petite vérification de la configuration sera toujours la bienvenue
 
-![11-VérifACLstandard]
+![11-VérifACLstandard](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_11-V%C3%A9rifACLstandard.png)
 
 ### 4. ACL étendues (filtrage inter-VLAN)
 
@@ -134,15 +134,15 @@ Pour filtrer le flux entre les VLANs il nous faut l'application d'une ACL étend
 
 **Note**: Une liste ACL étendue peut être numérotée de **100 à 199** et de **200 à 2699**.
 
-![12-ACLétenduePings]
+![12-ACLétenduePings](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_12-ACL%C3%A9tenduePings.png)
 
 Et pour finir, on gère l'accès Telnet/SSH vers le routeur. Puis, pour protéger l'accès au routeur lui-même, on appliquera plutôt l'ACL sur les lignes VTY
 
-![13-SSH&Telnet]
+![13-SSH&Telnet](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_13-SSH%26Telnet.png)
 
 ### 5. Tests de validation
 
-
+[En construction]
 
 ### 📚 Ressources:
 
