@@ -1,5 +1,6 @@
 # 📜 Liste des Challenges réalisés pour valider les notions abordés en cours 
 
+### Challenges A1
 👉 [Challenge A102](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A102.md) : Proposition d'achat de périphériques
 
 👉 [Challenge A103](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A103.md) : Composants d'un ordinateur
@@ -18,6 +19,7 @@
 
 👉 [Challenge A110](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A110.md) : QCM 1, Savoirs de base
 
+### Challenges A2
 👉 [Challenge A201](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A201.md) : Outils Bureautiques Microsoft / Libreoffice.
 
 👉 [Challenge A202](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A202.md) : Diagnostic Ping VM.
@@ -32,6 +34,7 @@ Challenge A207 : QCM certification ITIL.
 
 Challenge A208 : Installation GLPI Agent et test de ticketing.
 
+### Challenges A3
 Challenge A301 : Mise en place d'un réseau et ping sur Packet Tracer.
 
 Challenge A303 : Création d’un plan d’adressage
@@ -48,6 +51,7 @@ Atelier A308 : Installation de Proxmox sur un serveur OVH, configuration du NAT,
 
 Challenge A309 : Pratiquer les VLAN, Inter-VLAN et ACLs
 
+### Challenges A4
 Challenge A401 : Installation de Windows Server 2022 sur VMware.
 
 Challenge A402 : Installation WS2025 sur Proxmox, AD DS Gestion d'utilisateurs.
@@ -70,6 +74,7 @@ Challenge A411 : Installation et test du RDS (Remote Desktop Services).
 
 Challenge A412 : Installation d'une VM sur Hyper-V.
 
+### Challenges A5
 Challenge A501 : Installation d'une VM Linux sur VMware, et jeu Terminus Quest pour apprendre les commandes de base.
 
 Challenge A502 : Jouer à VIM Adventures et VIM Tutor pour se familiariser avec VIM.
@@ -88,18 +93,21 @@ Challenge A508 : Installation et configuration d'un serveur Asterisk.
 
 Challenge A509 : Atelier Installer et configurer un serveur Asterisk sur proxmox, fonctionnel via app VOIP du smartphone.
 
+### Challenges B1
 Challenge B101 : Installation d'Hyperviseurs Types 1 é 2, imbrication.
 
 Challenge B102 : Installation ESXi (vSphere)
 
 Challenge B103 : Installation de vCenter et le configurer.
 
+### Challenges B2
 Challenge B201 : Installation de TrueNAS (Proxmox), configuration ZFS, SMB et snapshots.
 
 Challenge B202 : Installation Veeam Backup & Replication, configuration, restauration.
 
 Challenge B204 : Installer Proxmox Backup Server, configurer, backup et restore.
 
+### Challenges B3
 Challenge B301 : Installation de Zabbix
 
 Challenge B302 : Installation d'Agents Zabbix pour étendre la supervision à l’ensemble de l’infrastructure.
@@ -108,6 +116,7 @@ Challenge B303 : Exploration plus en détail des paramètres, alertes de Zabbix 
 
 Challenge B304 : Installation de Nagios et de ses agents.
 
+### Challenges B4
 Challenge B401 : Pratiquer sur Scratch en créant un jeu du Nombre Mystère (Plus/Moins).
 
 Challenge B402 : Pratiquer Git & Github
@@ -124,6 +133,7 @@ Challenge B407 : une série d'exercices pour créer une suite d'outils Admin en 
 
 Atelier B408 : Atelier Bash - Automatisation de l'administration système.
 
+### Challenges C1
 Challenge C101 : Effectuer la note de cadrage d'un projet.
 
 Challenge C102 : Créer le WBS, matrice RACI et diagramme Gantt.
@@ -132,6 +142,7 @@ Challenge C103 : Analyser les risques pour notre projet.
 
 Challenge C104 : Définir un scénario d’incident majeur et les mesures, procédures, PRA-PCA type.
 
+### Challenges C2
 Challenge C201 : Expérimenter les versions gratuites de Google Cloud, AWS et Azure.
 
 Challenge C202 : Proposition d'une stratégie cloud simple, cohérente et réaliste pour une PME.
@@ -140,4 +151,5 @@ Atelier C203 : Déploiement Nextcloud
 
 Challenge C204 : Déploiement Openstack
 
+### Challenges C3
 Challenge C301 :
