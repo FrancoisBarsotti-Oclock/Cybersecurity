@@ -12,7 +12,7 @@
 >
 >Le responsable IT vous confie la mission de segmenter le réseau par service et de mettre en place des règles de filtrage pour appliquer une politique d'accès claire et justifiable.
 
-👉 [énoncé complet du challenge](https://github.com/O-clock-Aldebaran/SC03E01-VLAN) 👈
+👉 [Énoncé complet du challenge](https://github.com/O-clock-Aldebaran/SC03E01-VLAN) 👈
 
 Voir 👉 Cours C301 👈
 
