@@ -71,7 +71,7 @@ Et on établie le mode trunk pour tous les VLAN
 
 ![04-SwitchTrunk](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_04-SwitchTrunk.png)
 
-Même si à ce stade, il n'est pas encore possible d'avoir une communication entre VLAN, on peut vérifier que chaque interface soit up/up
+Même si à ce stade, il n'est pas encore possible d'avoir une communication entre VLAN, on peut vérifier que chaque interface soit up/up (avec la commande `show ip interface brief`) et relire la configuration globale (avec `show running-config`).
 
 Pour établir la connexion entre VLAN, il nous faut:
 
@@ -94,6 +94,53 @@ Pour établir la connexion entre VLAN, il nous faut:
 Et à partir de là, nos machines pourront communiquer même si dans des VLAN différentes
 
 ![09-Ping-OK](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_09-Ping-OK.png)
+
+### 3. ACL standard (restriction de l'administration)
+
+On créé l'ACL standard pour le réseau de la Direction et on l'active en l'appliquant sur les lignes vty 0 4 du routeur
+
+![10-ACLstandard]
+
+**Note 1**: La liste APL standard peut être numérotée de **1 à 99** et de **1300 à 1999**.
+
+**Note 2**: Dans Cisco Packet Tracer, la commande `line vty 0 4` désigne les lignes Virtual Teletype (VTY), utilisées pour les connexions distantes (Telnet ou SSH) sur un routeur ou un switch Cisco.
+
+👉 Concrètement
+
+* VTY = accès distant via le réseau
+* 0 4 = lignes numérotées de 0 à 4
+* Donc : 5 sessions simultanées maximum (0,1,2,3,4)
+
+Et une petite vérification de la configuration sera toujours la bienvenue
+
+![11-VérifACLstandard]
+
+### 4. ACL étendues (filtrage inter-VLAN)
+
+Pour filtrer le flux entre les VLANs il nous faut l'application d'une ACL étendue: Nous cherchons à ce que le flux ait la configuration suivante:
+
+| **#** | **Test** | **Résultat attendu** |
+| :---: | :---:| :---: |
+| 1 | Ping de Direction vers SRV-RH | ✅ Succès |
+| 2 | Ping de Direction vers SRV-COMPTA | ✅ Succès |
+| 3 | Ping de RH vers SRV-RH | ✅ Succès |
+| 4 | Ping de RH vers SRV-COMPTA | 	❌ Échec |
+| 5 | Ping de Comptabilité vers SRV-COMPTA | ✅ Succès |
+| 6 | Ping de Comptabilité vers SRV-RH | ❌ Échec |
+| 7 | Ping de Visiteur vers n'importe quel serveur | ❌ Échec |
+| 8 | Ping de Visiteur vers la passerelle Internet (simulée) | ✅ Succès |
+| 9 | 	Telnet/SSH vers le routeur depuis Direction | ✅ Succès |
+| 10 | 	Telnet/SSH vers le routeur depuis RH ou Visiteur | ❌ Échec |
+
+**Note**: Une liste ACL étendue peut être numérotée de **100 à 199** et de **200 à 2699**.
+
+![12-ACLétenduePings]
+
+Et pour finir, on gère l'accès Telnet/SSH vers le routeur. Puis, pour protéger l'accès au routeur lui-même, on appliquera plutôt l'ACL sur les lignes VTY
+
+![13-SSH&Telnet]
+
+### 5. Tests de validation
 
 
 
