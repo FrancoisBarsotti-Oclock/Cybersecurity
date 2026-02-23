@@ -55,20 +55,20 @@ On personalise les postes, en suivant le plan d'adressage proposé et la topolog
 
 Distribution de câbles Copper Straight-Through 
 
-![01-Câblage]
+![01-Câblage](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_01-C%C3%A2blage.png)
 
 ### 2. Configuration des VLAN
 
 Sur le switch, on commence par nommer les VLAN 
-![02-ConfVLAN]
+![02-ConfVLAN](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_02-ConfVLAN.png)
 
 Puis, on configure leur premier accèss
 
-![03-AccèsVLAN]
+![03-AccèsVLAN](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_03-Acc%C3%A8sVLAN.png)
 
 Et on établie le mode trunk pour tous les VLAN
 
-![04-SwitchTrunk]
+![04-SwitchTrunk](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_04-SwitchTrunk.png)
 
 Même si à ce stade, il n'est pas encore possible d'avoir une communication entre VLAN, on peut vérifier que chaque interface soit up/up
 
@@ -76,23 +76,25 @@ Pour établir la connexion entre VLAN, il nous faut:
 
 * configurer le routeur (le mettre en up et faire des sous-interfaces, sans oublier le `ip routing` à la fin de la configuration).
 
-![05-RouteurSous-interfaces]
+![05-RouteurSous-interfaces](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_05-RouteurSous-interfaces.png)
 
 * Activer le Trunk sur le switch
 
-![06-ActiverTrunk]
+![06-ActiverTrunk](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_06-ActiverTrunk.png)
 
 * Permettre le trunk sur les VLAN
 
-![07-AllowTrunk]
+![07-AllowTrunk](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_07-AllowTrunk.png)
 
 * S'assurer que toutes les Passerelles soient mises à jour, en accord avec l'ip du routeur (dans ce cas, il va finir toujour par `.254`)
 
-![08-Passerelle]
+![08-Passerelle](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_08-Passerelle.png)
 
 Et à partir de là, nos machines pourront communiquer même si dans des VLAN différentes
 
-![09-Ping-OK]
+![09-Ping-OK](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_09-Ping-OK.png)
+
+
 
 ### 📚 Ressources:
 
