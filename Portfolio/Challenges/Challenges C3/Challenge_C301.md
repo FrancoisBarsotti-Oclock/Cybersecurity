@@ -60,6 +60,7 @@ Distribution de câbles Copper Straight-Through
 ### 2. Configuration des VLAN
 
 Sur le switch, on commence par nommer les VLAN 
+
 ![02-ConfVLAN](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_02-ConfVLAN.png)
 
 Puis, on configure leur premier accèss
