@@ -55,7 +55,7 @@ On personalise les postes, en suivant le plan d'adressage proposé et la topolog
 
 Distribution de câbles Copper Straight-Through 
 
-![01-Câblage](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_01-C%C3%A2blage.png)
+![01-Câblage1](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/Challenge%20C301_01-C%C3%A2blage1.png)
 
 ### 2. Configuration des VLAN
 
