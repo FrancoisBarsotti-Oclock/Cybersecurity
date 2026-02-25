@@ -27,7 +27,7 @@ Voir 👉 Cours C302 👈
 * ### Côté Windows Server 2025
 
 
-![01-WinSrv]()
+![01-WinSrvAD](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_01-WinSrvAD.png)
 
 * ### Côté Ubuntu 🐧
 
@@ -35,15 +35,15 @@ Après installation d'Ubuntu, on teste la communication entre VMs:
 
 * `WinSrv-AD → Ubuntu-Radius`:
 
-![02-PingWin2Ubuntu]()
+![02-PingWin2Ubuntu](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_02-PingWin2Ubuntu.png)
 
 * `UbuntuLDAP → WinSrv&Radius-AD`
 
-![03-PingLDAPToWin&Radius]()
+![03-PingLDAPToWin&Radius](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_03-ingLDAPToWin%26Radius.png)
 
 Pas besoin de le faire depuis le serveur de Radius, puisqu'il a déjà donné réponse aux autres deux serveurs.
 
-On se fait l'installation du serveur ldap, en suivant les commandes:
+Alors, on commence à faire l'installation du serveur ldap, en suivant les commandes:
 
 ### Installation du serveur ldap
 
