@@ -140,19 +140,36 @@ Installer le serveur FreeRadius en mode simple
 
 `sudo apt update && sudo apt upgrade -y`
 
-`sudo apt install freeradius freeradius-ldap ldap-utils net-tools`
+`sudo apt install freeradius freeradius-ldap ldap-utils net-tools` (ce qui nous permet d'avoir le module permettant de communiquer avec LDAP pour la suite)
 
 `sudo systemctl enable --now freeradius.service`
 
 `sudo systemctl status freeradius`
 
-Vérification des ports en écoute :
+![07.4-RadiusStatus]()
+
+Maintenant on peut lancer la commande pour voir la liaison possible entre freeRADIUS et LDAP `ldapsearch -x -H ldap://10.0.0.70 -b dc=ldap,dc=lan` (tout en respectant son ip et son domaine)
+
+![07.5-Radius&LDAP]()
+
+On pourrait même chercher cette liaison avec la commande qui permet d'inclure l'utilisateur admin dans le résultat:  `ldapsearch -x -H ldap://10.0.0.70 -D "cn=admin,dc=ldap,dc=lan -w -b dc=ldap,dc=lan` (mais pas nécessaire de le faire cette fois-ci).
+
+à ce stade, on peut vérifier quels ports sont en écoute :
 `ss -aun`
 
 ![08-PortsEnécoute](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_08-PortsEn%C3%A9coute.png)
 
 ### Ajout de la configuration
 
+`sudo -s`
+
+`ls /etc/freeradius/` puis `ls /etc/freeradius/3.0/` nous permettra de voir tous ce qui a été créé dans dossier de freeradius, où on pourra voir le dossier client.conf qui nous servira pour paramétrer le reste. 
+
+![09-lsfreeradius]()
+
+Ce sera aussi intéréssant voir ce qu'il y a dans le fichier mods-config/files
+
+## En construction ...
 
 sudo nano /etc/freeradius/3.0/clients.conf
     client localhost {
