@@ -146,11 +146,11 @@ Installer le serveur FreeRadius en mode simple
 
 `sudo systemctl status freeradius`
 
-![07.4-RadiusStatus]()
+![07.4-RadiusStatus](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_07.4-RadiusStatus.png)
 
 Maintenant on peut lancer la commande pour voir la liaison possible entre freeRADIUS et LDAP `ldapsearch -x -H ldap://10.0.0.70 -b dc=ldap,dc=lan` (tout en respectant son ip et son domaine)
 
-![07.5-Radius&LDAP]()
+![07.5-Radius&LDAP](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_07.5-Radius%26LDAP.png)
 
 On pourrait même chercher cette liaison avec la commande qui permet d'inclure l'utilisateur admin dans le résultat:  `ldapsearch -x -H ldap://10.0.0.70 -D "cn=admin,dc=ldap,dc=lan -w -b dc=ldap,dc=lan` (mais pas nécessaire de le faire cette fois-ci).
 
@@ -165,7 +165,7 @@ On pourrait même chercher cette liaison avec la commande qui permet d'inclure l
 
 `ls /etc/freeradius/` puis `ls /etc/freeradius/3.0/` nous permettra de voir tous ce qui a été créé dans dossier de freeradius, où on pourra voir le dossier client.conf qui nous servira pour paramétrer le reste. 
 
-![09-lsfreeradius]()
+![09-lsfreeradius](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_09-lsfreeradius.png)
 
 Ce sera aussi intéréssant voir ce qu'il y a dans le fichier mods-config/files
 
