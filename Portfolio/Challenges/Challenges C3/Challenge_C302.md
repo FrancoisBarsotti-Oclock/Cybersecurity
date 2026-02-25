@@ -21,12 +21,13 @@ Voir 👉 Cours C302 👈
 | :---: | :---: | :---: | :---: |
 | **FreeRadius** | Ubuntu 24.04.4 | `10.0.0.68/16` | Serveur |
 | **ActiveDirectory** | Win Srv 2025 | `10.0.0.69/16` | Contrôl de Domaine |
+| **LDAP** | Ubuntu 24.04.4 | `10.0.0.70/16` | Serveur |
 | **Réseau** | Vmb2 | `10.0.0.0/16` | Segment réseau dans proxmox |
 
 * ### Côté Windows Server 2025
 
 
-![01-WinSrv](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_01-WinSrv.png)
+![01-WinSrv]()
 
 * ### Côté Ubuntu 🐧
 
@@ -34,11 +35,13 @@ Après installation d'Ubuntu, on teste la communication entre VMs:
 
 * `WinSrv-AD → Ubuntu-Radius`:
 
-![02-PingServeurs](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_02-PingServeurs.png)
+![02-PingWin2Ubuntu]()
 
-* `Ubuntu-Radius → WinSrv-AD`
+* `UbuntuLDAP → WinSrv&Radius-AD`
 
-![03-PingRadiusToWin](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_03-PingRadiusToWin.png)
+![03-PingLDAPToWin&Radius]()
+
+Pas besoin de le faire depuis le serveur de Radius, puisqu'il a déjà donné réponse aux autres deux serveurs.
 
 On se fait l'installation du serveur ldap, en suivant les commandes:
 
@@ -81,7 +84,7 @@ On se fait l'installation du serveur ldap, en suivant les commandes:
 
 ### Création d'un "USER" (nano newuser.ldif)
 
-`nano nwuser.ldif`
+`nano newuser.ldif`
 
     dn: uid=gbarsotti,ou=users,dc=example,dc=com
     objectClass: inetOrgPerson
@@ -98,7 +101,7 @@ On se fait l'installation du serveur ldap, en suivant les commandes:
     loginShell: /bin/bash
     homeDirectory: /home/gbarsotti
 
-`slappasswd` (puis remplacer le mot de passe dans le fichier)
+`slappasswd` (puis remplacer le mot de passe hashé dans le fichier)
 
 ![07-newmdp](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_07-newmdp.png)
 
