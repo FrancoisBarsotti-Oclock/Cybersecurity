@@ -76,7 +76,7 @@ Première commande pour vérifier que mon LDAP répond:
 
 Et on voit que le DN est bien trouvé sur mon serveur LDAP en locale 
 
-![05.1-DNtrouvé]()
+![05.1-DNtrouvé](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_05.1-DNtrouv%C3%A9.png)
 
 ### Création d'une "OU" (nano base_users.ldif)
 
@@ -89,7 +89,7 @@ Et on voit que le DN est bien trouvé sur mon serveur LDAP en locale
 Commande qui permettra de rajouter l'ou qui vient d'être créé
 `sudo ldapadd -x -D cn=admin,dc=example,dc=com -W -f base_users.ldif` → → `sudo ldapadd -x -D cn=admin,dc=ldap,dc=lan -W -f base_users.ldif`
 
-![06-OUcréé]()
+![06-OUcréé](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_06-OUcr%C3%A9%C3%A9.png)
 
 ### Création d'un "USER" (nano newuser.ldif)
 
@@ -112,21 +112,21 @@ Commande qui permettra de rajouter l'ou qui vient d'être créé
 
 De suite, il faut chiffrer le mdp qui apparait en clair avec la commande `slappasswd`
 
-![07-newmdpHashé]()
+![07-newmdpHashé](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_07-newmdpHash%C3%A9.png)
 
 puis le remplacer (dans le même fichier) par le mot de passe hashé 
 
-![07.1-mdpHashéRenseigné]()
+![07.1-mdpHashéRenseigné](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_07.1-mdpHash%C3%A9Renseign%C3%A9.png)
 
 Commande qui permettra de rajouter l'uid (utilisateur local) qui vient d'être créé
 `sudo ldapadd -x -D cn=admin,dc=example,dc=com -W -f newuser.ldif` → → `sudo ldapadd -x -D cn=admin,dc=ldap,dc=lan -W -f newuser.ldif`
 
-![07.2-uidRajouté]()
+![07.2-uidRajouté](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_07.2-uidRajout%C3%A9.png)
 
 ### TEST LOCAL
 `ldapsearch -x -LLL -b dc=example,dc=com uid=newuser` → → `ldapsearch -x -LLL -b dc=ldap,dc=lan uid=gbarsotti`
 
-![07.3-Vérifuid]()
+![07.3-Vérifuid](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_07.3-V%C3%A9rifuid.png)
 
 à partir de là, on peut continuer à créer autant d'utilisateurs nécessaires, car notre serveur LDAP est bien fonctionnel
 
