@@ -26,7 +26,7 @@ Voir 👉 Cours C302 👈
 * ### Côté Windows Server 2025
 
 
-![01-WinSrv]
+![01-WinSrv](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_01-WinSrv.png)
 
 * ### Côté Ubuntu 🐧
 
@@ -34,11 +34,11 @@ Après installation d'Ubuntu, on teste la communication entre VMs:
 
 * `WinSrv-AD → Ubuntu-Radius`:
 
-![02-PingServeurs]
+![02-PingServeurs](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_02-PingServeurs.png)
 
 * `Ubuntu-Radius → WinSrv-AD`
 
-![03-PingRadiusToWin]
+![03-PingRadiusToWin](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_03-PingRadiusToWin.png)
 
 On se fait l'installation du serveur ldap, en suivant les commandes:
 
@@ -57,13 +57,13 @@ On se fait l'installation du serveur ldap, en suivant les commandes:
     Base de données : généralement MDB (default).
     Supprimer la base existante : NON si vous voulez garder d’anciennes données.
 
-![04-ConfigSlapd]
+![04-ConfigSlapd](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_04-ConfigSlapd.png)
 
 `sudo systemctl status slapd`
 
 `ldapsearch -x -LLL -H ldap:// -b dc=example,dc=com` → → `ldapsearch -x -LLL -H ldap:// -b dc=challenge,dc=C302`
 
-![05-slapdStauts]
+![05-slapdStauts](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_05-slapdStauts.png)
 
 ### Création d'une "OU" (nano base_users.ldif)
 
@@ -77,7 +77,7 @@ On se fait l'installation du serveur ldap, en suivant les commandes:
 
 → Ici le mdp n'a pas été reconnu, même si j'ai retourné sur la configuration de slapd
 
-![06-InvalidCredentials]
+![06-InvalidCredentials](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_06-InvalidCredentials.png)
 
 ### Création d'un "USER" (nano newuser.ldif)
 
@@ -100,7 +100,7 @@ On se fait l'installation du serveur ldap, en suivant les commandes:
 
 `slappasswd` (puis remplacer le mot de passe dans le fichier)
 
-![07-newmdp] 
+![07-newmdp](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_07-newmdp.png)
 
 `sudo ldapadd -x -D cn=admin,dc=example,dc=com -W -f newuser.ldif` → → `sudo ldapadd -x -D cn=admin,dc=challenge,dc=C302 -W -f newuser.ldif`
 
@@ -123,9 +123,9 @@ On se fait l'installation du serveur ldap, en suivant les commandes:
 
 `ss -aun`
 
-![08-PortsEnécoute]
+![08-PortsEnécoute](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C302/Challenge%20C302_08-PortsEn%C3%A9coute.png)
 
-En construction
+### En construction...
 
 TEST DEPUIS LA MACHINE RADIUS (penser à remplacer l'IP)
 ldapsearch -x -H ldap://10.0.0.80 -b dc=example,dc=com
@@ -134,3 +134,5 @@ ldapsearch -x -H ldap://10.0.0.80 -D "cn=admin,dc=example,dc=com" -W -b dc=examp
 ### 📚 Ressources:
 
 * [FreeRadius for Debian and Ubuntu](https://www.freeradius.org/documentation/freeradius-server/4.0.0/howto/installation/debian.html)
+
+* [Install FreeRADIUS on Ubuntu](https://www.youtube.com/watch?v=3bvdL3uWHkE&t=141s)
