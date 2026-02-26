@@ -49,11 +49,17 @@
 >| **Machine** | **Type** | **IP** | **RAM** | **Rôle** |
 >| ------------ | ----------------------- | ------------- | ------------- | ------------------------------ |
 >| pfSense      | VM (existante)          | 10.0.0.1      | 1 Go          | Firewall / Gateway             |
->| Win11        | VM (existante)          | 10.0.0.10     | 4 Go          | VM cible                       |
+>| Win11        | VM          | 10.0.0.10     | 4 Go          | VM cible                       |
 >| **Suricata** | **VM ou CT (nouvelle)** | **10.0.0.50** | **2 Go**      | **IDS/IPS + Agent Wazuh**      |
 >| **Wazuh**    | **VM (nouvelle)**       | **10.0.0.40** | **Mini 4 Go** | **SIEM (Manager + Dashboard)** |
 
 ---
+
+## 1.1. Création de la machine Windows 11
+
+Elle n'était pas existante dans mon hyperviseur, alors j'ai dû tout installer (j'avais oublier comment c'est long pour avoir une Win11 Pro fonctionnelle)
+
+
 
 ## 1.2. Création de la machine Suricata
 
@@ -94,7 +100,94 @@ Quelle que soit l'option choisie (CT ou VM), vérifiez la connectivité :
 ping 10.0.0.1      # Gateway pfSense
 ping 8.8.8.8       # Internet (via pfSense)
 ```
-![02-PingpfSense&Google]()
+Pour lancer un ping vers Windows 11 (`ping 10.0.0.10`), on active les requêtes ICMP du parefeau Windows: 
+
+`wf.msc` → Inbound rules → File and Printer Sharing (Echo Request - ICMPv4-In)
+
+![02-PingpfSense&Google&Win11]()
+
+Bien sûr, une fois le ping testé, on éteint la permission de requête ICMP pour les désactiver à nouveau du parefeu
+
+## 1.4. Installation de Suricata
+```
+sudo apt update && apt upgrade -y
+sudo apt install -y suricata suricata-update
+```
+et on vérifie l'installation
+```
+suricata --build-info | head -5
+```
+![03-SuricataVersion]()
+
+## 1.5. Configuration de Suricata
+
+On fait l'édition du fichier de configuration principal:
+
+```
+sudo nano /etc/suricata/suricata.yaml
+```
+### 1.5.1. Définition du réseau à protéger (HOME_NET):
+
+Section `vars → address-groups` :
+
+```
+vars:
+  address-groups:
+    HOME_NET: "[10.0.0.0/16]"
+    EXTERNAL_NET: "!$HOME_NET"
+```
+
+### 1.5.2. Définition de l'interface d'écoute :
+
+Section `af-packet` :
+```
+af-packet:
+  - interface: ens18
+    cluster-id: 99
+    cluster-type: cluster_flow
+    defrag: yes
+```
+**Rappel**: `ens18` pour les VM Proxmox avec VirtIO, mais `eth0` pour les CT. 
+
+### 1.5.3. Activation de détails dans les logs EVE JSON :
+
+→ Jamais oublier le `F6` pour chercher un mot clé dans nano ! Alors, Chercher la section `outputs → eve-log → types → alert` pour décommenter les lignes `payload`, `payload-printable` et `packet` et les laisser comme il suit:
+
+```
+- alert:
+    payload: yes
+    payload-printable: yes
+    packet: yes
+    tagged-packets: yes
+```
+
+Attention ! On doit respecter l'indentation ! YAML est très sensible à l'indentation. Les options payload, payload-printable et packet doivent être au même niveau d'indentation que tagged-packets (4 espaces).
+
+💡 Pourquoi décommenter ces lignes ? Par défaut, Suricata ne log que le minimum (signature, IP, port). En activant `payload` et `payload-printable`, on aura le contenu du paquet qui a déclenché l'alerte — très utile pour investiguer dans Wazuh. Le fichier `eve.json` est le format de log structuré que Wazuh lira pour récupérer les alertes (`eve-log` doit être aussi bien activé).
+
+## 1.6. Télécharement des règles
+
+`sudo suricata-update` pour télécharger et intaller les règles dans `/var/lib/suricata/rules/suricata.rules`.
+
+![04-SuricataUpdate]()
+
+Puis, on peut vérifier le nombre de règles chargées avec `grep -c "^alert" /var/lib/suricata/rules/suricata.rules`
+
+→ à l'ocassion, on en a `48 730` 
+
+## 1.7. Démarrage de Suricata
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
