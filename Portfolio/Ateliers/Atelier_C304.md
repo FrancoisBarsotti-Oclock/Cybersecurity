@@ -86,5 +86,16 @@ Pui en vérifie avec `ip addr` ou `ip route` (sur Ubuntu)
 
 ![01-SuricataIP](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_01-SuricataIP.png)
 
+## 1.3. Vérification de connectivité
+
+Quelle que soit l'option choisie (CT ou VM), vérifiez la connectivité :
+
+```
+ping 10.0.0.1      # Gateway pfSense
+ping 8.8.8.8       # Internet (via pfSense)
+```
+![02-PingpfSense&Google]()
+
+
 
 
