@@ -55,6 +55,7 @@
 
 ---
 
+# Étape 1: Installation de Suricata (IDS/IPS)
 ## 1.1. Création de la machine Windows 11
 
 Elle n'était pas existante dans mon hyperviseur, alors j'ai dû tout installer (j'avais oublier comment c'est long pour avoir une Win11 Pro fonctionnelle)
@@ -69,22 +70,22 @@ Pour configurer une IP statique, une fois installée, j'ai fait plutôt la comma
 
 ```
     network:
-    version: 2
-    renderer: networkd
-    ethernets:
-        ens18:
-        dhcp4: no
-        addresses:
-            - 10.0.0.50/16
-        routes:
-            - to: default
-            via: 10.0.0.1
-        nameservers:
+        version: 2
+        renderer: networkd
+        ethernets:
+            ens18:
+            dhcp4: no
             addresses:
-            - 8.8.8.8
-            - 1.1.1.1
-            search:
-            - suricata.local
+                - 10.0.0.50/16
+            routes:
+                - to: default
+                via: 10.0.0.1
+            nameservers:
+                addresses:
+                - 8.8.8.8
+                - 1.1.1.1
+                search:
+                - suricata.local
 ```
 `sudo netplan apply` ou bien `sudo netplan try`, si l'on est en ssh.
 
@@ -176,5 +177,187 @@ Puis, on peut vérifier le nombre de règles chargées avec `grep -c "^alert" /v
 → à l'ocassion, on en a `48 730` 
 
 ## 1.7. Démarrage de Suricata
+
+```
+sudo systemctl enable suricata
+sudo systemctl start suricata
+sudo systemctl status suricata
+```
+et on voit qu'il est bien actif 
+
+![05-SuricataDémarré]()
+
+Avec `tail -f /var/log/suricata/suricata.log` on vérifie les logs de démarrage (**Attention**: au premier démarrage, Suricata peut mettre 30 secondes à 2 minutes pour charger toutes les règles):
+
+![06-SuricataLogsDémarrés]()
+
+# Étape 2 : Gestion d'un événement de test
+
+## 2.1. Déclenchage d'une règle connue
+
+Pour retourne volontairement la chaîne `uid=0(root)` dans sa réponse HTTP et déclencher, en conséquence, la règle `ET ATTACK_RESPONSE` (SID 2100498), on exécute l'url suivant dans Suricata:
+
+```
+sudo apt install curl -y
+curl http://testmynids.org/uid/index.html
+```
+![07-SuricataRègleConnue]()
+
+L'alerte pour information ressemble a ça dans les régles Suricata :
+
+```
+alert ip any any -> any any (msg:"GPL ATTACK_RESPONSE id check returned root"; content:"uid=0|28|root|29|"; classtype:bad-unknown; sid:2100498; rev:7;)
+```
+## 2.2. Vérification de l'alerte dans les logs
+
+On installe `jq` pour lire le JSON facilement :
+
+```
+sudo apt install -y jq
+```
+Puis  on vérifie les alertes :
+
+```
+cat /var/log/suricata/eve.json | jq 'select(.event_type=="alert")'
+```
+![08-SuricataAlerteDansLogs]()
+
+On peut aussi consulter le log simplifié :
+
+```
+cat /var/log/suricata/fast.log
+```
+
+![09-SuricataAlerteLogsSimplifiés]()
+
+Le fait de voir cette alerte nous dit que Suricata fonctionne correctement ! 🎉
+
+Il a détecté le contenu uid=0(root) dans la réponse HTTP et a déclenché la règle correspondante.
+
+## 2.3. Autres tests possibles
+
+| Test 1 | Commande | Règle déclenchée |
+| ---- | ----- | ----- |
+| Simulation d’attaque | `curl testmynids.org` | ET MALWARE TestMyIDS |
+
+Ce premier test était bien intéressant pour vérifier que les règles ET sont chargées et que l'on est bien en mode IDS (et pas uniquement capture passive mal configurée): `testmynids.org` renvoyait volontairement une signature d’attaque connue (une chaîne EICAR modifiée). Cependant, le site ne renvoie plus la signature test comme elle l'indique ("just a placeholder...we do not host any illegal or malicious content"). Donc c'est normal que Suricata ne déclenche rien.
+
+
+![10-SuricataTest1]()
+
+
+| Test 2 | Commande | Règle déclenchée |
+| ---- | ----- | ----- |
+| Scan de ports | `nmap -sS 10.0.0.50` (depuis une autre VM) | ET SCAN / GPL SCAN |
+
+Rappel: `sudo snap intall nmap # version 7.95`pour télécherger sur l'autre VM
+
+![11-SuricataTest2]()
+
+
+| Test 3 | Commande | Règle déclenchée |
+| ---- | ----- | ----- |
+| Requête DNS suspecte | `dig @8.8.8.8 testmynids.org` | Possible ET DNS |
+
+![12-SuricataTest3]()
+
+
+
+| Test 4 | Commande | Règle déclenchée |
+| ---- | ----- | ----- |
+| Ping ICMP | `ping -c 5 10.0.0.50` | ICMP rules (si activées) |
+
+![13-SuricataTest4]()
+
+| Test 5 | Commande | Règle déclenchée |
+| ---- | ----- | ----- |
+| Requête HTTP simple (GET) | `curl http://testphp.vulnweb.com` | ET INFO Outbound HTTP Request |
+
+![14-SuricataTest5]()
+
+# Étape 3 : Installation de Wazuh (SIEM)
+
+## 3.1. C'est quoi un SIEM?
+
+```
+       Sources                          SIEM Wazuh
+    ┌──────────┐                   ┌──────────────────┐
+    │ Suricata │──── eve.json ────>│  Wazuh Manager   │
+    │  (IDS)   │   via agent       │        │         │
+    └──────────┘                   │        ▼         │
+                                   │  Wazuh Indexer   │
+    ┌──────────┐                   │        │         │
+    │  Win11   │──── syslog ──────>│        ▼         │
+    │ (cible)  │   via agent       │ Wazuh Dashboard  │
+    └──────────┘                   └──────────────────┘
+```
+
+## 3.2. Création de la VM Wazuh
+
+Installation sur VM Ubuntu 24.04: les CT ne sont plus une option car Wazuh nécessite d'un accès système complet et de paramètres kernel spécifiques (`vm.max_map_count`) pour des composants propres, comme l'indexer basé sur OpenSearch.
+
+## 3.3. Configuration du réseau
+
+Une fois Ubuntu installé, même procédure pour établir l'ip statique sur yaml:
+
+```
+    network:
+        version: 2
+        renderer: networkd
+        ethernets:
+            ens18:
+            dhcp4: no
+            addresses:
+                - 10.0.0.40/16
+            routes:
+                - to: default
+                via: 10.0.0.1
+            nameservers:
+                addresses:
+                - 8.8.8.8
+                - 1.1.1.1
+                search:
+                - wazuh.local
+```
+`sudo netplan apply` ou bien `sudo netplan try`, si l'on est en ssh.
+
+Pui en vérifie avec `ip addr` ou `ip route` (sur Ubuntu)
+
+Vérification:
+
+```
+ping 10.0.0.1       # Gateway
+ping 10.0.0.50      # Suricata
+ping 8.8.8.8        # Internet
+ping 10.0.0.10      # Windows 11 (sans parefeu ICMP)
+```
+![15-WazuhPingsAll]()
+
+## 3.4. Installation de Wazuh (tout-en-un)
+
+L'installation tout-en-un déploie les trois composants sur la même VM :
+
+```
+su -
+curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh
+sudo bash ./wazuh-install.sh -a
+```
+
+⚠️ **Attention** : L'installation prend entre 5 et 15 minutes selon les performances du serveur. Il ne faut surtout pas l'enterrompre.
+
+S'il finit de s'installer, sans montrer el mot de passe généré, il faudra le récupérer:
+
+```
+tar -xvf /home/wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
+cat wazuh-install-files/wazuh-passwords.txt
+```
+Si rien ne s'affiche, il faudra désinstaller Wazuh:
+
+```
+sudo systemctl stop wazuh-manager
+sudo systemctl stop wazuh-dashboard
+sudo systemctl stop wazuh-indexer
+```
+
 
 
