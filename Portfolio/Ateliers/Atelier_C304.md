@@ -100,11 +100,11 @@ Quelle que soit l'option choisie (CT ou VM), vérifiez la connectivité :
 ping 10.0.0.1      # Gateway pfSense
 ping 8.8.8.8       # Internet (via pfSense)
 ```
-Pour lancer un ping vers Windows 11 (`ping 10.0.0.10`), on active les requêtes ICMP du parefeau Windows: 
+Pour lancer un ping vers Windows 11 aussi (`ping 10.0.0.10`), on active les requêtes ICMP du parefeau Windows: 
 
 `wf.msc` → Inbound rules → File and Printer Sharing (Echo Request - ICMPv4-In)
 
-![02-PingpfSense&Google&Win11]()
+![02-PingpfSense&Google&Win11](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_02-PingpfSense%26Google%26Win11.png)
 
 Bien sûr, une fois le ping testé, on éteint la permission de requête ICMP pour les désactiver à nouveau du parefeu
 
@@ -117,7 +117,7 @@ et on vérifie l'installation
 ```
 suricata --build-info | head -5
 ```
-![03-SuricataVersion]()
+![03-SuricataVersion](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_03-SuricataVersion.png)
 
 ## 1.5. Configuration de Suricata
 
@@ -169,26 +169,12 @@ Attention ! On doit respecter l'indentation ! YAML est très sensible à l'inden
 
 `sudo suricata-update` pour télécharger et intaller les règles dans `/var/lib/suricata/rules/suricata.rules`.
 
-![04-SuricataUpdate]()
+![04-SuricataUpdate](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_04-SuricataUpdate.png)
 
 Puis, on peut vérifier le nombre de règles chargées avec `grep -c "^alert" /var/lib/suricata/rules/suricata.rules`
 
 → à l'ocassion, on en a `48 730` 
 
 ## 1.7. Démarrage de Suricata
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
