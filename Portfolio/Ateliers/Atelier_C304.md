@@ -84,5 +84,7 @@ Pour configurer une IP statique, une fois installée, j'ai fait plutôt la comma
 
 Pui en vérifie avec `ip addr` ou `ip route` (sur Ubuntu)
 
-![01-SuricataIP]()
+![01-SuricataIP](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_01-SuricataIP.png)
+
+
 
