@@ -110,7 +110,7 @@ Pour lancer un ping vers Windows 11 aussi (`ping 10.0.0.10`), on active les requ
 Bien sûr, une fois le ping testé, on éteint la permission de requête ICMP pour les désactiver à nouveau du parefeu
 
 ## 1.4. Installation de Suricata
-```
+```bash
 sudo apt update && apt upgrade -y
 sudo apt install -y suricata suricata-update
 ```
@@ -131,7 +131,7 @@ sudo nano /etc/suricata/suricata.yaml
 
 Section `vars → address-groups` :
 
-```
+```bash
 vars:
   address-groups:
     HOME_NET: "[10.0.0.0/16]"
@@ -141,20 +141,20 @@ vars:
 ### 1.5.2. Définition de l'interface d'écoute :
 
 Section `af-packet` :
-```
+```bash
 af-packet:
   - interface: ens18
     cluster-id: 99
     cluster-type: cluster_flow
     defrag: yes
 ```
-**Rappel**: `ens18` pour les VM Proxmox avec VirtIO, mais `eth0` pour les CT. 
+💡 **Rappel**: `ens18` pour les VM Proxmox avec VirtIO, mais `eth0` pour les CT. 
 
 ### 1.5.3. Activation de détails dans les logs EVE JSON :
 
 → Jamais oublier le `F6` pour chercher un mot clé dans nano ! Alors, Chercher la section `outputs → eve-log → types → alert` pour décommenter les lignes `payload`, `payload-printable` et `packet` et les laisser comme il suit:
 
-```
+```bash
 - alert:
     payload: yes
     payload-printable: yes
@@ -178,7 +178,7 @@ Puis, on peut vérifier le nombre de règles chargées avec `grep -c "^alert" /v
 
 ## 1.7. Démarrage de Suricata
 
-```
+```bash
 sudo systemctl enable suricata
 sudo systemctl start suricata
 sudo systemctl status suricata
@@ -205,7 +205,7 @@ curl http://testmynids.org/uid/index.html
 
 L'alerte pour information ressemble a ça dans les régles Suricata :
 
-```
+```bash
 alert ip any any -> any any (msg:"GPL ATTACK_RESPONSE id check returned root"; content:"uid=0|28|root|29|"; classtype:bad-unknown; sid:2100498; rev:7;)
 ```
 ## 2.2. Vérification de l'alerte dans les logs
@@ -217,7 +217,7 @@ sudo apt install -y jq
 ```
 Puis  on vérifie les alertes :
 
-```
+```bash
 cat /var/log/suricata/eve.json | jq 'select(.event_type=="alert")'
 ```
 ![08-SuricataAlerteDansLogs]()
@@ -294,34 +294,25 @@ Rappel: `sudo snap intall nmap # version 7.95`pour télécherger sur l'autre VM
 
 ## 3.2. Création de la VM Wazuh
 
-Installation sur VM Ubuntu 24.04: les CT ne sont plus une option car Wazuh nécessite d'un accès système complet et de paramètres kernel spécifiques (`vm.max_map_count`) pour des composants propres, comme l'indexer basé sur OpenSearch.
+J'avais installé sur VM Ubuntu 24.04 en considérant que les CT ne sont plus une option car Wazuh nécessite d'un accès système complet et de paramètres kernel spécifiques (`vm.max_map_count`) pour des composants propres, comme l'indexer basé sur OpenSearch.
+
+Mais je ne l'ai pas trouvé stable lors de l'installation de Wazuh. Alors j'ai tout refait sur une VM Debian 12.
 
 ## 3.3. Configuration du réseau
 
-Une fois Ubuntu installé, même procédure pour établir l'ip statique sur yaml:
+Une fois Debian installé, nouvelle procédure pour établir l'ip statique avec `nano /etc/network/interfaces` :
 
 ```
-    network:
-        version: 2
-        renderer: networkd
-        ethernets:
-            ens18:
-            dhcp4: no
-            addresses:
-                - 10.0.0.40/16
-            routes:
-                - to: default
-                via: 10.0.0.1
-            nameservers:
-                addresses:
-                - 8.8.8.8
-                - 1.1.1.1
-                search:
-                - wazuh.local
+        auto ens18
+        iface ens18 inet static
+            address 10.0.0.40
+            netmask 255.255.0.0
+            gateway 10.0.0.1
+            dns-nameservers 8.8.8.8
 ```
-`sudo netplan apply` ou bien `sudo netplan try`, si l'on est en ssh.
+`systemctl restart networking` 
 
-Pui en vérifie avec `ip addr` ou `ip route` (sur Ubuntu)
+Puis en vérifie avec `ip addr` ou `ip route` (sur Ubuntu)
 
 Vérification:
 
@@ -339,6 +330,8 @@ L'installation tout-en-un déploie les trois composants sur la même VM :
 
 ```
 su -
+apt update
+apt install curl -y
 curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh
 sudo bash ./wazuh-install.sh -a
 ```
@@ -351,13 +344,103 @@ S'il finit de s'installer, sans montrer el mot de passe généré, il faudra le 
 tar -xvf /home/wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
 cat wazuh-install-files/wazuh-passwords.txt
 ```
-Si rien ne s'affiche, il faudra désinstaller Wazuh:
+Si rien ne s'affiche, il faudra désinstaller et réinstaller Wazuh:
 
 ```
-sudo systemctl stop wazuh-manager
-sudo systemctl stop wazuh-dashboard
-sudo systemctl stop wazuh-indexer
+sudo bash ./wazuh-install.sh -a -o
+```
+## 3.5. Vérification des services
+
+```
+systemctl status wazuh-manager
+systemctl status wazuh-indexer
+systemctl status wazuh-dashboard
+```
+![16-WazuhRunning]()
+
+## 3.6. Accès à l'interface web
+
+On ouvre depuis la Win11 du LAN avec l'ip de Wazuh (`https://10.0.0.40`) en s'enregistre avec les donnéés générées aléatoirement par l'installation de Wazuh (en étape 3.4):
+
+![17-AccèsInterfaceWazuh]()
+
+# Étape 4 : Connexion des sources
+## 4.1. Installation de l'agent Wazuh sur Suricata
+
+L'agent Wazuh est un programme léger qui collecte les logs locaux et les envoie au Manager. Depuis la machine Suricata (10.0.0.50) :
+
+```bash
+sudo apt install gpg -y
+
+curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | sudo gpg --no-default-keyring --keyring /usr/share/keyrings/wazuh.gpg --import
+
+sudo chmod 644 /usr/share/keyrings/wazuh.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main" | sudo tee /etc/apt/sources.list.d/wazuh.list
+
+sudo apt update
+
+sudo WAZUH_MANAGER="10.0.0.40" apt install -y wazuh-agent
+```
+Activation, démarrage et vérification de l'agent
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable wazuh-agent
+sudo systemctl start wazuh-agent
+sudo systemctl status wazuh-agent
 ```
 
+![18-AgentWazuhActif]()
 
+## 4.2. Vérification de connexion de l'agent
 
+**Côté Wazuh Manager** (10.0.0.40) :
+
+```
+/var/ossec/bin/manage_agents -l
+```
+
+![19-AgentWazuhConnecté]()
+
+**Côté Dashboard** (10.0.0.10): on va dans `Agents Management` → on voit l'agent avec son nom, son IP (10.0.0.50) et le statut Active (point vert).
+
+![20-AgentWazuhDashboard]()
+
+## 4.3. Configuration de collecte des logs Suricata
+
+Par défaut, l'agent Wazuh collecte les logs système (auth.log, syslog…). Il faut lui dire de lire aussi le fichier eve.json de Suricata.
+
+Sur la machine Suricata, il faut éditer la configuration de l'agent :
+
+```
+nano /var/ossec/etc/ossec.conf
+```
+Ajouter le bloc suivant dans la section `<ossec_config>`, avant la balise fermante `</ossec_config>` :
+
+```bash
+<!-- Collecte des alertes Suricata -->
+<localfile>
+  <log_format>json</log_format>
+  <location>/var/log/suricata/eve.json</location>
+</localfile>
+```
+
+On redémarre l'agent pour prendre en compte la modification :
+
+```
+sudo systemctl restart wazuh-agent
+sudo systemctl status wazuh-agent --no-pager -l
+```
+## 4.4. Vérification de réception des événements
+
+Côté Dashboard qu'on a depuis Windows (https://10.0.0.40)
+* Explore → Discover
+* On peut y jouer avec la plage de temps souhaitée
+* On y peut bien voir les derniers événements faits avec l'agent Suricata
+
+![21-SuricataBoard]()
+
+## 4.5. Installation d'un agent sur Win11
+
+### **En construction... to be continued...**
