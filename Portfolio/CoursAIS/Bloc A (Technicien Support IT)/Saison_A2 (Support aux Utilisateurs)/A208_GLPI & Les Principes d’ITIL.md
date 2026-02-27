@@ -1,4 +1,4 @@
-# 📎Session A208. GLPI & Les Principes d’ITIL
+# 📦 Session A208. GLPI & Les Principes d’ITIL
 ## Introduction à GLPI
 **GLPI** (Gestion Libre de Parc Informatique) est une solution open-source de **gestion des services informatiques**. Il permet la gestion des actifs informatiques, des tickets d’incidents, des demandes de service et des processus d’assistance, le tout basé sur les bonnes pratiques de l’**ITIL**.
 
