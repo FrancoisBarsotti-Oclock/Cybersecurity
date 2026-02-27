@@ -185,11 +185,11 @@ sudo systemctl status suricata
 ```
 et on voit qu'il est bien actif 
 
-![05-SuricataDémarré]()
+![05-SuricataDémarré](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_05-SuricataD%C3%A9marr%C3%A9.png)
 
 Avec `tail -f /var/log/suricata/suricata.log` on vérifie les logs de démarrage (**Attention**: au premier démarrage, Suricata peut mettre 30 secondes à 2 minutes pour charger toutes les règles):
 
-![06-SuricataLogsDémarrés]()
+![06-SuricataLogsDémarrés](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_06-SuricataLogsD%C3%A9marr%C3%A9s.png)
 
 # Étape 2 : Gestion d'un événement de test
 
@@ -201,7 +201,7 @@ Pour retourne volontairement la chaîne `uid=0(root)` dans sa réponse HTTP et d
 sudo apt install curl -y
 curl http://testmynids.org/uid/index.html
 ```
-![07-SuricataRègleConnue]()
+![07-SuricataRègleConnue](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_07-SuricataR%C3%A8gleConnue.png)
 
 L'alerte pour information ressemble a ça dans les régles Suricata :
 
@@ -220,7 +220,7 @@ Puis  on vérifie les alertes :
 ```bash
 cat /var/log/suricata/eve.json | jq 'select(.event_type=="alert")'
 ```
-![08-SuricataAlerteDansLogs]()
+![08-SuricataAlerteDansLogs](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_08-SuricataAlerteDansLogs.png)
 
 On peut aussi consulter le log simplifié :
 
@@ -228,7 +228,7 @@ On peut aussi consulter le log simplifié :
 cat /var/log/suricata/fast.log
 ```
 
-![09-SuricataAlerteLogsSimplifiés]()
+![09-SuricataAlerteLogsSimplifiés](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_09-SuricataAlerteLogsSimplifi%C3%A9s.png)
 
 Le fait de voir cette alerte nous dit que Suricata fonctionne correctement ! 🎉
 
@@ -243,7 +243,7 @@ Il a détecté le contenu uid=0(root) dans la réponse HTTP et a déclenché la 
 Ce premier test était bien intéressant pour vérifier que les règles ET sont chargées et que l'on est bien en mode IDS (et pas uniquement capture passive mal configurée): `testmynids.org` renvoyait volontairement une signature d’attaque connue (une chaîne EICAR modifiée). Cependant, le site ne renvoie plus la signature test comme elle l'indique ("just a placeholder...we do not host any illegal or malicious content"). Donc c'est normal que Suricata ne déclenche rien.
 
 
-![10-SuricataTest1]()
+![10-SuricataTest1](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_10-SuricataTest1.png)
 
 
 | Test 2 | Commande | Règle déclenchée |
@@ -252,28 +252,27 @@ Ce premier test était bien intéressant pour vérifier que les règles ET sont 
 
 Rappel: `sudo snap intall nmap # version 7.95`pour télécherger sur l'autre VM
 
-![11-SuricataTest2]()
+![11-SuricataTest2](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_11-SuricataTest2.png)
 
 
 | Test 3 | Commande | Règle déclenchée |
 | ---- | ----- | ----- |
 | Requête DNS suspecte | `dig @8.8.8.8 testmynids.org` | Possible ET DNS |
 
-![12-SuricataTest3]()
-
+![12-SuricataTest3](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_12-SuricataTest3.png)
 
 
 | Test 4 | Commande | Règle déclenchée |
 | ---- | ----- | ----- |
 | Ping ICMP | `ping -c 5 10.0.0.50` | ICMP rules (si activées) |
 
-![13-SuricataTest4]()
+![13-SuricataTest4](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_13-SuricataTest4.png)
 
 | Test 5 | Commande | Règle déclenchée |
 | ---- | ----- | ----- |
 | Requête HTTP simple (GET) | `curl http://testphp.vulnweb.com` | ET INFO Outbound HTTP Request |
 
-![14-SuricataTest5]()
+![14-SuricataTest5](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_14-SuricataTest5.png)
 
 # Étape 3 : Installation de Wazuh (SIEM)
 
@@ -322,7 +321,7 @@ ping 10.0.0.50      # Suricata
 ping 8.8.8.8        # Internet
 ping 10.0.0.10      # Windows 11 (sans parefeu ICMP)
 ```
-![15-WazuhPingsAll]()
+![15-WazuhPingsAll](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_15-WazuhPingsAll.png)
 
 ## 3.4. Installation de Wazuh (tout-en-un)
 
@@ -356,13 +355,13 @@ systemctl status wazuh-manager
 systemctl status wazuh-indexer
 systemctl status wazuh-dashboard
 ```
-![16-WazuhRunning]()
+![16-WazuhRunning](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_16-WazuhRunning.png)
 
 ## 3.6. Accès à l'interface web
 
 On ouvre depuis la Win11 du LAN avec l'ip de Wazuh (`https://10.0.0.40`) en s'enregistre avec les donnéés générées aléatoirement par l'installation de Wazuh (en étape 3.4):
 
-![17-AccèsInterfaceWazuh]()
+![17-AccèsInterfaceWazuh](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_17-Acc%C3%A8sInterfaceWazuh.png)
 
 # Étape 4 : Connexion des sources
 ## 4.1. Installation de l'agent Wazuh sur Suricata
@@ -391,7 +390,7 @@ sudo systemctl start wazuh-agent
 sudo systemctl status wazuh-agent
 ```
 
-![18-AgentWazuhActif]()
+![18-AgentWazuhActif](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_18-AgentWazuhActif.png)
 
 ## 4.2. Vérification de connexion de l'agent
 
@@ -401,11 +400,11 @@ sudo systemctl status wazuh-agent
 /var/ossec/bin/manage_agents -l
 ```
 
-![19-AgentWazuhConnecté]()
+![19-AgentWazuhConnecté](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_19-AgentWazuhConnect%C3%A9.png)
 
 **Côté Dashboard** (10.0.0.10): on va dans `Agents Management` → on voit l'agent avec son nom, son IP (10.0.0.50) et le statut Active (point vert).
 
-![20-AgentWazuhDashboard]()
+![20-AgentWazuhDashboard](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_20-AgentWazuhDashboard.png)
 
 ## 4.3. Configuration de collecte des logs Suricata
 
@@ -439,7 +438,7 @@ Côté Dashboard qu'on a depuis Windows (https://10.0.0.40)
 * On peut y jouer avec la plage de temps souhaitée
 * On y peut bien voir les derniers événements faits avec l'agent Suricata
 
-![21-SuricataBoard]()
+![21-SuricataBoard](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Ateliers/images_ateliers/Atelier_C304/Atelier%20C304_21-SuricataBoard.png)
 
 ## 4.5. Installation d'un agent sur Win11
 
