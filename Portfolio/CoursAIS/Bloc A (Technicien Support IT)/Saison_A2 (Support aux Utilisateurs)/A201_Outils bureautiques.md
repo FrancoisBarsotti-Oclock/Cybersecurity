@@ -1,4 +1,4 @@
-# 🖥️ Session A201. Les Outils bureautiques.
+# 📂 Session A201. Les Outils bureautiques.
 Un outil bureautique est un logiciel conçu pour que les utilisateurs puissent réaliser les tâches courantes au bureau. Cela inclut la gestion de documents, de tableaux de données, de présentations, de courriers électroniques, etc.
 
 On doit les différencier des autres logiciels.
