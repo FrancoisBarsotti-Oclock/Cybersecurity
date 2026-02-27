@@ -9,6 +9,12 @@
 
 * [Window 11 Pro sur Proxmox VE](https://www.youtube.com/watch?v=OobKut5Yq6s)
 
+* [Wazuh installation guide](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/index.html)
+
+* [Wazuh official documentation for Linux](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-linux.html)
+
+* [Wazuh official documentation for Windows](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-linux.html)
+
 ---
 
 ## 🎯 Contexte et pitch de l'atelier
