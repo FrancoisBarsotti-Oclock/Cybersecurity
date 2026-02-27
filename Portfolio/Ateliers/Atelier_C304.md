@@ -67,10 +67,13 @@
 Elle n'était pas existante dans mon hyperviseur, alors j'ai dû tout installer (j'avais oublier comment c'est long pour avoir une Win11 Pro fonctionnelle)
 
 
-
 ## 1.2. Création de la machine Suricata
 
-J'ai choisi de la créer en tant que VM, car en CT elle ne m'acceptait pas le mdp pour y rentrer.
+J'ai choisi de la créer en tant que VM, car en CT elle ne m'acceptait pas le mdp pour y rentrer. 
+
+```
+→ Note pour les CT: La première fois de connexion, il faut se connecter en tant que `"root"`
+```
 
 Pour configurer une IP statique, une fois installée, j'ai fait plutôt la commande: `sudo nano /etc/netplan/00-installer-config.yaml` car sur Ubuntu Server on passe plutôt par Netplan pour cette configuration, et le renseignement sur nano change un peu également:
 
