@@ -1,14 +1,15 @@
 # 🪟 Session A402. Windows Server (notions)
 
 ## Notions à aborder
-•	Windows serveur : à quoi ça sert ? 
-•	Active Directory, utilisateurs et groupes
-•	GPO
-•	Partage de fichiers
-•	Déploiement d'OS, de logiciels avec WDS
-•	Centralisation des mises à jour
-•	Bureau à distance avec Hyper-V
-•	Serveur de messagerie électronique (Exchange)
+* Windows serveur : à quoi ça sert ?
+* Active Directory, utilisateurs et groupes
+* GPO
+* Partage de fichiers
+* Déploiement d'OS, de logiciels avec WDS
+* Centralisation des mises à jour
+* Bureau à distance avec Hyper-V
+
+### Serveur de messagerie électronique (Exchange)
 
 Windows server (WS) est un système d’exploitation (OS) proposé par Microsoft pour installer sur nos serveurs physiques, qui date des débuts des prémisses de Windows OS : Dès le départ ils ont commencé à travailler sur un OS pour les PC des utilisateurs et, ils se sont rendu compte qu’en entreprise, il faudrait des serveurs pour gérer différents services ; alors, Windows Server a été la solution proposée par Microsoft pour répondre à ce besoin-là.
 
