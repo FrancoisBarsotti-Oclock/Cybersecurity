@@ -1,4 +1,4 @@
-# 🌎🚩 Session A305. DNS, Telnet & SSH
+# 🌎🚩 Session A306. DNS, Telnet & SSH
 
 Notions
 - Commande tracroute / tracert
