@@ -1,4 +1,4 @@
-# ✳️🪟 Session A409. WDS.
+# ✳️🪟 Session A409. WDS (Windows Deployment Services).
 
 Ce cours aborde le déploiement automatisé de systèmes d'exploitation via le réseau en utilisant le rôle **WDS** (Windows Deployment Services). Il permet d'installer Windows sur de multiples machines simultanément, sans avoir besoin de support physique (clé USB/DVD) pour chaque poste. Ainsi que l'injection de pilotes et l'automatisation des installations via des fichiers de réponses.
 
