@@ -13,7 +13,7 @@ La voix est numérisée, compressée, et transmise sous forme de paquets de donn
 
 •	Utilisée pour des appels audio et vidéo (exemple : Skype, Zoom).
 
-![01-Fonctionnement de la VoIP]()
+![01-Fonctionnement de la VoIP](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A5%20(GNU%20Linux)/images%20A5.md/images%20A508/A508_01-Fonctionnement%20de%20la%20VoIP.png)
 
 L'évolution des communications
 Du premier télégraphe de Chappe en 1790 au RTC actuel, l'histoire des communications a connu de grands moments et de grandes avancées, dues à l'ingéniosité de certains et aux progrès technologiques et électroniques.
@@ -87,7 +87,7 @@ Ces marques dominent le marché des téléphones IP, offrant des solutions vari�
 
 ## Mini Switch
 
-![02-Mini Switch]()
+![02-Mini Switch](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A5%20(GNU%20Linux)/images%20A5.md/images%20A508/A508_02-Mini%20Switch.png)
 
 ### Fonctionnement
 •	Mini switch sous le téléphone IP :
@@ -105,7 +105,7 @@ Ces marques dominent le marché des téléphones IP, offrant des solutions vari�
 
 ## Power Over Ethernet (POE)
 
-![03-POE]()
+![03-POE](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A5%20(GNU%20Linux)/images%20A5.md/images%20A508/A508_03-POE.png)
 
 L'importance du POE
 •	Switch POE recommandé :
@@ -274,7 +274,7 @@ exten => 100,3,Hangup()
 •	CRM comme Salesforce pour un suivi client.
 •	Plateformes comme Zoom pour les conférences hybrides.
 
-![04-Ex Asterisk]()
+![04-Ex Asterisk](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A5%20(GNU%20Linux)/images%20A5.md/images%20A508/A508_04-Ex%20Asterisk.png)
 
 La doc d’Asterisk : https://www.asterisk.org/ 
 
@@ -286,7 +286,7 @@ make -j$(nproc) : lance make en parallèle. -j : nombre de tâches simultanées.
 ```
 sudo make install-logrotate
 ```
-![05-Asterisk installation]()
+![05-Asterisk installation](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A5%20(GNU%20Linux)/images%20A5.md/images%20A508/A508_05-Asterisk%20installation.png)
 
 123 = le numéro de tél
 1, 2, 3 et 4 les étapes
