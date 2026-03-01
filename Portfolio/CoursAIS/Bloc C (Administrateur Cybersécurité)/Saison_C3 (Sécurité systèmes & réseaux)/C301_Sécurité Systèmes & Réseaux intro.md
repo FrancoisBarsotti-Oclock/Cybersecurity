@@ -501,9 +501,9 @@ VLAN Hopping : Switch Spoofing
 
 ```
 interface FastEthernet0/1
-switchport mode access
-switchport nonegotiate
-switchport access vlan 10
+  switchport mode access
+  switchport nonegotiate
+  switchport access vlan 10
 ```
 ### VLAN Hopping : Double Tagging
 . Exploite 802.1Q avec deux tags VLAN dans une seule trame
@@ -520,7 +520,7 @@ switchport access vlan 10
 
 ```
 interface GigabitEthernet0/1
-switchport trunk native vlan 99
+  switchport trunk native vlan 99
 ```
 ### Bonnes pratiques pour se protéger
 
