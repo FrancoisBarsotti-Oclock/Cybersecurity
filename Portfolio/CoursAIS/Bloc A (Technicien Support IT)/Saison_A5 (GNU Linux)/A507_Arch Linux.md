@@ -42,6 +42,6 @@ L’arch qu’on voit dans la console, s’appelle fast-fetch (c’est l’ASCII
 sudo pacman -S fastfetch (juste la première fois, pour installer)
 fastfetch (à chaque fois qu’on veuille l’avoir affichée)
 
-![Mon installation Arch Linux]()
+![Mon installation Arch Linux](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A5%20(GNU%20Linux)/images%20A5.md/images%20A507/A507_Mon%20Arch%20Linux.png)
 
 il faut modifier le fichier .config/hypr/hyperland.conf pour le mettre en FR 
