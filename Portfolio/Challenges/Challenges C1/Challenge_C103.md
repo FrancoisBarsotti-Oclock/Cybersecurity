@@ -15,6 +15,8 @@
 >       * Criticité = probabilité × impact
 > 3. Classez les risques par criticité
 > **Livrable attendu** : registre des risques avec évaluation.
+>
+---
 
 Voir 👉 [Cours C103]()
 
