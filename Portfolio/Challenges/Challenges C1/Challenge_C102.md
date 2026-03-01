@@ -17,7 +17,7 @@ Voir 👉 [Cours C102](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/
 * [Drawio](https://www.drawio.com/) pour faire diagramme.
 # Working Breakdown Structure (WBS): Modernisation de l'infrastructure IT du Campus O'clock  
 
-![01-WBS]()
+![01-WBS](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C1/images_C1/images%20C102/Challenge%20C102_01-WBS.png)
 
 ### Structure du WBS:
 **1. Pilotage du projet**
