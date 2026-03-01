@@ -18,7 +18,6 @@
 
 Voir 👉 [Cours C103]()
 
-#
 # :orange_book: Registre des risques - Modernisation infrastructure IT
 |**ID** | **Risque** | **Type** | **Probabilité** | **Impact** | **Criticité** |
 | -------- | :-------: | :-------: | :-------: | :-------: | :-------: |
