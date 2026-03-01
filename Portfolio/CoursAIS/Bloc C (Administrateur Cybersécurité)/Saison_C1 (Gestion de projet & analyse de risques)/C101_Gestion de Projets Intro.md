@@ -1,13 +1,13 @@
 # 📗 Session C101. Introduction à la Gestion de Projets.
 
 Notions du jour
-•	projet et gestion de projet
-•	cycle V et cycles semi-itératifs
-•	Agile et Scrum
-•	structuration, planification, suivi de projet
-•	gestion des risques d'un projet
-•	menaces et vulnérabilités IT / SI
-•	PCA / PRA
+*	projet et gestion de projet
+*	cycle V et cycles semi-itératifs
+*	Agile et Scrum
+*	structuration, planification, suivi de projet
+*	gestion des risques d'un projet
+*	menaces et vulnérabilités IT / SI
+*	PCA / PRA
 
 Quelques mots sur la saison
 Les notions de projet, gestion de projet et sécurité sont fondamentales dans nos façons de travailler.
@@ -53,13 +53,14 @@ Un projet est « une organisation temporaire, créée en vue de livrer un ou plu
 Définition simple : Un projet est un ensemble d'activités coordonnées visant à atteindre un objectif unique, dans un temps défini, avec des ressources limitées.
 
 Éléments caractéristiques
-•	un objectif / un but @
-•	une date de début 17
-•	une date de fin
-•	une organisation
-•	des livrables
-•	un budget
-•	un résultat unique
+*	un objectif / un but @
+*	une date de début 17
+*	une date de fin
+*	une organisation
+*	des livrables
+*	un budget
+*	un résultat unique
+
 Pourquoi fait-on des projets ?
 •	répondre à un besoin
 •	améliorer le service
@@ -129,7 +130,7 @@ Enjeux : intégration, performance, support
 
 Le prompt pour l’Ia : S’il te plait, vas lire la documentation (et aussi reformule) : https://www.acronymat.com/2024/12/29/cidi-frameworks/ 
 
-![01-01-CIDI AI prompting]()
+![01-01-CIDI AI prompting](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C101/C101_01-CIDI%20AI%20prompting.png)
 
 Voir aussi [Risen](https://neworbit.co.uk/blog/post/AI/write-better-ai-prompts-with-risen-framework/) 
 
@@ -197,7 +198,7 @@ Pourquoi gérer un projet ?
 
 Exemple de RACI (tâches)
 
-![02-RACI tâches]()
+![02-RACI tâches](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C101/C101_02-RACI%20t%C3%A2ches.png)
 
 ### Les objectifs finaux :
 
@@ -207,7 +208,7 @@ Exemple de RACI (tâches)
 
 ### Gérer les contraintes qualité / coûts / délais
 
-![03-QCD]()
+![03-QCD](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C101/C101_03-QCD.png)
 
 Conserver l'équilibre entre :
 •	la qualité du projet
@@ -332,7 +333,7 @@ Les étapes de la gestion de projet
 ## Cycle en V
 Chaque phase de conception correspond à une phase de test.
 
-![04-Cycle en V]()
+![04-Cycle en V](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C101/C101_04-Cycle%20en%20V.png)
 
 ### Avantages
 •	très structuré
@@ -346,7 +347,7 @@ Chaque phase de conception correspond à une phase de test.
 ### Cycles semi-itératifs / Agile
 Après la phase d'analyse, on produit par incrémentations courtes.
 
-![05-Cycles semi-itératifs]()
+![05-Cycles semi-itératifs](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C101/C101_05-Cycles%20semi-it%C3%A9ratifs.png)
 
 Avantages
 •	adapté aux environnements changeants
@@ -362,7 +363,7 @@ Fusion des activités Dev et Ops pour livrer plus vite et mieux.
 
 Note : Ce n'est pas vraiment de la gestion de projet, mais les principes sont très utilisés en Agile
 
-![06-DevOps]()
+![06-DevOps](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C101/C101_06-DevOps.png)
 
 ### Piliers
 •	automatisation
@@ -393,7 +394,7 @@ Gérer un projet, ce n'est pas seulement faire un planning. C'est anticiper, com
 C'est quoi, le cycle en V ?
 C'est un modèle d'organisation de projet qui améliore le cycle en cascade (waterfall).
 
-![07-Cycle en V dévéloppé]()
+![07-Cycle en V dévéloppé](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C101/C101_07-Cycle%20en%20V%20d%C3%A9v%C3%A9lopp%C3%A9.png)
 
 On retrouve les étapes classiques d'un projet, ces étapes peuvent avoir plusieurs sous-étapes :
 
@@ -592,7 +593,7 @@ l'analyse des risques
 •	évaluation des critères de limitation des risques
 •	matrice des risques
 
-![08-Matrice de criticité]()
+![08-Matrice de criticité](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C101/C101_08-Matrice%20de%20criticit%C3%A9.png)
 
 ### Définition du projet : planification
 
