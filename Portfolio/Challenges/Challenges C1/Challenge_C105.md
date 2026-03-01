@@ -6,7 +6,7 @@ Cette session a consisté à l'application d'un QCM sur la saison C1 (Gestion de
 
 Le résultat sur mon dixième QCM a été satisfaisant:
 
-![QCMA10]()
+![QCMA10](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C1/images_C1/images%20C105/Challenge%20C105_01-QCM10.png)
 
 ### 👉 [QCM Saison C1](https://docs.google.com/forms/d/e/1FAIpQLSesaMYieXG9TOeXE4oZzCbrKkrlcFkQnIRVqGXfOyCC_34PZw/viewscore?viewscore=AE0zAgCpeh4dbsPPoM8Q1oygmGhIVjlBMHteDYZdC25fD0-dUn74oiD4rOcW1PWkRA) 👈
 
