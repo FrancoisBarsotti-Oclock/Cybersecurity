@@ -634,7 +634,9 @@ Les outils de structuration et de suivi dépendent fortement du projet.
 L'usage d'outils structurants, de suivi rigoureux et d'une bonne communication constitue le socle d'une gestion de projet efficace.
 
 
-Pour le 👉 [challenge C102](https://gist.github.com/stephdl/8b39256712f17ec1c183ea9aee2c3266) 👈
+Pour les 👉 [Instructions du challenge C102](https://gist.github.com/stephdl/8b39256712f17ec1c183ea9aee2c3266) 👈
+
+👉 [Challenge fait]() 👈
 
 
 
