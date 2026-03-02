@@ -987,3 +987,4 @@ sudo sshd -t
 sudo systemctl restart ssh
 ```
 
+Challenge du jour 👉 [Challenge C306]() : Sécurisation d’un serveur Debian exposé sur Internet
