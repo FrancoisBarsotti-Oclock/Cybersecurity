@@ -56,7 +56,7 @@ ss -tlnp | grep ssh
 systemctl enable ssh
 ```
 
-![01-OpenSSHstatus]()
+![01-OpenSSHstatus](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C306/Challenge%20C306_01-OpenSSHstatus.png)
 
 ---
 
@@ -108,7 +108,7 @@ iptables -L -n -v
 netfilter-persistent save
 ```
 
-![02-VérificationRègles]()
+![02-VérificationRègles](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C306/Challenge%20C306_02-V%C3%A9rificationR%C3%A8gles.png)
 
 ---
 
@@ -132,7 +132,7 @@ ssh-keygen -t ed25519 -C "ubuntu@10.0.0.51"
 # Garder sur /home/franbar/.ssh/id_ed25519 et créer le passphrase
 ```
 
-![03-Création de clé]()
+![03-Création de clé](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C306/Challenge%20C306_03-03-Cr%C3%A9ation%20de%20cl%C3%A9.png)
 
 
 ### Copie de clé publique sur le serveur (vers Debian `10.0.0.61`)
@@ -140,11 +140,11 @@ ssh-keygen -t ed25519 -C "ubuntu@10.0.0.51"
 ssh-copy-id -i ~/.ssh/id_ed25519.pub franbar@10.0.0.61
 ```
 
-![04-Copie de clé]()
+![04-Copie de clé](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C306/Challenge%20C306_04-Copie%20de%20cl%C3%A9.png)
 
 ### Une vérification de connexion s'impose
 
-![05-TestConnexionSSH]()
+![05-TestConnexionSSH](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C306/Challenge%20C306_05-TestConnexionSSH.png)
 
 → Le fait qu'il ne demande que "Enter passphrase for key" veut dire que:
 
@@ -197,7 +197,7 @@ sudo systemctl reload ssh
 ssh franbar@10.0.0.61
 ```
 
-![06-TestRe-ConnexionSSH]()
+![06-TestRe-ConnexionSSH](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C306/Challenge%20C306_06-TestRe-ConnexionSSH.png)
 
 ---
 
@@ -238,7 +238,7 @@ sudo grep -nE '^(Port|ListenAddress|AllowUsers|Match)' /etc/ssh/sshd_config
 sudo systemctl restart ssh
 sudo systemctl status ssh --no-pager
 ```
-![07-Port2222]()
+![07-Port2222](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C306/Challenge%20C306_07-Port2222.png)
 
 ### Mise en place d’un utilisateur admin avec sudo
 
@@ -250,3 +250,7 @@ apt update
 apt install sudo
 usermod -aG sudo franbar
 ```
+
+Voici la preuve 
+
+![08-SudoUser]()
