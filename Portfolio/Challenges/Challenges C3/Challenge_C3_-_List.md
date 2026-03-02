@@ -7,6 +7,7 @@
 
 👉 [Challenge C303](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C303.md): VPN & Authentification Radius
 
-👉 [Challenge C304](): Atelier IDS & SIEM.
+👉 [Challenge C304](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C304.md): Atelier IDS/IPS & SIEM.
 
-👉 [Challenge C306](): Sécurisation d’un serveur Debian exposé sur Internet.
+👉 [Challenge C306](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C306.md): Sécurisation d’un serveur Debian exposé sur Internet.
+
