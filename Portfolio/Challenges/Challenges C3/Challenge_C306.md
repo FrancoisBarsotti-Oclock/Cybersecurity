@@ -152,7 +152,7 @@ ssh-copy-id -i ~/.ssh/id_ed25519.pub franbar@10.0.0.61
 * ✅ la clé publique est acceptée côté Debian
 * ✅ l’authentification par mot de passe n’est plus utilisée
 
-On est donc bien en authentification par clé. Par sécurité, on laisse la passphrase en place.
+On est donc bien en authentification par clé. Par sécurité, on laisse la passphrase en place, en tant que 2FA.
 
 ## Côté Serveur OpenSSH
 
