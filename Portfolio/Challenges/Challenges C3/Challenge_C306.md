@@ -214,11 +214,7 @@ Port 2222
 
 # Tester la config AVANT restart
 sudo sshd -t  # attendu: aucune sortie
-```
 
-### Mise en place d'une politique iptables plus complète (ESTABLISHED, RELATED)
-
-```bash
 # Suppression de l'ancienne règle
 sudo iptables -D INPUT -p tcp -s 10.0.0.51 --dport 22 -j ACCEPT
 
@@ -239,6 +235,10 @@ sudo systemctl restart ssh
 sudo systemctl status ssh --no-pager
 ```
 ![07-Port2222](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/images%20C3/C306/Challenge%20C306_07-Port2222.png)
+
+### Mise en place d'une politique iptables plus complète (ESTABLISHED, RELATED)
+
+⚒️ En construction... 
 
 ### Mise en place d’un utilisateur admin avec sudo
 
