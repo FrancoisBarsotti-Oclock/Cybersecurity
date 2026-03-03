@@ -48,3 +48,41 @@ Un module PAM fait une seule chose :
 On chaîne ces modules pour construire une politique de sécurité
 
 ### Les modules les plus fréquents
+
+| **Module** | **Rôle** |
+| --- | --- |
+| pam_unix | Auth locale classique (passwd/shadow) |
+| pam_ldap / pam_sss | Auth via annuaire (LDAP, AD) |
+| pam_faillock | Verrouillage après échecs |
+| pam_pwquality | Règles de complexité de mot de passe |
+| pam_limits | Quotas / limites de ressources |
+| pam_wheel | Restreindre su à un groupe |
+| pam time | Restreindre l'accès à certaines heures |
+
+### Où se trouve la config
+PAM est configuré dans /etc/pam. d/. Chaque service a son propre fichier :
+
+```bash
+/etc/pam.d/
+|--- sshd     ← config PAM pour SSH
+|--- login    ← config PAM pour le login console
+|--- sudo     ← config PAM pour sudo
+|--- su       ← config PAM pour su
+|___ common -*   ← règles partagées (Debian/Ubuntu)
+```
+
+Le contenu du fichier décide qui passe et dans quelles conditions
+
+### Le format
+Chaque ligne suit ce format :
+```bash
+Type  control  module  [arguments]
+```
+Exemple :
+```bash
+Auth   required   pam_unix. so
+```
+
+→ Pour l'authentification, le module pam_unix est obligatoire
+
+
