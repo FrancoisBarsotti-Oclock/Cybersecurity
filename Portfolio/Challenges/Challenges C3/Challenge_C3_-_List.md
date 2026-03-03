@@ -11,4 +11,4 @@
 
 👉 [Challenge C306](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C306.md): Sécurisation d’un serveur Debian exposé sur Internet.
 
-👉 [Challenge C307](): Sécurisation d’un serveur Linux contre les attaques par force brute.
+👉 [Challenge C307](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C307.md): Sécurisation d’un serveur Linux contre les attaques par force brute.
