@@ -296,7 +296,7 @@ _Le garde-barrière automatique_
 ### C'est quoi fail2ban ?
 fail2ban surveille les logs. Quand un comportement suspect dépasse un seuil, il ajoute automatiquement une **règle firewall** pour bannir l'**IP**.
 
-![01-fail2ban]()
+![01-fail2ban](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C3%20(S%C3%A9curit%C3%A9%20syst%C3%A8mes%20%26%20r%C3%A9seaux)/images%20C3/images%20C307/C307_01-fail2ban.png)
 
 _Simple, efficace, et ça stoppe la majorité des attaques automatisées_
 
