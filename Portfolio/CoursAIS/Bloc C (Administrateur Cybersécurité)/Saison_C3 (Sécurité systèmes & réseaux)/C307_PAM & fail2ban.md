@@ -71,7 +71,7 @@ On **chaîne** ces modules pour construire une politique de sécurité
 ### Où se trouve la config
 PAM est configuré dans /etc/pam. d/. Chaque service a son propre fichier :
 
-```bash
+```swift
 /etc/pam.d/
 ├── sshd ← config PAM pour SSH
 ├── login ← config PAM pour le login console
@@ -86,12 +86,12 @@ Le contenu du fichier décide **qui passe et dans quelles conditions**
 
 ### Le format
 Chaque ligne suit ce format :
-```bash
+```ps
 Type  control  module  [arguments]
 ```
 Exemple :
-```bash
-Auth   required   pam_unix. so
+```swift
+Auth  required   pam_unix.so
 ```
 
 → Pour l'authentification, le module pam_unix est **obligatoire**
@@ -112,7 +112,7 @@ Les plus courants :
 ### Fichier PAM — SSH 🔐
 Extrait simplifié de /etc/pam.d/sshd :
 
-```bash
+```go
 auth required pam_faillock.so preauth silent deny=5 unlock_time=300
 auth required pam_unix.so
 auth [default=die] pam_faillock.so authfail deny=5 unlock_time=300
@@ -123,7 +123,7 @@ session required pam_limits.so
 
 ### Fichier PAM — sudo 🧑‍💻
 Extrait simplifié de /etc/pam.d/sudo :
-```bash
+```apache
 auth required pam_unix.so
 account required pam_unix.so
 session required pam_limits.so
@@ -133,7 +133,7 @@ Plus simple que SSH : sudo s'appuie sur l'auth locale
 
 ### Fichier PAM — su (restreint au groupe wheel) 🔒
 
-```bash
+```apache
 auth required pam_wheel.so
 auth required pam_unix.so
 account required pam_unix.so
@@ -147,7 +147,7 @@ Un classique du hardening Linux !
 ## Forcer la complexité avec pam_pwquality
 
 Dans /etc/pam.d/common-password (Debian/Ubuntu) ou /etc/pam.d/system-auth (RHEL) :
-```bash
+```swift
 password required pam_pwquality.so minlen=12 ucredit=-1 lcredit=-1 dcredit=-
 password required pam_unix.so use_authtok sha512
 ```
@@ -161,7 +161,7 @@ Traduction :
 
 ### Verrouillage avec pam_faillock
 
-```bash
+```swift
 auth required pam_faillock.so preauth silent deny=5 unlock_time=300
 auth required pam_unix.so
 auth [default=die] pam_faillock.so authfail deny=5 unlock_time=300
@@ -170,12 +170,12 @@ auth [default=die] pam_faillock.so authfail deny=5 unlock_time=300
 * **unlock_time=300** : déverrouillage automatique après 5 minutes
 
 Vérifier l'état d'un compte :
-```
+```ps
 faillock --user admin
 ```
 Déverrouiller manuellement :
 
-```
+```ps
 faillock --user admin --reset
 ```
 
@@ -226,10 +226,10 @@ _Avant de défendre, il faut comprendre_
 
 ### last : qui s'est connecté ?
 La commande last lit /var/log/wtmp - la mémoire des connexions réussies
+```yaml
+last
 ```
-Last
-```
-```bash
+```apache
 admin pts/0 192.168.1.42 Fri Feb 27 09:12 still logged in
 root pts/1 10.0.0.5 Thu Feb 26 22:03 - 22:45 (00:42)
 reboot system boot 6.1.0-18 Thu Feb 26 21:58
@@ -238,7 +238,7 @@ reboot system boot 6.1.0-18 Thu Feb 26 21:58
 On y voit : **qui, d'où, quand, et combien de temps**
 
 ### Options utiles de last
-```bash
+```ps
 # Les 10 dernières connexions
 last -n 10
 
@@ -256,10 +256,10 @@ _Réflexe d'audit : "qui est passé sur ce serveur récemment ?"_
 
 ### lastb : qui a échoué ? !
 La commande lastb lit /var/log/btmp - la mémoire des connexions échouées
-```
+```yaml
 sudo lastb
 ```
-```bash
+```apache
 root ssh:notty 185.234.72.19 Fri Feb 27 03:12 - 03:12 (00:00)
 root ssh:notty 185.234.72.19 Fri Feb 27 03:12 - 03:12 (00:00)
 admin ssh:notty 45.133.1.88 Fri Feb 27 03:11 - 03:11 (00:00)
@@ -302,21 +302,21 @@ _Simple, efficace, et ça stoppe la majorité des attaques automatisées_
 
 ### Comment ça fonctionne
 
-```ruby
+```py
 Logs (auth.log, sshd...)
 
 │
 ┌───▼───────────┐
-│ fail2ban │
+│ fail2ban      │
 │ (surveillance)│
-│ │
+│               │
 │ filter → jail │
 └───┬───────────┘
 │ seuil dépassé ?
 ┌───▼───────────┐
-│ Action : │
-│ iptables/ │
-│ nftables ban │
+│ Action :      │
+│ iptables/     │
+│ nftables ban  │
 └───────────────┘
 ```
 ### Les concepts clés
@@ -327,7 +327,7 @@ Logs (auth.log, sshd...)
 _Un jail = "si ce pattern apparaît X fois en Y secondes, on bannit pendant Z secondes"_
 
 ### Installation
-```bash
+```yaml
 # Debian / Ubuntu
 sudo apt install fail2ban
 
@@ -340,7 +340,7 @@ sudo systemctl start fail2ban
 ```
 ### Les fichiers de configuration 📁
 
-```bash
+```apache
 /etc/fail2ban/
 ├── fail2ban.conf ← config globale (ne pas modifier)
 ├── jail.conf ← jails par défaut (ne pas modifier)
@@ -375,7 +375,7 @@ ignoreip = 127.0.0.1/8 :: 1 192.168.1.0/24
 
 ### Activer le jail SSH
 
-```ruby
+```ini
 [sshd]
 enabled = true
 port = ssh
@@ -402,7 +402,7 @@ Le filtre SSH (/etc/fail2ban/filter.d/sshd.conf) contient des regex comme :
 ### Ban progressif (récidivistes) 🔨
 Pour les IPs qui reviennent après un ban :
 
-```ruby
+```ini
 [recidive]
 enabled = true
 logpath = /var/log/fail2ban.log
@@ -414,7 +414,7 @@ maxretry = 3
 _3 bans en 24h → banni pour 1 semaine !_
 
 ### Commandes de gestion
-```bash
+```ps
 # Statut général
 sudo fail2ban-client status
 
@@ -435,23 +435,23 @@ sudo fail2ban-client get sshd banned
 Tester, c'est **prouver** que la protection fonctionne
 
 #### 1. Vérifier que le jail est actif :
-```
+```yaml
 sudo fail2ban-client status sshd
 ```
 
 #### 2. Depuis une autre machine, provoquer des échecs :
-```
+```ruby
 # Taper volontairement un mauvais mot de passe X fois
 ssh fakeuser@serveur
 ```
 
 #### 3. Vérifier le ban :
-```
+```ps
 sudo fail2ban-client status sshd
 # - Banned IP list: 10.0.0.99
 ```
 #### 4. Confirmer la règle firewall :
-```bash
+```ps
 sudo iptables -L -n | grep "10.0.0.99"
 ```
 
@@ -469,7 +469,7 @@ _Rendre un service invisible_
 ### Le principe
 Le port-knocking consiste à **ouvrir un port uniquement après une séquence précise** de connexions sur d'autres ports
 
-```ruby
+```rust
 Attaquant           Admin
     │                 │
 scan port 22       knock 7000
@@ -489,7 +489,7 @@ Vous devez frapper a la porte avec le bon rythme : toc ... toc-toc ... toc
 _Si vous ne connaissez pas la séquence, vous ne savez même pas qu'il y a un bar derrière la porte_
 
 ### Installation de knockd
-```
+```apache
 # Debian / Ubuntu
 sudo apt install knockd
 
@@ -499,7 +499,7 @@ sudo dnf install knock-server
 
 ### Configuration : /etc/knockd.conf
 
-```ruby
+```ini
 [options]
 UseSyslog
 [openSSH]
@@ -543,7 +543,7 @@ sudo systemctl start knockd
 
 ### Préparer le firewall
 Avant d'activer knockd, il faut que SSH soit **ferme par défaut** dans iptables :
-```bash
+```ps
 # S'assurer que SSH est bloqué par défaut
 sudo iptables -A INPUT -p tcp -- dport 22 -j DROP
 ```
