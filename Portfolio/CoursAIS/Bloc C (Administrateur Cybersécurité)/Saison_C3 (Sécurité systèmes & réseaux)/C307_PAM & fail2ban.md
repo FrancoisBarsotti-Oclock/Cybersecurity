@@ -10,6 +10,8 @@ Sans PAM, chaque service aurait sa propre logique, ses propres règles, ses prop
 
 Imaginez devoir configurer les règles de mot de passe séparément dans SSH, sudo, login, su ...
 
+[Lien démo PAM](https://github.com/O-clock-Aldebaran/SC3-E07-demo-pam)
+
 ### La solution : un système unique
 PAM (**Pluggable Authentication Modules**) permet de brancher des **modules d'authentification** de maniere coherente sur tout le système
 
@@ -85,4 +87,8 @@ Auth   required   pam_unix. so
 
 → Pour l'authentification, le module pam_unix est obligatoire
 
+
+
+
+[lien démo Last](https://github.com/O-clock-Aldebaran/SC3-E07-demo-last-lastb-fail2ban-crowdsec)
 
