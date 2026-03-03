@@ -61,9 +61,9 @@ La question fondamentale :
 **Policy par défaut = ACCEPT ou DROP ?**
 
 ### Règle d'or
-```
-"Deny by default" - tout est interdit sauf ce qui est explicitement autorisé
-```
+
+>"Deny by default" - tout est interdit sauf ce qui est explicitement autorisé
+
 
 * On met la policy à **DROP**
 * On ouvre **uniquement** ce qui est nécessaire
@@ -87,18 +87,18 @@ Le couteau suisse historique du pare-feu Linux
 ### Exemples iptables
 
 Autoriser SSH depuis une IP d'admin :
-```
+```ruby
 iptables -A INPUT -s 192.168.1.100 -p tcp -- dport 22 -j ACCEPT
 ```
 
 Autoriser HTTP et HTTPS pour tous :
-```
+```ruby
 iptables -A INPUT -p tcp -- dport 80 -j ACCEPT
 iptables -A INPUT -p tcp -- dport 443 -j ACCEPT
 ```
 
 Politique par défaut - tout bloquer :
-```
+```ruby
 iptables -P INPUT DROP
 ```
 
@@ -110,8 +110,8 @@ iptables -P INPUT DROP
 Le **successeur officiel d'iptables**, mais pas encore partout.
 
 #### Exemple nftables
- ```bash
-Ift add table inet filter
+ ```powershell
+nft add table inet filter
 nft add chain inet filter input { type filter hook input priority 0 \; policy drop\; }
 nft add rule inet filter input tcp dport 22 accept
 nft add rule inet filter input tcp dport { 80, 443 } accept
@@ -531,7 +531,7 @@ La pièce maîtresse du hardening SSH
 Le mot de passe n'est jamais transmis sur le réseau - impossible à intercepter !
 
 ### Générer une paire de clés
-```bash
+```powershell
 ssh-keygen -t ed25519 -C "admin@monserveur"
 ```
 * **-t ed25519** : algorithme moderne et sûr
@@ -540,8 +540,8 @@ ssh-keygen -t ed25519 -C "admin@monserveur"
 On peut aussi utiliser rsa (4096 bits minimum), mais **ed25519** est préféré aujourd'hui
 
 ### Ce que ça produit
-```
-~/.ssh/id ed25519  ← clé privée 🔐 (NE JAMAIS PĪARTAGER)
+```ruby
+~/.ssh/id ed25519  ← clé privée 🔐 (NE JAMAIS PARTAGER)
 ~/.ssh/id_ed25519.pub   ← clé publique 🔓 (à copier sur le serveur)
 ```
 Lors de la génération, on vous demande une **passphrase**
@@ -550,7 +550,7 @@ La passphrase protège la clé privée en cas de vol du fichier. C'est du **2FA 
 
 ### Copier la clé publique sur le serveur
 **La méthode simple** :
-```bash
+```ruby
 ssh-copy-id -i ~/.ssh/id_ed25519.pub user@serveur
 # ~ c’est un alias du dossier home ou root
 ```
@@ -563,7 +563,7 @@ cat ~/.ssh/id_ed25519.pub >>~/.ssh/authorized_keys
 La clé publique est ajoutée dans ~/. ssh/authorized_keys sur le serveur
 
 ### Les permissions, c'est critique ! ⚠️
-```bash
+```ruby
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/id ed25519
@@ -578,7 +578,7 @@ C'est une protection : si quelqu'un d'autre peut lire votre clé, elle n'est plu
 👉 [Image recapitulative des droits sur Linux](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fvkxuqbatopk21.png%3Fauto%3Dwebp%26s%3D81f97dac1e1ceb5054ee43cbe96ec6fa55215695) 👈
 
 ### Tester la connexion par clé
-```
+```ruby
 ssh -i ~/.ssh/id ed25519 user@serveur
 ```
 
@@ -605,7 +605,7 @@ On verrouille `sshd_çconfig`
 
 ### Le fichier magique
 Toute la configuration du serveur SSH est dans un seul fichier :
-```
+```yaml
 /etc/ssh/sshd_config
 ```
 
@@ -614,7 +614,7 @@ Toute la configuration du serveur SSH est dans un seul fichier :
 _sshd_config = serveur (le d = daemon) / ssh_config = client_
 
 ### Étape 1 : Désactiver le login root 🚫
-```bash
+```yaml
 PermitRootLogin no
 ```
 
@@ -635,7 +635,7 @@ _Alternative : on se connecte avec un compte nominatif, puis sudo pour les tâch
 _prohibit-password est un compromis acceptable dans certains cas (automatisation, Ansible ... )_
 
 ### Étape 2 : Désactiver le mot de passe 🔒
-```bash
+```yaml
 PasswordAuthentication no
 ```
 
@@ -648,7 +648,7 @@ PasswordAuthentication no
  ⚠️ **Rappel de Tester la clé AVANT de couper le mot de passe !**
 
 ### Étape 3 : Activer l'authentification par clé
-```bash
+```yaml
 PubkeyAuthentication yes
 ```
 
@@ -660,7 +660,7 @@ Et… On restart le serveur ssh
 
 D'autres paramètres utiles :
 
-```bash
+```yaml
 # Limiter les utilisateurs autorisés
 AllowUsers admin deployer
 
@@ -681,7 +681,7 @@ UsePAM no
 
 ### Récapitulatif : le sshd_config durci 📋
 
-```bash
+```yaml
 # === Authentification ==
 PermitRootLogin no
 PasswordAuthentication no
@@ -702,7 +702,7 @@ AllowTcpForwarding no
 Chaque ligne est **justifiable** : c'est ça la gouvernance en action !💡
 
 ### Appliquer les changements
-```
+```yaml
 # Vérifier la syntaxe AVANT de redémarrer !
 sudo sJhd -t
 
@@ -724,7 +724,7 @@ _Le workflow sécurisé pour ne rien casser_
 * ✅ Avoir les droits sudo sur un compte non-root
 
 ### Étape 2 : Générer et copier la clé
-```bash
+```ruby
 # Sur le poste client
 ssh-keygen -t ed25519 -C "admin@monserveur"
 ssh-copy-id -i ~/.ssh/id_ed25519.pub admin@serveur
@@ -732,26 +732,26 @@ ssh-copy-id -i ~/.ssh/id_ed25519.pub admin@serveur
 
 ### Étape 3 : Tester la clé
 
-```
+```yaml
 # Toujours tester AVANT de modifier la config !
 ssh -i ~/.ssh/id_ed25519 admin@serveur
 ```
 Si ça marche → on continue. Sinon → on corrige **avant** de toucher à sshd_config
 
 ### Étape 4 : Modifier sshd_config
-```
+```yaml
 sudo nano /etc/ssh/sshd_config
 ```
 
 Paramètres à modifier :
-```bash
+```yaml
 PermitRootLogin no
 PasswordAuthentication no
 PubkeyAuthentication yes
 ```
 
 ### Étape 5 : Vérifier et appliquer
-```
+```yaml
 # Vérifier la syntaxe
 sudo sshd -t
 
@@ -760,7 +760,7 @@ sudo systemctl restart sshd
 ```
 
 ### Étape 6 : Tester (sur la 2e session !)
-```
+```yaml
 # Depuis un NOUVEAU terminal (sans fermer l'ancien !)
 ssh admin@serveur
 ```
@@ -768,7 +768,7 @@ ssh admin@serveur
 ✅ Connexion par clé - parfait !
 
 Vérifier que le mot de passe est bien refusé :
-```
+```yaml
 ssh -o PubkeyAuthentication=no admin@serveur
 # - Permission denied (publickey)
 ```
@@ -795,7 +795,7 @@ _Si les permissions sont mauvaises, SSH refuse silencieusement la clé et demand
 ### Piège n°3 : SELinux / AppArmor ️
 Sur certaines distributions, SELinux peut bloquer l'accès au fichier `authorized_keys`
 
-```
+```yaml
 # Restaurer le contexte SELinux
 restorecon -Rv ~/.ssh/
 ```
@@ -838,7 +838,7 @@ Avec des mots de passe partagés, il faudrait changer le mot de passe partout ..
 * Ces clés de service doivent être séparées des clés personnelles
 * On peut restreindre une clé à une commande précise :
 
-```bash
+```powershell
 # Dans authorized_keys, préfixer la clé :
 command="/usr/bin/rsync -- server ... " ssh-ed25519 AAAA ...
 ```
@@ -881,26 +881,26 @@ _Un serveur sécurisé, c'est un serveur dont on sait exactement qui y a accès_
 
 Prendre la machine sur laquelle était déjà installé UFW (voir démo précédente) et s'assurer que le port SSH est ouvert :
 
-```bash
+```yaml
 ufw allow 22/tcp
 ```
 
 ## Générer une paire de clés SSH
 
-```bash
+```powershell
 ssh-keygen -t ed25519 -C "admin@monserveur"
 ```
 
 ## Copier la clé publique sur le serveur
 
-```bash
+```ruby
 # Remplacer par l'IP ou le nom de votre serveur
 ssh-copy-id -i ~/.ssh/id_ed25519.pub root@10.0.0.100
 ```
 
 ## Gérer les permissions du dossier .ssh
 
-```bash
+```yaml
 # Sur le serveur, vérifier les permissions du dossier .ssh
 ls -ld ~/.ssh
 # Si nécessaire, corriger les permissions
@@ -911,7 +911,7 @@ chmod 600 ~/.ssh/id_ed25519
 
 ## Tester la connexion SSH
 
-```bash
+```powershell
 ssh -o PubkeyAuthentication=yes root@10.0.0.100
 ```
 
@@ -932,7 +932,7 @@ sudo chmod 600 /home/admin/.ssh/authorized_keys
 
 ## Modifier la configuration SSH
 
-```bash
+```yaml
 # Sur le serveur, éditer le fichier de configuration SSH
 sudo nano /etc/ssh/sshd_config
 
@@ -948,14 +948,14 @@ sudo systemctl restart ssh
 
 ## Vérifier que le mot de passe est désactivé
 
-```bash
+```powershell
 ssh -o PubkeyAuthentication=no admin@10.0.0.100
 # Permission denied (publickey).
 ```
 
 ## Durcissement supplémentaire (optionnel)
 
-```bash
+```yaml
 # Limiter les tentatives de connexion pour prévenir les attaques par force brute
 MaxAuthTries 3
 LoginGraceTime 30
@@ -979,7 +979,7 @@ reboot
 
 ## Vérifier la configuration
 
-```bash
+```yaml
 # Vérifier la syntaxe du fichier de configuration SSH
 sudo sshd -t
 
