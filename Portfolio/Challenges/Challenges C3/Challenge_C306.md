@@ -201,7 +201,7 @@ ssh franbar@10.0.0.61
 
 ---
 
-## 🎓 Bonus (facultatif si temps restant)
+## 🎓 Bonus (facultatif)
 
 ### Changer le port SSH
 
