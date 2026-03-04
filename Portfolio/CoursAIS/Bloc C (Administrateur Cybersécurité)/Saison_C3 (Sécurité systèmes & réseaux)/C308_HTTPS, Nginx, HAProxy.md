@@ -285,8 +285,7 @@ Un **load-balancer** distribue les requêtes entre plusieurs serveurs. Si un ser
 | **Round Robin** | Chaque serveur à tour de rôle (1, 2, 3, 1, 2,3...) | Serveurs identiques |
 | **Least Connections** | Vers le serveur le moins chargé | Requêtes de durée variable |
 | **Source (IP Hash)** | Même serveur pour la même IP client | Sessions persistantes |
-| **Weighted RR** | Round Robin avec poids | Serveurs de capacités
-différentes |
+| **Weighted RR** | Round Robin avec poids | Serveurs de capacités différentes |
 
 ### Load-balancer vs reverse-proxy
 Un load-balancer **est** un reverse-proxy avec des fonctionnalités en plus :
@@ -832,7 +831,7 @@ Internet
 ### Les seuils recommandés (point de départ)
 
 | **Mécanisme** | **Seuil de départ** | **À ajuster selon** |
-| --- | --- | --- |
+| --- | --- | :---: |
 | SYN cookies | Toujours actif | — |
 | iptables hashlimit SYN | 10/s, burst 20 | Trafic légitime |
 | Nginx limit_req (général) | 10 req/s, burst 20 | Profil d'utilisation |
