@@ -116,7 +116,7 @@ Client C --→ Serveur 3 (10.0.0.22)
 ### La solution : le reverse-proxy
 
 ```py
-                                    ┌─> Serveur 1 (10.0.0.20)
+                                   ┌─> Serveur 1 (10.0.0.20)
 Client ──────> Reverse Proxy ──────┼─> Serveur 2 (10.0.0.21)
                (10.0.0.30)         └─> Serveur 3 (10.0.0.22)
 
