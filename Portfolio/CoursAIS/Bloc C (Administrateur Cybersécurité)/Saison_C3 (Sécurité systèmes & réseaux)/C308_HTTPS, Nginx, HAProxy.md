@@ -148,9 +148,8 @@ _Forward = protège les clients qui sortent. Reverse = protège les serveurs qui
 Le gros avantage : **HTTPS sur le proxy, HTTP en interne**
 ```bash
 Client ──── HTTPS (chiffré) ────> Reverse Proxy ──── HTTP (clair) ────> Back-end
-
-🔒 → 🔓
-(déchiffre ici)
+                                    🔒 → 🔓
+                                 (déchiffre ici)
 ```
 * Un seul certificat à gérer et à renouveler
 * Les back-ends restent simples (HTTP)
