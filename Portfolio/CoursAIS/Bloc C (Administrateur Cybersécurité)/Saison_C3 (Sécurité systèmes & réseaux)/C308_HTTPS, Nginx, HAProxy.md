@@ -6,11 +6,11 @@ Notions du jour
 •	load balancing avec HAProxy (idem)
 •	défense contre les attaques DDOS, Syn-flood (un type de DDOS) et protections avec rate-limiting
 
-## Reverse-proxy, Load-balancer & HTTPS
-Un point d'entrée unique, sécurisé et résilient
+## Reverse-proxy, Load-balancer & HTTPS 🌐
+_Un point d'entrée unique, sécurisé et résilient_
 
-## Partie 1 : HTTPS / TLS
-Pourquoi le cadenas dans le navigateur compte
+## Partie 1 : HTTPS / TLS 🔒
+_Pourquoi le cadenas dans le navigateur compte_
 
 ### HTTP vs HTTPS
 
@@ -36,10 +36,10 @@ N'importe qui sur le réseau peut intercepter (man-in-the-middle)
 5. Toutes les données sont chiffrées avec cette clé
 _On a vu la crypto symétrique et asymétrique en SA1 - c'est ici que ça sert concrètement !_
 
-### Le certificat TLS
+### Le certificat TLS 📜
 Le certificat contient :
 
-| **Élement**| | **Rôle** |
+| **Élement**| **Rôle** |
 | --- | --- |
 | **Nom de domaine** | Pour quel site le certificat est valide |
 | **Clé publique** | Utilisée pour l'échange de clés initial |
@@ -56,10 +56,11 @@ Le certificat contient :
 
 _En lab, on utilise des certificats auto-signés. Le principe est le même, seule la confiance change._
 
-### Let's Encrypt & Certbot
+### Let's Encrypt & Certbot 🤖
 
-Let's Encrypt = autorite de certification gratuite et automatisée
-Certbot = l'outil qui gère tout :
+**Let's Encrypt** = autorite de certification **gratuite et automatisée**
+
+**Certbot** = l'outil qui gère tout :
 ```apache
 # Installer certbot
 sudo apt install certbot python3-certbot-nginx
@@ -71,7 +72,8 @@ sudo certbot -- nginx -d monsite.example.com
 sudo certbot renew
 ```
 
-Certbot peut aussi configurer HTTPS sur un reverse-proxy – on verra ça juste après
+Certbot peut aussi configurer HTTPS sur un **reverse-proxy** – on verra ça juste après
+
 ### HTTPS directement sur Apache
 On peut activer HTTPS sur n'importe quel serveur Apache :
 
@@ -95,9 +97,9 @@ SSLCertificateKeyFile /etc/apache2/ssl/web.key
 </VirtualHost>
 ```
 
-_Ca fonctionne, mais ça veut dire un certificat par serveur ... On verra comment mieux faire_
+_Ca fonctionne, mais ça veut dire un certificat par serveur ... On verra comment mieux faire_ 💡
 
-## Partie 2 : le Reverse-proxy
+## Partie 2 : le Reverse-proxy 🔄
 _L'intermédiaire entre le client et vos serveurs_
 
 ### Le problème :  sans reverse-proxy
@@ -112,6 +114,20 @@ Client C --→ Serveur 3 (10.0.0.22)
 ```
 
 ### La solution : le reverse-proxy
+
+```py
+                                    ┌─> Serveur 1 (10.0.0.20)
+Client ──────> Reverse Proxy ──────┼─> Serveur 2 (10.0.0.21)
+               (10.0.0.30)         └─> Serveur 3 (10.0.0.22)
+
+✅ Un seul point d'entrée
+✅ Certificat HTTPS uniquement sur le proxy
+✅ Les serveurs back-end restent cachés
+```
+
+
+
+
 
 
 ## Pour plus d'information 📚
