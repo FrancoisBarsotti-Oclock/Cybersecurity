@@ -100,3 +100,20 @@ _Ca fonctionne, mais ça veut dire un certificat par serveur ... On verra commen
 ## Partie 2 : le Reverse-proxy
 _L'intermédiaire entre le client et vos serveurs_
 
+### Le problème :  sans reverse-proxy
+```swift
+Client A --→ Serveur 1 (10.0.0.20)
+Client B --→ Serveur 2 (10.0.0.21)
+Client C --→ Serveur 3 (10.0.0.22)
+
+❌ Chaque serveur est exposé directement
+❌ Certificat HTTPS sur chaque serveur
+❌ Pas de point de contrôle centralisé
+```
+
+### La solution : le reverse-proxy
+
+
+## Pour plus d'information 📚
+
+Voir 👉 [Démonstration Reverse-proxy, Load-balancer & HTTPS](https://github.com/O-clock-Aldebaran/SC03-E08-demo-reverse-proxy)
