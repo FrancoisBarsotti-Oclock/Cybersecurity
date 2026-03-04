@@ -283,8 +283,7 @@ Un **load-balancer** distribue les requêtes entre plusieurs serveurs. Si un ser
 | **Algorithme** | **Fonctionnement** | **Usage** |
 | --- | --- | --- |
 | **Round Robin** | Chaque serveur à tour de rôle (1, 2, 3, 1, 2,3...) | Serveurs identiques |
-| **Least
-Connections** | Vers le serveur le moins chargé | Requêtes de durée variable |
+| **Least Connections** | Vers le serveur le moins chargé | Requêtes de durée variable |
 | **Source (IP Hash)** | Même serveur pour la même IP client | Sessions persistantes |
 | **Weighted RR** | Round Robin avec poids | Serveurs de capacités
 différentes |
