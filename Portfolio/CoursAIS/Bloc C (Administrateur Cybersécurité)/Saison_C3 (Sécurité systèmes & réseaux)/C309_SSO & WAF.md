@@ -544,6 +544,231 @@ Voir 👉 [démo-keycloak](https://github.com/FrancoisBarsotti-Oclock/Cybersecur
 
 _Filtrer le trafic HTTP malveillant avant qu'il n'atteigne l'application_
 
+### Pourquoi un WAF ?
+Les firewalls classiques ne suffisent plus
+
+* Un firewall L3/L4 filtre sur **IP, port, protocole**
+* Les attaques modernes passent sur le port **443 (HTTPS)** ... autorisé partout
+* Injection SQL, XSS, traversée de répertoire : **tout passe en http**
+
+_Le WAF se positionne là où le firewall réseau est aveugle : à la couche applicative_
+
+### Rappel : les attaques web les plus courantes (OWASP Top 10)
+| **Rang** | **Catégorie** | **Exemple** |
+| --- | --- | --- |
+| A01 | Contrôle d'accès défaillant | Accès à /admin sans auth |
+| A02 | Échec cryptographique | HTTP en clair, credentials en clair |
+| A03 | Injection | `' OR 1=1 --` dans un formulaire |
+| A04 | Conception non sécurisée | Absence de validation côté serveur |
+| A07 | Authentification défaillante | Brute force, session fixation |
+| A09 | Journalisation insuffisante | Attaque non détectée |
+
+_Source : owasp.org 2021– liste mise à jour tous les 4 ans_
+
+[Dernier Top 10 OWASP : 2025](https://owasp.org/Top10/2025/) 
+
+### Ce que ces attaques ont en commun
+* Elles transitent toutes par **HTTP/HTTPS**
+* Le firewall réseau les laisse **passer** (port 80/443 ouvert)
+* L'application backend les **recoit** si rien ne filtre avant
+
+👉 Il faut une **inspection au niveau du contenu http**
+
+### C'est quoi un WAF ? 🧱
+Un **Web Application Firewall** est un équipement (physique, logiciel ou cloud) qui :
+
+1. **Intercepte** toutes les requêtes HTTP/HTTPS avant qu'elles arrivent à l'application
+2. **Analyse** leur contenu (URL, headers, body, cookies)
+3. **Bloque ou journalise** les requêtes malveillantes selon des règles
+
+_Analogie : le WAF est un **videur à l'entrée du club** - il inspecte chaque client avant de le laisser entrer_
+
+### Position du WAF dans l'architecture
+```ini
+Internet
+    │
+[Firewall L3/L4]  ← filtre IP/port
+    │
+  [WAF]           ← filtre le contenu HTTP
+    │
+[Reverse Proxy]   ← ex: Nginx, HAProxy
+    │
+[Application]     ← backend (PHP, Python, Java...)
+    │
+[Base de données]
+```
+
+_Le WAF peut être intégré au reverse proxy ou être un équipement dédié_
+
+### WAF vs Firewall réseau
+| **Critère** | **Firewall réseau** | **WAF** |
+| --- | --- | --- |
+| Couche OSI | L3/L4 | L7 |
+| Filtre sur | IP, port, protocole | URL, headers, body, cookies |
+| Voit le contenu HTTP | ❌ | ✅ |
+| Protège contre SQLi/XSS | ❌ | ✅ |
+| Protège contre port scan | ✅ | ❌ |
+| Complexité | Faible | Élevée |
+
+_Les deux sont complémentaires — le WAF ne remplace pas le firewall réseau_
+
+### Les deux modes de fonctionnement d'un WAF
+
+* **Mode détection** (Détection Only) :
+    * La requête **passe**, mais l'alerte est **journalisée**
+    * Idéal pour auditer sans bloquer - on observe ce qui se passe ! 
+    * ⚠️ Ne protège pas, sert uniquement à ajuster les règles
+
+* **Mode prévention** (Prevention / Block) :
+    * La requête suspecte est **bloquée** (réponse 403)
+    * Protection active
+    * Risque de **faux positifs** (bloquer des requêtes légitimes)
+
+_On commence toujours en mode détection, puis on passe en prévention après ajustement_
+
+### Les règles d'un WAF
+Un WAF fonctionne avec des **règles** (ou signatures) :
+
+* Chaque règle décrit un **pattern** à détecter (regex, correspondance de chaîne, score ... )
+* Les règles sont regroupées en **rulesets**
+* Le plus connu : **l'OWASP ModSecurity Core Rule Set (CRS)**
+    * ~200 règles couvrant OWASP Top 10
+    * Maintenu activement, open-source
+    * Utilisable avec ModSecurity, Nginx, AWS WAF ...
+
+### Types de WAF 📦
+Trois grandes familles selon le déploiement :
+
+| **Type** | **Exemples** | **Avantages** | **Inconvénients** |
+| --- | --- | --- | --- |
+| **Réseau** (appliance) | F5 BIG-IP, Fortiweb | Performances, dédié | Coût élevé |
+| **Hôte** (logiciel) | ModSecurity, NAXSI | Gratuit, contrôle total | Charge sur le serveur |
+| **Cloud** | Cloudflare, AWS WAF | Facile, scalable | Dépendance externe |
+
+### WAF hôte : le plus accessible
+* Installé directement sur le serveur web (Nginx, Apache)
+* **ModSecurity** : le WAF open-source de référence
+* **NAXSI** : WAF léger spécifique à Nginx (approche whitelist)
+
+_C'est ce que nous allons installer dans la démo_
+
+## ModSecurity 🔧
+
+_Le WAF open-source le plus utilisé au monde_
+
+### Présentation de ModSecurity
+* Créé en 2002, maintenu par **OWASP** et la communauté
+* Module pour **Apache** et **Nginx** (via libmodsecurity)
+* Analyse les requêtes et réponses HTTP selon des règles
+* Compatible avec **l'OWASP Core Rule Set (CRS)**
+* Version actuelle : **ModSecurity v3** (libmodsecurity3)
+
+### Architecture ModSecurity v3
+```ps
+Requête HTTP
+    │
+[Nginx / Apache]
+    │
+[ModSecurity v3 (libmodsecurity3)]
+    │ ↓ analyse
+[OWASP CRS (règles)]
+    │
+Bloquer / Journaliser / Laisser passer
+    │
+[Application backend]
+```
+_v3 = connecteurséparé du moteur → plus modulaire que v2_
+
+### Installation de ModSecurity sur Nginx (Debian/Ubuntu)
+
+```py
+# Installer les dépendances
+sudo apt update
+sudo apt install -y nginx libnginx-mod-http-modsecurity
+
+# Activer le module dans Nginx
+sudo sed -i 's/SecRuleEngine DetectionOnly/SecRuleEngine On/' \
+    /etc/modsecurity/modsecurity.conf-recommended
+sudo cp /etc/modsecurity/modsecurity.conf-recommended \
+    /etc/modsecurity/modsecurity.conf
+```
+
+### Activer ModSecurity dans la config Nginx
+
+```apache
+# Dans /etc/nginx/sites-available/default (ou votre vhost)
+server {
+    listen 80;
+    server_name mon-site.com;
+    
+    # Activer ModSecurity
+    modsecurity on;
+    modsecurity_rules_file /etc/nginx/modsecurity/main.conf;
+    
+    location / {
+        proxy_pass http://localhost:8080;
+    }
+}
+```
+
+```apache
+# Créer le répertoire de règles
+sudo mkdir -p /etc/nginx/modsecurity
+sudo cp /etc/modsecurity/modsecurity.conf /etc/nginx/modsecurity/
+```
+
+### Installation de ModSecurity sur Apache
+
+```ps
+# Installer le module Apache
+sudo apt install -y libapache2-mod-security2
+
+# Activer le module
+sudo a2enmod security2
+
+# Copier la config de base
+sudo cp /etc/modsecurity/modsecurity.conf-recommended \
+    /etc/modsecurity/modsecurity.conf
+```
+
+### Activer ModSecurity dans Apache
+```apache
+# Dans /etc/apache2/mods-enabled/security2.conf
+<IfModule security2_module>
+    # Inclure la config principale
+    Include /etc/modsecurity/modsecurity.conf
+
+    # Inclure les règles OWASP CRS (une fois installé)
+    Include /etc/modsecurity/crs/crs-setup.conf
+    Include /etc/modsecurity/crs/rules/*.conf
+</IfModule>
+```
+
+```apache
+sudo systemctl restart apache2
+```
+
+### Configuration de base : modsecurity.conf
+
+Les paramètres essentiels à connaître :
+```swift
+# Mode : DetectionOnly ou On (blocage)
+SecRuleEngine On
+
+# Taille max du body analysé (eviter les gros uploads)
+SecRequestBodyLimit 13107200
+SecRequestBodyNoFilesLimit 131072
+
+# Journaliser les alertes
+SecAuditLog /var/log/modsecurity/audit.log
+SecAuditLogParts ABCIJDEFHKZ
+
+# Format des logs
+SecAuditLogType Serial
+```
+
+
+
 
 
 
