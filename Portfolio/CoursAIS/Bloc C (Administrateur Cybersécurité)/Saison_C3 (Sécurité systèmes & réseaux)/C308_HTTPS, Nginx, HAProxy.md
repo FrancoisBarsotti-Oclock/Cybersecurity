@@ -1,10 +1,11 @@
 # Session C308. HTTPS, Nginx, HAProxy.
 
-Notions du jour
-•	Certificats HTTPS sur un serveur web
-•	reverse proxy avec Nginx (pour voir le principe)
-•	load balancing avec HAProxy (idem)
-•	défense contre les attaques DDOS, Syn-flood (un type de DDOS) et protections avec rate-limiting
+Notions du jour:
+* HTTPS, certbot/letsencrypt
+* reverse-proxy
+* load-balancer
+* mitigation des attaques DDoS
+* configuration d’Apache, nginx et HAProxy
 
 ## Reverse-proxy, Load-balancer & HTTPS 🌐
 _Un point d'entrée unique, sécurisé et résilient_

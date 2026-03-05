@@ -1,5 +1,10 @@
 # 🔒 Session C301. Introduction à la Sécurité des Systèmes & Réseaux.
 
+Notions du jour:
+* vocabulaire et accronymes
+* gouvernance, normes et outils
+* attaques réseau de niveau 2 (ARP spoofing/poisoning & VLAN hopping)
+
 ### Pourquoi ce module ?
 On passe de « ça marche à « c’est sécurisé », même si la sécurité parfaite n’existe pas.
 imaginez votre infra comme une maison

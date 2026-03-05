@@ -1,10 +1,10 @@
 # Session C3E07. PAM & fail2ban
 
-Notions du jour
+Notions du jour:
 * PAM
-commandes last & lastb
-fail2ban
-port-knocking
+* commandes last & lastb
+* fail2ban
+* port-knocking
 
 # PAM sur Linux 🧩
 _Comprendre quis'authentifie, et comment_

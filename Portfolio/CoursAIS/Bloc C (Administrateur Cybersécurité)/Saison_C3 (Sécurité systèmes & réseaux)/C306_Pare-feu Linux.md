@@ -1,5 +1,9 @@
 # 🧱 Session C306. Pare-feu Linux.
 
+Notions du jour:
+* pare-feu netfilter (iptables, nftables et ufw)
+* SSH hardening (key based auth, désactiver root & password login)
+
 Comprendre le moteur avant les commandes
 Notions du jour
 
