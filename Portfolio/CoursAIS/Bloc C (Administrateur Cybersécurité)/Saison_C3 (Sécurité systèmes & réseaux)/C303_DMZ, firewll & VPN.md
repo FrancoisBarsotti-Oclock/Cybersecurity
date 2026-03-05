@@ -1,4 +1,4 @@
-# Session C303. DMZ, pare-feu & VPN.
+# 🧱 Session C303. DMZ, pare-feu & VPN.
 
 Notions du jour
 * Radius

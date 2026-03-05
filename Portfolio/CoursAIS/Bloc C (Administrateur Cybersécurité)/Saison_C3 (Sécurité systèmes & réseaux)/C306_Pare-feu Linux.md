@@ -1,4 +1,4 @@
-# 🧱 Session C306. Pare-feu Linux.
+# 🧱🐧 Session C306. Pare-feu Linux.
 
 Notions du jour:
 * pare-feu netfilter (iptables, nftables et ufw)

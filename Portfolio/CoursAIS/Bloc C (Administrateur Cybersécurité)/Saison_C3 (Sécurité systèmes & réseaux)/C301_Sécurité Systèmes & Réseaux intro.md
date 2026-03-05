@@ -1,4 +1,4 @@
-# 🔒 Session C301. Introduction à la Sécurité des Systèmes & Réseaux.
+# 🛡️ Session C301. Introduction à la Sécurité des Systèmes & Réseaux.
 
 Notions du jour:
 * vocabulaire et accronymes

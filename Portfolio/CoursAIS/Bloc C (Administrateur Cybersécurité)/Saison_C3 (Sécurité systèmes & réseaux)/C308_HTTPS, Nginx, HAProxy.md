@@ -1,4 +1,4 @@
-# Session C308. HTTPS, Nginx, HAProxy.
+# 🌐 Session C308. HTTPS, Nginx, HAProxy.
 
 Notions du jour:
 * HTTPS, certbot/letsencrypt

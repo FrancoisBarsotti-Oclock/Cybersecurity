@@ -1,4 +1,4 @@
-# Session C302. Radius & WiFi.
+# 🔐 Session C302. Radius & WiFi.
 
 Notions du jour : 
 * ACL standards et étendues

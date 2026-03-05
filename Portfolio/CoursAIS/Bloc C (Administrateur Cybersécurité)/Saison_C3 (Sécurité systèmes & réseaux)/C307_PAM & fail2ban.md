@@ -1,4 +1,4 @@
-# Session C3E07. PAM & fail2ban
+# 🐧 Session C3E07. PAM & fail2ban
 
 Notions du jour:
 * PAM

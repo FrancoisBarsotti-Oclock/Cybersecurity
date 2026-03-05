@@ -1,4 +1,4 @@
-# Session C305. IDS/ IPS – SIEM & CTI.
+# 🔍 Session C305. IDS/ IPS – SIEM & CTI.
 
 Notions du jour:
 * IDS/IPS
