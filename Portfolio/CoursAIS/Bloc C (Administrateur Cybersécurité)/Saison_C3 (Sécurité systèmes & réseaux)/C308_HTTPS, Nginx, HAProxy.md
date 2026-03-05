@@ -858,7 +858,7 @@ _Ces valeurs sont des points de départ - un audit du trafic normal est indispen
         ↓
 7. Surveiller   → alertes sur les métriques (Grafana, Zabbix...)
 ```
-## ### Ce qu'il faut retenir 🧠
+## Ce qu'il faut retenir 🧠
 * Un DDoS exploite la **capacité finie** des ressources (RAM, connexions, CPU)
 * Le **SynFlood** sature la table des connexions TCP - tcp_syncookies + iptables hashlimit
 * Le **rate-limiting** limite les requetes par IP : Nginx limit_req_zone, HAProxy stick-table
