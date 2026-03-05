@@ -186,5 +186,11 @@ Connect | **Authentification** | JWT | Moyenne | Apps web modernes |
 
 _En pratique : Keycloak supporte les trois - choisir selon ce que supporte l'application_
 
-Voir 👉 [demo-keycloak](https://github.com/O-clock-Aldebaran/SC03E09-demo-keycloak)
+
+
+---
+
+## Pour plus d'information 📚
+
+Voir 👉 [démo-keycloak](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Supports%20Divers/S%C3%A9curit%C3%A9%20Syst%C3%A8mes%20%26%20R%C3%A9seaux/KeyCloak%20avec%20NextCloud%20%26%20VAULT/ReadMe.md)
 
