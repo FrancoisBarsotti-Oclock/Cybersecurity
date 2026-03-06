@@ -90,3 +90,20 @@ Et pour finir, tu devras uploader ce fichier à la racine de ton **dossier Drive
 * [Exemple de Dossier de Projet AIS 3](https://drive.google.com/file/d/1bCeJS_9DgmPrf7pG3Knr-r6Z631Diqnv/view)
 
 
+--- 
+
+# 🧐 Pour continuer la lecture, c'est par là 👇 : 
+
+*  [Relire 01_Récap rapide](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Supports%20Divers/Pr%C3%A9paration%20au%20TP%20AIS/01_Pr%C3%A9sentation%20du%20TP%20AIS.md)
+
+* [Relire 02_Le Dossier Professionnel](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Supports%20Divers/Pr%C3%A9paration%20au%20TP%20AIS/02_Dossier%20Professionnel.md)
+
+* [04_La présentation](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Supports%20Divers/Pr%C3%A9paration%20au%20TP%20AIS/04_La%20Pr%C3%A9sentation.md)
+
+* [05_Le Livret ECF](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Supports%20Divers/Pr%C3%A9paration%20au%20TP%20AIS/05_Le%20Livret%20ECF.md)
+
+* [06_La convention de stage](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Supports%20Divers/Pr%C3%A9paration%20au%20TP%20AIS/06_Convention%20de%20stage.md)
+
+* [07_Le Jour-J](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Supports%20Divers/Pr%C3%A9paration%20au%20TP%20AIS/07_Le%20Jour-J.md)
+
+* [08_La Soutenance](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Supports%20Divers/Pr%C3%A9paration%20au%20TP%20AIS/08_La%20Soutenance.md)

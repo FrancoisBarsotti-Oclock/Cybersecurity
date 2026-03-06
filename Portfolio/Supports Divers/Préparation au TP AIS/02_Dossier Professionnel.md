@@ -1,4 +1,4 @@
-# 02. Le Dossier Professionnel
+# 02. 📚 Le Dossier Professionnel
 
 ## 📚 Le Dossier Professionnel
 
