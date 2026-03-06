@@ -766,14 +766,377 @@ SecAuditLogParts ABCIJDEFHKZ
 # Format des logs
 SecAuditLogType Serial
 ```
+### Installer l'OWASP Core Rule Set (CRS)
+```ps
+# Télécharger le CRS depuis GitHub
+cd /tmp
+wget https://github.com/coreruleset/coreruleset/archive/v4.0.0.tar.gz
+tar -xzf v4.0.0.tar.gz
 
+# Installer dans le bon répertoire
+sudo mv coreruleset-4.0.0 /etc/modsecurity/crs
 
+# Copier la config par défaut
+sudo cp /etc/modsecurity/crs/crs-setup.conf.example \
+/etc/modsecurity/crs/crs-setup.conf
+```
 
+### Structure du CRS
+```swift
+/etc/modsecurity/crs/
+├── crs-setup.conf ← configuration globale du CRS
+└── rules/
+    ├── REQUEST-901-... ← initialisation
+    ├── REQUEST-920-... ← anomalies de protocole HTTP
+    ├── REQUEST-930-... ← attaques sur les fichiers locaux (LFI)
+    ├── REQUEST-931-... ← inclusion de fichiers distants (RFI)
+    ├── REQUEST-932-... ← injection de commandes OS
+    ├── REQUEST-933-... ← injections PHP
+    ├── REQUEST-941-... ← attaques XSS
+    ├── REQUEST-942-... ← injections SQL
+    ├── REQUEST-943-... ← session fixation
+    └── RESPONSE-950-... ← fuites de données dans les réponses
+```
+### Le système de score du CRS
+Le CRS utilise un **système de score par anomalie** :
+* Chaque règle qui matche **ajoute des points** à la requête
+* Si le score dépasse un seuil → requête bloquée
+* Seuil par défaut : **5 points** pour les requêtes entrantes
+```apache
+# Dans crs-setup.conf
+SecAction \
+    "id:900110,\
+    phase:1,\
+    nolog,\
+    pass,\
+    t:none,\
+    setvar:tx.inbound_anomaly_score_threshold=5"
+```
+_Avantage : une seule signature incertaine ne bloque pas, il faut plusieurs indices_
 
+### Tester ModSecurity avec une requête malveillante
+```apache
+# Test d'une injection SQL basique
+curl "http://localhost/?id=1' OR '1'='1"
 
+# → Réponse attendue en mode blocage : HTTP 403 Forbidden
 
+# Vérifier les logs
+sudo tail -f /var/log/modsecurity/audit.log
 
+# Tester XSS
+curl "http://localhost/?q=<script>alert(1)</script>"
+```
 
+### Lire les logs ModSecurity
+```swift
+--a1b2c3d4-A--
+[27/Feb/2026:10:15:33] 192.168.1.100 "GET /?id=1'+OR+'1'='1"
+--a1b2c3d4-B--
+GET /?id=1'+OR+'1'='1 HTTP/1.1
+Host: localhost
+
+--a1b2c3d4-F--
+HTTP/1.1 403 Forbidden
+
+--a1b2c3d4-H--
+Message: Warning. Pattern match "..." at ARGS:id.
+[id "942100"] [msg "SQL Injection Attack Detected via libinjection"]
+[severity "CRITICAL"] [tag "OWASP_CRS"]
+```
+* **id** : identifiant de la règle déclenchée
+* **msg** : description de l'attaque détectée
+* **severity** : niveau de criticité
+
+### Gérer les faux positifs
+
+Un faux positif = une requête légitime bloquée par erreur
+```apache
+# Désactiver une règle pour un chemin précis
+SecRule REQUEST_URI "@beginsWith /api/upload" \
+    "id:1001,phase:1,pass,nolog,\
+    ctl:ruleRemoveById=200002"
+
+# Désactiver une règle globalement (à éviter)
+SecRuleRemoveById 942100
+
+# Exclure un paramètre d'une règle
+SecRuleUpdateTargetById 942100 "!ARGS:search"
+```
+
+_Lesfaux positifssont normaux au début — c'est pour ça qu'on commence en DetectionOnly_
+
+## Cloudflare ☁️
+_Bien plus qu'un simple WAF_
+
+### Qu'est-ce que Cloudflare ?
+
+* Fondé en 2009, l'un des plus grands réseaux mondiaux
+* **+330 PoP** (Points of Presence) dans 100+ pays
+* Traite ~20% du trafic web mondial
+* Services : CDN, WAF, DDoS, DNS, Zero Trust, tunnels ...
+* Plan **gratuit** disponible (avec limitations)
+
+_Cloudflare s'est positionné comme une infrastructure invisible mais essentielle du web_
+
+### Comment Cloudflare fonctionne
+```apache
+Visiteur (Paris)
+    │
+[Cloudflare PoP Paris] ← le trafic s'arrête ici
+    │ ↓
+┌────────────────────┐
+│ • Anti-DDoS        │
+│ • WAF              │
+│ • CDN (cache)      │
+│ • Bot Management   │
+└────────────────────┘
+    │ ↓ seulement si OK
+[Votre serveur d'origine]
+```
+
+_Votre serveur ne voit jamaisle trafic malveillant — Cloudflare l'absorbe_
+
+### Activer Cloudflare sur un domaine
+
+1. Créer un compte sur cloudflare. com
+2. Ajouter votre domaine
+3. Cloudflare scanne vos DNS existants
+4. **Changer les nameservers** chez votre registrar vers ceux de Cloudflare
+5. Une fois actif, tout le trafic passe par Cloudflare
+```swift
+Avant : visiteur → DNS → votre IP → votre serveur
+Après : visiteur → DNS Cloudflare → PoP Cloudflare → votre serveur
+```
+
+_Votre IP réelle est masquée derrière les IPs Cloudflare_
+
+### Service 1 : CDN (Content Delivery Network) 🌍
+
+* **Mise en cache** des contenus statiques (images, CSS, JS) sur les PoP
+* Le visiteur reçoit le contenu depuis le PoP **le plus proche**
+* Réduit la latence et la charge sur votre serveur
+```apache
+Visiteur à Tokyo → PoP Tokyo (cache) → réponse en 5ms
+Sans CDN → Serveur à Paris → réponse en 200ms
+```
+
+### Configurer le cache Cloudflare
+
+Dans l'interface Cloudflare > **Caching** :
+
+* **Caching Level** : Standard, No Query String, Ignore Query String
+* **TTL du cache navigateur** : durée de cache côté client
+* **Page Rules** : règles spécifiques par URL
+```apache
+# Forcer le cache sur les assets statiques
+URL pattern : example.com/static/*
+Cache Level : Cache Everything
+Edge Cache TTL : 1 month
+```
+
+_Le cache statique est gratuit et illimité sur tousles plans_
+
+### Service 2 : Protection DDoS 🛡️
+
+* Protection **volumétrique** automatique (jusqu'à plusieurs Tbps)
+* Détection et mitigation en **moins de 3 secondes**
+* S'adapte automatiquement sans intervention manuelle
+
+#### Plans :
+
+* **Gratuit** : protection DDoS L3/L4 basique
+* **Pro** : protection applicative (L7)
+* **Business/Enterprise** : protection avancée avec SLA
+
+### Service 3 : WAF Cloudflare 🔍
+
+* WAF managé basé sur des règles OWASP et Cloudflare
+* ~100 règles dans le plan gratuit
+* **Firewall Rules** : règles personnalisées (IP, pays, user-agent, score bot...)
+```apache
+# Exemple de règle Cloudflare (firewall rule)
+Bloquer tous les accès depuis la Corée du Nord
+AND dont le chemin commence par /admin
+
+→ Action : Block
+```
+
+_Plussimple à configurer que ModSecurity — mais moins de contrôle_
+
+### Service 4 : DNS Cloudflare
+
+* DNS autoritaire **ultra-rapide** (résolution en ~11ms)
+* DNS récursif public : 1.1.1.1 et 1.0.0.1
+    * Respectueux de la vie privée (no-log certifié)
+    * Le DNS résolveur le plus rapide au monde (Cloudflare)
+* **DNSSEC** disponible en un clic
+
+### Service 5 : Zero Trust & Tunnels 🔐
+
+* **Cloudflare Tunnel** (cloudflared) :
+    * Expose un service local sur internet **sans ouvrir de port**
+    * Connexion sortante chiffrée → le serveur initie la connexion
+    * Idéal pour exposer un service derrière un NAT ou un firewall strict
+```apache
+# Installer et créer un tunnel
+curl -L --output cloudflared.deb \
+    https://github.com/cloudflare/.../cloudflared.deb
+sudo dpkg -i cloudflared.deb
+cloudflared tunnel login
+cloudflared tunnel create mon-tunnel
+cloudflared tunnel route dns mon-tunnel app.exemple.com
+cloudflared tunnel run mon-tunnel
+```
+
+### Service 6 : Cloudflare Access (Zero Trust) 🧩
+
+* **ZTNA** : Zero Trust Network Access
+* Remplace les VPN traditionnels
+* Authentification via Google, GitHub, SAML, OTP...
+* Chaque accès est vérifié individuellement (pas de réseau de confiance)
+```swift
+Employé → Cloudflare Access → vérification identité → ressource interne
+                            ↑
+                    (Google SSO, MFA, device check)
+```
+
+### Cloudflare : récapitulatif des services
+| **Service** | **Plan gratuit** | **Utilité principale** |
+| --- | --- | --- |
+| CDN | ✅illimité | Accélération, cache |
+| DNS | ✅ | Résolution rapide, sécurisée |
+| Anti-DDoS L3/L4 | ✅ | Protection volumétrique |
+| WAF basique | ✅limité | Filtrage OWASP |
+| WAF avancé | Pro (20$/mois) | Règles personnalisées |
+| DDoS L7 | Pro | Protection applicative |
+| Zero Trust | ✅(50 users) | Accès sans VPN |
+| Tunnel | ✅ | Exposition sans port |
+
+### Limites et considérations de Cloudflare
+
+#### Avantages :
+
+* Très simple à mettre en place
+* Efficace dès le plan gratuit
+* Absorbe les attaques sans impact sur votre serveur
+
+#### Inconvénients :
+
+* **Tout le trafic passe par Cloudflare** - dépendance à un tiers
+* Cloudflare peut voir le trafic HTTPS en clair (terminaison TLS)
+* Si Cloudflare tombe, votre site aussi (si l'IP est masquée)
+* Certains pays bloquent les IPs Cloudflare
+
+_Décision architecturale importante : confiance dans un tiers vs contrôle total_
+
+## Autres solutions WAF 🔍
+
+_Le marché est large selon le contexte_
+
+### AWS WAF
+
+* WAF managé intégré à l'écosystème AWS
+* Fonctionne avec **CloudFront, ALB, API Gateway**
+* Règles préconfigurées (OWASP, bots, IPs malveillantes)
+* Facturation à la requête (pas d'abonnement fixe)
+```rust
+Cas d'usage idéal : infrastructure hébergée sur AWS
+Avantage : intégration native avec les services AWS
+Inconvénient : coût variable, lock-in AWS
+```
+
+### Azure WAF
+
+* Intégré à **Azure Application Gateway** et **Azure Front Door**
+* Basé sur l'OWASP CRS
+* Détection de bots, rate limiting, IP filtering
+
+```rust
+Cas d'usage idéal : infrastructure hébergée sur Azure
+Avantage : intégration native avec l'écosystème Microsoft
+```
+
+### Imperva (ex-Incapsula)
+
+* Solution WAF **enterprise** cloud + appliance
+* Très utilisée dans les grandes entreprises
+* Analyse comportementale, protection API
+* Coût élevé, mais fonctionnalités avancées
+
+### NAXSI (WAF Nginx)
+
+* Module Nginx open-source (approche **whitelist**)
+* Plus léger que ModSecurity
+* Logique inversée : tout est bloqué, sauf ce qui est autorisé
+* Moins de faux positifs... mais configuration plus longue
+
+```apache
+# NAXSI : exemple de règle de base
+MainRule "str:select" "msg:select keyword" "mz:ARGS" "s:$SQL:4" id:1000;
+```
+
+### Tableau comparatif
+| **Solution** | **Type** | **Coût** | **Facilité** | **Flexibilité** | 
+| --- | --- | --- | --- | --- | 
+| **ModSecurity** | Hôte (open-source) | Gratuit | Moyenne | Très haute | 
+| **NAXSI** | Hôte (open-source) | Gratuit | Difficile | Haute | 
+| **Cloudflare** | Cloud | Gratuit → Pro | Très facile | Moyenne | 
+| **AWS WAF** | Cloud | Pay-per-use | Facile | Haute | 
+| **Azure WAF** | Cloud | Pay-per-use | Facile | Haute | 
+| **Imperva** | Cloud + Appliance | Élevé | Facile | Haute | 
+| **F5 BIG-IP** | Appliance | Très élevé | Moyenne | Très haute | 
+
+## Choisir son WAF 🎯
+
+_Les bonnes questions à se poser_
+
+### Critères de choix
+
+1. **Infrastructure** : hébergée où ? (on-premise, cloud, hybride)
+2. **Budget** : gratuit, abonnement mensuel, appliance ?
+3. **Compétences internes** : équipe sécu disponible ?
+4. **Niveau de contrôle** : besoin de règles sur mesure ?
+5. **Conformité** : PCI-DSS, RGPD, ISO 27001 imposent parfois des choix
+
+### Scénarios typiques
+| **Contexte** | **Solution recommandée** |
+| --- | --- |
+| Petit site, pas de budget | Cloudflare gratuit |
+| VPS auto-hébergé | ModSecurity + OWASP CRS |
+| Startup, croissance rapide | Cloudflare Pro |
+| AWS, infrastructure cloud | AWS WAF |
+| Grande entreprise, exigences élevées | F5, Imperva |
+| Besoin de contrôle total | ModSecurity sur-mesure |
+
+## Ce qu'il faut retenir 🧠
+
+* Un WAF opère au **niveau http** là où le firewall réseau est aveugle
+* Il fonctionne avec des **règles** (signatures + scores) et deux modes : détection / prévention
+* **ModSecurity + OWASP CRS** : la référence open-source, disponible sur Nginx et Apache
+* **Cloudflare** : solution cloud tout-en-un (CDN, WAF, DDoS, DNS, Zero Trust)
+* Commencer **toujours en mode détection**, ajuster les règles, puis passer en prévention
+* Un WAF ne remplace ni le firewall réseau, ni les **bonnes pratiques de développement**
+
+### Les couches de défense complémentaires
+
+```swift
+Internet
+    │
+[Firewall L3/L4] ← bloque les ports, IP malveillantes
+    │
+[Anti-DDoS / CDN] ← absorbe les attaques volumétriques (Cloudflare)
+    │
+[WAF] ← filtre SQLi, XSS, traversées de répertoire...
+    │
+[Reverse Proxy] ← rate limiting, TLS termination
+    │
+[Application] ← validation des entrées côté serveur
+    │
+[Base de données] ← requêtes paramétrées, moindre privilège
+```
+
+_La sécurité en profondeur : chaque couche protège des menaces différentes_
 
 ---
 
