@@ -36,4 +36,47 @@ Et pour finir, tu devras uploader ce fichier à la racine de ton **dossier Drive
 
  ## ✅ Checklist de vérification
 
- 
+ ### Activité Type 1 : Administrer et sécuriser les infrastructures
+
+- [ ] CP 1 : Appliquer les bonnes pratiques dans l’administration des infrastructures
+- [ ] CP 2 : Administrer et sécuriser les infrastructures réseaux
+- [ ] CP 3 : Administrer et sécuriser les infrastructures systèmes
+- [ ] CP 4 : Administrer et sécuriser les infrastructures virtualisées
+
+ ### Activité Type 2 : Concevoir et mettre en œuvre une solution en réponse à un besoin d’évolution
+
+- [ ] CP 5 : Concevoir une solution technique répondant à des besoins d’évolution de l’infrastructure
+- [ ] CP 6 : Mettre en production des évolutions de l’infrastructure
+- [ ] CP 7 : Mettre en œuvre et optimiser la supervision des infrastructures
+
+### Activité Type 3 : Participer à la gestion de la cybersécurité
+
+- [ ] CP 8 : Participer à la mesure et à l’analyse du niveau de sécurité de l’infrastructure
+- [ ] CP 9 : Participer à l’élaboration et à la mise en œuvre de la politique de sécurité
+- [ ] CP 10 : Participer à la détection et au traitement des incidents de sécurité
+
+### Attention générale à porter au dossier
+
+- [ ]Remplir la première page
+- [ ]  Exemples précis pour couvrir l’ensemble des compétences concernées
+- [ ] Illustrations des compétences via des captures d’écran d’interface, des schémas, des extraits de code
+- [ ] Sommaire avec numéro de pages & pages numérotés
+- [ ] Attestation sur l’honneur remplie
+
+## 🔗 Liens utiles
+
+### À lire
+* [REAC + RE – AIS](https://kourou.oclock.io/content/uploads/2026/01/Referentiel_Activites_Competences_Evaluation_TP_AIS.pdf)
+
+### À consulter
+* [Site dédié au Dossier Professionnel](https://www.dossierprofessionnel.fr/)
+
+### À visionner
+* [Le Dossier Professionnel en 10 points](https://www.dossierprofessionnel.fr/dp-10points)
+
+### À compléter
+* [Dossier Professionnel AIS vierge](https://docs.google.com/document/d/1BJOiCF7bOmjSvuv5FMcJHNGTRKhkU_PTSYvjYUugnec/edit?tab=t.0)
+
+⚠️⚠️⚠️ Pense à **dupliquer ce fichier sur ton Drive personnel**, ne modifie pas directement le template.
+
+
