@@ -48,7 +48,7 @@ Le Dossier de Projet doit suivre le plan suivant.
 
 ## 📤 Upload du Dossier de Projet
 
-Une fois terminé, ton fichier devra être exporté en **PDF** (F*ichier > Télécharger > Document PDF*). Prends bien soin de le nommer **exactement** dossier_de_projet.pdf (ça sera important pour nos vérifications de présence des documents).
+Une fois terminé, ton fichier devra être exporté en **PDF** (F*ichier > Télécharger > Document PDF*). Prends bien soin de le nommer **exactement** `dossier_de_projet.pdf` (ça sera important pour nos vérifications de présence des documents).
 
 Et pour finir, tu devras uploader ce fichier à la racine de ton **dossier Drive personnel de TP** (dont tu recevras l’URL par mail le lendemain de la fin de la formation), n’oublie surtout pas cette étape, c’est un document obligatoire pour ton passage 🏅 Pas d’inquiétude, on se chargera de te le rappeler en temps et en heure !
 

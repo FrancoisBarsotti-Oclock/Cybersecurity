@@ -30,7 +30,7 @@ Mais avant toute chose, la toute première étape, récupère le Dossier vierge 
 
 ### 📤 Upload du Dossier Professionnel
 
-Une fois terminé et **signé**, ton fichier devra être exporté en **PDF** (*Fichier > Télécharger > Document PDF*). Prends bien soin de le nommer **exactement** 👉 dossier_professionnel.pdf (ça sera important pour nos vérifications de présence des documents).
+Une fois terminé et **signé**, ton fichier devra être exporté en **PDF** (*Fichier > Télécharger > Document PDF*). Prends bien soin de le nommer **exactement** 👉 `dossier_professionnel.pdf` (ça sera important pour nos vérifications de présence des documents).
 
 Et pour finir, tu devras uploader ce fichier à la racine de ton **dossier Drive personnel de TP** (dont tu recevras l’URL par mail quelques jours après la fin de la formation), n’oublie surtout pas cette étape, c’est un document obligatoire pour ton passage 🏅 Pas d’inquiétude, on se chargera de te le rappeler en temps et en heure !
 
@@ -57,7 +57,7 @@ Et pour finir, tu devras uploader ce fichier à la racine de ton **dossier Drive
 
 ### Attention générale à porter au dossier
 
-- [ ]Remplir la première page
+- [ ] Remplir la première page
 - [ ]  Exemples précis pour couvrir l’ensemble des compétences concernées
 - [ ] Illustrations des compétences via des captures d’écran d’interface, des schémas, des extraits de code
 - [ ] Sommaire avec numéro de pages & pages numérotés
