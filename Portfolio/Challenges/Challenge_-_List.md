@@ -134,13 +134,15 @@ Challenge B407 : une série d'exercices pour créer une suite d'outils Admin en 
 Atelier B408 : Atelier Bash - Automatisation de l'administration système.
 
 ### Challenges C1 (Gestion de projet et analyse de risques)
-Challenge C101 : Effectuer la note de cadrage d'un projet.
+👉 [Challenge C101](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C1/Challenge_C101.md) : Faire fiche de cadrage d'un projet.
 
-Challenge C102 : Créer le WBS, matrice RACI et diagramme Gantt.
+👉 [Challenge C102](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C1/Challenge_C102.md) : Créer WBS, matrice RACI et diagramme Gantt.
 
-Challenge C103 : Analyser les risques pour notre projet.
+👉 [Challenge C103](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C1/Challenge_C103.md) : Registrer les risques du projet.
 
-Challenge C104 : Définir un scénario d’incident majeur et les mesures, procédures, PRA-PCA type.
+👉 [Challenge C104](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C1/Challenge_C104.md) : Prévoir scénarios d’incident majeur et les mesures, procédures à appliquer pour continuer et reprendre l'acitivité (PRA-PCA).
+
+👉 [Challenge C105](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C1/Challenge_C105.md) : QCM 10
 
 ### Challenges C2 (Cloud)
 Challenge C201 : Expérimenter les versions gratuites de Google Cloud, AWS et Azure.
@@ -156,7 +158,24 @@ Challenge C204 : Déploiement Openstack
 
 👉 [Challenge C302](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C302.md): Radius
 
-👉 [Challenge C302](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C303.md): VPN & Authentification Radius
+👉 [Challenge C302](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C303.md): Monter un serveur RADIUS et lier Authentification à AD.
+
+👉 [Challenge C303](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C303.md) : Déployer un VPN et authentifier les utilisateurs via RADIUS.
+
+👉 [Challenge C304](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C304.md) : 
+
+👉 [Challenge C305]() : 
+
+👉 [Challenge C306](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C306.md) : Sécuriser un serveur Debian exposé sur internet.
+
+👉 [Challenge C307](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C307.md) : Sécuriser un serveur Linux contre la brute-force.
+
+👉 [Challenge C308]() : 
+
+👉 [Challenge C309]() : 
+
+👉 [Challenge C310](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C310.md) : QCM 11, Sécurité système & réseau.
+
 
 ### Challenges C4 (Conteneurs & orchestration)
 
