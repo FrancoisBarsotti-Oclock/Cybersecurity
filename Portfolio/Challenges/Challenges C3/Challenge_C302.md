@@ -9,9 +9,9 @@
 >* Lier l’authentification à l’Active Directory.
 >* Tester un scénario d’accès (succès / échec) avec un compte AD.
 
-👉 [Énoncé complet du challenge](https://github.com/O-clock-Aldebaran/E02-SC3E02-radius-FrancoisBarsotti-Oclock) 👈
+👉 [Énoncé complet du challenge](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Supports%20Divers/S%C3%A9curit%C3%A9%20Syst%C3%A8mes%20%26%20R%C3%A9seaux/EnoncEs%20de%20challenges/Pour%20C302.md) 👈
 
-Voir 👉 Cours C302 👈
+Voir 👉 [Cours C302](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C3%20(S%C3%A9curit%C3%A9%20syst%C3%A8mes%20%26%20r%C3%A9seaux)/C302_Radius%20%26%20WiFi.md) 👈
 
 ---
 

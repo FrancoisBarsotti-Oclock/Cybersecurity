@@ -12,7 +12,7 @@
 >
 >Le responsable IT vous confie la mission de segmenter le réseau par service et de mettre en place des règles de filtrage pour appliquer une politique d'accès claire et justifiable.
 
-👉 [Énoncé complet du challenge](https://github.com/O-clock-Aldebaran/SC03E01-VLAN) 👈
+👉 [Énoncé complet du challenge](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Supports%20Divers/S%C3%A9curit%C3%A9%20Syst%C3%A8mes%20%26%20R%C3%A9seaux/EnoncEs%20de%20challenges/Pour%20C301.md) 👈
 
 Voir 👉 [Cours C301](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C3%20(S%C3%A9curit%C3%A9%20syst%C3%A8mes%20%26%20r%C3%A9seaux)/C301_S%C3%A9curit%C3%A9%20Syst%C3%A8mes%20%26%20R%C3%A9seaux%20intro.md) 👈
 
