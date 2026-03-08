@@ -648,4 +648,6 @@ Voir 👉 [Démonstration de last, fail2ban et knockd ](https://github.com/O-clo
 
 Voir aussi 👉 [Protéger un serveur Linux avec CrowdSec : le guide pour bien débuter](https://www.it-connect.fr/comment-proteger-son-serveur-linux-des-attaques-avec-crowdsec/)
 
-👉 le [Challenge C307](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C307.md)
+Challenge du jour 👉 [Challenge C307](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C307.md)
+
+#
