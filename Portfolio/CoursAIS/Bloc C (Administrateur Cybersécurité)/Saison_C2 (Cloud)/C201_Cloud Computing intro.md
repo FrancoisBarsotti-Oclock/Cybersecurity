@@ -537,3 +537,330 @@ Le provider gère **TOUT** :
 | **Stockage** | 👤Vous | ☁️Provider | ☁️Provider | ☁️Provider |
 | **Réseau** | 👤Vous | ☁️Provider | ☁️Provider | ☁️Provider |
 
+### L'analogie de la Pizza 🍕
+
+**On-Premises (Fait maison)** :
+* Acheter ingrédients
+* Faire la pâte
+* Préparer garniture
+* Cuire au four
+* Nettoyer
+
+**IaaS (Pizza à emporter)** :
+* Vous cuisinez chez vous
+* Vous avez le four et la cuisine
+* On vous livre les ingrédients
+
+**PaaS (Pizza livrée)** :
+* Pizza cuite, prête à manger
+* Vous choisissez les garnitures
+* Livrée chaude chez vous
+
+**SaaS (Restaurant)** :
+* Vous allez au restaurant
+* Vous commandez dans le menu
+* Tout est fait pour vous
+* Vous mangez, c'est tout
+
+### Critères de choix
+
+**Choisir On-Prem si** :
+* Conformité stricte (données ultra-sensibles)
+* Applications legacy impossibles à migrer
+* Coûts cloud trop élevés pour votre usage
+
+**Choisir IaaS si** :
+* Besoin de contrôle OS
+* Migration "lift & shift"
+* Applications spécifiques
+
+**Choisir PaaS si (le juste milieu)**:
+* Focus sur le développement
+* Pas de contraintes OS
+* Scaling important
+
+**Choisir SaaS si**:
+* Application standard (CRM, email)
+* Pas de compétences IT
+* Déploiement immédiat requis
+
+## Démonstrations
+_Voir la différence en action_
+
+### Démo 1 : Serveur On-Premises
+**Rappel de votre atelier Proxmox :**
+
+Créer un serveur web :
+
+1. Créer une VM (5 min)
+2. Installer Debian (15 min)
+3. Configurer réseau (5 min)
+4. Installer Apache (5 min)
+5. Configurer firewall (5 min)
+⏱️ **Total : ~35 minutes**
+
+➡️ **Et encore, c'est virtualisé ! Un serveur physique = semaines.**
+
+### Démo 2 : IaaS - AWS EC2
+**Créer une VM Ubuntu avec Apache**
+
+1. Se connecter à la console AWS
+2. Créer une instance EC2
+3. Choisir type d'instance, région
+4. Configuration réseau
+5. SSH et installer Apache
+
+⏱️ **Estimation : 10-15 minutes**
+
+### Démo 3 : PaaS – AWS Elastic Beanstalk
+**Déployer une application web Node.js**
+
+1. Créer une application Elastic Beanstalk
+2. Choisir runtime (Node.js)
+3. Déployer depuis GitHub
+4. Application live
+
+⏱️ **Estimation : 5 minutes**
+➡️ **Pas d'OS, pas de serveur à gérer.**
+
+### Démo 4 : SaaS – Microsoft 365
+**Créer un utilisateur et lui donner accès à Teams**
+
+1. Se connecter au portail admin M365
+2. Ajouter un utilisateur
+3. Assigner une licence
+4. L'utilisateur peut se connecter immédiatement
+
+⏱️ **Estimation : 2 minutes**
+➡️ **Application prête, zéro installation.**
+
+### Comparaison des démos
+| **Modèle** | **Temps** | **Compétences** | **Gestion** |
+| :--: | :--: | :--: | :--: |
+| **On-Prem** | 35 min | Sys admin | OS + App |
+| **IaaS** | 15 min | Sys admin | OS + App |
+| **PaaS** | 5 min | Développeur | App only |
+| **SaaS** | 2 min | Utilisateur | Rien |
+
+➡️ **Plus on monte dans l'abstraction, plus c'est rapide et simple.**
+
+## Jeu de catégorisation
+
+**Consigne** :
+
+On montre **20 services**.
+
+Pour chacun, on doit identifier :
+* On-Premises
+* IaaS 
+* PaaS
+* SaaS 
+
+* **Gmail →  SaaS** : application email complète, prête à l'emploi. Vous créez juste un compte et utilisez.
+
+* **AWS EC2 → IaaS** : machine virtuelle où vous installez l'OS et vos applications.
+
+* **Serveur physique dans vos locaux → On-Premises** : on possède et gère le matériel physique.
+
+* **Heroku → PaaS** : plateforme où vous déployez du code. L'OS et le runtime sont gérés pour vous.
+
+* **Salesforce → SaaS** : CRM complet, accessible via navigateur.
+
+* **Amazon DynamoDB → PaaS** : base de données managée. Vous gérez les données et requêtes, pas l'infrastructure.
+
+* **Google Compute Engine → IaaS** : machines virtuelles Google Cloud.
+
+* **Slack → SaaS** : Outil de communication prêt à l'emploi.
+
+* **AWS Lambda → PaaS** : Serverless = sous-catégorie de PaaS. Vous déployez du code, AWS gère tout le reste.
+
+* **Netflix → SaaS** : Service de streaming complet.
+
+* **Amazon Lightsail → IaaS** : VMs où vous installez l'OS de votre choix.
+
+* **GitHub → SaaS** : Plateforme Git complète, prête à l'emploi.
+
+* **AWS Elastic Beanstalk → PaaS** : Plateforme pour déployer des web apps.
+
+* **Dropbox → SaaS** : Stockage cloud prêt à l'emploi.
+
+* **AWS RDS → PaaS** : Base de données managée (MySQL, PostgreSQL).
+
+* **Zoom → SaaS** : Visioconférence prête à l'emploi.
+
+* **Google Cloud Storage → IaaS** : Stockage brut (buckets S3-like). Vous gérez l'accès, la structure, les permissions.
+
+* **vs Dropbox (SaaS)** : application complète de partage.
+
+* **Trello → SaaS** : Gestion de projets prête à l'emploi.
+
+* **Amazon EKS → PaaS** : Cluster Kubernetes managé. Vous déployez containers, AWS gère le cluster.
+
+* **Proxmox → On-Premises** : Logiciel de virtualisation installé sur votre serveur physique. Même si hébergé chez OVH, c'est votre infrastructure dédiée.
+
+### Récapitulatif de l'activité
+
+**Faciles à identifier** :
+
+* SaaS : applications grand public (Gmail, Netflix, Slack)
+* On-Prem : serveurs physiques
+
+**Plus subtils** :
+* IaaS vs PaaS : niveau de gestion
+* Serverless = PaaS
+* Storage brut = IaaS, storage avec app = SaaS
+➡️ **La frontière dépend de qui gère quoi.**
+
+## Cas d'usage réels
+
+### _Quand utiliser quoi ?_
+
+### Scénario 1 : Startup tech
+**Contexte** :
+* 5 développeurs
+* Application web SaaS (leur produit)
+* Budget serré
+* Croissance imprévisible
+
+**Recommandation** :
+* 🟢 PaaS pour l'application (AWS Elastic Beanstalk, Heroku)
+* 🟢 PaaS pour la base de données (AWS RDS)
+* 🟢 SaaS pour outils (GitHub, Slack, Google Workspace)
+
+**Pourquoi** ? Focus sur le produit, pas l'infrastructure.
+
+### Scénario 2 : PME traditionnelle
+**Contexte** :
+* 50 employés
+* ERP, CRM, email
+* Pas d'équipe IT
+* Besoins standards
+
+**Recommandation** :
+* 🟢 SaaS pour tout (Office 365, Salesforce, SAP Cloud)
+
+**Pourquoi** ? Pas de compétences IT, applications standards.
+
+### Scénario 3 : Hôpital
+**Contexte** :
+* Données de santé (ultra-sensibles)
+* Conformité HDS stricte
+* Applications métier spécifiques
+* Budget conséquent
+
+**Recommandation** :
+* 🟠 Hybride :
+    * On-Prem ou IaaS certifie HDS pour données patients
+    * SaaS pour outils non-critiques (email, RH)
+
+**Pourquoi** ? Conformité et sécurité avant tout.
+
+### Scénario 4 : E-commerce
+**Contexte** :
+* Site web avec pics saisonniers (Black Friday)
+* Application custom
+* Besoin de scalabilité
+
+**Recommandation** :
+* 🟢 PaaS pour le site web (auto-scaling)
+* 🟢 PaaS pour la base de données
+* 🟢 IaaS si besoin de contrôle OS (rare)
+
+**Pourquoi** ? Scalabilité automatique critique.
+
+### Scénario 5 : Banque
+**Contexte** :
+* Données ultra-sensibles
+* Réglementation stricte
+* Applications legacy (mainframe)
+* Millions de clients
+
+**Recommandation** :
+
+* 🔴 On-Prem pour core banking (legacy)
+* 🟠 Private Cloud ou IaaS pour nouvelles apps
+* 🟢 SaaS pour outils non-critiques
+
+**Pourquoi** ? Conformité, legacy, risques.
+
+## Points clés à retenir 🧠
+
+## Les 4 modèles 📋
+
+### On-Premises :
+* Contrôle total, mais complexité totale
+* CAPEX élevé, scalabilité lente
+
+### IaaS :
+* Infrastructure cloud, vous gérez l'OS
+* Flexibilité + scalabilité
+
+### PaaS :
+* Focus sur le code, provider gère l'OS
+* Rapidité + automatisation
+
+### SaaS :
+* Application prête, zéro gestion IT
+* Simplicité maximale
+
+## La règle d'or
+Plus vous montez dans l'abstraction :
+* Plus c'est simple
+* Plus c'est rapide
+* Moins de gestion
+* Moins de contrôle
+* Plus de dépendance au provider
+
+➡️ **Choisir selon vos besoins et compétences.**
+
+### Matrice de décision rapide
+| **Besoin** | **Modèle recommandé** |
+| :--: | :--: |
+| Contrôle OS nécessaire | IaaS |
+| Application standard | SaaS |
+| Focus développement | PaaS |
+| Conformité extrême | On-Prem ou Hybride |
+| Pas d'équipe IT | SaaS |
+| Scalabilité critique | PaaS ou IaaS |
+| Migration simple | IaaS (lift & shift) |
+
+### Et dans la vraie vie ?
+
+**La plupart des entreprises utilisent un mix.**
+
+Exemple réel typique :
+🟢 SaaS : Office 365, Salesforce
+🟢 PaaS : Applications web métier
+🟠 IaaS : Quelques VMs spécifiques
+🔴 On-Prem : Serveurs legacy en transition
+
+➡️ **Approche hybride et multi-cloud.**
+
+### Prochaine session
+
+**Responsabilité et réversibilité**
+
+Nous verrons :
+* Qui est responsable de quoi (matrice détaillée)
+* Comment éviter le lock-in
+* Réversibilité et portabilité
+* Aspects contractuels (SLA)
+
+## Pour plus d'information 📚  
+
+### Documentation
+* 👉 [NIST Cloud Computing](https://www.nist.gov/programs-projects/nist-cloud-
+computing-program-nccp)
+* AWS Well-Architected Framework
+* AWS Architecture Center
+
+### Comparateurs :
+* CloudHarmony (benchmarks)
+* RightScale State of the Cloud (rapports annuels)
+
+### Pratique :
+* Créer un compte gratuit AWS
+* Free tiers disponibles
+
+#
+
