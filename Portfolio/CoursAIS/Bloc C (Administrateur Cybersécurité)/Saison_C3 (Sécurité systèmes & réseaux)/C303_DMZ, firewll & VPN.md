@@ -176,5 +176,7 @@ Action: DENY ❌
 
 _La segmentation réseau, c'est la base de toute architecture sécurisée_💡
 
+Challenge du jour [Challenge C303](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C303.md)
+
 #
 
