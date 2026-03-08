@@ -403,8 +403,3 @@ Pas de challenge prévu pour cette session.
 
 #
 
-
-
-
-
-### 🚧 En construction 🚧
