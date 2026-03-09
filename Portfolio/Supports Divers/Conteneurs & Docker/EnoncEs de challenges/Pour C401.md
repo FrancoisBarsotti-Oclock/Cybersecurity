@@ -28,6 +28,6 @@ Pour vérifier que l'installation s'est bien passée, vous pouvez lancer la comm
 
 ## Exercice : bases de la CLI Docker
 
-Maintenant que nous avons installé Docker, il est temps de découvrir comment s'en servir ! La suite par [ici](README-basics.md).
+Maintenant que nous avons installé Docker, il est temps de découvrir comment s'en servir ! La suite par [ici]().
 
 #
