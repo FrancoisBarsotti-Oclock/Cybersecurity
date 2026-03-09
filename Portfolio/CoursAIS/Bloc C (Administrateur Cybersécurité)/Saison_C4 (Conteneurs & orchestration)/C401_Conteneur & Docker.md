@@ -6,6 +6,8 @@
 ## Docker
 Conteneurisation
 
+![01-LogoDocker]()
+
 Docker est un logiciel permettant d'exécuter des applications dans des **conteneurs**.
 
 Pas tout à fait, nous on parle de conteneurs logiciels.
@@ -125,5 +127,17 @@ Pour utiliser Docker avec nos projets, nous n'avons **pas forcément besoin de c
 
 On peut se contenter d'utiliser des images existantes, comme par exemple celle d'Apache2. _Mais on les récupère où, ces images ?_
 
-[HubDocker](https://hub.docker.com/)
+### [DockerHub](https://hub.docker.com/)
+
+Comme Git & GitHub, avec Docker on a **DockerHug** !
+
+DockerHub est un site web sur lequel on peut **héberger nos images Docker dans des dépôts** (repository).
+
+Comme sur Github avec nos depots Git, on pourra choisir si nos dépôts d'images Docker sont **publics ou privés**. Avec l'offre gratuite, nous sommes limités à un seul dépôt privé.
+
+![08-DuckerHub]()
+
+
+
+
 
