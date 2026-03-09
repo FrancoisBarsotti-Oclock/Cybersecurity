@@ -1,7 +1,10 @@
 # Session C401. Conteneur & Docker
 
 **Notions du jour :**
-
+* conteneurisation vs. virtualisation
+* docker
+* image
+* conteneur
 
 ## Docker
 Conteneurisation
