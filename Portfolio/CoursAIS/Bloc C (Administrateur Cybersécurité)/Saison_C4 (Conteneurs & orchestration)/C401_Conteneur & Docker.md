@@ -2,3 +2,114 @@
 
 **Notions du jour :**
 
+
+## Docker
+Conteneurisation
+
+Docker est un logiciel permettant d'exécuter des applications dans des **conteneurs**.
+
+Pas tout à fait, nous on parle de conteneurs logiciels.
+
+Mais le terme "conteneur" est bien inspiré des conteneurs maritimes, d'ailleurs le logo de Docker représente une "baleine porte-conteneur" !
+
+### Ça sert à quoi, Docker ?
+On doit souvent gérer des **problèmes de versions** en développement d'applications.
+
+Par exemple : si le développeur a créé un site web avec PHP version 8, et qu'un administrateur doit le déployer sur un serveur avec seulement PHP version 7 d'installé, le site ne fonctionnera pas !
+
+![02-dialogue film]()
+
+Et bien c'est justement l'idée derrière Docker :
+
+Si ça fonctionne sur l'environnement de dév, **on livre l'environnement de dev en prod** !
+
+#### **Docker permet, entre autres** :
+
+* de plus facilement déployer une application en production
+* de pouvoir **mettre en place rapidement un environnement de développement identique à l'environnement de production**
+* de supporter les montées en charge
+
+>Mais tout ça, c'est utile que pour les devs ?
+
+Non ! Ce sont les admins sys qui s'occupent de la mise en production des applications en général.
+
+Et il y a un autre intérêt pour nous : pouvoir installer facilement plein d'applications sur un même serveur très facilement !
+
+## Ça fonctionne comment ?
+Il y a deux termes à connaître pour bien comprendre comment Docker fonctionne :
+
+* les conteneurs Docker
+* les images Docker
+
+### Conteneur Docker
+Un conteneur est **une "enveloppe" virtuelle qui permet de distribuer une application avec tous les éléments dont elle a besoin pour fonctionner** : code source / binaire de l'application, environnement d'exécution, bibliothèques, outils et fichiers divers.
+
+![03-Conteneur Docker]()
+
+Prenons un premier exemple : **le frontend d'une application web** (ce qui est chargé dans le navigateur du visiteur).
+
+Un conteneur permettant de distribuer un frontend avec tout ce dont il a besoin pour fonctionner peut par exemple être composé de :
+
+* **application** : code source HTML/CSS/JS du frontend
+* **environnement d'exécution** : serveur web Apache
+* **bibliothèques** : on pourrait avoir une bibliothèque pour faire des animations
+* **outils et fichiers divers** : on pourrait avoir ici NPM, un gestionnaire de dépendances
+
+Deuxieme exemple : **le backend d'une application web** (le code coté serveur, qui génère ce qui sera envoyé au navigateur).
+
+Un conteneur permettant de distribuer un backend avec tout ce dont il a besoin pour fonctionner peut être composé de :
+
+* **application** : code source PHP (ou Python, JS, Java, C#, etc.) du backend
+* **environnement d'exécution** : serveur web Apache pour PHP, NodeJS pour JS, etc.
+* **bibliothèques** : dossier vendor pour PHP, dossier node_modules pour JS, etc.
+* **outils et fichiers divers** : Composer pour PHP, NPM et PM2 pour JS, etc.
+
+### Image Docker
+
+En POO, on dit **qu'un objet est l'instance d'une classe.**
+
+Avec Docker : **un conteneur Docker est l'instance d'une image.**
+
+On peut créer **un nombre infini de conteneurs à partir d’une même image Docker !**
+
+![04-Docker image]()
+
+### _Mais concrètement, c'est quoi une image ?_
+
+Une image Docker est un fichier **immuable** (qu'on ne peut pas modifier) qui est une **capture instantanée du système de fichiers** d'un conteneur.
+
+En quelques sortes, c'est comme si on prenait une "photo" du contenu du disque dur d'un serveur après avoir tout installe (l'application web + tout ce dont elle a besoin pour fonctionner).
+
+### Virtualisation vs. Conteneurisation
+
+On peut faire le parallèle avec la virtualisation :
+
+Le disque dur des **machines virtuelles** (Virtual Machine / VM en anglais) que nous utilisons depuis le début de la formation sur VirtualBox est un fichier avec l'extension . vdi.
+
+![05-Machines virtuelles]()
+
+On peut créer plusieurs **instances** (plusieurs VMs = équivalent à un conteneur) à partir d'un même disque dur virtuel (équivalent à une image Docker).
+
+### Différences entre virtualisation et conteneurisation
+
+Une machine virtuelle embarque un **système d'exploitation complet**, ce n'est pas le cas avec un conteneur Docker, qui partage certains composants avec l'hôte sur lequel il est lancé (notamment le noyau).
+
+En conséquence, une machine virtuelle peut être très lourde (de plusieurs Gigaoctets à plusieurs dizaines de Go !), là où **un conteneur Docker sera plus léger** (quelques centaines de Mo en général).
+
+![06-Différence Virtualisation et Docker]()
+
+### Images immuables
+
+Les images Docker, en quelques sortes les "disques durs virtuels" de nos conteneurs, sont **immuables**.
+
+Ça veut dire qu'**on ne peut pas les modifier**. _Mais comment on fait du
+coup pour installer nos logiciels et y placer notre code ?_
+
+### Dockerfile
+
+Pour créer **notre propre image Docker**, on va partir d'une **image existante**.
+
+Grâce à un fichier de configuration spécifique à Docker, le **Dockerfile**, on va pouvoir indiquer à Docker ce qu'on veut **ajouter** sur l'image existante.
+
+Nous découvrirons la syntaxe et les commandes à utiliser pour rédiger et utiliser un Dockerfile demain.
+
