@@ -355,6 +355,6 @@ Cela peut être utile pour rapidement construire plusieurs variantes au moyen d�
 
 ### Gestion des package managers applicatifs (npm, composer…)
 
-Voir [la fiche-récap dédiée]().
+Voir [la fiche-récap dédiée](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Supports%20Divers/Conteneurs%20%26%20Docker/Docker%20%26%20package%20managers.md).
 
 #
