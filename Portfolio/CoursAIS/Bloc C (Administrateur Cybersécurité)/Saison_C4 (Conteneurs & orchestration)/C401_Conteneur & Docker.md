@@ -146,4 +146,47 @@ _On va donc devoir créer une image contenant le frontend, le backend, et la bas
 
 Non ! On essaye en règle générale avec Docker de faire les choses de façon **modulaire**.
 
+### Applications multi-conteneurs
+
+Une application web va plutôt être **divisée en trois conteneurs** :
+
+* un conteneur pour le frontend
+* un conteneur pour le backend
+* un conteneur pour la base de données
+
+Ainsi, on peut facilement **mettre à jour chaque conteneur indépendamment**. On peut aussi, sur des applications plus sollicitées, démarrer plusieurs conteneurs pour le front ou le back, afin de supporter **un plus grand nombre de requêtes**.
+
+### 3 conteneurs, 3 images
+
+On l'a dit, **un conteneur est l'instance d'une image Docker**.
+
+Il va donc nous falloir **trois images Docker, une pour chaque conteneur de notre application**.
+
+Pour faire fonctionner une **application multi-conteneurs**, on utilisera **Docker Compose**, un "plugin" de Docker. On utilisera un fichier au format YAML (une alternative au JSON) pour configurer Docker Compose.
+
+### Docker : pratique
+Avant tout, il faut qu'on installe Docker !
+
+Pour l'instant, on va l'installer sur une VM Linux, et découvrir les commandes de base de Docker !
+
+Par principe, il doit être installé dans une VM ou sur un serveur physique.
+
+### Docker : pratique
+Avant tout, il faut qu'on installe Docker !
+
+Pour l'instant, on va l'installer sur une VM Linux, et découvrir les commandes de base de Docker !
+
+[Install Docker Engine on Debian]( https://docs.docker.com/engine/install/debian/) 
+
+Toujours commencer par :
+```apache
+apt update && upgrade -y
+
+apt install sudo
+
+usermod -aG sudo <user>
+```
+
+
+
 
