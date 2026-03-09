@@ -9,7 +9,7 @@ Docker utilise un modèle client-serveur :
 * la partie serveur est le Docker Engine (programme dockerd), c’est le runtime d’exécution des images Docker
 * la partie cliente est « Docker » (programme docker), c’est l’outil utilisé au quotidien pour créer et gérer les images Docker
 
->La communication entre le client et le serveur se fait au moyen d’[une API REST](), ce qui rend possible l’utilisation de Docker à travers n’importe quel réseau, pas uniquement en mode local !
+>La communication entre le client et le serveur se fait au moyen d’[une API REST](https://docs.docker.com/reference/api/engine/version/v1.53/), ce qui rend possible l’utilisation de Docker à travers n’importe quel réseau, pas uniquement en mode local !
 
 ### Images
 Les images Docker sont des [exécutables](https://fr.wikipedia.org/wiki/Fichier_ex%C3%A9cutable) à destination du Docker Engine. Ces exécutables contiennent typiquement :
