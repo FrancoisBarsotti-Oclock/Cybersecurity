@@ -135,9 +135,16 @@ DockerHub est un site web sur lequel on peut **héberger nos images Docker dans 
 
 Comme sur Github avec nos depots Git, on pourra choisir si nos dépôts d'images Docker sont **publics ou privés**. Avec l'offre gratuite, nous sommes limités à un seul dépôt privé.
 
-![08-DuckerHub]()
+![08-DuckerHub](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C4%20(Conteneurs%20%26%20orchestration)/images%20C4/images%20C401/C401_08-DuckerHub.png)
+
+Dans les nombreux dépôts publics, on retrouve des images Docker prêtes à l'emploi qui vont nous être très utiles comme base pour **construire nos propres images** ou mettre en place nos **environnements de développement et de production**.
 
 
+![09-EnvironnementDockerHub]()
 
+### Docker Compose
+_On va donc devoir créer une image contenant le frontend, le backend, et la base de données d'une application ?_
+
+Non ! On essaye en règle générale avec Docker de faire les choses de façon **modulaire**.
 
 
