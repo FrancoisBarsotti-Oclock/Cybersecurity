@@ -113,3 +113,17 @@ Grâce à un fichier de configuration spécifique à Docker, le **Dockerfile**, 
 
 Nous découvrirons la syntaxe et les commandes à utiliser pour rédiger et utiliser un Dockerfile demain.
 
+### Exemple pour créer une image Docker de notre frontend :
+
+![07-image Docker Frontend]()
+
+Le **Dockerfile** permet de copier des fichiers dans une image, lancer des commandes, installer des logiciels ou dépendances, etc.
+
+L'image d'origine, embarquant le logiciel Apache2, a (elle aussi) été construite en utilisant un Dockerfile.
+
+Pour utiliser Docker avec nos projets, nous n'avons **pas forcément besoin de créer nos propres images Docker avec un Dockerfile !**
+
+On peut se contenter d'utiliser des images existantes, comme par exemple celle d'Apache2. _Mais on les récupère où, ces images ?_
+
+[HubDocker](https://hub.docker.com/)
+
