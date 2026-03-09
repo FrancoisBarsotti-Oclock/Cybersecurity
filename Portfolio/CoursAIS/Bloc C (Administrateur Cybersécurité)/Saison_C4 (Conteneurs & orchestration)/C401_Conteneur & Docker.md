@@ -139,8 +139,7 @@ Comme sur Github avec nos depots Git, on pourra choisir si nos dépôts d'images
 
 Dans les nombreux dépôts publics, on retrouve des images Docker prêtes à l'emploi qui vont nous être très utiles comme base pour **construire nos propres images** ou mettre en place nos **environnements de développement et de production**.
 
-
-![09-EnvironnementDockerHub]()
+![09-EnvironnementDockerHub](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C4%20(Conteneurs%20%26%20orchestration)/images%20C4/images%20C401/C401_09-EnvironnementDockerHub.png)
 
 ### Docker Compose
 _On va donc devoir créer une image contenant le frontend, le backend, et la base de données d'une application ?_
