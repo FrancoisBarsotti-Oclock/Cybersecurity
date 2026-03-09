@@ -17,7 +17,7 @@ On doit souvent gérer des **problèmes de versions** en développement d'applic
 
 Par exemple : si le développeur a créé un site web avec PHP version 8, et qu'un administrateur doit le déployer sur un serveur avec seulement PHP version 7 d'installé, le site ne fonctionnera pas !
 
-![02-dialogue film]()
+![02-dialogue film](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C4%20(Conteneurs%20%26%20orchestration)/images%20C4/images%20C401/C401_02-dialogue%20film.png)
 
 Et bien c'est justement l'idée derrière Docker :
 
@@ -44,7 +44,7 @@ Il y a deux termes à connaître pour bien comprendre comment Docker fonctionne 
 ### Conteneur Docker
 Un conteneur est **une "enveloppe" virtuelle qui permet de distribuer une application avec tous les éléments dont elle a besoin pour fonctionner** : code source / binaire de l'application, environnement d'exécution, bibliothèques, outils et fichiers divers.
 
-![03-Conteneur Docker]()
+![03-Conteneur Docker](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C4%20(Conteneurs%20%26%20orchestration)/images%20C4/images%20C401/C401_03-Conteneur%20Docker.png)
 
 Prenons un premier exemple : **le frontend d'une application web** (ce qui est chargé dans le navigateur du visiteur).
 
@@ -72,7 +72,7 @@ Avec Docker : **un conteneur Docker est l'instance d'une image.**
 
 On peut créer **un nombre infini de conteneurs à partir d’une même image Docker !**
 
-![04-Docker image]()
+![04-Docker image](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C4%20(Conteneurs%20%26%20orchestration)/images%20C4/images%20C401/C401_04-Docker%20image.png)
 
 ### _Mais concrètement, c'est quoi une image ?_
 
@@ -86,7 +86,7 @@ On peut faire le parallèle avec la virtualisation :
 
 Le disque dur des **machines virtuelles** (Virtual Machine / VM en anglais) que nous utilisons depuis le début de la formation sur VirtualBox est un fichier avec l'extension . vdi.
 
-![05-Machines virtuelles]()
+![05-Machines virtuelles](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C4%20(Conteneurs%20%26%20orchestration)/images%20C4/images%20C401/C401_05-Machines%20virtuelles.png)
 
 On peut créer plusieurs **instances** (plusieurs VMs = équivalent à un conteneur) à partir d'un même disque dur virtuel (équivalent à une image Docker).
 
@@ -96,7 +96,7 @@ Une machine virtuelle embarque un **système d'exploitation complet**, ce n'est 
 
 En conséquence, une machine virtuelle peut être très lourde (de plusieurs Gigaoctets à plusieurs dizaines de Go !), là où **un conteneur Docker sera plus léger** (quelques centaines de Mo en général).
 
-![06-Différence Virtualisation et Docker]()
+![06-Différence Virtualisation et Docker](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C4%20(Conteneurs%20%26%20orchestration)/images%20C4/images%20C401/C401_06-Diff%C3%A9rence%20Virtualisation%20et%20Docker.png)
 
 ### Images immuables
 
@@ -115,7 +115,7 @@ Nous découvrirons la syntaxe et les commandes à utiliser pour rédiger et util
 
 ### Exemple pour créer une image Docker de notre frontend :
 
-![07-image Docker Frontend]()
+![07-image Docker Frontend](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C4%20(Conteneurs%20%26%20orchestration)/images%20C4/images%20C401/C401_07-image%20Docker%20Frontend.png)
 
 Le **Dockerfile** permet de copier des fichiers dans une image, lancer des commandes, installer des logiciels ou dépendances, etc.
 
