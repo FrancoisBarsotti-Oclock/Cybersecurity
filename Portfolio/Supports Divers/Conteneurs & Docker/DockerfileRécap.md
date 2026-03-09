@@ -247,8 +247,110 @@ RUN NODE_ENV=production npm install
 
 ### Autres instructions utiles
 
-* `VOLUME` : voir la fiche-récap sur les [volumes Docker]().
-* `ARG`, `HEALTHCHECK` : voir la doc officiel
-* `FROM` multi-stage : voir la documentation officielle
-* etc. (documentation officielle Dockerfile)
+* `VOLUME` : voir la fiche-récap sur les [volumes Docker](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Supports%20Divers/Conteneurs%20%26%20Docker/Volumes.md).
+* `ARG`, `HEALTHCHECK` : voir [la doc officielle](https://docs.docker.com/reference/compose-file/build/#args)
+* `FROM` multi-stage : voir [la documentation officielle](https://docs.docker.com/build/building/multi-stage/)
+* [etc](https://docs.docker.com/reference/dockerfile). (documentation officielle Dockerfile)
 
+## Résumé des bonnes pratiques
+
+* Utiliser un linter **pour Dockerfile**. Par exemple, un outil comme [fromlatest.io](https://www.fromlatest.io/#/) permet de détecter les pistes d’améliorations.
+
+* **Privilégier les images de base légères** : [alpine](https://hub.docker.com/_/alpine), [minideb](https://hub.docker.com/r/bitnami/minideb)… Ne pas hésiter à créer une image de base personnalisée pour les besoins de son entreprise, mais sans y intégrer plus que nécessaire. Une image de base ne doit contenir que des outils utiles *la plupart du temps* (sinon tout le temps), *pour la plupart des intervenants* (sinon tous). Par exemple, ne pas intégrer un serveur web dans l’image de base racine, sauf si 100% des projets dockerisés en ont besoin (ce qui n’est jamais le cas à moyen terme, donc ne pas le faire 🙈).
+
+* **Fournir un `.dockerignore`** pour exclure tout contenu inutile au processus de `build` (minimisation du *build context*).
+
+* É**crire un Dockerfile pour le dev, un autre pour la prod**. Les configurations sont différentes et par soucis de clareté, il vaut mieux deux fichiers séparés et lisibles, plutôt qu’un seul remplis de `RUN if` … — il est toujours possible d’écrire un script sh de build qui décidera quel Dockerfile utiliser en fonction d’une variable d’environnement, par exemple.
+
+* **Tirer partie du cache** des couches (*layers*) de l’image pour accéler les builds.
+
+* **Ne jamais travailler en utilisateur root**. Toujours créer (s’il n’existe pas déjà dans les images de base) un utilisateur dédié, puis l’utiliser avec l’instruction `USER`. Configurer les droits de cet utilisateur pour qu’il puisse éventuellement réaliser des opérations d’administration système avec `sudo` et/ou faire partie des bons groupes utilisateur pour lancer les applicatifs dans le container.
+
+* **Ne pas copier plus de fichiers & dossiers que nécessaire** avec `COPY`. Par exemple, éviter de mettre vendors/ ou node_modules/ dans une image, de façon à en réduire la taille.
+
+* **Toujours `build` avec un tag précis**. L’utilisation implicite de :latest n’est [pas fiable](https://vsupalov.com/docker-latest-tag/), car il s’agit d’un tag « comme un autre » qui ne correspond pas nécessairement à la dernière version en date d’une image… mais tout simplement à la dernière version construite sans tag explicite, ce qui ouvre la porte à un simple oubli ! En mettant toujours un tag explicite et différent de latest, on s’assure que les utilisateurs sélectionnent bien volontairement la version qui les intéresse.
+
+* **Écrire des instructions `RUN` « auto-nettoyantes »** si possible. Par exemple, quand un gestionnaire de paquet est utilisée pour installer des logiciels (`apt-get`, `yum`…), penser à ajouter, dans le même `RUN`, une commande pour nettoyer le cache. Éviter d’installer tout paquet inutile (ex. usage de `--no-install-recommends` avec apt-get).
+
+* **Toujours privilégier `COPY` à `ADD`**, sauf cas particulier. L’instruction `ADD` est similaire à `COPY`, mais permet de gérer en plus la copie depuis une URL externe, ce qui peut poser un problème de sécurité. Autant s’en passer par défaut.
+
+* **Privilégier le format exec pour l’instruction `CMD`** (`CMD ["executable", "param"]`), sauf si vous savez pourquoi le format shell est utile et/ou requis dans un cas particulier.
+
+* Envisager d’utiliser un minifier pour images Docker, tel que [DockerSlim](https://forsale.godaddy.com/forsale/dockersl.im?utm_source=TDFS_BINNS2&utm_medium=parkedpages&utm_campaign=x_corp_tdfs-binns2_base&traffic_type=TDFS_BINNS2&traffic_id=binns2&oref=https%3A%2F%2Fkourou.oclock.io%2F).
+
+* Et bien d’autres. Consulter la [liste officielle](https://docs.docker.com/build/building/best-practices/), cette [liste généraliste](https://kimh.github.io/blog/en/docker/gotchas-in-writing-dockerfile-en/#treat_your_container_like_a_binary_with_cmd). Écrire et alimenter sa propre liste de bonnes pratiques au fur et à mesure des projets !
+
+### Exemple de Dockerfile complet
+
+```apache
+# Étape de build
+# Utilisation d'une version spécifique de node comme base pour le build
+FROM node:16-alpine as builder
+
+# Définition du répertoire de travail dans le conteneur pour l'étape de build
+# Cette définition garantit que toutes les commandes suivantes sont exécutées à partir de ce répertoire
+WORKDIR /app
+
+# Copie du fichier package.json et package-lock.json pour installer les dépendances
+COPY package*.json ./
+
+# Installation des dépendances en mode production
+RUN npm ci --only=production
+
+# Copie des fichiers source de l'application
+COPY . .
+
+# Construction de l'application pour la production
+RUN npm run build
+
+# Étape de production
+# Utilisation d'une version spécifique d'Alpine pour minimiser la taille de l'image
+FROM node:16-alpine
+
+# Création d'un utilisateur non root pour exécuter l'application
+# Cela améliore la sécurité en limitant les permissions dans le conteneur final
+RUN addgroup app && adduser -S -G app app
+USER app
+
+# Définition du répertoire de travail dans le conteneur pour l'étape de production
+# Il est défini à nouveau ici pour garantir l'indépendance des étapes du Dockerfile
+# Cela assure que les modifications dans une étape n'affectent pas l'autre
+WORKDIR /app
+
+# Copie des artefacts de build depuis l'étape précédente
+# Ceci inclut à la fois le dossier build et node_modules pour l'exécution de l'application
+COPY --from=builder /app/build ./build
+COPY --from=builder /app/node_modules ./node_modules
+
+# Déclaration du port sur lequel l'application va s'exécuter
+EXPOSE 3000
+
+# Définition de la variable d'environnement NODE_ENV pour l'exécution en mode production
+ENV NODE_ENV=production
+
+# Commande exécutée au démarrage du conteneur
+# Cela lance l'application Node.js à partir du dossier build
+CMD ["node", "build/index.js"]
+```
+
+## Astuces
+
+### `FROM` dynamique
+
+Un Dockerfile avec :
+```apache
+ARG BASE_IMAGE=ubuntu:16.04
+FROM ${BASE_IMAGE}
+```
+
+offre la possibité de surcharger l’image de base au moment du build :
+
+```apache
+docker build --build-arg BASE_IMAGE=alpine:latest .
+```
+
+Cela peut être utile pour rapidement construire plusieurs variantes au moyen d’un script d’automatisation, pour réaliser des tests en intégration continue, etc.
+
+### Gestion des package managers applicatifs (npm, composer…)
+
+Voir [la fiche-récap dédiée]().
