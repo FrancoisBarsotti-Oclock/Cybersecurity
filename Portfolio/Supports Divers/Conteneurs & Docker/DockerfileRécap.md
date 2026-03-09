@@ -1,4 +1,6 @@
-# Dockerfile
+# Les fiches récap de l'école O'clock
+
+## Dockerfile
 
 Quand on veut créer une nouvelle image Docker, il faut écrire une « recette de cuisine » qui en détaille les différentes étapes de construction. Cette recette, c’est le Dockerfile.
 
@@ -354,3 +356,5 @@ Cela peut être utile pour rapidement construire plusieurs variantes au moyen d�
 ### Gestion des package managers applicatifs (npm, composer…)
 
 Voir [la fiche-récap dédiée]().
+
+#

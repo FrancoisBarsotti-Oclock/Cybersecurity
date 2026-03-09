@@ -1,4 +1,6 @@
-# Docker et les package managers
+# # Les fiches récap de l'école O'clock
+
+## Docker et les package managers
 
 **Situation** : un projet en développement dans lequel un *package manager* est utilisé (composer en PHP, npm en JS, etc.) Le projet est dockerisé sous la forme d’une image optimisée pour le développement, avec un Dockerfile du type :
 
