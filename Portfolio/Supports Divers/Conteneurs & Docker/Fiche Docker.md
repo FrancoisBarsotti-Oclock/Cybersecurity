@@ -1,6 +1,6 @@
 # Les fiches récap de l'école O'Clock: Docker
 
-Docker
+## Docker
 Docker est une plateforme de gestion de [containers](). Il permet de facilement créer, lancer, distribuer des images et les containers qui en découlent.
 
 ### Fonctionnement général
@@ -12,7 +12,7 @@ Docker utilise un modèle client-serveur :
 >La communication entre le client et le serveur se fait au moyen d’[une API REST](), ce qui rend possible l’utilisation de Docker à travers n’importe quel réseau, pas uniquement en mode local !
 
 ### Images
-Les images Docker sont des [exécutables]() à destination du Docker Engine. Ces exécutables contiennent typiquement :
+Les images Docker sont des [exécutables](https://fr.wikipedia.org/wiki/Fichier_ex%C3%A9cutable) à destination du Docker Engine. Ces exécutables contiennent typiquement :
 
 * du code source applicatif
 * ses dépendances éventuelles
