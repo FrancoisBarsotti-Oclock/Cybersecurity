@@ -128,6 +128,8 @@ Pour utiliser Docker avec nos projets, nous n'avons **pas forcément besoin de c
 
 On peut se contenter d'utiliser des images existantes, comme par exemple celle d'Apache2. _Mais on les récupère où, ces images ?_ 🤔
 
+→ Pour le hacking, nous avons [Exegol, containerized hacking environments](https://exegol.com/)
+
 ### [DockerHub](https://hub.docker.com/)
 
 Comme Git & GitHub, avec Docker on a **DockerHug** !
