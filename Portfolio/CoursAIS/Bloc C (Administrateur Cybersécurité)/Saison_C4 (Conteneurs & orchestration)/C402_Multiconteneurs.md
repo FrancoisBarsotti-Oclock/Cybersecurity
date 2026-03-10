@@ -1,6 +1,10 @@
 # Session C402. Multiconteneurs
 
 **Notions du jour :**
+* volumes (bind-mounts et volumes docker)
+* compilation d’images avec `docker build`
+* applications multi-conteneurs avec docker compose
+* dockerhub
 
 ## Docker : Build & Compose
 
