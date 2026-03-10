@@ -295,5 +295,46 @@ sudo docker compose up -d
 
 ![08-NavigateurphpMyAdmin](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C4/images%20C4/images%20C402/Challenge%20402_08-NavigateurphpMyAdmin.png)
 
+## Étape 5 — Démarrage & Configuration initiale
 
+```apache
+# Démarrage des services, depuis glpi-docker
+sudo docker compose up -d
 
+# Vérification
+sudo docker ps
+
+# Suppression du dossier après changement de mot de passe
+sudo docker exec -it glpi rm -rf /var/www/html/install
+```
+
+![09-RunningServices]()
+
+### GLPI (côté navigateur) avec nouveau mot de passe
+
+![10-GLPIconfiguré]()
+
+### phpMyAdmin (côté navigateur) avec nouveau mot de passe
+
+![10-phpMyAdminconfiguré]()
+
+De cette façon, on obtient l'architecture ci-dessous
+
+```apache
+Navigateur
+     │
+     ▼
+GLPI (8080)
+     │
+     ▼
+MariaDB (db)
+     │
+     ▲
+phpMyAdmin (8081)
+```
+
+## ⭐ Bonus — Aller plus loin
+
+### 🚧 En construction 🚧
+
+#
