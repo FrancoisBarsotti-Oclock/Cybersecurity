@@ -117,5 +117,61 @@ sudo docker ps
 ```
 ![02-Etapes 1&2]()
 
+## Étape 3: Nommer nos conteneurs & Compiler images Docker
+
+```apache
+# Attribuer le nom "hello-docker"
+sudo docker run -dp 8888:80 --name hello-docker bdelphin/hello-docker
+
+# Vérification
+sudo docker ps
+```
+
+![03-RenameContainer]()
+
+Pour la compilation d'une première image Docker, après la création d'un compte sur DockerHub:
+
+```apache
+# Création du dossier test et y accéder
+mkdir mon-premier-docker
+cd mon-premier-docker
+
+# Création d'un fichier `Dockerfile`
+sudo nano Dockerfile
+
+# y mettre
+FROM debian:stable-slim
+RUN apt update && apt install -y curl
+CMD ["echo", "Bonjour depuis mon premier conteneur Docker"]
+
+# Compiler l'image
+sudo docker build -t mon-image:1.0 .
+
+# Vérification existance de l'image
+sudo docker images
+
+# Lancer un conteneur à partir de l'image
+sudo docker run --rm mon-image:1.0
+
+# Résultat attendu
+Bonjour depuis mon premier conteneur Docker
+
+# Envoyer l'image sur DockerHub
+sudo docker login
+sudo docker tag mon-image:1.0 USERNAME/mon-image:1.0
+sudo docker push USERNAME/mon-image:1.0
+```
+### Côté CLI
+
+![04-FirstDockerImage]()
+
+### Côté interface DockerHub
+
+![05-côté DockerHub]()
 
 
+## 📚 Ressources:
+
+* [Docker sur Debian](https://docs.docker.com/engine/install/debian/)
+
+#
