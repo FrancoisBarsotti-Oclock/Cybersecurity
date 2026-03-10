@@ -115,7 +115,7 @@ sudo docker ps
 sudo docker logs glpi-mariadb
 ```
 
-![03-MariaDBOK]()
+![03-MariaDBOK](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C4/images%20C4/images%20C402/Challenge%20402_03-MariaDBOK.png)
 
 ## Étape 3 — Service GLPI
 
@@ -166,11 +166,11 @@ sudo docker ps
 
 ### Vérification depuis la VM
 
-![04-GlpiVM]()
+![04-GlpiVM](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C4/images%20C4/images%20C402/Challenge%20402_04-GlpiVM.png)
 
 ### Vérification depuis mon navigateur
 
-![05-GlpiNavigateur]()
+![05-GlpiNavigateur](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C4/images%20C4/images%20C402/Challenge%20402_05-GlpiNavigateur.png)
 
 ## Étape 4 — Réseau & Communication
 
@@ -224,7 +224,7 @@ sudo docker network ls
 sudo docker network inspect glpi-docker_glpi-net
 ```
 
-![06-GlpiNet]()
+![06-GlpiNet](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C4/images%20C4/images%20C402/Challenge%20402_06-GlpiNet.png)
 
 ### Création de phpMyAdmin
 
@@ -289,9 +289,11 @@ sudo docker compose down
 sudo docker compose up -d
 ```
 
-![07-phpMyAdmin]()
+![07-phpMyAdmin](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C4/images%20C4/images%20C402/Challenge%20402_07-phpMyAdmin.png)
 
 ### Vérification côté navigateur
 
-![08-NavigateurphpMyAdmin]()
+![08-NavigateurphpMyAdmin](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C4/images%20C4/images%20C402/Challenge%20402_08-NavigateurphpMyAdmin.png)
+
+
 
