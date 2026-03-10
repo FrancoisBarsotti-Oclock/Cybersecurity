@@ -308,15 +308,15 @@ sudo docker ps
 sudo docker exec -it glpi rm -rf /var/www/html/install
 ```
 
-![09-RunningServices]()
+![09-RunningServices](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C4/images%20C4/images%20C402/Challenge%20402_09-RunningServices.png)
 
 ### GLPI (côté navigateur) avec nouveau mot de passe
 
-![10-GLPIconfiguré]()
+![10-GLPIconfiguré](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C4/images%20C4/images%20C402/Challenge%20402_10-GLPIconfigur%C3%A9.png)
 
 ### phpMyAdmin (côté navigateur) avec nouveau mot de passe
 
-![10-phpMyAdminconfiguré]()
+![11-phpMyAdminconfiguré](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C4/images%20C4/images%20C402/Challenge%20402_11-phpMyAdminconfigur%C3%A9.png)
 
 De cette façon, on obtient l'architecture ci-dessous
 
