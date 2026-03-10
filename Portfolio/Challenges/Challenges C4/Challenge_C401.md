@@ -15,7 +15,7 @@ Voir 👉 [Cours C401](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/
 | **Élément** | Docker |
 | :---: | :---: | 
 | **OS** | Debian 13.3.0 |
-| **IP** | :---: | 
+| **IP statique** | 10.0.0.8 | 
 | **System** | Qemu Agent |
 | **Disque** | 32 GiB | 
 | **CPU** | 2 Sockets + 2 Cores (type host, si en local) | 
