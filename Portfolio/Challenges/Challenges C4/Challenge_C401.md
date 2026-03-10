@@ -10,3 +10,27 @@ Voir 👉 [Cours C401](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/
 
 ---
 
+## 🛠️ Environnement technique
+
+| **Élément** | Docker |
+| :---: | :---: | 
+| **OS** | Debian 13.3.0 |
+| **IP** | :---: | 
+| **System** | Qemu Agent |
+| **Disque** | 32 GiB | 
+| **CPU** | 2 Sockets + 2 Cores (type host, si en local) | 
+| **RAM** | 2048 MiB | 
+
+Toujours commencer par :
+```apache
+su -
+
+apt update && apt upgrade -y && apt install sudo
+
+usermod -aG sudo <user>
+
+reboot
+```
+
+
+
