@@ -11,11 +11,9 @@ Conteneurisation
 
 ![01-LogoDocker](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C4%20(Conteneurs%20%26%20orchestration)/images%20C4/images%20C401/C401_01-LogoDocker.png)
 
-Docker est un logiciel permettant d'exécuter des applications dans des **conteneurs**.
+Docker est un logiciel permettant d'exécuter des applications dans des **conteneurs**. On parle de conteneurs logiciels.
 
-Pas tout à fait, nous on parle de conteneurs logiciels.
-
-Mais le terme "conteneur" est bien inspiré des conteneurs maritimes, d'ailleurs le logo de Docker représente une "baleine porte-conteneur" !
+Le terme "conteneur" est bien inspiré des conteneurs maritimes, d'ailleurs le logo de Docker représente une "baleine porte-conteneur" !
 
 ### Ça sert à quoi, Docker ?
 On doit souvent gérer des **problèmes de versions** en développement d'applications.
