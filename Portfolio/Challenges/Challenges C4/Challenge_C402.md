@@ -18,3 +18,64 @@ Voir 👉 [Cours C402](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/
 
 ---
 
+## 🛠️ Environnement technique
+
+| **Élément** | Docker |
+| :---: | :---: | 
+| **OS** | Debian 13.3.0 |
+| **IP statique** | 10.0.0.8 | 
+| **System** | Qemu Agent |
+| **Disque** | 32 GiB | 
+| **CPU** | 2 Sockets + 2 Cores (type host, si en local) | 
+| **RAM** | 2048 MiB | 
+
+## Étape 1 - Mise en place du projet
+
+```apache
+# Création du dossier du projet
+mkdir glpi-docker && cd glpi-docker
+
+# Préparation de la structure du projet
+mkdir -p glpi mariadb phpmyadmin
+touch docker-compose.yml
+
+# Vérification (avec tree)
+sudo apt install tree -y
+tree
+```
+
+![01-VérificationTree](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C4/images%20C4/images%20C402/Challenge%20402_01-V%C3%A9rificationTree.png)
+
+### Services à prévoir dans le `docker-compose.yml`
+
+**Obligatoires**
+
+* **glpi** : l’application web GLPI
+* **mariadb** : la base de données de GLPI
+
+**Bonus**
+
+* **phpmyadmin** : interface web pour administrer MariaDB
+
+### Volumes / persistance à prévoir
+
+Pour que ce soit reproductible **sans perdre les données** :
+
+* un volume pour **MariaDB**
+
+* un volume pour les **fichiers GLPI** si besoin
+
+* éventuellement un réseau Docker dédié
+
+### Projet prévu 
+
+```
+glpi-docker/
+├── docker-compose.yml
+├── glpi/
+├── mariadb/
+└── phpmyadmin/
+```
+
+
+
