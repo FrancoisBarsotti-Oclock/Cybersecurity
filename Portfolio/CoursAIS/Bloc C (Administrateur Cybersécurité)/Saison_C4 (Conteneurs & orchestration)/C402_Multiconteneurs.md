@@ -6,25 +6,25 @@
 * applications multi-conteneurs avec docker compose
 * dockerhub
 
-## Docker : Build & Compose
+## Docker : Build & Compose 🐋
 
 _Construire ses images et orchestrer ses conteneurs_
 
 ### Ce qu'on sait déjà
-* **Image** = la recette (immuable)
-* **Conteneur** = le plat servi (instance d'une image)
-* **DockerHub** = le supermarché des images
+* **Image** = la recette (immuable) 📦
+* **Conteneur** = le plat servi (instance d'une image) 🍽️
+* **DockerHub** = le supermarché des images 🛒
 
-Aujourd'hui, on apprend à **cuisiner nos propres recettes !**
+Aujourd'hui, on apprend à **cuisiner nos propres recettes !** 👨‍🍳
 
-### Le Dockerfile
+### Le Dockerfile 📄
 
 _La recette de votre image_
 
 ### C'est quoi ?
 Un fichier texte qui décrit **étape par étape** comment construire une image Docker.
 
-Comme une recette de cuisine : on part d'une base, on ajoute des ingrédients, on configure.
+Comme une recette de cuisine : on part d'une base, on ajoute des ingrédients, on configure. 👨‍🍳
 
 ### Les instructions essentielles
 
@@ -85,7 +85,7 @@ CMD ["node", "server. js"]
 
 _On copie d'abord le package.json pour profiter du **cache Docker** sur les dépendances_ 🧠
 
-## Docker Build
+## Docker Build 🔨
 _Transformer un Dockerfile en image_
 
 .
@@ -293,7 +293,7 @@ Une application web moderne, c'est souvent :
 * Une base de données (MySQL, PostgreSQL ... )
 * 📦 Un cache (Redis ... )
 
-Gérer tout ça à la main avec docker run ?
+Gérer tout ça à la main avec docker run ? 😩
 
 ### La solution : Docker Compose
 
@@ -353,6 +353,8 @@ volumes :
 * **depends_on** : ordre de démarrage
 * **environment** : variables d'environnement
 
+## Les commandes Compose 🧰
+
 ### Les essentielles
 
 * docker compose up -d -> tout lancer en arrière-plan 🚀
@@ -382,6 +384,7 @@ $pdo = new PDO("mysq1:host=db;dbname=myapp", "root", "secret");
 ```
 
 ### Réseaux custom
+
 ```apache
 services:
     web:
@@ -395,13 +398,13 @@ networks:
     frontend:
     backend:
 ```
-_Le service db n'est pas accessible depuis le réseau frontend → segmentation !_
+_Le service db n'est pas accessible depuis le réseau frontend → segmentation !_ 🔒
 
 ## Volumes & persistance 💾
 
 ### Le problème
 
-Un conteneur est **éphémère** : si on le supprime, les données disparaissent
+Un conteneur est **éphémère** : si on le supprime, les données disparaissent 💨
 
 Solution : les **volumes** !
 
@@ -413,8 +416,41 @@ _Bind mounts = pratique en dev. Named volumes = recommande en prod_
 
 [Video explicatif de Volume](https://www.youtube.com/watch?v=lstTLSM5494)
 
+## Variables d'environnement 🔐
 
+### Le fichier .env
 
+```ruby
+MYSQL_ROOT_PASSWORD=supersecret
+MYSQL_DATABASE=myapp
+APP_PORT=8080
+```
+
+```apache
+services:
+    db:
+        image: mariadb:11
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+    web:
+        ports:
+            - "${APP_PORT}:80"
+```
+
+⚠️ Ne commitez **jamais** le fichier .env !
+
+## En résumé 📝
+
+* 📄 Dockerfile = recette pour construire une image
+* 🔨 docker build = cuire la recette
+* 🎼 Docker Compose = orchestrer plusieurs conteneurs
+* 📋 docker-compose.yml = la partition de l'orchestre
+
+Prochaine étape : l'orchestration à grande échelle avec Docker Swarm !🚀
+
+---
 
 Challenge du jour 👉 [Challenge_C402](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C4/Challenge_C402.md) 👈
 
+#

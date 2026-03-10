@@ -106,7 +106,7 @@ En conséquence, une machine virtuelle peut être très lourde (de plusieurs Gig
 Les images Docker, en quelques sortes les "disques durs virtuels" de nos conteneurs, sont **immuables**.
 
 Ça veut dire qu'**on ne peut pas les modifier**. _Mais comment on fait du
-coup pour installer nos logiciels et y placer notre code ?_
+coup pour installer nos logiciels et y placer notre code ?_ 🤔
 
 ### Dockerfile
 
@@ -126,7 +126,7 @@ L'image d'origine, embarquant le logiciel Apache2, a (elle aussi) été construi
 
 Pour utiliser Docker avec nos projets, nous n'avons **pas forcément besoin de créer nos propres images Docker avec un Dockerfile !**
 
-On peut se contenter d'utiliser des images existantes, comme par exemple celle d'Apache2. _Mais on les récupère où, ces images ?_
+On peut se contenter d'utiliser des images existantes, comme par exemple celle d'Apache2. _Mais on les récupère où, ces images ?_ 🤔
 
 ### [DockerHub](https://hub.docker.com/)
 
@@ -143,7 +143,7 @@ Dans les nombreux dépôts publics, on retrouve des images Docker prêtes à l'e
 ![09-EnvironnementDockerHub](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C4%20(Conteneurs%20%26%20orchestration)/images%20C4/images%20C401/C401_09-EnvironnementDockerHub.png)
 
 ### Docker Compose
-_On va donc devoir créer une image contenant le frontend, le backend, et la base de données d'une application ?_
+_On va donc devoir créer une image contenant le frontend, le backend, et la base de données d'une application ?_ 🤔
 
 Non ! On essaye en règle générale avec Docker de faire les choses de façon **modulaire**.
 
