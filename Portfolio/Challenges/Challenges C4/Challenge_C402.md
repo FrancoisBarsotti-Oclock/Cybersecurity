@@ -67,7 +67,7 @@ Pour que ce soit reproductible **sans perdre les données** :
 
 * éventuellement un réseau Docker dédié
 
-### Projet prévu 
+### Projet prévu (selon tree)
 
 ```
 glpi-docker/
@@ -76,6 +76,222 @@ glpi-docker/
 ├── mariadb/
 └── phpmyadmin/
 ```
+## Étape 2 — Service MariaDB
 
+```Apache
+# Édition du fichier, dans le dossier glpi-docker
+nano docker-compose.yml
 
+# Ajout du service MariaDB
+services:
+  db:
+    image: mariadb:11
+    container_name: glpi-mariadb
+    restart: always
+
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: glpidb
+      MYSQL_USER: glpiuser
+      MYSQL_PASSWORD: glpipassword
+
+    volumes:
+      - db_data:/var/lib/mysql
+
+    ports:
+      - "3306:3306"
+
+volumes:
+  db_data:
+```
+```apache
+# Démarrage du conteneur dans le dossier glpi-docker
+sudo docker compose up -d db
+
+# Vérification que glpi-mariaDB soit UP
+sudo docker ps
+
+# Vérification des logs
+sudo docker logs glpi-mariadb
+```
+
+![03-MariaDBOK]()
+
+## Étape 3 — Service GLPI
+
+```apache
+sudo nano docker-compose.yml
+
+# Nouvelle édition du fichier docker-compose pour ajouter le service glpi
+services:
+
+  db:
+    image: mariadb:11
+    container_name: glpi-mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: glpidb
+      MYSQL_USER: glpiuser
+      MYSQL_PASSWORD: glpipassword
+    volumes:
+      - db_data:/var/lib/mysql
+
+  glpi:
+    image: diouxx/glpi
+    container_name: glpi
+    restart: always
+
+    depends_on:
+      - db
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - glpi_data:/var/www/html
+
+volumes:
+  db_data:
+  glpi_data:
+```
+
+```apache
+# Démarrage de glpi
+sudo docker compose up -d
+
+# Vérification des conteneurs
+sudo docker ps
+```
+
+### Vérification depuis la VM
+
+![04-GlpiVM]()
+
+### Vérification depuis mon navigateur
+
+![05-GlpiNavigateur]()
+
+## Étape 4 — Réseau & Communication
+
+```apache
+# Ajout (3 fois) de glpi-net ent que réseau privé Docker pour rattacher db et glpi
+
+services:
+  db:
+    image: mariadb:11
+    container_name: glpi-mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: glpidb
+      MYSQL_USER: glpiuser
+      MYSQL_PASSWORD: glpipassword
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - glpi-net
+
+  glpi:
+    image: diouxx/glpi
+    container_name: glpi
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8080:80"
+    volumes:
+      - glpi_data:/var/www/html
+    networks:
+      - glpi-net
+
+volumes:
+  db_data:
+  glpi_data:
+
+networks:
+  glpi-net:
+    driver: bridge
+```
+
+```apache
+# Application de modif
+sudo docker compose down
+sudo docker compose up -d
+
+# Vérification du réseau
+sudo docker network ls
+sudo docker network inspect glpi-docker_glpi-net
+```
+
+![06-GlpiNet]()
+
+### Création de phpMyAdmin
+
+```apache
+# Ajout du service phpmyadmin sur le port 8081
+
+services:
+
+  db:
+    image: mariadb:11
+    container_name: glpi-mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: glpidb
+      MYSQL_USER: glpiuser
+      MYSQL_PASSWORD: glpipassword
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - glpi-net
+
+  glpi:
+    image: diouxx/glpi
+    container_name: glpi
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8080:80"
+    volumes:
+      - glpi_data:/var/www/html
+    networks:
+      - glpi-net
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: glpi-phpmyadmin
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: rootpassword
+    networks:
+      - glpi-net
+
+volumes:
+  db_data:
+  glpi_data:
+
+networks:
+  glpi-net:
+    driver: bridge
+```
+
+```apache
+# Rédemarrage des conteneurs
+sudo docker compose down
+sudo docker compose up -d
+```
+
+![07-phpMyAdmin]()
+
+### Vérification côté navigateur
+
+![08-NavigateurphpMyAdmin]()
 
