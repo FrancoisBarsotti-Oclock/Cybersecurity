@@ -335,6 +335,109 @@ phpMyAdmin (8081)
 
 ## ⭐ Bonus — Aller plus loin
 
+### 🏆 Bonus 1 — Adminer
+
+Au lieu d'ajouter le service **Adminer** au stack, j'ai ajouté **phpMyAdmin**, interface web pour administrer MariaDB.
+
+### 🏆 Bonus 2 — Fichier .env
+
+### B2.1. Création du fichier `.env` dans le `glpi-docker`
+
+`sudo nano .env`, pour y mettre:
+```apache
+MYSQL_ROOT_PASSWORD=rootpassword
+MYSQL_DATABASE=glpidb
+MYSQL_USER=glpiuser
+MYSQL_PASSWORD=glpipassword
+PMA_HOST=db
+```
+
+### B2.2. Modification du `docker-compose.yml`
+
+Il est necéssaire de remplacer les valeurs en dur par des variables:
+
+```yaml
+services:
+  db:
+    image: mariadb:11
+    container_name: glpi-mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - glpi-net
+
+  glpi:
+    image: diouxx/glpi
+    container_name: glpi
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8080:80"
+    volumes:
+      - glpi_data:/var/www/html
+    networks:
+      - glpi-net
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: glpi-phpmyadmin
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: ${PMA_HOST}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    networks:
+      - glpi-net
+
+volumes:
+  db_data:
+  glpi_data:
+
+networks:
+  glpi-net:
+    driver: bridge
+```
+
+### B2.3. Création de `.gitignore` (aussi) dans `glpi-docker/`
+
+`sudo nano .gitignore`, pour y mettre:
+
+```apache
+.env
+*.log
+```
+
+Puis, redémarrer les services et vérifier
+```apache
+# redémarrage
+sudo docker compose down -v  # pour détruire les anciennes valeurs
+sudo docker compose up -d
+
+# Vérification que les conteneurs tournent
+sudo docker ps
+
+# Réconfiguration de GLPI & phpMyAdmin dans le navigateur
+
+# Suppression du dossier d'installation
+docker exec -it glpi rm -rf /var/www/html/install
+
+# Vérification
+sudo docker compose config
+```
+
+
+
+
 ### 🚧 En construction 🚧
 
 #
