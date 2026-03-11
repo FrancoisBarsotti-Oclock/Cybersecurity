@@ -1,0 +1,79 @@
+services:
+
+  # ──────────────────────────────────────────────
+  # SERVICE 1 : Base de données MariaDB
+  # ──────────────────────────────────────────────
+  db:
+    image: mariadb:11          # toujours préciser une version plutôt que latest
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: glpi
+      MYSQL_USER: glpi
+      MYSQL_PASSWORD: glpipass
+    volumes:
+      - db_data:/var/lib/mysql  # /var/lib/mysql = dossier de données MariaDB
+    networks:
+      - glpi_network
+    healthcheck:               # (bonus 3) attend que MariaDB soit vraiment prêt
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ──────────────────────────────────────────────
+  # SERVICE 2 : Application GLPI
+  # ──────────────────────────────────────────────
+  glpi:
+    image: diouxx/glpi         # alternative valide : glpi/glpi:latest
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy  # (bonus 3) attend le healthcheck de db
+        # sans bonus, on accepte : depends_on: [db]
+    ports:
+      - "80:80"                # port machine:port conteneur
+    volumes:
+      # ── Avec diouxx/glpi ──
+      - glpi_config:/var/www/glpi/config
+      - glpi_files:/var/www/glpi/files
+      - glpi_marketplace:/var/www/glpi/marketplace
+      # ── Avec glpi/glpi:latest (remplacer les lignes ci-dessus) ──
+      # - glpi_config:/etc/glpi
+      # - glpi_files:/var/lib/glpi
+      # - glpi_log:/var/log/glpi
+    environment:
+      GLPI_DB_HOST: db         # ← nom du SERVICE, pas localhost ni IP
+      GLPI_DB_PORT: 3306
+      GLPI_DB_NAME: glpi
+      GLPI_DB_USER: glpi
+      GLPI_DB_PASSWORD: glpipass
+    networks:
+      - glpi_network
+
+  # ──────────────────────────────────────────────
+  # SERVICE 3 : Adminer (bonus 1)
+  # ──────────────────────────────────────────────
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:80"              # Adminer écoute sur le port 80, PAS 8080
+    networks:
+      - glpi_network
+
+# ──────────────────────────────────────────────
+# VOLUMES nommés — Docker gère leur emplacement
+# ──────────────────────────────────────────────
+volumes:
+  db_data:           # données MariaDB
+  glpi_config:       # config GLPI — chemin selon l'image (voir erreur #2)
+  glpi_files:        # fichiers uploadés
+  glpi_marketplace:  # plugins (diouxx/glpi uniquement)
+  glpi_log:          # logs (glpi/glpi uniquement)
+
+# ──────────────────────────────────────────────
+# RÉSEAU dédié — isolation et communication entre services
+# ──────────────────────────────────────────────
+networks:
+  glpi_network:
