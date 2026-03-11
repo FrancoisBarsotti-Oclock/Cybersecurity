@@ -145,4 +145,9 @@ Ajoutez un `healthcheck` sur le service `db` pour que GLPI n'essaie de démarrer
 
 > Indice : `condition: service_healthy` dans `depends_on`
 
+### Bonus 4 - Killercoda
+
+Jouer avec [Killercoda](https://killercoda.com/): c'est une super alternative. Vous vous connectez > cliquer sur "docker" > "Building an image" et coller votre "docker run -dp 8888:80 pseudo/my-hello-docker"
+
+
 #
