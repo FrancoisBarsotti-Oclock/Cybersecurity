@@ -256,7 +256,7 @@ Les deux outils sont tres similaires. Ce qu'on apprend pour l'un s'applique à l
 
 ### Sur Ubuntu (snap)
 
-```apache
+```nginx
 # Installer LXD
 sudo snap install 1xd
 
