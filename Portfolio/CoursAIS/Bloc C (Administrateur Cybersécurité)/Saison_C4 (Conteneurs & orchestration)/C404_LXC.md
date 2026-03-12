@@ -267,7 +267,7 @@ newgrp lxd
 
 ### Sur Debian (Incus)
 
-```markdown
+```bash
 # Ajouter Le dépôt
 sudo apt install extrepo
 sudo extrepo enable incus
