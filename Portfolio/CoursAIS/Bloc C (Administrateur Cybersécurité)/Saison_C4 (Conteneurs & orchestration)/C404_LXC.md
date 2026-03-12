@@ -1,6 +1,10 @@
 # 🐧Session C404. Linux Containers (LXC) 
 
 **Notions du jour :**
+* LXC vs. Docker
+* LXC sur Proxmox
+* Bonus : LXD
+
 
 ## LXC : Linux Containers 🐧📦
 
@@ -208,13 +212,13 @@ Le bon outil pour le bon usage !
 
 _LXC sous stéroïdes_
 
-### Définition
+### Définition 
 
-LXD (prononcé "lex-dee") est un gestionnaire de conteneurs système et de machines virtuelles.
+**LXD** (prononcé "lex-dee") est un gestionnaire de conteneurs système et de machines virtuelles.
 
 C'est une **surcouche** au-dessus de LXC qui ajoute une API REST, un CLI moderne et des fonctionnalités avancées 🧠
 
-### Analogie 
+### Analogie 🚗
 
 * 🐧 **LXC** = le moteur (les briques de base)
 * 🚀 **LXD** = la voiture complete (moteur + tableau de bord + GPS + confort)
@@ -235,6 +239,8 @@ de tout !
 | **Clustering** | ❌ Non | ✅ Oui |
 
 ⚠️ _**Attention** à la confusion : la commande lxc (sans tiret) = LXC, lxc -* (avec tiret) = LXC !_
+
+## Historique rapide 📜
 
 ### De Canonical à ... Canonical
 
@@ -294,7 +300,9 @@ lxd init
 * Network bridge ? → yes (crée 1xdbrø)
 * Accès réseau à distance ? -> no (sécurité)
 
-Accepter les valeurs par défaut est un bon point de départ
+_Accepter les valeurs par défaut est un bon point de départ_ 👍
+
+## Premiers pas 🐣
 
 ### Lancer un conteneur
 
@@ -332,5 +340,395 @@ lxc delete mon-serveur
 lxc delete mon-serveur -- force
 ```
 
+### Informations sur un conteneur
 
+```nginx
+# Vue détaillée
+lxc info mon-serveur
 
+# Configuration complète
+lxc config show mon-serveur
+```
+
+Le lxc info affiche : état, IP, CPU, RAM, disque, PID, snapshots...
+
+## Gestion des images ️🏞️
+
+### Les dépôts d'images
+
+LXD accède à des **serveurs d'images distants** :
+* ubuntu: → images Ubuntu officielles (Canonical)
+* images: → images communautaires (Debian, CentOS, Alpine, Fedora...)
+
+```nginx
+# Lister les images Ubuntu disponibles
+lxc image list ubuntu:
+
+# Lister les images Debian
+lxc image list images: debian
+# Lister les images locales (déjà téléchargées)
+lxc image list
+```
+
+### Gérer les images locales
+
+```nginx
+# Télécharger une image sans créer de conteneur
+lxc image copy ubuntu:24.04 local: --alias ubuntu-noble
+
+# Créer une image à partir d'un conteneur existant
+lxc publish mon-serveur --alias mon-image-custom
+
+# Supprimer une image locale
+lxc image delete mon-image-custom
+```
+
+_Publier un conteneur configuré = créer votre propre "template" réutilisable_ 🔄
+
+## Fichiers & transferts 📂
+
+### Copier des fichiers
+
+```nginx
+# Hôte → conteneur
+lxc file push fichier-local.txt mon-serveur/root/
+
+# Conteneur → hôte
+lxc file pull mon-serveur/etc/nginx/nginx.conf ./
+# Éditer un fichier directement
+lxc file edit mon-serveur/etc/hosts
+```
+
+### Copier un dossier entier
+
+```nginx
+# Pousser un dossier (récursif)
+lxc file push -r mon-site/ mon-serveur/var/www/html/
+
+# Récupérer un dossier
+lxc file pull -r mon-serveur/var/log/ ./logs-serveur/
+```
+
+_Beaucoup plus simple que docker cp ! Pas besoin de reconstruire une image_ 😉
+
+## Configuration des conteneurs ⚙️
+
+### Limiter les ressources
+
+```nginx
+# Limiter la RAM à 512 Mo
+lxc config set mon-serveur limits.memory 512MB
+
+# Limiter à 2 CPUs
+lxc config set mon-serveur limits.cpu 2
+# Limiter le disque à 5 Go
+lxc config device set mon-serveur root size=5GB
+```
+
+### Autres configurations utiles
+
+```nginx
+# Démarrage automatique au boot de l'hôte
+lxc config set mon-serveur boot.autostart true
+
+# Priorité de démarrage (plus petit = démarre en premier)
+lxc config set mon-serveur boot.autostart.priority 10
+# Empêcher l'élévation de privilèges
+lxc config set mon-serveur security.privileged false
+```
+
+### Profils (profiles) 📋
+
+Les profils permettent de **réutiliser des configurations** :
+
+```nginx
+# Créer un profil
+lxc profile create web-server
+
+# Configurer le profil
+lxc profile set web-server limits.memory 1GB
+lxc profile set web-server limits.cpu 2
+
+# Appliquer le profil à un conteneur
+lxc launch ubuntu:24.04 site-prod --profile default --profile web-server
+
+# Voir les profils existants
+lxc profile list
+```
+
+_Le profil default est toujours appliqué — les profils supplémentaires viennent s'ajouter_
+
+## Réseau 🌐
+
+### Le bridge par défaut
+
+À l'initialisation, LXD crée un bridge lxdbr0 :
+* DHCP intégré (attribution automatique des IPs)
+* DNS intégré (résolution par nom de conteneur)
+* NAT vers l'extérieur
+
+```nginx
+# Voir la config réseau
+lxc network show lxdbr0
+
+# Lister les réseaux
+lxc network list
+```
+
+### IP statique
+
+```nginx
+# Assigner une IP fixe
+lxc config device override mon-serveur eth0 \
+ipv4.address=10.10.10.100
+```
+
+### Créer un réseau custom
+
+```nginx
+# Créer un nouveau bridge
+lxc network create mon-reseau \
+ipv4.address=192.168.100.1/24 \
+ipv4.nat=true
+
+# Attacher un conteneur à ce réseau
+lxc network attach mon-reseau mon-serveur eth1
+```
+
+### Redirection de ports
+
+```nginx
+# Rediriger le port 80 de l'hôte vers le conteneur
+lxc config device add mon-serveur http proxy \
+listen=tcp:0.0.0.0:80 \
+connect=tcp:127.0.0.1:80
+```
+
+_Équivalent du -p 80:80 de Docker, mais configurable à chaud !_🔥
+
+## Stockage 💾
+
+### Les storage pools
+LXD gère le stockage via des **pools** :
+
+```nginx
+# Lister les pools
+lxc storage list
+# Voir les détails d'un pool
+lxc storage show default
+# Créer un nouveau pool ZFS
+lxc storage create fast-pool zfs size=50GB
+```
+
+### Backends supportés
+
+| **Backend** | **Avantages** | **Cas d'usage** |
+| :--: | :--: | :--: |
+| **dir** | Simple, aucune dépendance | Tests, débutants |
+| **zfs** | Snapshots rapides, compression | Recommandé en prod |
+| **btrfs** | Snapshots, sous-volumes | Alternative à ZFS |
+| **lvm** | Familier pour les sysadmins | Infra existante |
+| **ceph** | Stockage distribué | Clustering |
+
+_ZFS est le choix recommandé pour la plupart des cas d'usage_🏆
+
+## Snapshots 📸
+
+### Créer et restaurer
+
+```nginx
+# Prendre un snapshot
+lxc snapshot mon-serveur snap-avant-maj
+
+# Lister les snapshots
+lxc info mon-serveur # section "Snapshots"
+
+# Restaurer un snapshot
+lxc restore mon-serveur snap-avant-maj
+# Supprimer un snapshot
+lxc delete mon-serveur/snap-avant-maj
+```
+
+### Snapshots automatiques
+
+```nginx
+# Snapshot toutes les heures, garder les 24 derniers
+lxc config set mon-serveur snapshots.schedule "0 * * * *"
+lxc config set mon-serveur snapshots.schedule.stopped false
+lxc config set mon-serveur snapshots.expiry 24h
+```
+
+_Format cron classique ! Parfait pour les environnements de test_ 🧪
+
+### Créer un conteneur à partir d'un snapshot
+
+```nginx
+# Copier un snapshot vers un nouveau conteneur
+lxc copy mon-serveur/snap-avant-maj nouveau-serveur
+lxc start nouveau-serveur
+```
+
+Idéal pour dupliquer rapidement un environnement configuré 🔄
+
+## Machines virtuelles 💻
+
+_Oui, LXD fait aussi des VMs!_
+
+### Conteneur vs VM dans LXD
+
+```nginx
+# Lancer un conteneur (par défaut)
+lxc launch ubuntu:24.04 mon-ct
+
+# Lancer une VM
+lxc launch ubuntu:24.04 ma-vm --vm
+```
+
+Même commande, même gestion, même réseau — seule l'isolation change !
+
+### Pourquoi des VMs dans LXD ?
+
+* 🔒Isolation forte (noyau séparé)
+* 🪟Support d'autres OS (pas seulement Linux)
+* 🛡️ Séparation totale quand la sécurité l'exige
+
+|  | **Conteneur LXD** | **VM LXD** |
+| :--: | :--: | :--: |
+| **Noyau** | Partagé | Dédié |
+| **Performance** | Quasi-native | Légère overhead |
+| **Démarrage** | ~1s | ~10s |
+| **Isolation** | Namespaces | Hyperviseur (QEMU) |
+
+_Le gros avantage : gérer conteneurs ET VMs avec les mêmes commandes!_🎯
+
+## Clustering 🏢
+
+### LXD en cluster
+
+LXD peut fonctionner en **cluster multi-nœuds** :
+
+* Haute disponibilité des conteneurs
+* Migration live entre les nœuds
+* Base de données distribuée (Dqlite)
+
+```nginx
+# Sur le premier nœud
+lxd init # répondre "yes" au clustering
+
+# Sur les autres nœuds
+lxd init # rejoindre le cluster existant
+```
+
+### Migration live
+
+```nginx
+# Déplacer un conteneur vers un autre nœud
+lxc move mon-serveur --target noeud-2
+
+# Copier un conteneur vers un autre nœud
+lxc copy mon-serveur noeud-2:mon-serveur-copie
+```
+
+_La migration se fait à chaud,sansinterruption de service !_🔥
+
+## Sécurité 🔐
+
+### Conteneurs non-privilégiés
+
+Par défaut, les conteneurs LXD sont **non-privilégiés** :
+
+* Le root dans le conteneur ≠ root sur l'hôte
+* Mapping d'UID/GID (65536 → 0 dans le conteneur)
+* Réduit considérablement la surface d'attaque
+
+```nginx
+# Vérifier le mode
+lxc config get mon-serveur security.privileged
+# false = non-privilegié (par défaut, bien !)
+```
+
+### Bonnes pratiques
+* ✅Garder les conteneurs non-privilegiés
+* ✅Limiter les ressources (CPU, RAM, disque)
+* ✅Utiliser des profils pour standardiser la sécurité
+* ✅Mettre à jour les images régulièrement
+* ❌Ne jamais activer security.privileged=true sans raison
+* ❌Ne pas exposer l'API LXD sur le réseau sans TLS
+
+### AppArmor & Seccomp
+
+LXD applique automatiquement des profils de sécurité :
+
+* **AppArmor** : restreint les accès fichiers et capacités
+* **Seccomp** : filtre les appels système dangereux
+
+_Pas besoin de configurer quoi que ce soit — c'est actif par défaut !️_ 🛡️
+
+## LXD vs Docker — récap' 🔍
+
+### Philosophies différentes
+
+|  | **LXD** | **Docker** |
+| :--: | :--: | :--: |
+| **Approche** | Système complet | Application isolée |
+| **Cible** | Sysadmins, infra | Développeurs, DevOps |
+| **Gestion** | Comme une VM légère | Comme un processus |
+| **Persistance** | Système de fichiers persistant | Conteneurs éphémères + volumes |
+| **VMs** | ✅Intégrées | ❌Non |
+| **Clustering** | ✅Natif | Via Swarm/K8s |
+| **Écosystème** | Plus restreint | Énorme (Hub, Compose...) |
+
+### Quand choisir LXD ?
+
+* 🧪Labs et environnements de test
+* 🍂 Infrastructure légère (remplacer des VMs)
+* 🎓Formation sysadmin (vrais systèmes Linux)
+* 🔒Isolation de services système
+* ️🖥️ Mix conteneurs + VMs sur un même hôte
+
+## Commandes essentielles — récap' 📋
+
+### Conteneurs
+
+```nginx
+lxc launch <image> <nom> # Créer et démarrer
+lxc exec <nom> -- bash # Entrer dans le conteneur
+lxc stop/start/restart <nom> # Gestion du cycle de vie
+lxc delete <nom> # Supprimer
+lxc list # Lister
+lxc info <nom> # Détails
+```
+
+### Fichiers & config
+
+```nginx
+lxc file push/pull # Transférer des fichiers
+lxc config set/get # Configuration
+lxc profile create/set # Profils
+lxc snapshot/restore # Snapshots
+```
+
+### Réseau & stockage
+
+```nginx
+lxc network list/show/create # Gestion réseau
+lxc storage list/show/create # Gestion stockage
+lxc image list/copy/delete # Gestion images
+```
+
+## En résumé 📝
+
+* 🚀**LXD** = gestionnaire moderne de conteneurs système (et VMs)
+* 🐧Surcouche de **LXC** avec API REST et CLI élégant
+* 📸**Snapshots, profils, clustering** intégrés
+* 🔐Sécurité par défaut (non-privilegié, AppArmor, Seccomp)
+* 💻Gère aussi bien les **conteneurs** que les **VMs**
+* 🍴Alternative communautaire : **Incus**
+
+L'outil idéal pour les sysadmins qui veulent la légèreté des conteneurs avec le confort d'une VM !🎯
+
+---
+
+Pas de challenge prévu, pour préparer l'ECF du lendemain
+
+---
