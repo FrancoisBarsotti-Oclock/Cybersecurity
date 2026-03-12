@@ -1,4 +1,4 @@
-# 🏆 Challenge C405: QCM 12, Gestion de projet
+# 🏆 Challenge C405: QCM 12, Conteneurs & orchestration
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 
