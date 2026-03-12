@@ -313,7 +313,7 @@ C’est tout ! Le téléchargement de l’image + création + démarrage en **un
 
 ### Commandes de base
 
-```ps
+```ruby
 # Lister les conteneurs
 lxc list
 
