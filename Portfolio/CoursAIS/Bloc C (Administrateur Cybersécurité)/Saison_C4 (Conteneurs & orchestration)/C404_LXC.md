@@ -298,7 +298,7 @@ Accepter les valeurs par défaut est un bon point de départ
 
 ### Lancer un conteneur
 
-```nginx
+```yaml
 # Créer et démarrer un conteneur Ubuntu
 lxc launch ubuntu:24.04 mon-serveur
 
@@ -313,7 +313,7 @@ C’est tout ! Le téléchargement de l’image + création + démarrage en **un
 
 ### Commandes de base
 
-```dockerfile
+```json
 # Lister les conteneurs
 lxc list
 
