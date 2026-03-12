@@ -1,7 +1,8 @@
 # Session C403. Orchestration
 
 **Notions du jour :**
-
+* docker swarm
+* portainer
 
 ## Orchestration : Docker Swarm 🎼
 

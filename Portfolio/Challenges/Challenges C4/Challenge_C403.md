@@ -18,3 +18,14 @@ Voir 👉 [Cours C402](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/
 
 ---
 
+## 🛠️ Environnement technique
+
+| **Élément** | Docker | Docker2 | Docker3 |
+| :---: | :---: | :---: | :---: | 
+| **OS** | Debian 13.3.0 | = | = |
+| **IP statique** | 10.0.0.8 | 10.0.0.12 | 10.0.0.13 | 
+| **System** | Qemu Agent | = |  = |  
+| **Disque** | 32 GiB | = | = |  
+| **CPU** | 2 Sockets + 2 Cores (type host, si en local) | = | = |  
+| **RAM** | 2048 MiB | = | = |   
+
