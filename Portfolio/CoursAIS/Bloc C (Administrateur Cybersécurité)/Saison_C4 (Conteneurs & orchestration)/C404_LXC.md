@@ -204,4 +204,81 @@ _Quel outil choisiriez-vous pour :_
 
 Le bon outil pour le bon usage !
 
+## LXD : Le gestionnaire de conteneurs moderne 🚀📦
+
+_LXC sous stéroïdes_
+
+### Définition
+
+LXD (prononcé "lex-dee") est un gestionnaire de conteneurs système et de machines virtuelles.
+
+C'est une **surcouche** au-dessus de LXC qui ajoute une API REST, un CLI moderne et des fonctionnalités avancées 🧠
+
+### Analogie 
+
+* 🐧 **LXC** = le moteur (les briques de base)
+* 🚀 **LXD** = la voiture complete (moteur + tableau de bord + GPS + confort)
+
+On ne manipule plus les fichiers de config a la main - LXD s'occupe
+de tout !
+
+### LXD vz LXC – en bref
+
+|  | **LXC** | **LXD** |
+| :--: | :--: | :--: |
+| **Interface** | Commandes 1xc-* | Commande 1xc |
+| **Config** | Fichiers manuels | API REST |
+| **Images** | Templates locaux | Dépôt d'images distant |
+| **Réseau** | Config manuelle | Gestion intégrée |
+| **Stockage** | Basique | Pools avancés (ZFS, Btrfs...) |
+| **VMs** | ❌ Non | ✅ Oui |
+| **Clustering** | ❌ Non | ✅ Oui |
+
+⚠️ _**Attention** à la confusion : la commande lxc (sans tiret) = LXC, lxc -* (avec tiret) = LXC !_
+
+### De Canonical à ... Canonical
+
+* **2014** : Canonical (Ubuntu) crée LXD comme surcouche de LXC
+* **2023** : Canonical retire LXD de la Linux Containers community
+* **2023** : LXD devient un projet **100% Canonical** sous licence Apache 2.0
+* **2023** : La communauté fork LXD- naissance d'**Incus**
+
+_Incus est maintenu par les anciens developpeurs de LXD au sein de Linux Containers. Les commandes sont quasi identiques !_
+
+### LXD ou Incus ? 🤔
+
+* **LXD** : maintenu par Canonical, intégré à Ubuntu (snap)
+* **Incus** : fork communautaire, disponible sur toutes les distros
+
+Les deux outils sont tres similaires. Ce qu'on apprend pour l'un s'applique à l'autre 🤝
+
+## Installation 🔧
+
+### Sur Ubuntu (snap)
+
+```apache
+# Installer LXD
+sudo snap install 1xd
+
+# Ajouter L'utilisateur au groupe Lxd
+sudo usermod -aG 1xd $USER
+newgrp 1xd
+```
+
+### Sur Debian (Incus)
+
+```apache
+# Ajouter Le dépôt
+sudo apt install extrepo
+sudo extrepo enable incus
+
+# Installer
+sudo apt update && sudo apt install incus
+
+# Ajouter L'utilisateur au groupe
+sudo usermod -aG incus $USER
+```
+
+_Incus utilise la commande incus au lieu de lxc, mais la systaxe est identique_
+
 
