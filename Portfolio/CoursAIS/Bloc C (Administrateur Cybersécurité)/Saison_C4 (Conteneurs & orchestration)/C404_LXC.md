@@ -258,11 +258,11 @@ Les deux outils sont tres similaires. Ce qu'on apprend pour l'un s'applique à l
 
 ```nginx
 # Installer LXD
-sudo snap install 1xd
+sudo snap install lxd
 
 # Ajouter L'utilisateur au groupe Lxd
-sudo usermod -aG 1xd $USER
-newgrp 1xd
+sudo usermod -aG lxd $USER
+newgrp lxd
 ```
 
 ### Sur Debian (Incus)
