@@ -313,12 +313,12 @@ C’est tout ! Le téléchargement de l’image + création + démarrage en **un
 
 ### Commandes de base
 
-```json
+```yaml
 # Lister les conteneurs
 lxc list
 
 # Entrer dans un conteneur
-1xc exec mon-serveur -- bash
+lxc exec mon-serveur -- bash
 
 # Arrêter / démarrer / redémarrer
 lxc stop mon-serveur
