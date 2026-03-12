@@ -281,4 +281,56 @@ sudo usermod -aG incus $USER
 
 _Incus utilise la commande incus au lieu de lxc, mais la systaxe est identique_
 
+### lnitialisation
+
+```nginx
+# Configuration interactive
+lxd init
+```
+**Questions posées** :
+
+* Clustering ? → no (pour un usage standalone)
+* Storage backend ? → dir (simple) ou zfs (recommandé)
+* Network bridge ? → yes (crée 1xdbrø)
+* Accès réseau à distance ? -> no (sécurité)
+
+Accepter les valeurs par défaut est un bon point de départ
+
+### Lancer un conteneur
+
+```nginx
+# Créer et démarrer un conteneur Ubuntu
+lxc launch ubuntu:24.04 mon-serveur
+
+# Créer et démarrer un Debian
+lxc launch images:debian/12 web-server
+
+# Créer et démarrer un Alpine (ultra-Léger)
+lxc launch images:alpine/3.19 mini-server
+```
+
+C’est tout ! Le téléchargement de l’image + création + démarrage en **une seule commande** 🎉
+
+### Commandes de base
+
+```ps
+# Lister les conteneurs
+lxc list
+
+# Entrer dans un conteneur
+1xc exec mon-serveur -- bash
+
+# Arrêter / démarrer / redémarrer
+lxc stop mon-serveur
+lxc start mon-serveur
+lxc restart mon-serveur
+
+# Supprimer (doit être arrêté)
+lxc delete mon-serveur
+
+# Forcer La suppression
+lxc delete mon-serveur -- force
+```
+
+
 
