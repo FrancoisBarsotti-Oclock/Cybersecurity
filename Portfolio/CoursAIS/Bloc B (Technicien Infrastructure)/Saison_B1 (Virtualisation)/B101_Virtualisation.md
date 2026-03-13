@@ -601,3 +601,7 @@ Ces licences sont mises à disposition pour l'apprentissage.
 Le respect de cet usage est essentiel pour que cet utilisateur puisse continuer à les partager avec la communauté.
 
 ---
+
+Challenge du jour 👉 [Challenge_B101](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B1/Challenge_B101.md) 👈
+
+---
