@@ -1,4 +1,4 @@
-# B102 : ProxMox interface
+# Session B102 : ProxMox interface
 
 ### Notions du jour
 
@@ -137,6 +137,6 @@ Le **Firewall** permet de filtrer les tentatives d’intrusion, pour contrôler 
 
 ---
 
-Challenge du jour 👉 [Challenge_B102]() 👈
+Challenge du jour 👉 [Challenge_B102](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B1/Challenge_B102.md) 👈
 
 ---
