@@ -450,33 +450,138 @@ Avec clustering multi-nœuds :
 
 ### Open-source et gratuit
 
-* Code source ouvert (licence AGPL)
-* Version community complète et gratuite, c’est qui est payant c’est le support
-* Pas de limitations artificielles
-* Mises à jour régulières
+* ✔️ Code source ouvert (licence AGPL)
+* ✔️ Version community complète et gratuite, c’est qui est payant c’est le support
+* ✔️ Pas de limitations artificielles
+* ✔️ Mises à jour régulières
 
 ### Tout-en-un
 
-* VM complètes (KVM) + Conteneurs (LXC)
-* Interface web unique pour tout
-* Pas besoin d'outils externes
+* ✔️ VM complètes (KVM) + Conteneurs (LXC)
+* ✔️ Interface web unique pour tout
+* ✔️ Pas besoin d'outils externes
 
 ### Simplicité
 
-* Installation rapide (10-15 min)
-* Interface intuitive
-* Pas besoin d'être expert Linux
+* ✔️ Installation rapide (10-15 min)
+* ✔️ Interface intuitive
+* ✔️ Pas besoin d'être expert Linux
 
 ### Performance
 
-* Accès direct au matériel (type 1)
-* Overhead minimal
-* Support des technologies récentes
+* ✔️ Accès direct au matériel (type 1)
+* ✔️ Overhead minimal
+* ✔️ Support des technologies récentes
 
 ### Écosystème Linux
 
-* Basé sur Debian (stable et fiable)
-* Compatible outils Linux standards
-* Communauté active et réactive
+* ✔️ Basé sur Debian (stable et fiable)
+* ✔️ Compatible outils Linux standards
+* ✔️ Communauté active et réactive
+
+## Cas d’usage de ProxMox
+
+### 🏢 Serveur PME
+
+Héberger plusieurs serveurs d'entreprise sur un seul matériel
+
+* Serveur de fichiers
+* Active Directory
+* Serveurs web
+* Bases de données
+
+Ratio prix/performance excellent
+
+### 🏠 Homelab
+
+Créer son propre "cloud" à la maison
+
+* Services auto-hébergés
+* NextCloud, Plex, Pi-hole ...
+* Apprentissage et expérimentation
+
+### 💻 Infrastructure de développement
+
+* Environnements dev/test/staging
+* CI/CD (intégration et déploiement continues) avec conteneurs légers (les pratiques DevOps)
+* Isolation des projets
+
+### 🌐 Hébergement de services
+
+* Fournisseurs VPS
+* Hébergement multi-clients avec isolation
+* Gestion automatisée (via API)
+
+### 🧪 Formation et labs
+
+* Créer environnements de formation rapidement
+* Snapshots pour revenir à un état propre
+* Multiplier les instances sans surcharge
+
+## Comparaison Proxmox vs VMware ESXi
+ 
+| **Critère** | **Proxmox VE** | **VMware ESXi** |
+| :--: | :--: | :--: |
+| **Licence** | Gratuit | Payant |
+| **Support** | Community ou payant | Souscription |
+| **Conteneurs** | LXC natif | Non (ajouts requis) |
+| **Interface** | Web complète | Web basique |
+| **Clustering** | Intégré gratuit | vCenter requis (payant) |
+| **API** | REST complète | Limitée sans vCenter |
+| **Apprentissage** | Moyen | Moyen-Élevé |
+| **Écosystème** | Open-source | Propriétaire |
+
+## Sur le marché du travail
+
+### VMware
+
+Leader mondial de la virtualisation
+
+* ✅ Présent dans 90% des grandes entreprises
+* ✅ Certifications reconnues (VCP, VCAP)
+* ✅ Salaires attractifs pour les experts
+
+### Proxmox
+
+Adoption croissante
+* ✅ Alternative aux solutions propriétaires
+* ✅ Très présent en PME et startups
+* ✅ Écosystème open-source
+* ✅ Compétence différenciante sur CV
+
+### Ensemble
+
+**= Polyvalence**
+
+* ✅ Intervenir sur différents environnements
+* ✅ Compréhension globale de la virtualisation
+* ✅ Capacité à conseiller sur les solutions
+* ✅ Profil "DevOps-compatible" (VM + conteneurs)
+
+## Licences VMware
+
+⚠️ **Point important**
+
+VMware Workstation est un produit commercial (500$ a 3500$ selon les versions).
+
+Pour cette formation, nous utilisons des **licences pédagogiques gratuites** fournies par un utilisateur certifié VMware.
+
+### 🎓 Usage strictement pédagogique
+
+Ces clés permettent d'accéder à toutes les fonctionnalités avancées :
+
+* Haute disponibilité
+* Motion
+* Connexion vCenter/vSphere
+* Réplication
+
+### Engagement éthique
+
+X Ne pas utiliser en production professionnelle
+
+Ces licences sont mises à disposition pour l'apprentissage.
+
+Le respect de cet usage est essentiel pour que cet utilisateur puisse continuer à les partager avec la communauté.
+
 
 
