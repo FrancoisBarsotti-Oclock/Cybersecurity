@@ -8,9 +8,11 @@
 
 ----------------------------------
 
-Un **jeu** en **lignes** de **commandes** : [Terminus](https://luffah.xyz/bidules/Terminus/)
+* Un **jeu** en **lignes** de **commandes** : [Terminus](https://luffah.xyz/bidules/Terminus/)
 
-**Jeu** pour apprendre **VIN** [Learn VIM while playing a game - VIM Adventures](https://vim-adventures.com/)
+* **Jeu** pour apprendre **VIN** [Learn VIM while playing a game - VIM Adventures](https://vim-adventures.com/)
+
+* [LabEx Linux Projets](https://labex.io/fr/projects/category/linux) : Projets pratiques pour manipuler Linux
 
 -----------------------------------
 # Comptes utilisateurs
