@@ -105,7 +105,7 @@ La DMIA, **Durée Maximale d'Interruption Admissible** (RTO, Recovery Time Objec
 
 Ces métriques sont définies par **accord de niveau de service** (SLA, Service Level Agreement), entre la DSI et la Direction Générale.
 
-![01-PDMA&DMIA]()
+![01-PDMA&DMIA](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_01-PDMA%26DMIA.png)
 
 Reprenons notre exemple de tout à l'heure :
 Si l'attaque par ransomware se produit à **10h** du matin, et que la **dernière sauvegarde** a été effectuée à **2h** du matin, on a perdu **8 heures de données**.
@@ -133,11 +133,11 @@ Pour sauvegarder dans les règles de l'art, il faut ...
 
 _On peut aller plus loin, mais la règle ci-dessus est censée être le minimum._
 
-![02-Règle3-2-1]()
+![02-Règle3-2-1](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_02-R%C3%A8gle3-2-1.png)
 
 _**Exemple** : une sauvegarde en interne sur un serveur différent, et une sauvegarde sur bande à conserver hors-site._
 
-![03-Exemple règle]()
+![03-Exemple règle](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_03-Exemple%20r%C3%A8gle.png)
 
 _Pas envie d'apporter les sauvegardes dans un coffre-fort ? Remplacez les bandes par un stockage Cloud !_
 
@@ -173,7 +173,7 @@ Quand on fait une sauvegarde incrémentielle, on sauvegarde **uniquement les fic
 
 Cette sauvegarde est beaucoup **plus rapide et très légère**, mais la **restauration est plus complexe** : il faut restaurer la dernière sauvegarde complète + toutes les sauvegardes incrémentielles effectuées depuis la dernière sauvegarde complète.
 
-![04-Sauvegarde incrémentielle]()
+![04-Sauvegarde incrémentielle](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_04-Sauvegarde%20incr%C3%A9mentielle.png)
 
 ### Sauvegarde différentielle
 
@@ -181,7 +181,7 @@ On peut aussi choisir de faire une sauvegarde **différentielle** : dans ce cas,
 
 Un peu **plus lentes et volumineuses que les sauvegardes incrémentielles**, les sauvegardes différentielles sont **plus simples à restaurer** : on restaure la dernière sauvegarde complète et la dernière sauvegarde différentielle.
 
-![05-Sauvegarde différentielle]()
+![05-Sauvegarde différentielle](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_05-Sauvegarde%20diff%C3%A9rentielle.png)
 
 ## Sauvegarde vs. Snapshot
 
@@ -265,7 +265,7 @@ Le _Directly Attached Storage_ (**DAS**) est le type de stockage que nous utilis
 
 Très rapide, il a l'inconvénient de ne **pas** être **accessible aux autres machines** sur le réseau, comme c’est local.
 
-§[06-DAS]()
+§[06-DAS](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_06-DAS.png)
 
 ### NAS
 
@@ -273,7 +273,7 @@ Un serveur **NAS** (_Network Attached Storage_) est un serveur spécifiquement c
 
 Il est accessible par toutes les machines sur le réseau via des protocole comme SMB/CIFS ou NFS, mais est moins rapide qu'un stockage DAS. C’est du RJ45.
 
-![07-NAS]()
+![07-NAS](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_07-NAS.png)
 
 ### SAN
 
@@ -281,7 +281,7 @@ Un **SAN** (_Storage Area Network_) est un **réseau de stockage**. Plus exactem
 
 C'est comme si on avait un disque dur en DAS, mais physiquement connecté à plusieurs serveurs. C’est de la fibre.
 
-![08-SAN]()
+![08-SAN](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_08-SAN.png)
 
 ## RAID
 
@@ -307,7 +307,7 @@ Il existe différents "niveaux" d'architecture RAID, numérotés à partir de 0.
 
 _On peut également combiner certains niveaux entre eux (RAID 10 = RAID 1+0, par exemple)._
 
-![09-NiveauxRAID]()
+![09-NiveauxRAID](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_09-NiveauxRAID.png)
 
 ### Matériel vs. logiciel
 
