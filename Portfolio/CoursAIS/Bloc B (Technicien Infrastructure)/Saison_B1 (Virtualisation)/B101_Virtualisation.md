@@ -1,5 +1,22 @@
 # 🌐 Session B101. La Virtualisation.
 
+### Notions du jour :
+
+* Introduction à la virtualisation
+    * Définition et avantages de la virtualisation
+    * Applications pratiques et cas d’utilisation
+
+* Hyperviseur Type 1 et Type 2
+    * Différences entre les hyperviseurs Type 1 (bare-metal) et Type 2 (hosted)
+    * Exemples courants d’hyperviseurs Type 1 et Type 2
+* Présentation de VMWare Workstation
+    * Fonctionnalités et avantages de VMWare Workstation
+    * Cas d’utilisation et exemples de déploiement
+
+* Présentation de Proxmox
+    * Fonctionnalités et avantages de Proxmox
+    * Cas d’utilisation et exemples de déploiement
+
 ## Qu'est-ce que la virtualisation ?
 
 La virtualisation est une technologie qui permet de créer des versions virtuelles de ressources informatiques, telles que des serveurs, des postes de travail, des systèmes d'exploitation et des
