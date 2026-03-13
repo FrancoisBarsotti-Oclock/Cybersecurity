@@ -175,8 +175,191 @@ Cette sauvegarde est beaucoup **plus rapide et très légère**, mais la **resta
 
 ![04-Sauvegarde incrémentielle]()
 
+### Sauvegarde différentielle
 
+On peut aussi choisir de faire une sauvegarde **différentielle** : dans ce cas, on sauvegarde **uniquement les fichiers ajoutés/modifiés depuis la dernière sauvegarde complète** (même s'il y a eu d'autres sauvegardes différentielles entre temps).
 
+Un peu **plus lentes et volumineuses que les sauvegardes incrémentielles**, les sauvegardes différentielles sont **plus simples à restaurer** : on restaure la dernière sauvegarde complète et la dernière sauvegarde différentielle.
+
+![05-Sauvegarde différentielle]()
+
+## Sauvegarde vs. Snapshot
+
+_(vs. réplication)_
+
+Les **snapshots** et **sauvegarde** sont souvent confondus, ce sont en réalité **deux techniques complémentaires**.
+
+On peut aussi mettre en place de la **réplication**.
+
+_Snapshot ?_
+
+Un snapshot (instantané FR) est la **photographie d'un système de fichiers à un instant t**. Ils permettent de pouvoir revenir dans le passé, à la date à laquelle a été faite le snapshot. C’est juste une représentation d’un état, c’est pour ça il est rapide (il ne copie pas les fichiers).
+
+Attention : les snapshots ne peuvent pas être considérées comme des sauvegardes, puisque les données ne sont pas copiées ! Seules les données modifiées ou supprimées depuis le dernier snapshot (ou le snapshot initial) sont conservées.
+
+Les snapshots sont **rapides** (à créer et à restaurer) et relativement légers (individuellement). On peut donc se permettre de faire des snapshots fréquents (toutes les 30min ou 60min, par exemple), pour pouvoir revenir à des **versions antérieures** de nos fichiers.
+
+Cette rapidité a un inconvénient : les snapshots sont stockes sur la même baie de stockage (en général). Et même si ce n'est pas le cas, les snapshots seuls ne permettent pas la restauration des données.
+
+### Bonne pratique :
+
+En général, on combine sauvegardes et snapshots.
+
+Exemple :
+
+* une sauvegarde complète toutes les semaines
+* une sauvegarde différentielle ou incrémentielle tous les jours
+* un snapshot toutes les heures
+
+_Et la réplication ?_
+
+Pour certaines entreprises, on ne tolère **pas d'interruption de service**. Dans ce cas, on peut mettre en place de la **réplication** !
+
+Cette réplication peut être **synchrone** (en "miroir", toutes les entrées/sorties sont faites sur 2 serveurs/disques/supports simultanément), ou **asynchrone** (copie des modifications après la fin de l'écriture sur le premier support, ou toutes les 1/5/10 minutes).
+
+En cas d'incident, il suffit de basculer sur le répliquât.
+
+## Stockage
+
+_C’est bien beau, mais on sauvegarde sur **quoi** ?_
+
+Voir cette [Vidéo intéressante sur stockage](https://www.youtube.com/watch?v=8cNPpLswdLY) 
+
+### Hot vs. Cold
+
+Il existe de nombreux types de supports de stockage !
+
+On utilise la température (hot/cold) pour "classer" ces supports.
+
+Plus un support est "**chaud**", plus il est **proche de la production**, plus on peut **facilement/rapidement écrire et lire sur ce support**. À l'inverse, un support est "**froid**" quand il est **plus difficile ou plus lent de lire/écrire sur ce support**, qu'il n'est pas connecté à la production, peut-être même pas alimenté électriquement.
+
+### Online vs. nearline vs. offline
+
+On n’utilise pas toujours la température pour classer les types de supports !
+
+•	stockage "online" : correspond à un stockage "chaud", directement accessible.
+•	stockage "nearline" : "tiède", pas directement accessible mais facilement accessible (par exemple, un disque dur externe à connecter)
+•	stockage "offline" : stockage "froid", plus difficilement accessible (stockage sur bandes sur site distant par exemple)
+
+### Médias de stockage
+Lire sur le [stockage SAN](https://www.hpe.com/fr/fr/what-is/san-storage.html) 
+
+* bande magnétique (LTO)
+* disque dur (mécanique)
+* supports optiques (CD, DVD, Blu-ray + M-Disc)
+* mémoire flash (disques dur SSD, carte SD/microSD, clés USB)
+_Liste non exhaustive !_
+
+Chaque media a des avantages et des inconvénients, il n'y a pas un média _parfait_.
+
+Selon le média choisi, différentes mises en œuvre sont possibles :
+
+* DAS (Directly Attached Storage)
+* NAS (Network Attached Storage)
+* SAN (Storage Area Network)
+* Stockage Cloud
+
+### DAS
+
+Le _Directly Attached Storage_ (**DAS**) est le type de stockage que nous utilisons le plus souvent : le média (disque dur, clé USB, etc.) est **directement connecté/attaché à une machine**.
+
+Très rapide, il a l'inconvénient de ne **pas** être **accessible aux autres machines** sur le réseau, comme c’est local.
+
+§[06-DAS]()
+
+### NAS
+
+Un serveur **NAS** (_Network Attached Storage_) est un serveur spécifiquement conçu pour le stockage de données.
+
+Il est accessible par toutes les machines sur le réseau via des protocole comme SMB/CIFS ou NFS, mais est moins rapide qu'un stockage DAS. C’est du RJ45.
+
+![07-NAS]()
+
+### SAN
+
+Un **SAN** (_Storage Area Network_) est un **réseau de stockage**. Plus exactement, ce sont des **baies de stockage** directement accessibles en mode bloc (comme en DAS) par le système de fichiers des serveurs.
+
+C'est comme si on avait un disque dur en DAS, mais physiquement connecté à plusieurs serveurs. C’est de la fibre.
+
+![08-SAN]()
+
+## RAID
+
+Le **RAID** (_Redundant Array of Independent Disks_) est un ensemble de techniques de virtualisation du stockage permettant de **repartir des données sur plusieurs disques durs** afin d'améliorer les **performances**, la **sécurité** ou la **tolérance aux pannes**.
+
+[Exemple d’un super RAID en vente](https://www.inmac-wstore.com/broadcom-megaraid-mr408i-o-controleur-de-stockage-sata-6gb-s-sas-12gb-s-pcie-4-0-nvme-pcie-4-0-x8/p7343722.htm) 
+
+### Intérêt du RALD
+
+Le RAID permet soit :
+
+* **redondance** des données sur plusieurs disques pour avoir une certaine tolérance aux pannes matérielles (exemple : RAID 1)
+* **répartition** des données sur plusieurs disques pour améliorer les performances (exemple : RAID O)
+* compromis entre redondance et répartition (exemple : RAID 5)
+
+### Niveaux RAID
+
+Il existe différents "niveaux" d'architecture RAID, numérotés à partir de 0. Les plus connus :
+
+* **RAID 1** : mise en "mirroir" de 2 (ou +) disques (tolère la panne d'un disque)
+* **RAID O** : répartition des données sur 2 (ou +) disques (ne tolère aucune panne, mais + performant)
+* **RAID 5** : 3 disques mini, utilisation d'un bit de parité pour reconstruire les données en cas d'incident (tolère la panne d'un disque)
+
+_On peut également combiner certains niveaux entre eux (RAID 10 = RAID 1+0, par exemple)._
+
+![09-NiveauxRAID]()
+
+### Matériel vs. logiciel
+
+On peut faire du RAID de deux façons différentes :
+
+* **RAID matériel** : nécessite une carte contrôleur PCI spécifique relativement coûteuse, souvent avec une batterie.
+* **RAID logiciel** : assure par le système d'exploitation (avec lequel nous allons travailler en cours)
+
+## Solutions
+
+_Sur le marché, pour le stockage & la sauvegarde !_
+
+### Solutions stockage
+
+Fabricants de NAS réputés :
+* Synology
+* QNAP
+
+Fabricants de SAN :
+* Dell
+* HP Entreprise
+* IBM
+
+---
+
+### Section culture
+
+[Vidéo sur les écoutes](https://www.youtube.com/watch?v=0lz2KRRGQZI)
+
+[Vidéo sur le mithes de la tech](https://www.youtube.com/watch?v=CT72czY9MBE)
+
+---
+
+## NAS DIY
+
+Il est possible, bien que rarement rencontré en entreprise, de créer son propre NAS. Les OS les plus souvent rencontrés sont :
+
+* TrueNAS (propose aussi des solutions pro)
+* OpenMediaVault
+* Unraid (payant)
+* Rockstor
+
+### Solutions de sauvegarde
+
+* Veeam
+* UrBackup
+* Proxmox Backup Server
+
+## Place à la Pratique
+TrueNAS, on va utiliser Scale
+
+### 🚧 En construction 🚧
 
 
 
