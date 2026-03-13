@@ -1,4 +1,4 @@
-# 📜 Liste des Challenges réalisés pour valider les notions abordés en cours, toutes saisons. 
+# 📜 Liste de tous les Challenges réalisés pour valider les notions abordés en cours, toutes saisons. 
 
 ### Challenges A1 (Savoir de base)
 👉 [Challenge A102](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A102.md) : Proposition d'achat de périphériques
