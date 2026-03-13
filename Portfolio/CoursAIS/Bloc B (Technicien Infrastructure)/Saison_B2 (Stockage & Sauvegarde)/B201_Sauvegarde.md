@@ -356,7 +356,7 @@ Il est possible, bien que rarement rencontré en entreprise, de créer son propr
 * UrBackup
 * Proxmox Backup Server
 
-## Place à la Pratique
+## Place à la Pratique (Pag. 11 de mes notes)
 TrueNAS, on va utiliser Scale
 
 ### 🚧 En construction 🚧
