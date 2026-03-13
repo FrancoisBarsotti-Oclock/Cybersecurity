@@ -7,7 +7,7 @@ applications, sur un matériel physique unique.
 
 En d'autres termes, la virtualisation permet de faire fonctionner plusieurs systèmes d'exploitation ou applications sur un seul serveur physique, comme si chacun d'eux disposait de son propre matériel dédié.
 
-![01-Traditional&Virtualisation]()
+![01-Traditional&Virtualisation](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B1%20(Virtualisation)/images%20B1/images%20B101/B101_01-Traditional%26Virtualisation.png)
 
 ### Historique de la virtualisation
 Ça a commencé en 1960 !
@@ -32,7 +32,7 @@ _**Un hyperviseur**_, également connu sous le nom de moniteur de machine virtue
 
 Il permet d'isoler les systèmes d'exploitation et les applications virtuelles les uns des autres, tout en fournissant un accès sécurisé aux ressources physiques.
 
-![02-Hypervisor]()
+![02-Hypervisor](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B1%20(Virtualisation)/images%20B1/images%20B101/B101_02-Hypervisor.png)
 
 L'hyperviseur fonctionne comme un intermédiaire entre le matériel physique et les systèmes d'exploitation virtuels. Il gère l'allocation des ressources, telles que la mémoire, le processeur et le stockage, entre les systèmes virtuels.
 
@@ -52,7 +52,7 @@ Ils sont souvent utilisés pour la virtualisation de postes de travail, les test
 
 c'est la première couche logicielle qui tourne sur le matériel. Si tu as un OS avant de lancer l'hyperviseur, c'est un type 2 (sauf Hyper-V) car Hyper-V est intégré à Windows.
 
-![03-HypervisorTypes]()
+![03-HypervisorTypes](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B1%20(Virtualisation)/images%20B1/images%20B101/B101_03-HypervisorTypes.png)
 
 ## Hyperviseurs populaires
 ### VMware vSphere
@@ -60,7 +60,7 @@ Une plateforme de virtualisation puissante offrant une gestion centralisée, le 
 
 ❗ **Hyperviseur de type 1**.
 
-![04-VMware vSphere]()
+![04-VMware vSphere](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B1%20(Virtualisation)/images%20B1/images%20B101/B101_04-VMware%20vSphere.png)
 
 ### Microsoft Hyper-V
 
@@ -68,7 +68,7 @@ Intégré aux systèmes d'exploitation Windows Server, Hyper-V est une solution 
 
 ❗ **Hyperviseur de type 1**.
 
-![05-Microsoft Hyper-V]()
+![05-Microsoft Hyper-V](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B1%20(Virtualisation)/images%20B1/images%20B101/B101_05-Microsoft%20Hyper-V.png)
 
 ### Oracle VM VirtualBox
 
@@ -76,7 +76,7 @@ Un hyperviseur open source populaire, connu pour sa compatibilité avec de nombr
 
 ❗ **Hyperviseur de type 2**.
 
-![06-VirtualBox]()
+![06-VirtualBox](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B1%20(Virtualisation)/images%20B1/images%20B101/B101_06-VirtualBox.png)
 
 ### Citrix XenServer
 
@@ -84,7 +84,7 @@ Une solution de virtualisation de serveurs axée sur la performance et l'évolut
 
 ❗ **Hyperviseur de type 1**.
 
-![07-Citrix XenServer]()
+![07-Citrix XenServer](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B1%20(Virtualisation)/images%20B1/images%20B101/B101_07-Citrix%20XenServer.png)
 
 ### Proxmox VE
 Une plateforme de virtualisation open source basée sur le noyau Linux (sur Debian), offrant une gestion centralisée des machines virtuelles et des conteneurs, avec une interface conviviale et une grande flexibilité pour les entreprises de toutes tailles.
@@ -97,7 +97,7 @@ Une plateforme de virtualisation open source basée sur le noyau Linux (sur Debi
 * **Les VMs (via KVM)** : Virtualisation complète (Type 1).
 * **Les Conteneurs (via LXC)** : Virtualisation au niveau du système d'exploitation. Bien que ce ne soit pas du "Type 2" au sens strict, cette polyvalence pousse certains auteurs à le présenter comme une solution hybride. Cette double technologie fait la force de ProxMox.
 
-![08-ProxmoxVE]()
+![08-ProxmoxVE](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B1%20(Virtualisation)/images%20B1/images%20B101/B101_08-ProxmoxVE.png)
 
 ### Définition :
 
@@ -188,7 +188,7 @@ En diminuant le nombre de serveurs physiques nécessaires, la virtualisation con
 
 La virtualisation des postes de travail (VDI) consiste à exécuter un système d'exploitation et ses applications sur un serveur distant, permettant aux utilisateurs d'accéder à leur environnement de travail depuis n'importe quel appareil (genre RDS ou Citrix).
 
-![09-MicrosoftRDS]()
+![09-MicrosoftRDS](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B1%20(Virtualisation)/images%20B1/images%20B101/B101_09-MicrosoftRDS.png)
 
 ## Virtualisation des applications 🐋
 
@@ -196,7 +196,7 @@ La virtualisation des applications permet de séparer une application de son env
 
 Les conteneurs offrent un niveau d'abstraction plus élevé que les machines virtuelles traditionnelles, encapsulant une application et ses dépendances dans un environnement isolé pour une exécution cohérente sur diverses plateformes.
 
-![10-Docker]()
+![10-Docker](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B1%20(Virtualisation)/images%20B1/images%20B101/B101_10-Docker.png)
 
 ## Virtualisation du stockage 💾
 
@@ -215,7 +215,7 @@ Le **NAS** (_Network Attached Storage_) fournit un accès aux données aux serve
 
 La différence entre le **SAN** et le **NAS** est que le **SAN** est connecté à une infrastructure de stockage centralisée, tandis que le NAS est connecté directement aux serveurs et aux utilisateurs.
 
-![![alt text](image-1.png)]()
+![11-NAS&SAN](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B1%20(Virtualisation)/images%20B1/images%20B101/B101_11-NAS%26SAN.png)
 
 ## Virtualisation du réseau 🌐
 
@@ -570,18 +570,17 @@ Pour cette formation, nous utilisons des **licences pédagogiques gratuites** fo
 
 Ces clés permettent d'accéder à toutes les fonctionnalités avancées :
 
-* Haute disponibilité
-* Motion
-* Connexion vCenter/vSphere
-* Réplication
+* ✅ Haute disponibilité
+* ✅ Motion
+* ✅ Connexion vCenter/vSphere
+* ✅ Réplication
 
-### Engagement éthique
+### ⚠️ Engagement éthique
 
-X Ne pas utiliser en production professionnelle
+❌ **Ne pas utiliser en production professionnelle**
 
 Ces licences sont mises à disposition pour l'apprentissage.
 
 Le respect de cet usage est essentiel pour que cet utilisateur puisse continuer à les partager avec la communauté.
 
-
-
+---
