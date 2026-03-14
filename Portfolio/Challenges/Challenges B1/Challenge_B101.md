@@ -1,4 +1,4 @@
-# 🏆 Challenge B101: Installation d'Hyperviserus types 1 et 2, imbrication.
+# 🏆 Challenge B101: Installation d'Hyperviseurs types 1 et 2, imbrication.
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 

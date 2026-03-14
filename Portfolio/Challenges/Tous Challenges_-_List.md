@@ -94,14 +94,16 @@ Challenge A508 : Installation et configuration d'un serveur Asterisk.
 Challenge A509 : Atelier Installer et configurer un serveur Asterisk sur proxmox, fonctionnel via app VOIP du smartphone.
 
 ### Challenges B1 (Virtualisation)
-Challenge B101 : Installation d'Hyperviseurs Types 1 é 2, imbrication.
+👉 [Challenge B101](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B1/Challenge_B101.md) : Installation d'Hyperviseurs Types 1 é 2, imbrication.
 
-Challenge B102 : Installation ESXi (vSphere)
+👉 [Challenge B102](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B1/Challenge_B102.md) : Installation ESXi (vSphere)
 
-Challenge B103 : Installation de vCenter et le configurer.
+👉 [Challenge B103](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B1/Challenge_B103.md) : Installation et configuration de vCenter.
+
+👉 [Challenge B105](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B1/Challenge_B105.md) : QCM 6, Virtualisation
 
 ### Challenges B2 (Stockage & Sauvegarde)
-Challenge B201 : Installation de TrueNAS (Proxmox), configuration ZFS, SMB et snapshots.
+👉 [Challenge B201](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B2/Challenge_B201.md) : Installation et configuration de TrueNAS Scale.
 
 Challenge B202 : Installation Veeam Backup & Replication, configuration, restauration.
 
