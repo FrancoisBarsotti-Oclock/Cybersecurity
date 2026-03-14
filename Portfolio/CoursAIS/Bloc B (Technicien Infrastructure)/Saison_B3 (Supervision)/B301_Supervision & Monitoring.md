@@ -436,7 +436,7 @@ SNMP ne suffit pas pour une supervision complète :
 
 ➡️ Une stratégie de supervision efficace **combine plusieurs approches**.
 
- Challenge du jour 👉 [Challenge B301]() : supervision réseau 
+ Challenge du jour 👉 [Challenge B301](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/Challenge_B301.md) : supervision réseau 
 
  ---
 
