@@ -8,6 +8,6 @@
 
 👉 [Challenge B203](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B2/Challenge_B203.md) : NFS/ iSCSI dans Veeam, configuration diverse.
 
-Challenge B204 : Installer Proxmox Backup Server, configurer, backup et restore.
+Challenge B204 : Installation et configuration de Proxmox Backup Server.
 
 Challenge B205 : QCM 7, Stockage & Sauvegarde.
