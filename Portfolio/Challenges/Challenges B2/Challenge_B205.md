@@ -6,7 +6,7 @@ Cette session a consisté à l'application d'un QCM sur la saison B2 (Stockage &
 
 Le résultat sur mon dixième QCM a été satisfaisant:
 
-![]()
+![Résultat QCM7](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B2/images_B2/images%20B205/B205_01-R%C3%A9sultatQCM7.png)
 
 ### 👉 [QCM Saison B2](https://docs.google.com/forms/d/e/1FAIpQLSfY_lOdrZTXYEUjvcvVNX66cOPFN9GDGqC8pBl65uYlO-Wf8A/viewscore?viewscore=AE0zAgD_RVHOHmJ8uDlBFsF9NLk3nve-ADYQu6l6B2EK8NNeCoIzhZC3kyKtXUel6wbp0Dc)
 
