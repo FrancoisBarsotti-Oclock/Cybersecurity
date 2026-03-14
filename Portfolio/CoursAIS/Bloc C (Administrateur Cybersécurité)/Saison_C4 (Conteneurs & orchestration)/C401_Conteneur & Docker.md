@@ -67,6 +67,8 @@ Un conteneur permettant de distribuer un backend avec tout ce dont il a besoin p
 * **bibliothèques** : dossier vendor pour PHP, dossier node_modules pour JS, etc.
 * **outils et fichiers divers** : Composer pour PHP, NPM et PM2 pour JS, etc.
 
+it-Connect a dédié du contenu à ce sujet 👉 [Proxmox VE : comment créer des conteneurs Docker ?](https://www.it-connect.fr/tuto-proxmox-ve-creer-des-conteneurs-docker/)
+
 ### Image Docker
 
 En POO, on dit **qu'un objet est l'instance d'une classe.**
