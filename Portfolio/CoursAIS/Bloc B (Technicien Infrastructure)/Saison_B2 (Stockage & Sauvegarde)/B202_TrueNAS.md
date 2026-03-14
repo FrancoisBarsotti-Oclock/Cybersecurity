@@ -47,15 +47,15 @@ System / Network/ Interfaces: Edit
 
 Pour créer des pools il faut avoir les trois suivants
 
-![02-PrérequisPools]()
+![02-PrérequisPools](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_02-Pr%C3%A9requisPools.png)
 
 Quand on commence à faire un **Storage** :
 
-![03-StorageStep1]()
+![03-StorageStep1](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_03-StorageStep1.png)
 
 `Pool = VDEV`
 
-![04-StorageVDEV]()
+![04-StorageVDEV](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_04-StorageVDEV.png)
 
 **Différent Layouts** : Une fois sélectionné on ne peut pas le changer. Par contre, on pourra toujours effacer le pool (sur Export/Disconnect).
 
@@ -67,13 +67,13 @@ Disons que chaque disque est de 50 Go, alors selon layout la répartition sera c
 
 Cependant, une fois le Pool créé, les ressources seront montrées en termes de GiB :
 
-![05-RessourcesGiB]()
+![05-RessourcesGiB](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_05-RessourcesGiB.png)
 
 On peut maintenant créer un **Dataset** :
 
 Bon à savoir qu’avec la création du PoolNAS on a déjà créé un Dataset, mais ses permissions ne peuvent pas être éditées car le PoolNAS est en root (juste pour gérer une hiérarchie). C’est pour cela qu’il faut créer un Dataset (pour gérer les permissions).
 
-![06-CréationDataset]()
+![06-CréationDataset](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_06-Cr%C3%A9ationDataset.png)
 
 Puis, on a **Shares** pour les partages :
 
@@ -88,33 +88,33 @@ Les groups Windows (SMB) sont les built-in: Quand on crée un compte SMB, on pou
 
 Cependant, on peut éditer les permissions (Datasets/) pour virer le groupe « everyone » et rajouter d’autres.
 
-![07-Built-in]()
+![07-Built-in](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_07-Built-in.png)
 
 Dans un autre côté, on aura une VM Win10 prête à être utilisé pour établir connexion avec le NAS
 
-![08-ConnexionWin10]()
+![08-ConnexionWin10](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_08-ConnexionWin10.png)
 
 Et on y rentre avec l’utilisateur SMB qu’on a créé (user : fb*** ; mdp : ********)
 
-![09-AuthWin10]()
+![09-AuthWin10](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_09-AuthWin10.png)
 
 Pour la récupération, les **Datasets** pourront être sécurisés avec des Snapshots (cela fait partie de la Data Protection). Le snapshot va être l’instantanée réel de notre disque.
 
 ⚠️ _**Attention**_ : un instantanée n’est pas une solution de sauvegarde, c’est juste une solution pour restaurer l’état du disque.
 
-![10-Dataset&Snapshots]()
+![10-Dataset&Snapshots](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_10-Dataset%26Snapshots.png)
 
 Et on définit son nom, selon la convention de l’entreprise
 
-![11-DatasetNaming]()
+![11-DatasetNaming](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_11-DatasetNaming.png)
 
 Et voilà qu’il apparaît finalement listé, le snapshot :
 
-![12-SnapshotListé]()
+![12-SnapshotListé](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_12-SnapshotList%C3%A9.png)
 
 Pour sécuriser l’activité de l’entreprise, on peut paramétrer des snapshots réguliers (une rotation), dans les « `View Snapshot Tasks` → `Add Periodic Snapshot Task` »
 
-![13-PeriodicSnapshots]()
+![13-PeriodicSnapshots](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_13-PeriodicSnapshots.png)
 
 ⚠️ Faire **attention** à la rotation que l’on met concernant la durée de vie (**Lifetime**) : Si on sélectionne de faire à l’heure pendant 2 semaines, cela fera 24 snapshots par jour x semaine, ce qui fera trop de snapshots.
 
@@ -122,7 +122,7 @@ Cela utilise **Cron** pour déclencher les snaps périodiques. Cron est un plani
 
 Si l’on a besoin de récupérer l’état du disque, il suffira de « Cloner vers un nouveau Dataset » ou bien de « **Rollbacker** » le dernier snapshot, présent dans « Datasets » :
 
-![14-Clone&Rollback]()
+![14-Clone&Rollback](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_14-Clone%26Rollback.png)
 
 **Clone To New Dataset** sera utile pour récupérer uniquement des pertes par inattention (i.e., dossier effacer par erreur)
 
@@ -130,35 +130,39 @@ Si l’on a besoin de récupérer l’état du disque, il suffira de « Cloner v
 
 Une fois la restauration créée, elle apparaît sans droit de partage ce qui empêche que la restauration arrive à destination. 
 
-![15-Restauration]()
+![15-Restauration](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_15-Restauration.png)
 
 💡 Il faudra créer son partage, à travers « `Create SMB Share` »
 
-![16-SMBshare]()
+![16-SMBshare](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_16-SMBshare.png)
 
 Avec le partage créé, on pourra voir l’icône SMB et l’information du partage, à droite :
 
-![17-icôneSMB]()
+![17-icôneSMB](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_17-ic%C3%B4neSMB.png)
 
 💡 Il faudra aussi gérer ses permissions pour rajouter notre utilisateur :
 
-![18-GestionPermissions]()
+![18-GestionPermissions](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_18-GestionPermissions.png)
 
 Il suffit d’éditer les permissions, et on laisse « `Other` » sans permission **par mesure de sécurité** (toujours important de côcher « Apply User » et « Apply Group », ainsi que la « Récursivité ») :
 
-![19-UnixPermissionsEditor]()
+![19-UnixPermissionsEditor](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_19-UnixPermissionsEditor.png)
 
 On vérifie que l’édition est prise en compte :
 
-![20-Vérificationédition]()
+![20-Vérificationédition](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_20-V%C3%A9rification%C3%A9dition.png)
 
 Et on pourra la voir (et l'accéder) sur Windows :
 
-![21-AccèsFinalWin10]()
+![21-AccèsFinalWin10](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B202/B202_21-Acc%C3%A8sFinalWin10.png)
 
 On pourra prendre le fichier qui avait disparu par erreur, le coller sur le Dataset d’origine et finir par effacer la restauration manuelle (dans mon Dataset de TrueNAS), tout de suite.
 
+### 🚧 En construction 🚧
 
+Challenge du jour 👉 [Challenge_C202]() 👈
+
+---
 
 
 
