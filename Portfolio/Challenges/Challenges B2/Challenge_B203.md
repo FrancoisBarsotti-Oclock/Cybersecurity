@@ -1,4 +1,4 @@
-# 🏆 Challenge B203: NFS/ iSCSI dans Veeam, configuration diverse.
+# 🏆 Challenge B203: NFS/ iSCSI dans Veeam, configuration diverse. Revision des notions de la saison B2.
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 
