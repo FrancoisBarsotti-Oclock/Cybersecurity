@@ -359,8 +359,42 @@ Il est possible, bien que rarement rencontré en entreprise, de créer son propr
 ## Place à la Pratique (Pag. 11 de mes notes)
 TrueNAS, on va utiliser Scale
 
-### 🚧 En construction 🚧
+![10-Scale]()
 
+![11-Type de Disque]()
 
+**scsi** c'est pour le système et les 3 sata sont pour les données (les **satas pour le RAID**)
+J’ai rajouté 18 GiB sur sci1 pour un total de 50.
 
+![12-Destination Media]()
+
+On sélectionne le disque sci1 pour le système.
+
+Puis, **Astuce premier mdp** : On ne sait pas si l’on est en qwerty ou azerty, alors ont met **fffff** et on va le changer après
+
+![13-Astuce mdp]()
+
+On doit accepter le démarrage EFI si possible
+
+![14-EFI boot]()
+
+La configuration sera numérotée et proposée sur console
+
+![15-Console setup]()
+
+On rentre sur le navigateur web (VPN à activer si directement sur la machine hôte)
+
+`truenas_admin` sera l’utilisateur **par défaut**
+
+![16-DefaultUser]()
+
+💡 Pour modifier le mdp on va sur `truenas_admin` (session) → `change password`
+
+![17-ChangePsswd]()
+
+💡 Par défaut il se déconnecte en 5 minutes. Pour modifier cela, on va sur `System/ Advanced` → `Settings/ Access`
+
+Challenge du jour 👉 [Challenge_C201]() 👈
+
+---
 
