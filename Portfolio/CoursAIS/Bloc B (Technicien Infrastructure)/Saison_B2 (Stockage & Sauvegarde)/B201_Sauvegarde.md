@@ -359,38 +359,40 @@ Il est possible, bien que rarement rencontré en entreprise, de créer son propr
 ## Place à la Pratique (Pag. 11 de mes notes)
 TrueNAS, on va utiliser Scale
 
-![10-Scale]()
+![10-Scale](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_10-Scale.png)
 
-![11-Type de Disque]()
+Pour cela, on va devoir rajoute 3 disques
+
+![11-Type de Disque](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_11-Type%20de%20Disque.png)
 
 **scsi** c'est pour le système et les 3 sata sont pour les données (les **satas pour le RAID**)
 J’ai rajouté 18 GiB sur sci1 pour un total de 50.
 
-![12-Destination Media]()
+![12-Destination Media](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_12-Destination%20Media.png)
 
 On sélectionne le disque sci1 pour le système.
 
 Puis, **Astuce premier mdp** : On ne sait pas si l’on est en qwerty ou azerty, alors ont met **fffff** et on va le changer après
 
-![13-Astuce mdp]()
+![13-Astuce mdp](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_13-Astuce%20mdp.png)
 
 On doit accepter le démarrage EFI si possible
 
-![14-EFI boot]()
+![14-EFI boot](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_14-EFI%20boot.png)
 
 La configuration sera numérotée et proposée sur console
 
-![15-Console setup]()
+![15-Console setup](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_15-Console%20setup.png)
 
 On rentre sur le navigateur web (VPN à activer si directement sur la machine hôte)
 
 `truenas_admin` sera l’utilisateur **par défaut**
 
-![16-DefaultUser]()
+![16-DefaultUser](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_16-DefaultUser.png)
 
 💡 Pour modifier le mdp on va sur `truenas_admin` (session) → `change password`
 
-![17-ChangePsswd]()
+![17-ChangePsswd](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B201/B201_17-ChangePsswd.png)
 
 💡 Par défaut il se déconnecte en 5 minutes. Pour modifier cela, on va sur `System/ Advanced` → `Settings/ Access`
 
