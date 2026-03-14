@@ -160,7 +160,7 @@ On pourra prendre le fichier qui avait disparu par erreur, le coller sur le Data
 
 ### 🚧 En construction 🚧
 
-Challenge du jour 👉 [Challenge_C202]() 👈
+Challenge du jour 👉 [Challenge_C202](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B2/Challenge_B202.md) 👈
 
 ---
 
