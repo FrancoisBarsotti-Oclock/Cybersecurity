@@ -66,7 +66,128 @@ Si le parc est composé de 10 machines, ça va être fastidieux mais on peut le 
 
 Et en plus, ça fait partie des compétences que l'on doit maitriser pour obtenir le TP: Voir la fiche professionnelle #6 (Automatiser des tâches à l'aide de scritps).
 
+## Bases de la programmation
+_Quelques concepts de base, avant d'attaquer !_
 
+### Opérateurs logiques
 
+Plus grand que : > GT (pour Greater than)
+Plus grand ou égal que : >= GTE (pour Greater than or equal)
+Égal à : == EQ (equal)
+Strictement égal à : ===
+Différent de : != NEQ (Not Equal)
+Strictement différent de : !==
+Plus petit que : < LT (Lower Than)
+Plus petit ou égal à : <= LTE (Lower than or Equal)
 
+```python
+if (1 == 1) { // OK
 
+}
+
+if (1 == '1') { // Ici on compare uniquement la valeur, donc 1 = 1 donc c'est OK
+
+}
+
+if (1 === '1') { // On compare la valeur ET le type (nombre entier Vs. chaine de caractères) donc c'est KO
+
+}
+```
+
+* **Pour combiner plusieurs conditions** : condition 1 && condition 2 (and, -and, &, && selon langage) ; donc vérifie si les 2 condition sont respectées.
+
+* **Pour combiner plusieurs conditions et vérifier qu’au moins une est OK** : condition 1 || condition 2 (or, -or, | , || selon le langage) ; cela vérifie si au moins une des 2 conditions est OK.
+
+* Nous pouvons combiner autant de conditions que nécessaires, et même faire un mélange entre ET et OU.
+
+### Variables
+
+Le principe d’une **variable** est de stocker du contenu (Texte, nombre, listes, etc…) dans un espace de stockage lié au programme, au script, que l’on nomme comme on veut et que l’on peut réutiliser partout (on stocke une information).
+
+Par **exemple** :
+
+$prénom = "Robin" (pas de comparaison quand il y a qu'un seul "=" ; Il s'agit d'assigner la valeur Robin a la variable $prénom)
+= > Assignation de variable
+== > Comparaison simple
+=== > Comparaison stricte
+
+En programmation, une variable permet de stocker une donnée (chaîne de caractères, nombre entier ou à virgule, booléen vrai ou faux, une liste/un tableau, etc.) dans la mémoire vive de l'ordinateur.
+
+### Conditions
+
+Les conditions vont nous permettre de modifier le comportement de notre programme (même une boucle) !
+Quelques **exemples** :
+
+* Si un dossier est présent, le supprimer. Sinon, ne rien faire.
+* Si l'utilisateur répond "non" à une question posée par le script, ne pas faire une certaine action.
+* etc.
+
+```python
+if ($age >= 21) {
+    echo "majeur";
+} elseif ($age >= 18) {
+    echo "Mineur mais peut tuer";
+} else {
+    echo "Mineur";
+}
+```
+
+### Boucles
+Les boucles permettent de répéter une (ou plusieurs) action(s) un certain nombre de fois.
+On peut également s'en servir pour parcourir une liste d'éléments et effectuer une action pour chaque élément dans la liste.
+
+Mots clés : `for`, `while`
+
+Exemple de tableau : [element1, element2, element3, element4]
+Pour chaque élément du tableau ci-dessus, on va faire cette liste d’actions :
+-action 1
+-action 2
+-action 3
+
+**ATTENTION** : Cela varie en fonction du langage 
+Je déclare une variable tableau dans lequel je stock une liste d’éléments
+
+$tableau = [element1, element2, element3, element4]
+
+* Pour chaque élément du tableau que je vais récupérer dans ma boucle sous le nom $élément
+* Pour chaque élément, ma boucle va faire certaines actions que je vais définir
+* Puis, une fois les actions finies, je passe à l’élément suivant et je refais le 
+>For (*élément in $tableau) {
+>$élément->add($user)
+>}
+>
+>For
+
+```python
+$tableau = [$pc1, $pc2, $pc3, $pc4];
+
+// Je récupère chaque élément du tableau ci-dessus
+// Chaque élément sera récupéré sous le nom $ordinateur
+for ($ordinateur in $tableau) {
+    // J'éxecute une liste d'action sur l'ordinateur
+    $ordinateur->ajouterUtilisateur();
+    $ordinateur->action2();
+    $ordinateur->redemarrer();
+    // Une fois mes actions finies, je passe à l'élément suivant de mon tableau et je recommence
+}
+
+// une fois mon tableau terminé, quand j'arrive à la fin, la boucle se termine
+```
+
+### Fonctions
+Les fonctions permettent de "regrouper" plusieurs actions dans un "bloc", et ce bloc d'actions pourra être déclenché depuis différents endroits dans notre script. Elles évitent de répéter le même code.
+
+* ✔️ Je crée ma fonction `verifierAge`, et je demande d* prendre un paramètre, l’âge à tester.
+* ✔️ Je récupère l’âge dans la variable `$age`
+* ✔️ Je fais ma condition pour vérifier l’âge de la personne
+* ✔️ Et en fonction du résultat, j’affiche mineur ou majeur.
+
+Maintenant que ma fonction `vérifierAge` est créée, je peux l’utiliser autant de fois que je veux juste en appelant « `VéfrifierAge(ageàVérivier)` », par exemple :
+
+* `VérifierAge(18)`
+* `VérifierAge(12)`
+* `VérifierAge(39)`
+
+### 🚧 En construction 🚧 (pag. 5)
+
+---
