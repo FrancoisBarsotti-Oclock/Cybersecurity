@@ -67,6 +67,6 @@
 
 ### 🚧 En construction 🚧
 
-Challenge du jour 👉 [Challenge_C204](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B2/Challenge_B204.md)
+Challenge du jour 👉 [Challenge_B204](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B2/Challenge_B204.md)
 
 ---

@@ -396,7 +396,7 @@ On rentre sur le navigateur web (VPN à activer si directement sur la machine h�
 
 💡 Par défaut il se déconnecte en 5 minutes. Pour modifier cela, on va sur `System/ Advanced` → `Settings/ Access`
 
-Challenge du jour 👉 [Challenge_C201](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B2/Challenge_B201.md) 👈
+Challenge du jour 👉 [Challenge_B201](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B2/Challenge_B201.md) 👈
 
 ---
 
