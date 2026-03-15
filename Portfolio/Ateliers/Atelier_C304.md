@@ -5,7 +5,7 @@
 
 > 👉 [**Instructions**](https://github.com/O-clock-Aldebaran/SC3E04-Atelier-IDS-IPS) 
 
-📚 **Ressources complémentaires**
+### 📚 Ressources complémentaires
 
 * [Window 11 Pro sur Proxmox VE](https://www.youtube.com/watch?v=OobKut5Yq6s)
 

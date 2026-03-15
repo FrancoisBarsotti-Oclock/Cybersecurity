@@ -3,9 +3,9 @@
 
 ---
 
-> 👉 [**Instructions**](https://github.com/O-clock-Aldebaran/SC2E03-nextcloud-FrancoisBarsotti-Oclock) 
+> 👉 [**Instructions de l'atelier**](https://github.com/O-clock-Aldebaran/SC2E03-nextcloud-FrancoisBarsotti-Oclock) 
 
-📚 **Ressources complémentaires**
+### 📚 Ressources complémentaires
 
 ---
 
