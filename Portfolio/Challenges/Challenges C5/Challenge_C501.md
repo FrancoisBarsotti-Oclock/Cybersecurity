@@ -39,9 +39,9 @@ Voir 👉 [Cours C501](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/
 
 Le site du lab, nous présente une "search box" où l'on peut mettre n'importe quel mot ou phrase, pour avoir ce que l'on écrit en retour. Dans ce cas, j'ai écrit "Hi, Francois!":
 
-![01-HiFrancois]()
+![01-HiFrancois](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C5/images%20C5/images%20C501/Challenge%20C501_01-HiFrancois.png)
 
 Pour lancer l'attaque Reflected XSS (pour que la victime doive cliquer sur le lien piégé), j'ai mit `C<script>alert(1)</script>` dans la "search box"
 
-![C501_02-Lab1Solved]()
+![C501_02-Lab1Solved](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C5/images%20C5/images%20C501/Challenge%20C501_02-Lab1Solved.png)
 
