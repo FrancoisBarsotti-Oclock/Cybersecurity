@@ -63,7 +63,7 @@ rm -rf *
 ### Culture Virtualisation :
 Proxmox a des conteneurs que l’on trouve dans le local/ CT Templates. Les VM créées avec ces templates vont se différencier en forme de carré. 
 
-![01-CTProxmox]()
+![01-CTProxmox](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B203/B203_01-CTProxmox.png)
 
 Elles sont moins lourdes, et aussi moins sécurisées, alors il ne faut pas les mettre en privilégié.
 
@@ -74,11 +74,11 @@ Elles sont moins lourdes, et aussi moins sécurisées, alors il ne faut pas les 
 
 Pendant l’installation de Veeam, on peut voir les ports qu’il utilise pour fonctionner :
 
-![02-VisualisationdePorts]()
+![02-VisualisationdePorts](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B203/B203_02-VisualisationdePorts.png)
 
 C’est lent pour démarrer la première fois, le temps d’attendre que toutes les applications de Veem finissent de se lancer :
 
-![03-LancementVeeam]()
+![03-LancementVeeam](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B2%20(Stockage%20%26%20Sauvegarde)/images%20B2/images%20B203/B203_03-LancementVeeam.png)
 
 
 
