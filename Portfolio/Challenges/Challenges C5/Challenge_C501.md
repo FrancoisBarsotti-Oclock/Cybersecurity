@@ -49,4 +49,7 @@ Pour lancer l'attaque Reflected XSS (pour que la victime doive cliquer sur le li
 
 ### Lab 2: Stored XSS into HTML context with nothing encoded
 
-L'objectif de ce lab est de faire que le script soit exécuté automatiquement à chaque fois que la victime charge le blog.
+L'objectif de ce lab est de faire que le script soit exécuté automatiquement à chaque fois que la victime charge le blog. Le message de pop-up sera le même que pour le reflected XSS.
+
+### Lab 3: DOM XSS in `document.write` sink using source `location.search`
+
