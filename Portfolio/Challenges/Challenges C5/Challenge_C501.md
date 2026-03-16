@@ -33,9 +33,11 @@ Voir 👉 [Cours C501](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/
 
 ✅ Compte créé et enregistré sur le gestionnaire de mots de passe.
 
+![00-RootMe](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C5/images%20C5/images%20C501/Challenge%20C501_00-RootMe.png)
+
 ## Partie 2: 
 
-### Lab: Reflected XSS into HTML context with nothing encoded
+### Lab 1: Reflected XSS into HTML context with nothing encoded
 
 Le site du lab, nous présente une "search box" où l'on peut mettre n'importe quel mot ou phrase, pour avoir ce que l'on écrit en retour. Dans ce cas, j'ai écrit "Hi, Francois!":
 
@@ -44,4 +46,6 @@ Le site du lab, nous présente une "search box" où l'on peut mettre n'importe q
 Pour lancer l'attaque Reflected XSS (pour que la victime doive cliquer sur le lien piégé), j'ai mit `C<script>alert(1)</script>` dans la "search box"
 
 ![C501_02-Lab1Solved](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C5/images%20C5/images%20C501/Challenge%20C501_02-Lab1Solved.png)
+
+### Lab 2: Stored XSS into HTML context with nothing encoded
 
