@@ -8,6 +8,6 @@
 * Markdown
 
 
-### 🚧 En construction 🚧 (pag. 5)
+### 🚧 En construction 🚧
 
 ---

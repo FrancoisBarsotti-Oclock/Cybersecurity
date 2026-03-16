@@ -1,4 +1,4 @@
-# Session B403 : Les fondamentaux de Python.
+# Session B404 : Batch & Powershell.
 
 ### Notions du jour :
 
@@ -6,6 +6,6 @@
 * PowerShell
 
 
-### 🚧 En construction 🚧 (pag. 5)
+### 🚧 En construction 🚧 
 
 ---
