@@ -8,4 +8,26 @@
 >* Réaliser les 3 exploitations de XSS Sur DVWA
 
 
+Voir 👉 [Cours C501](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C5%20(Pentesting)/C501_Intro%20au%20Pentesting%20%26%20XSS.md) 👈
+
+---
+
+### 🔗 Liens utiles :
+
+* [CWE-79: XSS](https://cwe.mitre.org/data/definitions/79.html)
+* [OWASP XSS](https://owasp.org/www-community/attacks/xss/) : une page de l’OWASP dédiée aux attaques XSS
+* [OWASP XSS Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) : une liste de bonnes pratiques pour prévenir les attaques XSS
+* [OWASP DOM-based XSS Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html) : une liste de bonnes pratiques pour prévenir les attaques XSS basées sur le DOM
+
+
+### 📚 Ressources:
+
+* [OWASP – Cross-Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)
+* [PortSwigger – XSS Cheat Sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)
+* [HackTheBox – Starting Point](https://www.hackthebox.com/starting-point)
+* [TryHackMe – XSS Room](https://tryhackme.com/room/xss)
+
+---
+
+
 
