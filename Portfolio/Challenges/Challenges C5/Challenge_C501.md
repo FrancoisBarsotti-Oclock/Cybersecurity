@@ -49,3 +49,4 @@ Pour lancer l'attaque Reflected XSS (pour que la victime doive cliquer sur le li
 
 ### Lab 2: Stored XSS into HTML context with nothing encoded
 
+L'objectif de ce lab est de faire que le script soit exécuté automatiquement à chaque fois que la victime charge le blog.
