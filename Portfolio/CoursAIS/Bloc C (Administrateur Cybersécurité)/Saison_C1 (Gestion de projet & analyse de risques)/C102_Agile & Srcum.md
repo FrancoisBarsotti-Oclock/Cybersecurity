@@ -1,4 +1,4 @@
-# Session C102. Agile & Scrum
+# 🏉 Session C102. Agile & Scrum
 
 ### Notions du jour :
 * Agile et Scrum
@@ -201,166 +201,123 @@ Si on vous parle de chef de projet Scrum, c'est qu'il y a un problème ...
 * travaillent les uns avec les autres
 * administrateurs systèmes, analystes, concepteurs, développeurs, UI / UX designer, architectes ...
 
-### Les Artefacts 📚
+## Les Artefacts 📚
 
 Ce sont les livrables
 
-Product Backlog : carnet de produit
-Sprint Backlog : carnet de sprint
-Product Incrément : incrément de produit
-Les Artefacts : Product Backlog
+* **Product Backlog** : carnet de produit
+
+* **Sprint Backlog** : carnet de sprint
+
+* **Product Incrément** : incrément de produit
+
+### Les Artefacts : Product Backlog 📌
+
 * liste ordonnée de ce qui est nécessaire pour le produit
-* centralise ce doit être fait (besoins, exigences, fonctionnalités ... )
+* centralise ce qui doit être fait (besoins, exigences, fonctionnalités ... )
 * liste priorisée
 * gérée par le Product Owner
 * peut évoluer pendant le projet
-Les Artefacts : Sprint Backlog
+
+### Les Artefacts : Sprint Backlog 📜
+
 * liste des tâches d'un Sprint
 * tâches issues du Product Backlog
 * les objectifs du Sprint ne changent pas
 * mais l'état est mis à jour tous les jours
 * géré par les Developers
-Les Artefacts : Product Increment
+
+### Les Artefacts : Product Increment 📈
+
 * réalisation du Sprint
 * est ajouté aux incréments précédents
 * permet d'avancer vers le produit définitif
 * est aligné sur le DoD
-(Définition of Done : ensemble des conditions nécessaires pour considérer un élément comme terminé et livrable, i.e. : serveur provisionné, configuré, tests OK, documenté)
-Les Événements
-Sprint : pointe de vitesse
-Sprint Planning : planification du Sprint
-Daily Scrum : mêlée quotidienne
-Sprint Review : revue de Sprint
-Sprint Restrospective : rétrospective du Sprint
-Les Événements : Sprint Planning
+
+(_Définition of "Done"_ : ensemble des conditions nécessaires pour considérer un élément comme terminé et livrable, i.e. : serveur provisionné, configuré, tests OK, documenté)
+
+## Les Événements 📆
+
+* **Sprint** : pointe de vitesse
+* **Sprint Planning** : planification du Sprint
+* **Daily Scrum** : mêlée quotidienne
+* **Sprint Review** : revue de Sprint
+* **Sprint Restrospective** : rétrospective du Sprint
+
+### Les Événements : Sprint Planning ✍️
+
 * planification du Sprint
 * création du Sprint Backlog
 * explication du Sprint (pourquoi, que faire, comment ?)
 * Product Owner, Scrum Master, Developers
 * durée : max 8h pour Sprint de 1 mois
-Les Événements : Daily Scrum
+
+### Les Événements : Daily Scrum 📢
+
 * rituel quotidien, heure et lieu fixes (10h00, heure Paris)
 * permet de suivre le plan de développement
-* ce qui est fait
-* ce qui est à faire aujourd'hui
-* les problèmes
+    * ce qui est fait
+    * ce qui est à faire aujourd'hui
+    * les problèmes
 * Scrum Master, Developers, si besoin Product Owner
 * durée : 15 minutes
-Les Événements : Sprint Review
+
+### Les Événements : Sprint Review 🔎
+
 * inspection du résultat du Sprint
 * déterminer vers où il faut aller
 * voir ce qui a changé dans l'environnement
 * Product Owner, Scrum Master, Developers
 * durée : max 4h pour Sprint de 1 mois
-Les Événements : Sprint Retrospective
+
+### Les Événements : Sprint Retrospective 💡
+
 * rituel de fin de Sprint
 * réflexions sur l'amélioration de la qualité et de l'efficacité (outils, interactions, communication ... )
 * vise à améliorer le quotidien de l'équipe
 * Scrum Master, Developers, si besoin Product Owner
 * durée : max 3h pour Sprint de 1 mois
 
-Schéma de synthèse
+### Schéma de synthèse
 
 ![04-The Scrum Framework](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C102/C102_04-The%20Scrum%20Framework.png)
 
-Exemple d'un projet Scrum 
-Contexte
+## Exemple d'un projet Scrum 💡
+
+### Contexte 🎯
 
 Projet de mise en place d'un environnement de supervision pour 50 serveurs d'entreprise.
 
 | **Sprint** | **Objectifs** | **Livrables** | **Backlog / Notes** |
 | --- | --- | --- | --- |
-| **Sprint
-0**
-(2 sem) | - Définir l’infrastructure cible
-- Identifier besoins
-utilisateurs
+| **Sprint 0** (2 sem) | - 1.Définir l’infrastructure cible - 2.Identifier besoins utilisateurs - 3.Préparer environnement test | - 1.Doc architecture cible - 2.Backlog initial - 3.Environnement de test prêt | - 1.Collecte des besoins - 2.Identification des contraintes - 3.Mise en place du repo / serveur test |
+| **Sprint 1** (2 sem) | - 1.Installer outil de supervision (Zabbix) - 2.Configurer agents sur 10 serveurs - 3.Vérifier métriques CPU/RAM/disque | - 1.Supervision sur 10 serveurs - 2.Doc installation & config - 3.Backlog mis à jour | - 1.Création template d’agent - 2.Tests remontée métriques - 3.Feedback PO |
+| **Sprint 2** (2 sem) | - 1.Déployer sur 20 serveurs supplémentaires - 2.Configurer alertes email/SMS - 3.Commencer dashboards | - 1.Supervision sur 30 serveurs - 2.Alerting opérationnel - 3.Documentation mise à jour | - 1.Prioriser alertes critiques - 2.Ajuster dashboards - 3.Retours des utilisateurs |
+| **Sprint 3** (2 sem) | - 1.Déployer sur 20 serveurs restants - 2.Dashboards complets et reporting - 3.Ajuster seuils alertes - 4.Ajouter métriques réseau et stockage - 5.Former l’équipe IT | - 1.Supervision complète 50 serveurs - 2.Dashboards et alerting optimisés - 3.Documentation finale - 4.Formation / transfert de connaissances | - 1.Feedback final PO - 2.Validation DoD - 3.Préparer guide utilisateurs |
 
-- Préparer environnement
+## Conclusion
 
-test | - Doc architecture cible
-- Backlog initial
-- Environnement de
-test prêt | - Collecte des besoins
-- Identification des
-contraintes
-- Mise en place du repo /
-serveur test |
-| **Sprint
-1**
-(2 sem) | - Installer outil de supervision
+Scrum est un **framework Agile** qui organise le travail en **itérations courtes (Sprints)** et repose sur des **rôles clairs**, des **artefacts concrets** et des **événements réguliers**.
 
-(Zabbix)
-
-- Configurer agents sur 10
-
-serveurs
-- Vérifier métriques
-CPU/RAM/disque | - Supervision sur 10
-serveurs
-- Doc installation &
-config
-- Backlog mis à jour | - Création template d’agent
-- Tests remontée métriques
-- Feedback PO |
-| **Sprint
-2**
-(2 sem) | - Déployer sur 20 serveurs
-supplémentaires
-
-- Configurer alertes email/SMS
-- Commencer dashboards | - Supervision sur 30 serveurs
-- Alerting opérationnel
-- Documentation mise à jour | - Prioriser alertes
-critiques
-- Ajuster
-dashboards
-- Retours des
-utilisateurs |
-| **Sprint
-3**
-(2 sem) | - Déployer sur 20 serveurs
-
-restants
-
-- Dashboards complets et
-
-reporting
-- Ajuster seuils alertes
-- Ajouter métriques réseau et
-
-stockage
-- Former l’équipe IT | - Supervision complète 50
-
-serveurs
-
-- Dashboards et alerting
-
-optimisés
-- Documentation finale
-- Formation / transfert de
-connaissances | - Feedback final PO
-- Validation DoD
-- Préparer guide
-utilisateurs |
-
-Conclusion
-Scrum est un framework Agile qui organise le travail en itérations courtes (Sprints) et repose sur des rôles clairs, des artefacts concrets et des événements réguliers.
-
-Scrum permet de livrer rapidement et régulièrement des incréments de produit, s'adapter aux changements de besoins ou d'environnement, d'améliorer la collaboration et la transparence au sein de l'équipe et de mesurer et améliorer continuellement l'efficacité et la qualité.
+Scrum permet de **livrer rapidement et régulièrement** des incréments de produit, **s'adapter aux changements** de besoins ou d'environnement, d'**améliorer la collaboration et la transparence** au sein de l'équipe et de **mesurer et améliorer continuellement** l'efficacité et la qualité.
 
 Tous les projets ne peuvent pas être Scrum !
 
-# Outils de la gestion de projet
+## Outils de la gestion de projet
 
-Introduction
+### Introduction
+
 La gestion de projet passe par des méthodes ou cadre, des rôles et responsabilités, mais également par des outils.
+
 Nous allons voir ici différents outils. Dans un projet on n'utilise pas forcément tous les outils, mais il est intéressant d'en connaître plusieurs pour choisir ceux en adéquation avec le projet !
-Structuration du projet
+
+## Structuration du projet 🏗️
+
 Les outils de structuration de projet permettent d'avoir une vision synthétique du produit et des tâches nécessaires à la réalisation.
 
-## PBS
-[Product Breakdown Structure]( https://fr.wikipedia.org/wiki/Structure_de_d%C3%A9composition_du_produit)  : découpage du produit
+## Product Breakdown Structure (PBS) 📎
+
+[_Product Breakdown Structure_]( https://fr.wikipedia.org/wiki/Structure_de_d%C3%A9composition_du_produit)  : découpage du produit
 
 Le PBS est orienté sur le produit et ce qui compose le produit, sous forme de représentation graphique.
 
@@ -368,15 +325,16 @@ PBS simplifiée pour le projet "Déploiement d'une infrastructure de supervision
 
 ![05-PBS](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C102/C102_05-PBS.png)
 
-PBS : méthode de construction
+### PBS : méthode de construction
 
-* Définir le produit final
-* Identifier les grandes familles de livrables
-* Décomposer chaque famille en sous-produits
-* Décomposer jusqu'au niveau livrable élémentaire
+* Définir le **produit final**
+* Identifier les **grandes familles** de livrables
+* Décomposer chaque famille en **sous-produits**
+* Décomposer jusqu'au niveau **livrable élémentaire**
 * Vérifier la cohérence
 
-## WBS
+## Work Breakdown Structure (WBS) ✂️
+
 [Work Breakdown Structure]( https://fr.wikipedia.org/wiki/Organigramme_des_t%C3%A2ches_du_projet)  : découpage des tâches du projet
 
 Le WBS est orienté sur les tâches du projet, on décompose le projet avec toutes les tâches, les actions à réaliser.
@@ -387,13 +345,14 @@ WBS détaillé pour le projet "Déploiement d'une infrastructure de supervision 
 
 Des outils qui aident à désigner des boîtes, des imbrications : Drawio, tldraw.
 
-WBS : méthode de construction
-* Définir les livrables
-* Décomposer en lots de travail (Work Packages)
-* Décomposer en tâches
+### WBS : méthode de construction
+
+* Définir les **livrables**
+* Décomposer en **lots de travail (Work Packages)**
+* Décomposer en **tâches**
 * Vérifier que chaque tâche est unique, mesurable, datable
 
-# Planification et affectation des ressources
+## Planification et affectation des ressources
 
 Ces outils permettent d'avoir une vue d'ensemble des ressources, des tâches et de l'affectation des ressources aux tâches dans le temps.
 
