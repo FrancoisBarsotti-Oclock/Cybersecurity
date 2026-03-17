@@ -1,137 +1,150 @@
 # Session C102. Agile & Scrum
 
-Notions du jour
-•	Agile et Scrum
-•	structuration, planification, suivi de projet
+### Notions du jour :
+* Agile et Scrum
+* structuration, planification, suivi de projet
 Référentiel Agile
-Pourquoi ?
+
+### Pourquoi ?
 Issu du monde du développement logiciel
 
 Depuis les années 50 de nombreuses méthodes de gestion de projet existent
 
 Les projets sont souvent complexes et échouent, en 1994*
 
-•	31% sont stoppés
-•	52% dépassent de 189% le budget prévu
-•	mais 16% réussissent dans les coûts et délais
+* 31% sont stoppés 😰
+* 52% dépassent de 189% le budget prévu 😧
+* mais 16% réussissent dans les coûts et délais 😇
 * [Chaos Repport 1994]( https://www.cs.nmt.edu/~cs328/reading/Standish.pdf)  du [Standish Group]( https://fr.wikipedia.org/wiki/Standish_Group) 
 
-Comment ?
-•	2001 : 17 personnalités du développement logiciel se réunissent
-•	échangent sur les problèmes projets et leurs méthodes
-•	déterminent des critères communs et principes
-•	de cette réunion émerge le [Manifeste agile]( https://agilemanifesto.org/iso/fr/manifesto.html) 
+### Comment ?
+* 2001 : 17 personnalités du développement logiciel se réunissent
+* échangent sur les problèmes projets et leurs méthodes
+* déterminent des critères communs et principes
+* de cette réunion émerge le [Manifeste agile]( https://agilemanifesto.org/iso/fr/manifesto.html) 
 
-![ 01-RéunionManifesteAgile](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C102/C102_01-R%C3%A9unionManifesteAgile.png)
+![01-RéunionManifesteAgile](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C102/C102_01-R%C3%A9unionManifesteAgile.png)
 
-Résumé du manifeste Agile
-•	forte implication du client
-•	réactivité face à la demande
-•	développement itératif
-•	production incrémentale
-•	production adaptative
-•	validation à chaque étape
-•	autonomie des équipes
+### Résumé du manifeste Agile
+* forte implication du client
+* réactivité face à la demande
+* développement itératif
+* production incrémentale
+* production adaptative
+* validation à chaque étape
+* autonomie des équipes
 C'est quoi le Manifeste ?
-•	une approche
-•	une philosophie
-•	une démarche
+* une approche
+* une philosophie
+* une démarche
 
-Ce n'est pas
-•	une méthode projet
-•	une structure d'organisation
+### Ce n'est pas
+* une méthode projet
+* une structure d'organisation
 
 → le Manifeste sert de base intellectuelle à des méthodes
 
-La méthode Agile n'existe pas !
+**La méthode Agile n'existe pas !**
 
-Attention !
+⚠️ **Attention !**
 
-Agile ce n'est pas l'anarchie !
-On DOIT organiser, structurer, documenter !
+**Agile ce n'est pas l'anarchie !**
+On **DOIT** organiser, structurer, documenter !
 D'ailleurs les projets agiles exigent discipline et rigueur.
 
-Ce n'est que pour le développement logiciel !
-Ça vient du logiciel, mais les cadres agiles peuvent s'appliquer à
-différents domaines.
+**Ce n'est que pour le développement logiciel !**
+Ça vient du logiciel, mais les cadres agiles peuvent s'appliquer à différents domaines.
 
-Ça ne fonctionne pas !
+**Ça ne fonctionne pas !**
+
 Si si, mais il faut bien appliquer les cadres pour avoir des résultats !
-Quand utiliser un cadre Agile ?
-•	quand un besoin n'est pas complètement identifié
-•	quand le besoin peut varier
-•	quand on doit tester / expérimenter / innover
 
-Et que le client est disponible et prêt à "jouer le jeu" !
-Et dans l'infra ?
+### Quand utiliser un cadre Agile ?
+* quand un besoin n'est pas complètement identifié
+* quand le besoin peut varier
+* quand on doit tester / expérimenter / innover
 
-Agile en Infra fonctionne quand :
+**Et que le client est disponible et prêt à "jouer le jeu" !**
 
-•	on peut découper en petites étapes
-•	on peut livrer progressivement
-•	les risques sont maîtrisés
-•	le client peut valider au fur et à mesure
+### Et dans l'infra ?
+
+**Agile en Infra fonctionne quand :**
+
+* on peut découper en petites étapes
+* on peut livrer progressivement
+* les risques sont maîtrisés
+* le client peut valider au fur et à mesure
+
 ex : automatisation / scripting, amélioration d'une supervision, mise en place d'un environnement Cloud / hybride ...
 
-Agile fonctionne mal quand :
+**Agile fonctionne mal quand :**
 
-•	tout doit basculer d'un coup
-•	un seul livrable final est possible
-•	la prod doit être arrêtée pour avancer
+* tout doit basculer d'un coup
+* un seul livrable final est possible
+* la prod doit être arrêtée pour avancer
+
 ex : migrations lourdes en one-shot, contraintes contractuelles / réglementaires, projets à périmètre figé ...
 
-Les méthodes / cadres Agiles
+### Les méthodes / cadres Agiles
+
 Certaines existaient avant le Manifeste et s'y inscrivent.
 
 Il en existe [beaucoup]( https://www.nutcache.com/fr/blog/les-methodes-agiles/) !
 
-•	[Scrum]( https://fr.wikipedia.org/wiki/Scrum_(d%C3%A9veloppement)) 
-•	[Extreme programming]( https://fr.wikipedia.org/wiki/Extreme_programming) 
-•	[BDD]( https://fr.wikipedia.org/wiki/Programmation_pilot%C3%A9e_par_le_comportement) 
-•	[Crystal Clear]( https://fr.wikipedia.org/wiki/Crystal_clear) 
-Conclusion
-Le Manifeste Agile met l'accent sur la collaboration, la réactivité, les livrables concrets et l'adaptation continue.
+* [Scrum]( https://fr.wikipedia.org/wiki/Scrum_(d%C3%A9veloppement)) 
+* [Extreme programming]( https://fr.wikipedia.org/wiki/Extreme_programming) 
+* [BDD]( https://fr.wikipedia.org/wiki/Programmation_pilot%C3%A9e_par_le_comportement) 
+* [Crystal Clear]( https://fr.wikipedia.org/wiki/Crystal_clear) 
 
-Mais Agile n'est pas un chaos organisé. Il exige rigueur, discipline, communication et une culture d'équipe solide.
+## Conclusion
 
-Agile ne remplace pas les méthodes classiques, il propose une approche différente pour répondre à des besoins spécifiques.
-Scrum
-C'est quoi ?
-•	Scrum : mêlée (de rugby)
-•	framework Agile
-•	très utilisé
-•	itératif
-•	basé sur la collaboration
-•	fondements en 1986 puis 1995 (communication)
-•	formalisation en 2002
-•	[Guide Scrum]( https://gist.github.com/stephdl/13c8a66cccb87f696fb2fc058f3b4aad) en 2010 : 
-Comment ?
-•	équipes pluridisciplinaires et auto-organisées
-•	produits réalisés de façon itérative et incrémentale
-•	des cycles de 1 mois ou moins
-•	des rôles
-•	des événements / cérémonies / rituels
-•	des livrables
-Sprint
-Sprint : pointe de vitesse
+Le Manifeste Agile met l'accent sur la **collaboration**, la **réactivité**, les **livrables concrets** et l'**adaptation continue**.
 
-c'est le cœur de Scrum !
+Mais Agile n'est pas un chaos organisé. Il exige **rigueur, discipline, communication** et une **culture d'équipe solide**.
+
+Agile ne remplace pas les méthodes classiques, il propose une **approche différente** pour **répondre à des besoins spécifiques**.
+
+## Scrum 🏉
+
+### C'est quoi ?
+
+* Scrum : mêlée (de rugby)
+* framework Agile
+* très utilisé
+* itératif
+* basé sur la collaboration
+* fondements en 1986 puis 1995 (communication)
+* formalisation en 2002
+* [Guide Scrum]( https://gist.github.com/stephdl/13c8a66cccb87f696fb2fc058f3b4aad) en 2010  
+
+### Comment ?
+
+* équipes pluridisciplinaires et auto-organisées
+* produits réalisés de façon itérative et incrémentale
+* des cycles de 1 mois ou moins
+* des rôles
+* des événements / cérémonies / rituels
+* des livrables
+
+### Sprint
+
+**Sprint** : pointe de vitesse
+
+c'est le **cœur de Scrum** ! 🫀
 
 un Sprint = un cycle de réalisation = une itération
 
-objectifs de réalisation fixés avant le Sprint
+**objectifs** de réalisation **fixés avant** le Sprint
 
-on ne change pas les objectifs du Sprint
+on **ne change pas** les objectifs du Sprint
 
 on peut annuler un Sprint
 
 ![02-Sprint](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C102/C102_02-Sprint.png)
 
-Sprint
+durée : **jusqu'à** 1 mois (1 à 4 semaines en général)
 
-durée : jusqu'à 1 mois (1 à 4 semaines en général)
-
-durée fixe pendant toute la durée du projet
+**durée fixe** pendant toute la durée du projet
 
 débute et termine à des dates précises
 
@@ -141,65 +154,77 @@ si le travail est terminé, il est livré
 
 ![03-Sprint1&2](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C102/C102_03-Sprint1%262.png)
 
-La Scrum Team
-•	petite équipe projet
-•	pluridisciplinaire
-•	toutes les compétences pour réaliser le Sprint
-•	petite pour être réactive
-•	un Scrum Master
-•	un Product Owner
-•	les Developers
-•	c'est l'équipe de réalisation
+### La Scrum Team
 
-Les rôles
+* petite équipe projet
+    * pluridisciplinaire
+    * toutes les compétences pour réaliser le Sprint
+    * petite pour être réactive
+* un Scrum Master
+* un Product Owner
+* les Developers
+    * c'est l'équipe de réalisation
+
+## Les rôles 🫵
+
 différents de ceux de la conduite de projet "classique" !
 
-Product Owner : directeur produit
-Scrum Master : chef de mêlée
-Developers : équipe de réalisation
+**Product Owner** : directeur produit
+
+**Scrum Master** : chef de mêlée
+
+**Developers** : équipe de réalisation
 
 Si on vous parle de chef de projet Scrum, c'est qu'il y a un problème ...
-Les rôles : Product Owner
-•	responsable du produit
-•	expert métier
-•	formule les besoins
-•	gère et communique les besoins
-•	s'assure que les besoins sont compris
-Les rôles : Scrum Master
-•	facilitateur du projet
-•	protège l'équipe des perturbations extérieures
-•	responsable du projet
-•	s'assure du respect de la méthode Scrum
-•	peut-être un Developer
-•	ne peut pas être Product Owner
-Les rôles : Developers
-•	équipe de réalisation
-•	construit le projet
-•	travaillent les uns avec les autres
-•	administrateurs systèmes, analystes, concepteurs, développeurs, UI / UX designer, architectes ...
-Les Artefacts
+
+### Les rôles : Product Owner 💶
+
+* responsable du produit
+* expert métier
+* formule les besoins
+* gère et communique les besoins
+* s'assure que les besoins sont compris
+
+### Les rôles : Scrum Master 🧑‍💼
+
+* facilitateur du projet
+* protège l'équipe des perturbations extérieures
+* responsable du projet
+* s'assure du respect de la méthode Scrum
+* peut-être un Developer
+* **ne peut pas être Product Owner**
+
+### Les rôles : Developers 🧑‍💻
+
+* équipe de réalisation
+* construit le projet
+* travaillent les uns avec les autres
+* administrateurs systèmes, analystes, concepteurs, développeurs, UI / UX designer, architectes ...
+
+### Les Artefacts 📚
+
 Ce sont les livrables
 
 Product Backlog : carnet de produit
 Sprint Backlog : carnet de sprint
 Product Incrément : incrément de produit
 Les Artefacts : Product Backlog
-•	liste ordonnée de ce qui est nécessaire pour le produit
-•	centralise ce doit être fait (besoins, exigences, fonctionnalités ... )
-•	liste priorisée
-•	gérée par le Product Owner
-•	peut évoluer pendant le projet
+* liste ordonnée de ce qui est nécessaire pour le produit
+* centralise ce doit être fait (besoins, exigences, fonctionnalités ... )
+* liste priorisée
+* gérée par le Product Owner
+* peut évoluer pendant le projet
 Les Artefacts : Sprint Backlog
-•	liste des tâches d'un Sprint
-•	tâches issues du Product Backlog
-•	les objectifs du Sprint ne changent pas
-•	mais l'état est mis à jour tous les jours
-•	géré par les Developers
+* liste des tâches d'un Sprint
+* tâches issues du Product Backlog
+* les objectifs du Sprint ne changent pas
+* mais l'état est mis à jour tous les jours
+* géré par les Developers
 Les Artefacts : Product Increment
-•	réalisation du Sprint
-•	est ajouté aux incréments précédents
-•	permet d'avancer vers le produit définitif
-•	est aligné sur le DoD
+* réalisation du Sprint
+* est ajouté aux incréments précédents
+* permet d'avancer vers le produit définitif
+* est aligné sur le DoD
 (Définition of Done : ensemble des conditions nécessaires pour considérer un élément comme terminé et livrable, i.e. : serveur provisionné, configuré, tests OK, documenté)
 Les Événements
 Sprint : pointe de vitesse
@@ -208,31 +233,31 @@ Daily Scrum : mêlée quotidienne
 Sprint Review : revue de Sprint
 Sprint Restrospective : rétrospective du Sprint
 Les Événements : Sprint Planning
-•	planification du Sprint
-•	création du Sprint Backlog
-•	explication du Sprint (pourquoi, que faire, comment ?)
-•	Product Owner, Scrum Master, Developers
-•	durée : max 8h pour Sprint de 1 mois
+* planification du Sprint
+* création du Sprint Backlog
+* explication du Sprint (pourquoi, que faire, comment ?)
+* Product Owner, Scrum Master, Developers
+* durée : max 8h pour Sprint de 1 mois
 Les Événements : Daily Scrum
-•	rituel quotidien, heure et lieu fixes (10h00, heure Paris)
-•	permet de suivre le plan de développement
-•	ce qui est fait
-•	ce qui est à faire aujourd'hui
-•	les problèmes
-•	Scrum Master, Developers, si besoin Product Owner
-•	durée : 15 minutes
+* rituel quotidien, heure et lieu fixes (10h00, heure Paris)
+* permet de suivre le plan de développement
+* ce qui est fait
+* ce qui est à faire aujourd'hui
+* les problèmes
+* Scrum Master, Developers, si besoin Product Owner
+* durée : 15 minutes
 Les Événements : Sprint Review
-•	inspection du résultat du Sprint
-•	déterminer vers où il faut aller
-•	voir ce qui a changé dans l'environnement
-•	Product Owner, Scrum Master, Developers
-•	durée : max 4h pour Sprint de 1 mois
+* inspection du résultat du Sprint
+* déterminer vers où il faut aller
+* voir ce qui a changé dans l'environnement
+* Product Owner, Scrum Master, Developers
+* durée : max 4h pour Sprint de 1 mois
 Les Événements : Sprint Retrospective
-•	rituel de fin de Sprint
-•	réflexions sur l'amélioration de la qualité et de l'efficacité (outils, interactions, communication ... )
-•	vise à améliorer le quotidien de l'équipe
-•	Scrum Master, Developers, si besoin Product Owner
-•	durée : max 3h pour Sprint de 1 mois
+* rituel de fin de Sprint
+* réflexions sur l'amélioration de la qualité et de l'efficacité (outils, interactions, communication ... )
+* vise à améliorer le quotidien de l'équipe
+* Scrum Master, Developers, si besoin Product Owner
+* durée : max 3h pour Sprint de 1 mois
 
 Schéma de synthèse
 
@@ -345,11 +370,11 @@ PBS simplifiée pour le projet "Déploiement d'une infrastructure de supervision
 
 PBS : méthode de construction
 
-•	Définir le produit final
-•	Identifier les grandes familles de livrables
-•	Décomposer chaque famille en sous-produits
-•	Décomposer jusqu'au niveau livrable élémentaire
-•	Vérifier la cohérence
+* Définir le produit final
+* Identifier les grandes familles de livrables
+* Décomposer chaque famille en sous-produits
+* Décomposer jusqu'au niveau livrable élémentaire
+* Vérifier la cohérence
 
 ## WBS
 [Work Breakdown Structure]( https://fr.wikipedia.org/wiki/Organigramme_des_t%C3%A2ches_du_projet)  : découpage des tâches du projet
@@ -363,10 +388,10 @@ WBS détaillé pour le projet "Déploiement d'une infrastructure de supervision 
 Des outils qui aident à désigner des boîtes, des imbrications : Drawio, tldraw.
 
 WBS : méthode de construction
-•	Définir les livrables
-•	Décomposer en lots de travail (Work Packages)
-•	Décomposer en tâches
-•	Vérifier que chaque tâche est unique, mesurable, datable
+* Définir les livrables
+* Décomposer en lots de travail (Work Packages)
+* Décomposer en tâches
+* Vérifier que chaque tâche est unique, mesurable, datable
 
 # Planification et affectation des ressources
 
@@ -405,42 +430,42 @@ stockage | I | R | A | C | I | C | I |
 
 RACI : méthode de construction
 
-•	Identifier les activités / livrables du projet (PBS / WBS peuvent aider !)
-•	Identifier les parties prenantes / rôles (ne pas oublier le support, les fournisseurs ... )
-•	Définir les responsabilités RACI
-•	Chaque tache doit avoir au moins un R et un A.
-•	Un A peut être aussi R si la personne réalise et valide elle-même
-•	Les C et I peuvent être multiples
-•	Idéalement un seul A par tâche pour éviter les conflits de décision
-•	Remplir la matrice
-•	Vérifier et valider
+* Identifier les activités / livrables du projet (PBS / WBS peuvent aider !)
+* Identifier les parties prenantes / rôles (ne pas oublier le support, les fournisseurs ... )
+* Définir les responsabilités RACI
+* Chaque tache doit avoir au moins un R et un A.
+* Un A peut être aussi R si la personne réalise et valide elle-même
+* Les C et I peuvent être multiples
+* Idéalement un seul A par tâche pour éviter les conflits de décision
+* Remplir la matrice
+* Vérifier et valider
 
 Diagramme de Gantt
 Il permet de visualiser :
 
-•	les tâches
-•	les durées
-•	les dépendances
-•	les ressources affectées
-•	les jalons
+* les tâches
+* les durées
+* les dépendances
+* les ressources affectées
+* les jalons
 Jalon : évènement significatif sans durée
-•	installation terminée
-•	recette validée
-•	documentation livrée
+* installation terminée
+* recette validée
+* documentation livrée
 
 ![07-Diagramme de Gantt](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C102/C102_07-Diagramme%20de%20Gantt.png)
 
 Sur ce diagramme les affectations de ressources ne sont pas présentes.
 Diagramme de Gantt : méthode de construction
-•	Identifier les phases du projet (les PBS et WBS peuvent aider !)
-•	Décomposer en tâches (les PBS et WBS peuvent aider !)
-•	Définir les dépendances (liens entre des tâches)
-•	Estimer la durée de chaque tâche
-•	Paralléliser les tâches qui peuvent l'être
-•	Créer le diagramme
-•	Affecter les ressources
-•	Vérifier la cohérence et valider
-•	Mettre à jour selon l'avancement réel
+* Identifier les phases du projet (les PBS et WBS peuvent aider !)
+* Décomposer en tâches (les PBS et WBS peuvent aider !)
+* Définir les dépendances (liens entre des tâches)
+* Estimer la durée de chaque tâche
+* Paralléliser les tâches qui peuvent l'être
+* Créer le diagramme
+* Affecter les ressources
+* Vérifier la cohérence et valider
+* Mettre à jour selon l'avancement réel
 Kanban
 
 Méthode visuelle d'organisation de tâches.
@@ -457,9 +482,9 @@ Une carte descriptive d'une action à réaliser (on peut y mettre les infos que 
 
 Posée sur un tableau avec plusieurs statuts pour l'action :
 
-•	à faire (to do)
-•	en cours (doing / in progress)
-•	fait (done)
+* à faire (to do)
+* en cours (doing / in progress)
+* fait (done)
 
 On glisse la carte dans la colonne qui correspond à son statut.
 
@@ -467,10 +492,10 @@ Les cdlonnes du tableau sont personnalisables.
 Suivi de projet
 Le suivi de projet permet :
 
-•	de détecter les dérives
-•	d'anticiper les risques
-•	d'ajuster les ressources
-•	de décider rapidement des actions correctives
+* de détecter les dérives
+* d'anticiper les risques
+* d'ajuster les ressources
+* de décider rapidement des actions correctives
 
 ## KPI
 KPI : Key Performance Indicators, indicateurs clés de performance
@@ -484,21 +509,21 @@ Les KPI doivent être actualisés régulièrement pour refléter l'état du proj
 ### KPI classiques
 ### ⏱ Délais
 
-•	Respect du planning : % de tâches livrées dans les délais
-•	Respect des jalons : nombre de jalons atteints à temps
-•	Durée totale du projet : prévisionnelle vs réelle
+* Respect du planning : % de tâches livrées dans les délais
+* Respect des jalons : nombre de jalons atteints à temps
+* Durée totale du projet : prévisionnelle vs réelle
 
 ### 💰Coût
 
-•	Coût réel par rapport au coût prévisionnel
-•	Taux de consommation du budget
-•	Coût des imprévus / demandes supplémentaires
+* Coût réel par rapport au coût prévisionnel
+* Taux de consommation du budget
+* Coût des imprévus / demandes supplémentaires
 
 ### 👥Charge / Capacité
 
-•	Charge consommée par rapport à la charge prévue
-•	Taux d'utilisation des ressources
-•	Taux de surcharge / sous-charge des équipes
+* Charge consommée par rapport à la charge prévue
+* Taux d'utilisation des ressources
+* Taux de surcharge / sous-charge des équipes
 
 # Tableau de bord
 Outil de pilotage qui regroupe les informations clés permettant de suivre l'avancement, anticiper les risques et prendre des décisions rapides.
@@ -596,10 +621,10 @@ risques) | Hebdo / bi-hebdo |
 | **Kanban / boards collaboratifs** | Visualiser l’avancement, tâches | Temps réel |
 
 ### Types de communication
-•	ascendante : équipe – direction
-•	descendante : direction – équipe
-•	transversale : entre équipes techniques
-•	vers l'utilisateur : informations, consignes, mises en production
+* ascendante : équipe – direction
+* descendante : direction – équipe
+* transversale : entre équipes techniques
+* vers l'utilisateur : informations, consignes, mises en production
 
 ### Types de communication par parties prenantes
 
@@ -618,12 +643,12 @@ prestataires** | Délais, livrables, incidents | Réunions contractuelles / mail
 
 ⚠️Note : les utilisateurs finaux sont trop souvent oubliés dans la communiation ! D’où incompréhension, frustration et mauvaise adhésion au changement.
 Bonnes pratiques
-•	être synthétique, clair et concis
-•	avoir un discours adapté au public
-•	avoir une fréquence adaptée et régulière
-•	être transparent, partager les risques et difficultés, pas seulement les succès
-•	utiliser les bons outils, dont les outils collaboratifs
-•	désigner un référent communication et établir un document des fréquences, publics et contenus de communication
+* être synthétique, clair et concis
+* avoir un discours adapté au public
+* avoir une fréquence adaptée et régulière
+* être transparent, partager les risques et difficultés, pas seulement les succès
+* utiliser les bons outils, dont les outils collaboratifs
+* désigner un référent communication et établir un document des fréquences, publics et contenus de communication
 Conclusion
 Beaucoup d'outils existent pour une gestion de projet efficace. Il n'est pas nécessaire de tous les utiliser.
 
