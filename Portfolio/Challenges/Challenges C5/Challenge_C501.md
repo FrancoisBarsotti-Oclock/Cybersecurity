@@ -43,13 +43,13 @@ Le site du lab, nous présente une "search box" où l'on peut mettre n'importe q
 
 ![01-HiFrancois](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C5/images%20C5/images%20C501/Challenge%20C501_01-HiFrancois.png)
 
-Pour lancer l'attaque Reflected XSS (pour que la victime doive cliquer sur le lien piégé), j'ai mit `C<script>alert(1)</script>` dans la "search box"
+Pour lancer l'attaque Reflected XSS (pour que la victime doive cliquer sur le lien piégé), j'ai mit `C<script>alert(1)</script>` dans la "search box", cependant le script apparaît évident dans l'url manipulé.
 
 ![C501_02-Lab1Solved](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C5/images%20C5/images%20C501/Challenge%20C501_02-Lab1Solved.png)
 
 ### Lab 2: Stored XSS into HTML context with nothing encoded
 
-L'objectif de ce lab est de faire que le script soit exécuté automatiquement à chaque fois que la victime charge le blog. Le message de pop-up sera le même que pour le reflected XSS.
+L'objectif de ce lab est de faire que le script soit exécuté automatiquement à chaque fois que la victime charge le blog, sans que le script soit apperçu sur l'url. Le message de pop-up sera le même que pour le reflected XSS.
 
 ### Lab 3: DOM XSS in `document.write` sink using source `location.search`
 
