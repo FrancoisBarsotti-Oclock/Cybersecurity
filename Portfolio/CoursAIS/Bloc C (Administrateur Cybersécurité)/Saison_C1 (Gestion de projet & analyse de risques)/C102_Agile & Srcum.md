@@ -356,7 +356,7 @@ Des outils qui aident à désigner des boîtes, des imbrications : Drawio, tldra
 
 Ces outils permettent d'avoir une vue d'ensemble des ressources, des tâches et de l'affectation des ressources aux tâches dans le temps.
 
-## RACI
+## RACI 🫵
 La matrice RACI indique les rôles et responsabilités des acteurs du projet.
 
 * **R**esponsible : réalisateur
@@ -366,40 +366,26 @@ La matrice RACI indique les rôles et responsabilités des acteurs du projet.
 
 RACI (extrait) pour le projet "Déploiement d'une infrastructure de supervision pour 50 serveurs"
 
-| **Étape / 
-Livrable** | **MOA
-(Client)** | **Chef
-de
-projet** | **Administrateur
-système** | **Équipe
-Réseau** | **DevOps** | **RSSI** | **Utilisateur
-finaux** |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1.
-Définition
-du besoin /
-Note de
-cadrage | A | R | C | C | C | C | I |
-| 2. Étude de
-faisabilité | C | R | C | C | C | C | I |
-| 3.
-Acquisition
-serveurs /
-stockage | I | R | A | C | I | C | I |
+| **Étape / Livrable** | **MOA (Client)** | **Chef de projet** | **Administrateur système** | **Équipe Réseau** | **DevOps** | **RSSI** | **Utilisateur finaux** |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| 1.Définition du besoin / Note de cadrage | A | R | C | C | C | C | I |
+| 2. Étude de faisabilité | C | R | C | C | C | C | I |
+| 3. Acquisition serveurs / stockage | I | R | A | C | I | C | I |
 
-RACI : méthode de construction
+### RACI : méthode de construction 📏
 
 * Identifier les activités / livrables du projet (PBS / WBS peuvent aider !)
 * Identifier les parties prenantes / rôles (ne pas oublier le support, les fournisseurs ... )
 * Définir les responsabilités RACI
-* Chaque tache doit avoir au moins un R et un A.
-* Un A peut être aussi R si la personne réalise et valide elle-même
-* Les C et I peuvent être multiples
-* Idéalement un seul A par tâche pour éviter les conflits de décision
+    * Chaque tache doit avoir au moins un R et un A.
+    * Un A peut être aussi R si la personne réalise et valide elle-même
+    * Les C et I peuvent être multiples
+    * Idéalement un seul A par tâche pour éviter les conflits de décision
 * Remplir la matrice
 * Vérifier et valider
 
-Diagramme de Gantt
+## Diagramme de Gantt 📊
+
 Il permet de visualiser :
 
 * les tâches
@@ -407,15 +393,20 @@ Il permet de visualiser :
 * les dépendances
 * les ressources affectées
 * les jalons
-Jalon : évènement significatif sans durée
+
+**Jalon** : évènement significatif sans durée
 * installation terminée
 * recette validée
 * documentation livrée
 
+### Diagramme de Gantt pour le projet"Déploiement d’une infrastructure de supervision pour 50 serveurs"
+
 ![07-Diagramme de Gantt](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C102/C102_07-Diagramme%20de%20Gantt.png)
 
 Sur ce diagramme les affectations de ressources ne sont pas présentes.
-Diagramme de Gantt : méthode de construction
+
+### Diagramme de Gantt : méthode de construction 📏
+
 * Identifier les phases du projet (les PBS et WBS peuvent aider !)
 * Décomposer en tâches (les PBS et WBS peuvent aider !)
 * Définir les dépendances (liens entre des tâches)
@@ -425,15 +416,16 @@ Diagramme de Gantt : méthode de construction
 * Affecter les ressources
 * Vérifier la cohérence et valider
 * Mettre à jour selon l'avancement réel
-Kanban
+
+## Kanban 📆
 
 Méthode visuelle d'organisation de tâches.
 
-Vient du japonais (kanban,<etiquette>>)
+Vient du japonais (kanban,"etiquette")
 
 Très utile pour un petit projet ou une organisation personnelle.
 
-Kanban : principes
+### Kanban : principes
 
 ![08-Kanban Principes](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20C%20(Administrateur%20Cybers%C3%A9curit%C3%A9)/Saison_C1%20(Gestion%20de%20projet%20%26%20analyse%20de%20risques)/images%20C1/images%20C102/C102_08-Kanban%20Principes.png)
 
@@ -448,7 +440,9 @@ Posée sur un tableau avec plusieurs statuts pour l'action :
 On glisse la carte dans la colonne qui correspond à son statut.
 
 Les cdlonnes du tableau sont personnalisables.
-Suivi de projet
+
+### Suivi de projet 🧐
+
 Le suivi de projet permet :
 
 * de détecter les dérives
@@ -456,8 +450,8 @@ Le suivi de projet permet :
 * d'ajuster les ressources
 * de décider rapidement des actions correctives
 
-## KPI
-KPI : Key Performance Indicators, indicateurs clés de performance
+## Key Performance Indicators (KPI) ✅
+_KPI : Key Performance Indicators_, indicateurs clés de performance
 
 Permet de mesurer une performance. Dans le cadre d'un projet, de suivre l'avancement du projet.
 
@@ -466,76 +460,78 @@ On détermine quelques indicateurs (pas trop pour ne pas s'y perdre) qui doivent
 Les KPI doivent être actualisés régulièrement pour refléter l'état du projet.
 
 ### KPI classiques
-### ⏱ Délais
+
+### 🕛 Délais
 
 * Respect du planning : % de tâches livrées dans les délais
 * Respect des jalons : nombre de jalons atteints à temps
 * Durée totale du projet : prévisionnelle vs réelle
 
-### 💰Coût
+### 💰 Coût
 
 * Coût réel par rapport au coût prévisionnel
 * Taux de consommation du budget
 * Coût des imprévus / demandes supplémentaires
 
-### 👥Charge / Capacité
+### 👥 Charge / Capacité
 
 * Charge consommée par rapport à la charge prévue
 * Taux d'utilisation des ressources
 * Taux de surcharge / sous-charge des équipes
 
-# Tableau de bord
-Outil de pilotage qui regroupe les informations clés permettant de suivre l'avancement, anticiper les risques et prendre des décisions rapides.
+## Tableau de bord 📋
 
-Présente les KPI, alertes, tendances et éléments structurants du projet sous forme visuelle et synthétique.
+Outil de pilotage qui regroupe les informations clés permettant de **suivre l'avancement, anticiper les risques et prendre des décisions rapides**.
+
+Présente les **KPI, alertes, tendances** et éléments structurants du projet sous forme **visuelle** et **synthétique**.
 
 ## Tableau de bord : objectifs
 
-### 📊Suivre l’état du projet
+### 📊 Suivre l’état du projet
 
-· Avancement global (en %)
-· État des tâches clés
-· État des jalons
+* Avancement global (en %)
+* État des tâches clés
+* État des jalons
 
-### 📆Anticiper les dérives
+### 📆 Anticiper les dérives
 
-· Dérapage planning
-· Surconsommation budgétaire
-. Retards fournisseurs
-· Indisponibilités ressources
-· Dérives techniques détectées pendant les tests
+* Dérapage planning
+* Surconsommation budgétaire
+* Retards fournisseurs
+* Indisponibilités ressources
+* Dérives techniques détectées pendant les tests
 
-### 💬Améliorer la communication
+### 💬 Améliorer la communication
 
-· Support de réunion de pilotage
-. Données partagées avec la MOA / MOE
-· Alignement des équipes
+* Support de réunion de pilotage
+* Données partagées avec la MOA / MOE
+* Alignement des équipes
 
-### 🤷‍♂️Aider la décision
+### 🤷‍♂️ Aider la décision
 
-· Priorisation
-· Arbitrages
-. Ajustement des ressources
-· Gestion de crise
+* Priorisation
+* Arbitrages
+* Ajustement des ressources
+* Gestion de crise
 
-## 🚦 Tableau de bord Projet
+## Tableau de bord Projet 🚦
 
 Déploiement d'une infrastructure de supervision pour 50 serveurs
 
 ### 🧭 Vue d’ensemble
-*	Statut global :🟠Soussurveillance
-*	Chef de projet : A. Martin
-*	Périmètre : Supervision complète (agents, dashboards, alerting)
-*	Échéance : 12 semaines
-*	Avancement : 42%
+*	**Statut global** :🟠Soussurveillance
+*	**Chef de projet** : A. Martin
+*	**Périmètre** : Supervision complète (agents, dashboards, alerting)
+*	**Échéance** : 12 semaines
+*	**Avancement** : 42%
 
 ### 📈 Avancement
 
-*	Agents déployés : 26 / 50 (52%)
-*	Dashboards créés : 3 / 5 (60%)
-*	Alertes critiques configurées : 12 / 20 (40%)
-*	Serveur de supervision prêt: ✔ OK
-*	Tests de charge :⏳Prévu Semaine 5
+*	**Agents déployés** : 26 / 50 (52%)
+*	**Dashboards créés** : 3 / 5 (60%)
+*	**Alertes critiques configurées** : 12 / 20 (40%)
+*	**Serveur de supervision prêt** : ✔ OK
+*	**Tests de charge** :⏳Prévu Semaine 5
 
 ### 📊 Indicateurs
 
@@ -548,42 +544,42 @@ Déploiement d'une infrastructure de supervision pour 50 serveurs
 | Ressources | 🟢 | Équipe conforme au staffing |
 
 ### 🔥 Risques & Actions
+
 **Risque 1 — Plug-in non livré à temps**
-* Impact : retard de 1–2 semaines
-* Probabilité : moyenne
-* Action : relance fournisseur + scénario B sans ce plug-in
+* **Impact** : retard de 1–2 semaines
+* **Probabilité** : moyenne
+* **Action** : relance fournisseur + scénario B sans ce plug-in
 
 ### 📌 Actions en cours/ décisions
+
 *	Valider la liste finale des alertes critiques
 *	Arbitrer entre plugin officiel ⇢ plugin custom
 *	Confirmer planning des tests de charge
 
-## Communication
-La communication est un élément clé d'un projet. Cela permet d'informer les parties prenantes sur le projet, d'assurer l'alignement sur les objectifs, le planning, les livrables, d'éviter les erreurs, d'obtenir validation et d'anticiper les blocages.
+## Communication 🗣️👂
 
-Une bonne communication projet est un facteur de motivation et d'engagement des équipes.
+La communication est un élément clé d'un projet. Cela permet d'**informer les parties prenantes** sur le projet, d'**assurer l'alignement** sur les objectifs, le planning, les livrables, d'**éviter les erreurs**, d'**obtenir validation** et d'**anticiper les blocages**.
+
+Une bonne communication projet est un facteur de **motivation** et d'**engagement** des équipes.
 
 ### Les supports classiques
 
-| **Support** | **Objectif** | **Fréquence /
-Exemple** |
+| **Support** | **Objectif** | **Fréquence /Exemple** |
 | --- | --- | --- |
 | **Réunions de pilotage (COPIL)** | Décision stratégique, suivi global | 1x par semaine / mois |
-| **Comité technique (COTECH)** | Suivi des tâches techniques,
-arbitrages | Hebdomadaire |
-| **Rapports d’avancement/ status
-reports** | Synthèse chiffrée (KPI, avancement,
-risques) | Hebdo / bi-hebdo |
+| **Comité technique (COTECH)** | Suivi des tâches techniques, arbitrages | Hebdomadaire |
+| **Rapports d’avancement/ status reports** | Synthèse chiffrée (KPI, avancement, risques) | Hebdo / bi-hebdo |
 | **Tableaux de bord** | Vue synthétique des KPI et alertes | Mis à jour en continu |
 | **Emails ciblés** | Information rapide et formelle | Selon besoins |
 | **Wikis / Docs partagés** | Documentation, procédures, notes | Mise à jour continue |
 | **Kanban / boards collaboratifs** | Visualiser l’avancement, tâches | Temps réel |
 
 ### Types de communication
-* ascendante : équipe – direction
-* descendante : direction – équipe
-* transversale : entre équipes techniques
-* vers l'utilisateur : informations, consignes, mises en production
+
+* **ascendante** : équipe → direction
+* **descendante** : direction → équipe
+* transv**ersale : entre équipes techniques
+* **vers l'utilisateur** : informations, consignes, mises en production
 
 ### Types de communication par parties prenantes
 
@@ -591,24 +587,23 @@ risques) | Hebdo / bi-hebdo |
 | --- | --- | --- |
 | **Direction / Sponsor** | Décision, arbitrage, budget | COPIL / rapports synthétiques |
 | **MOA / Métier** | Suivi du périmètre, besoins | Réunions régulières / rapports, KPI |
-| **MOE / équipes
-techniques** | Coordination, tâches,
-dépendances | COTECH / Kanban / wiki |
-| **Utilisateurs finaux** | Adoption, tests, retour | Newsletter, mails, sessions de
+| **MOE / équipes techniques** | Coordination, tâches, dépendances | COTECH / Kanban / wiki |
+| **Utilisateurs finaux** | Adoption, tests, retour | Newsletter, mails, sessions de formation |
+| **Fournisseurs / prestataires** | Délais, livrables, incidents | Réunions contractuelles / mails |
 
-formation |
-| **Fournisseurs /
-prestataires** | Délais, livrables, incidents | Réunions contractuelles / mails |
+⚠️ **Note** : les utilisateurs finaux sont trop souvent oubliés dans la communiation ! D’où incompréhension, frustration et mauvaise adhésion au changement.
 
-⚠️Note : les utilisateurs finaux sont trop souvent oubliés dans la communiation ! D’où incompréhension, frustration et mauvaise adhésion au changement.
-Bonnes pratiques
+## Bonnes pratiques 💡
+
 * être synthétique, clair et concis
 * avoir un discours adapté au public
 * avoir une fréquence adaptée et régulière
 * être transparent, partager les risques et difficultés, pas seulement les succès
 * utiliser les bons outils, dont les outils collaboratifs
 * désigner un référent communication et établir un document des fréquences, publics et contenus de communication
-Conclusion
+
+## Conclusion
+
 Beaucoup d'outils existent pour une gestion de projet efficace. Il n'est pas nécessaire de tous les utiliser.
 
 Il est essentiel de bien définir les rôles, responsabilités et formes de communication.
@@ -620,7 +615,7 @@ L'usage d'outils structurants, de suivi rigoureux et d'une bonne communication c
 
 Pour les 👉 [Instructions du challenge C102](https://gist.github.com/stephdl/8b39256712f17ec1c183ea9aee2c3266) 👈
 
-👉 [Challenge fait]() 👈
+Challenge du jour 👉 [Challenge_C102](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C1/Challenge_C102.md) 👈
 
 
 
