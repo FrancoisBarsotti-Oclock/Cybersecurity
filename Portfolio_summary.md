@@ -1,5 +1,7 @@
 # Résumé des cours que je suis
 
+![Script de bienvenue](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/images_Portfolio/Script%20de%20bienvenue.png)
+
 Ce document essaie de montrer un résumé de notions abordées tout au long de la formation de préparation au Titre Pro AIS (Administrateur d'Infrastructures Sécurisées).
 
 La formation est divisée en trois blocs (A, B, et C). Dans chaque bloc nous trouvons ce que l'on appelle des saisons énumérées, pour réprésenter chaque notion dédiée.
