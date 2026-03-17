@@ -53,3 +53,5 @@ L'objectif de ce lab est de faire que le script soit exécuté automatiquement �
 
 ### Lab 3: DOM XSS in `document.write` sink using source `location.search`
 
+
+### 🚧 En construction 🚧
