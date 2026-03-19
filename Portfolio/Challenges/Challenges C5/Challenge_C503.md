@@ -32,7 +32,7 @@ nmap -sn <ip CIDR>
 nmap -sV -F -T5 <ip CIDR> -v -Pn
 ```
 
-![1-Connexion et reconnaissance]()
+![1-Connexion et reconnaissance](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C5/images%20C5/images%20C503/Challenge%20C503_1-Connexion%20et%20reconnaissance.png)
 
 ## Analyse passive du réseau (étapes 4 à 6) 🌐
 
@@ -56,7 +56,7 @@ sftp -o StrictHostKeyChecking=accept-new admin@ip attaquant
 rm -f /tmp/*.pcap
 ```
 
-![02-pcap1 sur Wireshark]()
+![02-pcap1 sur Wireshark](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C5/images%20C5/images%20C503/Challenge%20C503_02-pcap1%20sur%20Wireshark.png)
 
 Sur cette première VM, on doit se connecter (deux fois) pour lancer l'attaque avec une `macof` (envoi de trames sur tous le ports, pour transformer le switch en hub en saturant sa table-cam).
 à la fin de cette partie, on fera un essai de ARP poisoning, qui ne marchera pas car les machines de cette VM sont intentionnellement protégés. Pour l'attaque, il faudra ouvrir une autre connexion (à revoir juste après).
@@ -72,7 +72,7 @@ macof -i eth1
 ettercap -T -i eth1 -M arp
 ```
 
-![03-pcap2 sur Wireshark]()
+![03-pcap2 sur Wireshark](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C5/images%20C5/images%20C503/Challenge%20C503_03-pcap2%20sur%20Wireshark.png)
 
 💡 **Note** : Pour voir les pings entre les deux machines sniffées, on peut filtrer la recherche sur Wireshark en tappant "icmp"
 
@@ -114,7 +114,7 @@ etterfilter filter.ecf -o filter.ef
 
 Et c'est comme ça qu'on arrive à tout finir 🙂​
 
-![00-Challenge completed]()
+![00-Challenge completed](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C5/images%20C5/images%20C503/Challenge%20C503_00-Challenge%20completed.png)
 
 ---
 
