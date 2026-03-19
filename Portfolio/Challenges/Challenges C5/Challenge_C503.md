@@ -11,7 +11,7 @@ Voir 👉 [Cours C503](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/
 
 ## Man In The Middle 👀
 
-## Connexion à la VM & reconnaissance de réseau (étapes 1 à 3) 🔎
+## Connexion à la VM & reconnaissance de réseau (étapes 1 à 3) 🤓🔎
 
 Selon description, cette connexion SSH est faite sur interface Ethernet `eth0`, à tenir en compte tout au long des exercices.
 
@@ -34,7 +34,7 @@ nmap -sV -F -T5 <ip CIDR> -v -Pn
 
 ![1-Connexion et reconnaissance](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C5/images%20C5/images%20C503/Challenge%20C503_1-Connexion%20et%20reconnaissance.png)
 
-## Analyse passive du réseau (étapes 4 à 6) 🌐
+## Analyse passive du réseau (étapes 4 à 6) 🔎🌐
 
 On doit utiliser `tcpdump` pour essayer de sniffer l'interface eth1
 
