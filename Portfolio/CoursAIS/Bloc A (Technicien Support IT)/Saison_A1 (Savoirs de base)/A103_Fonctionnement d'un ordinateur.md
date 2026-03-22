@@ -24,7 +24,7 @@ Il est composé (en général) d'une **unité centrale**, d'un (ou plusieurs) é
 
 Plus d'infos par [Wikipedia, ici](https://fr.wikipedia.org/wiki/Ordinateur_de_bureau).
 
-![01-Desktop]()
+![01-Desktop](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_01-Desktop.png)
 
 _On distingue sur cette photo l'unité centrale à gauche, un écran ainsi qu'un clavier et une souris._
 
@@ -36,7 +36,7 @@ Un **ordinateur portable** (_laptop_, en anglais), est un ordinateur personnel d
 
 Un ordinateur portable est muni des mêmes types de composants qu'un ordinateur de bureau classique : un écran, un clavier, un périphérique de pointage (trackpoint et/ou trackpad), de haut-parleurs, etc.
 
-![02-laptop]()
+![02-laptop](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_02-laptop.png)
 
 _Un laptop_
 
@@ -53,7 +53,7 @@ Un ordinateur à carte unique (parfois abrégé SBC, de l'anglais _Single-Board 
 
 Rarement utilisés comme ordinateurs personnels, ils servent en général plutôt pour de **l'informatique** **embarquée** (à l'intérieur d'une machine ou d'un appareil).
 
-![03-raspberry]()
+![03-raspberry](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_03-Raspberry.png)
 
 _Plusieurs modèles de Raspberry Pi, un ordinateur à carte unique très populaire._
 
@@ -127,7 +127,7 @@ Un système d'exploitation (souvent appelé **OS** — _de l'anglais operating s
 
 Il offre une suite de service permettant la création de logiciels applicatifs, et sert d'intermédiaire entre ces logiciels et le matériel. Il offre une suite de service permettant la communication entre le matériel physique de l’ordi (à travers les drivers) et les logiciels/applications interne (Chrome, Microsoft…)
 
-![04-OS]()
+![04-OS](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_04-OS.png)
 
 Il existe plusieurs systèmes d'exploitation, les plus courament rencontrés sur les ordinateurs modernes sont : Microsoft Windows 🪟, Apple MacOS ​🍏 et GNU/Linux 🐧​.
 
@@ -159,7 +159,7 @@ L'interface graphique et l'interface en ligne de commande sont appelées des **i
 
 Elles permettent à un homme (dans le sens "être humain") d'interagir avec la machine.
 
-![05-Interfaces]()
+![05-Interfaces](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_05-Interfaces.png)
 
 #### Interface Graphique 
 Ce sont les différents menus proposés par le OS pour le configurer et réaliser des tâches courantes. Par exemple, pour éteindre votre ordinateur, vous cliquez sur le
@@ -171,7 +171,7 @@ Moins connues du grand public, les interfaces en ligne de commande permettent au
 
 Sur Windows, elle est accessible via un programme préinstallé qui s’appelle l’**invite de** **commande**. On appelle parfois cette interface le **terminal**.
 
-![06-Terminal]()
+![06-Terminal](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_06-Terminal.png)
 
 💡​ **À retenir** _Raccourci clavier_ : `Ctrl + R` ou `Win + R` puis taper `cmd`.
 
@@ -209,7 +209,7 @@ Un cœur de processeur ne peut exécuter qu'une seule tâche à la fois : pour p
 
 Sur Windows, on peut voir (et stopper !) les processus et programmes en cours d'exécution depuis le **Gestionnaire des tâches**
 
-![07-Gestionnaire de tâches]()
+![07-Gestionnaire de tâches](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_07-Gestionnaire%20de%20t%C3%A2ches.png)
 
 ### Pilote de Périphérique (Driver)
 
@@ -237,7 +237,7 @@ Les pilotes doivent être conçus pour le système d’exploitation installé su
 
 Sur Windows, on peut gérer les périphériques et leurs pilotes depuis le **Gestionnaire de Périphériques** : `Win + x` et ensuite `G`.
 
-![08-Gestionnaire de périphériques]()
+![08-Gestionnaire de périphériques](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_08-Gestionnaire%20de%20p%C3%A9riph%C3%A9riques.png)
 
 ### Fichiers 📂​
 
@@ -301,13 +301,13 @@ Le terme "informatique" n'est apparu que dans les années 50-60. Mais en réalit
 
 ### Ada Lovelace
 
-![09-Ada Lovelace]()
+![09-Ada Lovelace](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_09-Ada%20Lovelace.png)
 
 Date : environ entre 1830 & 1852
 
 [Ada Lovelace](https://fr.wikipedia.org/wiki/Ada_Lovelace) est une pionnière de l'informatique. D'après Wikipédia : Elle est principalement connue pour avoir réalisé le premier véritable programme informatique, lors de son travail sur un ancêtre de l'ordinateur : _la [machine analytique de Charles Babbage](https://fr.wikipedia.org/wiki/Machine_analytique)_
 
-![10-Machine analytique]()
+![10-Machine analytique](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_10-Machine%20analytique.png)
 
 ### Métier Jacquard
 
@@ -317,7 +317,7 @@ D'après Wikipédia : _Le métier Jacquard est un métier à tisser mis au point
 
 ## Al-Khwârizmî
 
-![11-Al-Khwârizmî]()
+![11-Al-Khwârizmî](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_11-Al-Khw%C3%A2rizm%C3%AE.png)
 Date : environ entre 800 et 850
 
 Le mathématicien [Al-Khwârizmî — Wikipédia](https://fr.wikipedia.org/wiki/Al-Khw%C3%A2rizm%C3%AE) a également indirectement contribué à l'informatique moderne ! D'après Wikipédia : 
@@ -325,7 +325,7 @@ Le mathématicien [Al-Khwârizmî — Wikipédia](https://fr.wikipedia.org/wiki/
 
 ### Euclide
 
-![12-Euclide]()
+![12-Euclide](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_12-Euclide.png)
 
 Date : vers 300 avant JC
 
@@ -337,7 +337,7 @@ L'ère moderne : Retour au 20ème siècle !
 
 ## Alan Turing
 
-![13-Alan Turing]()
+![13-Alan Turing](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_13-Alan%20Turing.png)
 
 Date : entre 1936 et 1940 environ
 
@@ -354,7 +354,7 @@ Datealculer électromécaniques voient le jour :
 
 * [Zuse 3](https://fr.wikipedia.org/wiki/Zuse_3) : développée en secret par Konrad Zuse entre 1939 et 1941, détruit pendant la Seconde Guerre mondiale. 
 
-![14-Machine à calcular]()
+![14-Machine à calcular](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_14-Machine%20%C3%A0%20calculer.png)
 
 ## Premier "ordinateur"
 
@@ -371,7 +371,7 @@ Le premier "ordinateur" ne fait pas consensus : d'un ouvrage à l'autre, 6 machi
 
 ## John Von Neumann
 
-![15-Neumann]()
+![15-Neumann](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_15-Neuman.png)
 
 Date : 1945
 
@@ -389,7 +389,7 @@ Il permet de faire des opérations mathématiques (addition, soustraction, multi
 
 ## Premiers ordinateurs commercialisés
 
-![16-Premiers ordi]()
+![16-Premiers ordi](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_16-Premiers%20ordi.png)
 
 * 1949 : Le [BINAC](https://fr.wikipedia.org/wiki/BINAC), produit par l'entreprise EMCC (première entreprise fabriquant des ordinateurs, premier ordinateur commercialisé)
 * 1951 : Le [Ferranti Mark I](https://fr.wikipedia.org/wiki/Ferranti_Mark_I), premier ordinateur électronique "généraliste" commercialisé
@@ -399,7 +399,7 @@ Il permet de faire des opérations mathématiques (addition, soustraction, multi
 
 ### Le Transistor
 
-![17-Transistor]()
+![17-Transistor](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_17-Transistor.png)
 
 Date : 1947
 
@@ -414,7 +414,7 @@ Le transistor est considéré comme un énorme progrès face au tube électroniq
 
 ### Disque dur
 
-![18-Disque dur]()
+![18-Disque dur](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_18-Disque%20dur.png)
 
 Premier disque dur produit vers 1956/57 par **IBM**, le **RAMAC** **350**.
 
@@ -424,7 +424,7 @@ Premier disque dur produit vers 1956/57 par **IBM**, le **RAMAC** **350**.
 
 ### Circuit intégré
 
-![19-Circuit intégré]()
+![19-Circuit intégré](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_19-Circuit%20int%C3%A9gr%C3%A9.png)
 
 Invention en 1958 par Jack Kilby du première [Circuit intégré](https://fr.wikipedia.org/wiki/Circuit_int%C3%A9gr%C3%A9).
 
@@ -432,7 +432,7 @@ Le circuit intégré, aussi appelé puce électronique (chip ou IC en anglais), 
 
 ## PDP-8
 
-![20-PDP8]()
+![20-PDP8](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_20-PDP8.png)
 
 Le [PDP-8](https://fr.wikipedia.org/wiki/PDP-8), sorti en mars 1965, est qualifié de "Fort T" de l'informatique : simple, rustique, abordable (moins de 10 000$), et produit en masse.
 
@@ -442,7 +442,7 @@ Sa mémoire ? À peine plus de 6 octets (4096 mots de 12 bits).
 
 ### Micro-processeur
 
-![21-Micro-processeur]()
+![21-Micro-processeur](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_21-Micro-processeur.png)
 
 En 1969, le [Microprocesseur](https://fr.wikipedia.org/wiki/Microprocesseur) est inventé par un physicien d'Intel.
 
@@ -452,7 +452,7 @@ Un petit tour sur la page Wikipédia s'impose !
 
 ## Loi de Moore
 
-![22-Loi de Moore]()
+![22-Loi de Moore](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_22-Loi%20de%20Moore.png)
 
 En 1965, Gordon E. Moore postule que les semi-conducteurs vont devenir deux fois plus complexes tous les ans à un coût constant.
 
@@ -482,7 +482,7 @@ prix : 55 000 $ (180 vendus)
 
 ### Olivetti Programma 101
 
-![23-Olivetti Programma 101]()
+![23-Olivetti Programma 101](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_23-Olivetti%20Programma%20101.png)
 
 Parfois présenté comme premier ordinateur personnel, ou ordinateur de bureau (en réalité plutôt une calculatrice programmable), sorti en 1965.
 
@@ -504,7 +504,7 @@ Très limité (256 octets de mémoire, entrées/sorties via lumières & boutons 
 
 ### Datapoint 2200
 
-![24-Datapoint 2200]()
+![24-Datapoint 2200](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_24-Datapoint%202200.png)
 
 Première machine ressemblant à un ordi moderne (écran, clavier, stockage) !
 
@@ -512,7 +512,7 @@ Sorti en 1970, avec un processeur Intel 8008 (successeur du 4004).
 
 ### Micral
 
-![25-Micral]()
+![25-Micral](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_25-Micral.png)
 
 Développé en 1972 et commercialisé dès 1973 par R2E, un bureau d'études Français.
 
@@ -526,7 +526,7 @@ R2E a été absorbé par le groupe Bull en 1978.
 
 ### Téléscripteur
 
-![26-Téléscripteur]()
+![26-Téléscripteur](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_26-T%C3%A9l%C3%A9scripteur.png)
 
 Bel exemple d'une [page Wikipédia](https://fr.wikipedia.org/wiki/T%C3%A9l%C3%A9scripteur) beaucoup plus fournie en anglais qu'en français.
 
@@ -540,7 +540,7 @@ Bel exemple d'une [page Wikipédia](https://fr.wikipedia.org/wiki/T%C3%A9l%C3%A9
 
 premier ordi transportable.
 
-![27-IBM 5100]()
+![27-IBM 5100](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_27-IBM%205100.png)
 
 1978 : IBM 5110 , plus large public, 5120 écran plus grand [IBM 5100 et 5110](https://fr.wikipedia.org/wiki/IBM_5100_et_5110)
 
@@ -548,7 +548,7 @@ premier ordi transportable.
 
 ### Altair 8800 (1975)
 
-![28-Altair 8800]()
+![28-Altair 8800](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_28-Altair%208800.png)
 
 Considéré comme l'un des premiers micro- ordinateurs vendus aux particuliers : l'Atlair 8800 est sorti en 1975, vendu sous forme de kit à 400$.
 
@@ -558,11 +558,11 @@ Bill Gates, Paul Allen, Steve Wozniak et Steve Jobs ont tous fait leurs débuts 
 
 Si jamais on a regardé Malcom, c'est possible qu'on ait vu passer l'Altair 8800 dans une épisode
 
-![29-Malcom with an Altair 8800]()
+![29-Malcom with an Altair 8800](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_29-Malcom%20with%20an%20Altair%208800.png)
 
 ### Homebrew Computer Club (Apple)
 
-![30-Apple Homebrew]()
+![30-Apple Homebrew](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_30-Apple%20Homebrew.png)
 
 Club d'amateurs d'informatique qui se réunissent dans la Silicon Valley.
 
@@ -570,7 +570,7 @@ Plusieurs machines conçues par des membres du club ont été commercialisées, 
 
 ### Appel II (1977/1993)
 
-![31-Apple II]()
+![31-Apple II](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_31-Apple%20II.png)
 
 Après une commande de 100 Apple I, Woz & Steve Jobs fondent Apple Computer.
 
@@ -580,7 +580,7 @@ Quelques dizaines de commandes plus tard et ils annoncent l'Apple II, un ordinat
 
 ### Commodore PET (1977)
 
-![32-Comodore PET]()
+![32-Comodore PET](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_32-Comodore%20PET.png)
 
 Sorti en 1977, un peu moins d’un million d'unités vendues.
 
@@ -588,7 +588,7 @@ Pour savoir plus de [Commodore PET](https://fr.wikipedia.org/wiki/Commodore_PET)
 
 ### TRS-80 (1977)
 
-![33-TRS 80]()
+![33-TRS 80](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_33-TRS%2080.png)
 
 Sorti en 1977, 1,5 millions d'unités vendues.
 
@@ -596,7 +596,7 @@ Pour plus d'information sur [TRS-80](https://fr.wikipedia.org/wiki/TRS-80) 👈�
 
 ### TL-99 (1979)
 
-![34-TL 99]()
+![34-TL 99](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_34-TL%2099.png)
 
 Sorti fin 1979, 2,8 millions vendus.
 
@@ -604,7 +604,7 @@ Pour savoir plus du [TI-99/4A](https://fr.wikipedia.org/wiki/TI-99/4A) 👈​
 
 ###  Atari 8-bits (1979)
 
-![35-Atari 8 bits]()
+![35-Atari 8 bits](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_35-Atari%208%20bits.png)
 
 Sorti en novembre 1979.
 
@@ -612,7 +612,7 @@ Pour plus d'information sur l'[Atari 8-bits](https://fr.wikipedia.org/wiki/Atari
 
 ### Sinclair (1970/1980)
 
-![36-Sinclair]()
+![36-Sinclair](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_36-Sinclair.png)
 
 Date : fin des années 70 / début 80
 
@@ -620,7 +620,7 @@ Pour plus d'information du [Sinclair Research](https://fr.wikipedia.org/wiki/Sin
 
 ### Commodore VIC-20 & 64 (1980/1982)
 
-![37-Comodore VIC 20]()
+![37-Comodore VIC 20](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_37-Comodore%20VIC%2020.png)
 
 1980 & 1982
 
@@ -630,7 +630,7 @@ Pour plus de détails sur le [Commodore 64](https://fr.wikipedia.org/wiki/Commod
 
 ### Oric-1 & Atmos (1982/83)
 
-![38-Oric 1 & Atmos]()
+![38-Oric 1 & Atmos](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_38-Oric%201%20%26%20Atmos.png)
 
 L'ordinateur [Oric-1](https://fr.wikipedia.org/wiki/Oric#Oric-1), sorti en 1982/83, est le premier ordi à se répandre dans les foyers français & anglais (UK). 
 
@@ -638,7 +638,7 @@ L'ordinateur [Oric-1](https://fr.wikipedia.org/wiki/Oric#Oric-1), sorti en 1982/
 
 ### Thomson TO7 (1982) & MO5 (1984)
 
-![39-Thomson T07]()
+![39-Thomson T07](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_39-Thomson%20T07.png)
 
 1982 : [Thomson TO7](https://fr.wikipedia.org/wiki/Thomson_TO7)
 
@@ -646,7 +646,7 @@ L'ordinateur [Oric-1](https://fr.wikipedia.org/wiki/Oric#Oric-1), sorti en 1982/
 
 ### Amstrad CPC 464 (1984)
 
-![40-Amstrad CPC 464]()
+![40-Amstrad CPC 464](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_40-Amstrad%20CPC%20464.png)
 
 Sorti en 1984, pensé pour une utilisation familiale (il ne coûtait "que" 3500 francs).
 
@@ -654,7 +654,7 @@ Plus d’un million d'exemplaires vendus !
 
 ### IBM PC (1981/83)
 
-![41-IBM PC]()
+![41-IBM PC](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_41-IBM%20PC.png)
 
 1981 : [IBM 5150](https://fr.wikipedia.org/wiki/IBM_PC), à base de processeur Intel 8088 
 
@@ -662,7 +662,7 @@ Plus d’un million d'exemplaires vendus !
 
 #### Lisa & Apple Macintosh (1983/84)
 
-![42-Lisa & Apple Macintosh]()
+![42-Lisa & Apple Macintosh](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_42-Lisa%20%26%20Apple%20Macintosh.png)
 
 [Apple Lisa](https://fr.wikipedia.org/wiki/Apple_Lisa) 1983 (avec interface graphique) Motorola 68000 1Mo RAM, DD 5Mo 10k$ / 70k francs : 
 
@@ -670,7 +670,7 @@ Plus d’un million d'exemplaires vendus !
 
 ### IBM PS/1 & PS/2 (1987/90)
 
-![43-IBM PS1]()
+![43-IBM PS1](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_43-IBM%20PS1.png)
 
 1987 : [IBM Personal System/2](https://fr.wikipedia.org/wiki/IBM_Personal_System/2)
 
@@ -678,11 +678,13 @@ Plus d’un million d'exemplaires vendus !
 
 ### IBM compatible
 
-![44-IBM compatible]()
+![44-IBM compatible](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A103/A103_44-IBM%20compatible.png)
 
 Pour en savoir un peu [Compaq](https://fr.wikipedia.org/wiki/Compaq) 👈​
 
-#### Fin des années 90, 2000 & de nos jours, tout commence à exploser en évolution, niveau hardware et software.
+#### Fin des années 90, 2000 & de nos jours, 
+
+Tout commence à exploser en évolution, niveau hardware et software.
 
 [Compatible PC](https://fr.wikipedia.org/wiki/Compatible_PC), informatique embarquée & miniaturisation…
 
