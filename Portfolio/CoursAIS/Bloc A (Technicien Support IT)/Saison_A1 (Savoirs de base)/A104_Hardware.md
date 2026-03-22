@@ -8,15 +8,15 @@ _Comment monter son propre PC ! (et aussi réparer des PCs !)_
 
 Composant indispensable, elle **permet de connecter tous les autres composants de l’ordi**. C’est un circuit imprimé, dont la taille est **standardisée**. Elle est équipée de nombreux ports et connecteurs. On va y trouver : Connecteurs d’extension PCI, Connecteurs d’entrée-sortie, Support du processeur, chipset, Connecteurs de mémoire vive RAM, Connecteur alimentation, Connecteurs de lecteurs de disques et disquettes, BIOS, Connecteur d’extension AGP, Pile du CMOS.
 
-![01-Carte mère]()
+![01-Carte mère](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_01-Carte%20m%C3%A8re.png)
 
 _Une carte mère AsRock, pas toute jeune !_
 
-![02-Carte mère Asus]()
+![02-Carte mère Asus](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_02-Carte%20m%C3%A8re%20Asus.png)
 
 _Une carte mère Asus, un peu plus récente !_
 
-![03-Éléments carte mère]()
+![03-Éléments carte mère](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_03-%C3%89l%C3%A9ments%20carte%20m%C3%A8re.png)
 
 _Les éléments principaux qu'on rencontre sur une carte mère._
 
@@ -37,7 +37,7 @@ Ces connecteurs permettent d’acheminer le courant électrique du bloc d’alim
 
 On les appelle connecteurs PIN.
 
-![04-Connecteurs 8 PIN]()
+![04-Connecteurs 8 PIN](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_04-Connecteurs%208%20PIN.png)
 
 _Les deux connecteurs électriques sur une carte mère._
 
@@ -49,11 +49,11 @@ Le processeur doit être installé dans un connecteur spécifique de la carte-m�
 
 Il faut que ton processeur soit compatible avec le processeur et la carte-mère. On ne peut pas changer le socket de carte-mère. On achète l’un en fonction de l’autre. Il faut lire sur la fiche technique de chacun. Avec les configurateurs sur les sites comme top achat ldlc, sa devient automatique. Généralement quand tu montes ta config (en étant débutant) tu utilises un configurateur, et ce configurateur te propose des éléments uniquement compatibles ensemble.
 
-![05-Installantion d'un CPU]()
+![05-Installantion d'un CPU](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_05-Installantion%20d'un%20CPU.png)
 
 _Installation d'un CPU dans le socket de la carte-mère._
 
-![06-Différents sockets par fabricant de processeur]()
+![06-Différents sockets par fabricant de processeur](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_06-Diff%C3%A9rents%20sockets%20par%20fabricant%20de%20processeur.png)
 
 _Les différents sockets, par fabricant de processeur._
 
@@ -66,7 +66,7 @@ Attention à ne pas confondre DDR (RAM dédié à la carte-mère) et GDDR (RAM d
 
 On n’est pas sur les mêmes versions actuellement (DDR5 et GDDR6).
 
-![07-Connecteurs mémoire]()
+![07-Connecteurs mémoire](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_07-Connecteurs%20m%C3%A9moire.png)
 
 ### Connecteurs cartes d’extension  
 
@@ -81,7 +81,7 @@ Il en existe plusieurs types :
 * **AGP** (Accelerated Graphic Port) : lancé en 1997 par Intel, ce slot était réservé à la connexion de cartes graphiques. Disparu au milieu des années 2000.
 * **PCI Express** (souvent abrégé PCIe) : lancé en 2004 par Intel, il est plus rapide et apte à supporter des cartes graphiques (mais il supporte aussi d'autres types de cartes).
 
-![08-Différents PCI]()
+![08-Différents PCI](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_08-Diff%C3%A9rents%20PCI.png)
 
 _De haut en bas : PCIe x4, PCIe x16, PCIe x1, PCIe x16 et PCI traditionnel._
 
@@ -96,19 +96,19 @@ Il en existe 5 types :
 * Connecteur **mSATA** : pour _mini SATA_, version miniature de connecteur SATA destinée aux ordinateurs portables.
 * **Connecteur M.2** : permet de connecter des disques SSD ou des cartes d’extension (WiFi, bluetooth…), c’est la révolution du moment.
 
-![09-Connecteur SATA]()
+![09-Connecteur SATA](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_09-Connecteur%20SATA.png)
 
 _Le connecteur **SATA**, fréquemment utilisé pour connecter disques durs et lecteurs optiques._
 
-![10-Deux connecteurs IDE]()
+![10-Deux connecteurs IDE](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_10-Deux%20connecteurs%20IDE.png)
 
 _Deux connecteurs IDE et un connecteur Floppy, obsolètes de nos jours._
 
-![11-mSTA vs M.2]()
+![11-mSTA vs M.2](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_11-mSTA%20vs%20M.2.png)
 
 _Sur la gauche, un SSD avec un connecteur mSATA. Sur la droite, un SSD avec un connecteur M.2. Attention à ne pas les confondre !_
 
-![12-Types de connecteurs M.2]()
+![12-Types de connecteurs M.2](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_12-Types%20de%20connecteurs%20M.2.png)
 
 ⚠️​ _Attention, il existe différents types de connecteurs M.2 !_
 
@@ -136,13 +136,13 @@ On peut accéder au BIOS en pressant une touche (qui varie d’un fabricant à l
 
 On peut chercher sur Google/YouTube notre `BIOS + modèle de l’ordinateur` et on y pourra trouver une procédure.
 
-![13-ancien BIOS]()
+![13-ancien BIOS](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_13-ancien%20BIOS.png)
 
 _Un aperçu d'un BIOS, plutôt ancien (1999)_
 
 _En comparaison, un BIOS moderne sur une carte mère MSI :_
 
-![14-BIOS moderne]()
+![14-BIOS moderne](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_14-BIOS%20moderne.png)
 
 On reparle du BIOS plus en détail en Saison 2 !
 
@@ -155,7 +155,7 @@ C’est une puce électronique soudée à la carte mère. Il était divisé en d
 
 💡​ A savoir que le northbridge est maintenant directement intégré au processeur.
 
-![15-Northbridge vs Southbridge]()
+![15-Northbridge vs Southbridge](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_15-Northbridge%20vs%20Southbridge.png)
 
 _Relation entre processeur, northbridge et southbridge sur les anciennes cartes mères._
 
@@ -163,12 +163,12 @@ Le chipset détermine les fonctions proposées par la carte mère, et les compos
 
 C’est une puce intégrée à la CM et elle chauffe beaucoup. C’est comme l’assistant du CPU, soudée à la CM.
 
-![16-Chipset]()
+![16-Chipset](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_16-Chipset.png)
 
 ### Panneau d’entrées/sorties
 Chaque carte mère dispose d’un panneau d’entrées/sorties (Inpunt/output Panel), sur lequel on trouve la **connectique pour les périphériques de notre ordi**.
 
-![17-Panneau d'entrées et sorties]()
+![17-Panneau d'entrées et sorties](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_17-Panneau%20d'entr%C3%A9es%20et%20sorties.png)
 
 _Pouvez-vous nommer tous les ports présents ci-dessus ?_
 
@@ -192,7 +192,7 @@ Solution, de gauche à droite et de haut en bas :
 
 Avant que les processeur multi-cœurs deviennent la norme, on pouvait parfois rencontrer des cartes mères multiprocesseurs.
 
-![18-Carte multiporcesseur]()
+![18-Carte multiporcesseur](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_18-Carte%20multiporcesseur.png)
 
 💡​ De nos jours, on rencontre uniquement ce genre de cartes mères sur les serveurs.
 
@@ -226,7 +226,7 @@ Il faut s’assurer que le boîtier dans lequel vous comptez installer la CM soi
 
 Souvent appelé **CPU** (Central Processing Unit) est l’un des composants primordiaux, avec la mémoire vive, d’un ordinateur. C’est le composant qui effectue les calculs dans notre ordinateur.
 
-![19-Processeur]()
+![19-Processeur](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_19-Processeur.png)
 
 ### Classification des processeurs
 
@@ -291,7 +291,7 @@ Les deux fabricants sur le marché des ordis de bureau sont Intel et AMD. Ils pr
 
 >On cherche « PC » / Afficher le nom de votre PC. Ça ouvre les infos systèmes et on a les specs de l’ordi (proc/Ram…). Ci-après un laptop  Intel® Core(TM) i7-12650H.
 
-![20-Exemple processeur]()
+![20-Exemple processeur](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_20-Exemple%20processeur.png)
 
 ### Comparer les processeurs
 
@@ -311,11 +311,11 @@ On utilise en général une combinaison appelée **ventirad** : un radiateur en 
 
 _Un ventirad (sur la gauche, juste le radiateur), à fixer sur le processeur et connecter à la carte mère._
 
-![21-Vintarad]()
+![21-Vintarad](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_21-Vintarad.png)
 
 _Il existe plein de types de ventirad, et chacun a sa procédure de montage. Lisez la notice (ou cherchez sur YouTube/Google) !_
 
-![22-Différents ventirad]()
+![22-Différents ventirad](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_22-Diff%C3%A9rents%20ventirad.png)
 
 Sous le radiateur, qui sera en contact direct avec le boîtier en métal du processeur, on applique de la **pâte thermique** pour améliorer l'échange thermique entre le CPU et le radiateur.
 
@@ -323,7 +323,7 @@ Certains radiateurs sont pré-équipés de pads thermiques, collés directement 
 
 _Application de pâte thermique sur un CPU. Pas besoin d’en mettre beaucoup (un gros grain de riz au centre suffit)._
 
-![23-Application de pâte thermique]()
+![23-Application de pâte thermique](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_23-Application%20de%20p%C3%A2te%20thermique.png)
 
 Il existe également des systèmes de refroidissement liquide :
 * **watercooling "AIO"** (All-In-One), prêt à être installé sur un CPU - souvent plus silencieux et performant qu'un ventirad, simple à installer
@@ -337,7 +337,7 @@ Autre composant indispensable, la **mémoire vive**, souvent appelée **RAM** (R
 
 Par exemple, les données (images, texte, etc.) des pages web ouvertes sur votre navigateur sont stockées dans la mémoire vive.
 
-![24-barettes de RAM]()
+![24-barettes de RAM](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_24-barettes%20de%20RAM.png)
 
 _En haut, une barette de RAM pour PC �xe (taille **DIMM**)._
 
@@ -364,7 +364,7 @@ Il existe différents types/technologie de mémoire RAM, mais de nos jours les m
 
 Il existe différentes générations de DDR, de DDR1 à DDR5 (la plus récente). ⚠️​ **Attention** à la compatibilité avec votre carte mère /processeur là-aussi !
 
-![25-Types de mémoire]()
+![25-Types de mémoire](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_25-Types%20de%20m%C3%A9moire.png)
 
 ## Dual channel
 
@@ -401,7 +401,7 @@ En général, on trouve deux dimensions de disques durs :
 * 2.5" (pouces), utilisé pour les PC portables
 * 3.5", dans les PC fixes
 
-![26-Disque dur de 2.5puces]()
+![26-Disque dur de 2.5puces](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_26-Disque%20dur%20de%202.5puces.png)
 
 ### Connectique 
 
@@ -412,7 +412,7 @@ Il existe plusieurs connectiques différentes pour les disques durs :
 
 Récupérer de l’information, le HDD est plus fiable
 
-![27-Disque dur IDE et SATA]()
+![27-Disque dur IDE et SATA](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_27-Disque%20dur%20IDE%20et%20SATA.png)
 
 _Sur la gauche, un disque dur connecté en IDE/PATA (avec une nappe IDE), et un connecteur MOLEX 4 broches pour l'alimentation._
 
@@ -425,7 +425,7 @@ _Sur la droite, un disque dur connecté en SATA (avec un câble SATA), et un con
 
 💡​ Les disques durs SATA sont en général compatibles avec des connecteurs SAS, l'inverse n'est pas vrai.
 
-![28-Connecteurs Parallel]()
+![28-Connecteurs Parallel](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_28-Connecteurs%20Parallel.png)
 
 _Deux disques durs avec des connecteurs Parallel SCSI, uniquement rencontré sur du matériel relativement ancien._
 
@@ -450,11 +450,11 @@ Les clés USB, cartes SD ou Compact Flash et les disques SSD reposent tous sur c
 * format mSATA (spécifications proches du format disque 2,5’’)
 * format M.2, avec ou sans NVMe (très performant en NVMe/PCIe)
 
-![29-SSD 2.5 puces]()
+![29-SSD 2.5 puces](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_29-SSD%202.5%20puces.png)
 
 _Un SSD au format 2.5" monté dans un adaptateur 3.5" pour installation dans un PC fixe._
 
-![30-Différents SSDs]()
+![30-Différents SSDs](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_30-Diff%C3%A9rents%20SSDs.png)
 
 _Différents types de SSDs, plus ou moins performants._
 
@@ -529,7 +529,7 @@ Il faut s’assurer de la compatibilité de la GPU avec la CM (vitesse du bus PC
 
 💡​ **Attention**, Certaines cartes mères en possèdent plusieurs (comme sur la photo de la slide suivante), il faut en priorité utilisé le plus proche du processeur, qui dispose en général de la meilleure bande passante.
 
-![31-Slots PCI Express]()
+![31-Slots PCI Express](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_31-Slots%20PCI%20Express.png)
 
 _Deux connecteurs (slots) PCI Express 16x, celui du haut est renforcé pour accueillir des cartes graphiques de grande taille._
 
@@ -537,7 +537,7 @@ Comme d'habitude, il faut s'assurer de la **compatibilité de la carte graphique
 
 ⚠️ **Attention** également : certaines cartes graphiques doivent être directement alimentées par le bloc d'alimentation, il faut donc que le bloc d'alim dispose des connecteurs adaptés (c'est indiqué sur la fiche technique).
 
-![32-Carte graphique avec alimentation directe]()
+![32-Carte graphique avec alimentation directe](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_32-Carte%20graphique%20avec%20alimentation%20directe.png)
 
 _Une carte graphique nécessitant une alimentation directe._
 
@@ -573,7 +573,7 @@ Les 20% restants sont transformés en chaleur émise par l'alim.
 
 _Les logos des certifications 80 PLUS, visibles sur la fiche technique et parfois directement sur l'alim._
 
-![33-Certifictations alim]()
+![33-Certifictations alim](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_33-Certifictations%20alim.png)
 
 💡​ Pour ne pas "gaspiller" d'énergie, on va donc chercher un rendement le plus proche des 100%.
 
@@ -606,7 +606,7 @@ Quelques exemples par [ici](https://www.ldlc.pro/pieces/boitier-pc/c5418/)
 
 Il existe différentes tailles de boîtiers
 
-![34-Dimensions boîtier]()
+![34-Dimensions boîtier](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_34-Dimensions%20bo%C3%AEtier.png)
 
 ### Choix du boîtier
 
@@ -634,7 +634,7 @@ Peut varier en fonction du boîtier/des composants, mais en général :
 10.	Connexion du "front panel" à la carte mère (voir ci-après)
 11.	(optionnel) Installation de ventilateurs
 
-![35-Montage PC]()
+![35-Montage PC](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_35-Montage%20PC.png)
 
 ## Front Panel 
 
@@ -644,11 +644,11 @@ On appelle ces éléments le **front panel** (on pourrait traduire ça en "panne
 
 Tous ces éléments vont devoir être connectés à la carte mère !
 
-![36-Front Panel]()
+![36-Front Panel](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_36-Front%20Panel.png)
 
 _Ça ressemble à ça, le front panel ! (sur la gauche, les câbles à connecter à la carte mère)_
 
-![37-Connexions sur carte mère]()
+![37-Connexions sur carte mère](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_37-Connexions%20sur%20carte%20m%C3%A8re.png)
 
 _Là où il faut connecter les éléments sur la carte mère ! (cette position peut varier un peu d'une carte mère à l'autre)_
 
@@ -658,7 +658,7 @@ C’est l’une des tâches les plus compliquées lors de l’assemblage d’un 
 
 💡​ Les boutons n’ont pas de polarité : on peut les connecter dans un sens ou dans l’autre. Ce n’est pas le cas des LEDs. Si une LED ne s'allume pas, c'est qu'elle est connectée à l'envers.
 
-![38-Boutons led]()
+![38-Boutons led](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_38-Boutons%20led.png)
 
 ## Cable management
 
@@ -668,11 +668,11 @@ Quand on assemble un PC, il est courant de faire attention au **cable management
 
 Un bon câble management facilite également la maintenance !
 
-![39-Mauvais cablement]()
+![39-Mauvais cablement](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_39-Mauvais%20cablement.png)
 
 _Un mauvais câble management !_ ❌​
 
-![40-bon câble management]()
+![40-bon câble management](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_40-bon%20c%C3%A2ble%20management.png)
 
 _Un bon câble management !_ ✅
 
@@ -682,7 +682,7 @@ Faire un bon câble management demande d'avoir un bon boîtier !
 
 Les boîtiers modernes de bonne facture sont en général pensés pour faciliter le câble management (avec de l'espace prévu derrière la carte mère et des trous pour passer les câbles).
 
-![41-câbles bien rangés]()
+![41-câbles bien rangés](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_41-c%C3%A2bles%20bien%20rang%C3%A9s.png)
 
 ## Electricité statique
 
@@ -690,7 +690,7 @@ Les boîtiers modernes de bonne facture sont en général pensés pour faciliter
 
 Évitez de porter des vêtements en matière synthétique, privilégiez les vêtements en coton. Vous pouvez aussi toucher un élément relié à la terre (radiateur, tige de terre dans une prise 220V, etc.) pour vous "décharger".
 
-![42-bracelet antistatique]()
+![42-bracelet antistatique](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A104/A104_42-bracelet%20antistatique.png)
 
 _Il existe également des bracelets de mise à la terre, pour être sûr de ne pas détruire son matériel à cause de l'électricité statique._
 
