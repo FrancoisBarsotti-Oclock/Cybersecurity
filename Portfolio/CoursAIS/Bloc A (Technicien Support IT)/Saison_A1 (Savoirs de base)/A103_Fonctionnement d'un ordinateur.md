@@ -512,7 +512,7 @@ Sorti en 1970, avec un processeur Intel 8008 (successeur du 4004).
 
 ### Micral
 
-![[Pasted image 20251116194105.png#center]]
+![25-Micral]()
 
 Développé en 1972 et commercialisé dès 1973 par R2E, un bureau d'études Français.
 
@@ -526,9 +526,9 @@ R2E a été absorbé par le groupe Bull en 1978.
 
 ### Téléscripteur
 
-![[Pasted image 20251116194158.png#center]]
+![26-Téléscripteur]()
 
-Bel exemple d'une [Téléscripteur](https://fr.wikipedia.org/wiki/T%C3%A9l%C3%A9scripteur) beaucoup plus fournie en anglais qu'en français.
+Bel exemple d'une [page Wikipédia](https://fr.wikipedia.org/wiki/T%C3%A9l%C3%A9scripteur) beaucoup plus fournie en anglais qu'en français.
 
 ### Xerox Alto & Star (1973/1981)
 
@@ -540,17 +540,15 @@ Bel exemple d'une [Téléscripteur](https://fr.wikipedia.org/wiki/T%C3%A9l%C3%A9
 
 premier ordi transportable.
 
-![[Pasted image 20251116194740.png]]
+![27-IBM 5100]()
 
 1978 : IBM 5110 , plus large public, 5120 écran plus grand [IBM 5100 et 5110](https://fr.wikipedia.org/wiki/IBM_5100_et_5110)
 
-1981 : 5150 successeurs du 5110, architecture différente, qui deviendra le
-
-fameux IBM PC
+1981 : 5150 successeurs du 5110, architecture différente, qui deviendra le fameux IBM PC
 
 ### Altair 8800 (1975)
 
-![[Pasted image 20251116194815.png]]
+![28-Altair 8800]()
 
 Considéré comme l'un des premiers micro- ordinateurs vendus aux particuliers : l'Atlair 8800 est sorti en 1975, vendu sous forme de kit à 400$.
 
@@ -558,9 +556,13 @@ Bill Gates, Paul Allen, Steve Wozniak et Steve Jobs ont tous fait leurs débuts 
 
 [Altair 8800](https://fr.wikipedia.org/wiki/Altair_8800)
 
+Si jamais on a regardé Malcom, c'est possible qu'on ait vu passer l'Altair 8800 dans une épisode
+
+![29-Malcom with an Altair 8800]()
+
 ### Homebrew Computer Club (Apple)
 
-![[Pasted image 20251116194857.png]]
+![30-Apple Homebrew]()
 
 Club d'amateurs d'informatique qui se réunissent dans la Silicon Valley.
 
@@ -568,7 +570,7 @@ Plusieurs machines conçues par des membres du club ont été commercialisées, 
 
 ### Appel II (1977/1993)
 
-![[Pasted image 20251116195135.png#center]]
+![31-Apple II]()
 
 Après une commande de 100 Apple I, Woz & Steve Jobs fondent Apple Computer.
 
@@ -578,63 +580,65 @@ Quelques dizaines de commandes plus tard et ils annoncent l'Apple II, un ordinat
 
 ### Commodore PET (1977)
 
-![[Pasted image 20251116195341.png#center]]
+![32-Comodore PET]()
 
 Sorti en 1977, un peu moins d’un million d'unités vendues.
 
-[Commodore PET](https://fr.wikipedia.org/wiki/Commodore_PET)
+Pour savoir plus de [Commodore PET](https://fr.wikipedia.org/wiki/Commodore_PET) 👈​
 
 ### TRS-80 (1977)
-![[Pasted image 20251116195415.png#center]]
+
+![33-TRS 80]()
+
 Sorti en 1977, 1,5 millions d'unités vendues.
 
-[TRS-80](https://fr.wikipedia.org/wiki/TRS-80)
+Pour plus d'information sur [TRS-80](https://fr.wikipedia.org/wiki/TRS-80) 👈​
 
 ### TL-99 (1979)
 
-![[Pasted image 20251116195452.png]]
+![34-TL 99]()
 
 Sorti fin 1979, 2,8 millions vendus.
 
-[TI-99/4A](https://fr.wikipedia.org/wiki/TI-99/4A)
+Pour savoir plus du [TI-99/4A](https://fr.wikipedia.org/wiki/TI-99/4A) 👈​
 
 ###  Atari 8-bits (1979)
 
-![[Pasted image 20251116195522.png]]
+![35-Atari 8 bits]()
 
 Sorti en novembre 1979.
 
-[Atari 8-bits](https://fr.wikipedia.org/wiki/Atari_8-bits)
+Pour plus d'information sur l'[Atari 8-bits](https://fr.wikipedia.org/wiki/Atari_8-bits) 👈​
 
 ### Sinclair (1970/1980)
 
-![[Pasted image 20251116195552.png]]
+![36-Sinclair]()
 
 Date : fin des années 70 / début 80
 
-[Sinclair Research](https://fr.wikipedia.org/wiki/Sinclair_Research)
+Pour plus d'information du [Sinclair Research](https://fr.wikipedia.org/wiki/Sinclair_Research) 👈​
 
 ### Commodore VIC-20 & 64 (1980/1982)
 
-![[Pasted image 20251116195627.png]]
+![37-Comodore VIC 20]()
 
 1980 & 1982
 
 25 millions d'unités vendues pour le Commodore 64 !
 
-[Commodore 64](https://fr.wikipedia.org/wiki/Commodore_64)
+Pour plus de détails sur le [Commodore 64](https://fr.wikipedia.org/wiki/Commodore_64) 👈​
 
 ### Oric-1 & Atmos (1982/83)
 
-![[Pasted image 20251116195700.png]]
+![38-Oric 1 & Atmos]()
 
-L'ordinateur Oric-1, sorti en 1982/83, est le premier ordi à se répandre dans les foyers français & anglais (UK). [Oric](https://fr.wikipedia.org/wiki/Oric#Oric-1)
+L'ordinateur [Oric-1](https://fr.wikipedia.org/wiki/Oric#Oric-1), sorti en 1982/83, est le premier ordi à se répandre dans les foyers français & anglais (UK). 
 
-Oric Atmos: sorti en 1985. [Oric](https://fr.wikipedia.org/wiki/Oric#Oric_Atmos)
+[Oric Atmos](https://fr.wikipedia.org/wiki/Oric#Oric_Atmos): sorti en 1985. 
 
 ### Thomson TO7 (1982) & MO5 (1984)
 
-![[Pasted image 20251116195738.png]]
+![39-Thomson T07]()
 
 1982 : [Thomson TO7](https://fr.wikipedia.org/wiki/Thomson_TO7)
 
@@ -642,7 +646,7 @@ Oric Atmos: sorti en 1985. [Oric](https://fr.wikipedia.org/wiki/Oric#Oric_Atmos)
 
 ### Amstrad CPC 464 (1984)
 
-![[Pasted image 20251116195811.png]]
+![40-Amstrad CPC 464]()
 
 Sorti en 1984, pensé pour une utilisation familiale (il ne coûtait "que" 3500 francs).
 
@@ -650,32 +654,33 @@ Plus d’un million d'exemplaires vendus !
 
 ### IBM PC (1981/83)
 
-![[Pasted image 20251116200029.png]]
+![41-IBM PC]()
 
-1981 : IBM 5150, à base de processeur Intel 8088 [IBM PC](https://fr.wikipedia.org/wiki/IBM_PC)
+1981 : [IBM 5150](https://fr.wikipedia.org/wiki/IBM_PC), à base de processeur Intel 8088 
 
-1983 : IBM PC XT [IBM PC/XT](https://fr.wikipedia.org/wiki/IBM_PC/XT)
+1983 : [IBM PC XT](https://fr.wikipedia.org/wiki/IBM_PC/XT)
 
-### Lisa & Apple Macintosh (1983/84)
+#### Lisa & Apple Macintosh (1983/84)
 
-![[Pasted image 20251116200128.png]]
+![42-Lisa & Apple Macintosh]()
 
-Lisa 1983 (avec interface graphique) Motorola 68000 1Mo RAM, DD 5Mo 10k$ / 70k francs : [Apple Lisa](https://fr.wikipedia.org/wiki/Apple_Lisa)
+[Apple Lisa](https://fr.wikipedia.org/wiki/Apple_Lisa) 1983 (avec interface graphique) Motorola 68000 1Mo RAM, DD 5Mo 10k$ / 70k francs : 
 
-Macintosh 1984, premier succès d'interface graphique WIMP (Windows, Icons, Menus & Pointing device) similaire au Lisa mais à 2495€ 128ko de RAM, pas de disque interne : [Macintosh 128K](https://fr.wikipedia.org/wiki/Macintosh_128K)
+[Macintosh 1984](https://fr.wikipedia.org/wiki/Macintosh_128K), premier succès d'interface graphique WIMP (Windows, Icons, Menus & Pointing device) similaire au Lisa mais à 2495€ 128ko de RAM, pas de disque interne.
 
 ### IBM PS/1 & PS/2 (1987/90)
 
-![[Pasted image 20251116200318.png#center]]
+![43-IBM PS1]()
 
 1987 : [IBM Personal System/2](https://fr.wikipedia.org/wiki/IBM_Personal_System/2)
 
-1990 : [IBM Personal System/2](https://fr.wikipedia.org/wiki/IBM_Personal_System/2)
+1990 : [IBM Personal System/1](https://en.wikipedia.org/wiki/IBM_PS/1)
 
 ### IBM compatible
 
-![[Pasted image 20251116200357.png#center]]
-[Compaq](https://fr.wikipedia.org/wiki/Compaq)
+![44-IBM compatible]()
+
+Pour en savoir un peu [Compaq](https://fr.wikipedia.org/wiki/Compaq) 👈​
 
 #### Fin des années 90, 2000 & de nos jours, tout commence à exploser en évolution, niveau hardware et software.
 
