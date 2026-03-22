@@ -1,14 +1,14 @@
 # 🖥️ Session A103. Fonctionnement d'un ordinateur
 
 ### Comment fonctionne un ordinateur ?
-Un ordinateur (computer, en anglais) est un système programmable de traitement de l'information, qui fonctionne par la lecture séquentielle d'un ensemble d'instructions (programme informatique), qui lui font exécuter des opérations logiques et arithmétiques.
+Un ordinateur (computer, en anglais) est un **système programmable de traitement de l'information**, qui fonctionne par la lecture séquentielle d'un ensemble d'instructions (programme informatique), qui lui font exécuter des **opérations logiques et arithmétiques**.
 
 La notion d'ordinateur a été formalisée mathématiquement par **Alan Turing** en 1931. Les premières implémentations commencent à émerger dans les années 40, suite notamment aux travaux de **John von Neumann**.
 
 Le mot "ordinateur" a été introduit en France par IBM dans les années 50. La traduction littérale de computer, calculateur ou calculatrice, est plutôt réservé aux machines scientifiques.
 
 ## Types d’ordinateurs
-Les ordinateurs modernes que nous utilisons s'appellent des ordinateurs personnels (PC, _Personnal Computer_, en anglais).
+Les ordinateurs modernes que nous utilisons s'appellent des **ordinateurs personnels** (PC, _Personnal Computer_, en anglais).
 
 On rencontrait parfois avant le terme de **micro-ordinateur** ou d'**ordinateur individuel**, mais ces termes sont tombés en désuétude.
 
@@ -17,20 +17,30 @@ Il existe différents "types" d'ordinateurs personnels :
 * Ordinateur portable
 * Ordinateur à carte unique
 
-### Ordinateur fixe
-Un **ordinateur de bureau** ou **ordinateur** **fixe** (_desktop computer_, en anglais) est un ordinateur destiné à être utilisé sur un bureau ou tout autre endroit "fixe", à cause de ses dimensions qui le rendent difficilement transportable.
+### Ordinateur fixe 🖥️​
+Un **ordinateur de bureau** ou **ordinateur fixe** (_desktop computer_, en anglais) est un ordinateur destiné à être utilisé sur un bureau ou tout autre endroit "fixe", à cause de ses dimensions qui le rendent difficilement transportable.
 
 Il est composé (en général) d'une **unité centrale**, d'un (ou plusieurs) écran(s), ainsi que de **périphériques** **d'entrées**/**sorties** (clavier, souris, haut-parleurs, imprimante, etc.).
 
-Plus d'infos par [https://fr.wikipedia.org/wiki/Ordinateur_de_bureau](https://fr.wikipedia.org/wiki/Ordinateur_de_bureau) .
-![[Pasted image 20251116190829.png]]
-_On distingue sur cette photo l'unité centrale à gauche, du fabricant Dell, un écran de marque LG ainsi qu'un clavier et une souris._
-### Ordinateur portable
+Plus d'infos par [Wikipedia, ici](https://fr.wikipedia.org/wiki/Ordinateur_de_bureau).
+
+![01-Desktop]()
+
+_On distingue sur cette photo l'unité centrale à gauche, un écran ainsi qu'un clavier et une souris._
+
+Pour plus d'information, [Wikipedia en a bien plus à nous dire](https://fr.wikipedia.org/wiki/Ordinateur_de_bureau)
+
+### Ordinateur portable 💻​
+
 Un **ordinateur portable** (_laptop_, en anglais), est un ordinateur personnel dont le poids et les dimensions limitées permettent un transport facile.
 
 Un ordinateur portable est muni des mêmes types de composants qu'un ordinateur de bureau classique : un écran, un clavier, un périphérique de pointage (trackpoint et/ou trackpad), de haut-parleurs, etc.
-![[Pasted image 20251116190941.png]]
-_Un laptop IBM Thinkpad R51._
+
+![02-laptop]()
+
+_Un laptop_
+
+Ce que [Wikipedia peut nous dire sur l'ordi portable](https://fr.wikipedia.org/wiki/Ordinateur_portable)
 
 Il existe différents types d'ordinateurs portables :
 * ***tablettes** : ordinateur portable ultraplat sans clavier, composé uniquement d'un écran tactile.
@@ -38,12 +48,15 @@ Il existe différents types d'ordinateurs portables :
 * **ultrabook** (_ultraportable_, en français) : ordinateur portable de petite taille (écran de 12, 13 ou 14"), aussi performant qu'un portable classique
 * ordinateur portable de taille "classique" (écran de 15" ou 17")
 
-### Ordinateur à carte unique
+### Ordinateur à carte unique ​🍒​
 Un ordinateur à carte unique (parfois abrégé SBC, de l'anglais _Single-Board Computer_) est un ordinateur complet construit sur un seul circuit imprimé.
 
 Rarement utilisés comme ordinateurs personnels, ils servent en général plutôt pour de **l'informatique** **embarquée** (à l'intérieur d'une machine ou d'un appareil).
-![[Pasted image 20251116191054.png]]
+
+![03-raspberry]()
+
 _Plusieurs modèles de Raspberry Pi, un ordinateur à carte unique très populaire._
+
 ### Autres types d'ordinateurs
 * Serveur
 * Ordinateur embarqué / ordinateur de bord
@@ -51,85 +64,103 @@ _Plusieurs modèles de Raspberry Pi, un ordinateur à carte unique très populai
 * Super-calculateur
 
 On ne peut pas vraiment parler d'ordinateurs personnels pour ceux-là ! On reparlera des serveurs un peu plus tard.
+
 ## Hardware vs. Software
 Un ordinateur, pour fonctionner, a besoin de deux éléments :
-* partie matérielle, hardware en anglais : les différents composants et périphériques qui constituent l'ordinateur.
-* partie logicielle, software en anglais : les programmes, applications, le système d'exploitation qui permettent d'utiliser le hardware pour réaliser les tâches que nous souhaitons réaliser avec l'ordinateur.
-## Composants d'un ordinateur
+
+* **partie matérielle, hardware** en anglais : les différents composants et périphériques qui constituent l'ordinateur.
+* **partie logicielle, software** en anglais : les programmes, applications, le système d'exploitation qui permettent d'utiliser le hardware pour réaliser les tâches que nous souhaitons réaliser avec l'ordinateur.
+
+## Composants d'un ordinateur 🧩
 
 Tout ordinateur, quel que soit son type, a besoin de certains composants pour fonctionner :
-* le processeur (CPU, Central Processing Unit en anglais) : le cerveau de l'ordinateur, il traite les instructions des programmes et effectue les calculs
-* la mémoire morte (ROM, Read-Only Memory en anglais) : là où sont stockées les données et les programmes !
-* la mémoire vive (RAM, Random-Access Memory en anglais) : la mémoire de "travail", ne conserve que les données quand l'ordinateur est allumé D'autres composants peuvent être ajoutés, on en reparle très bientôt.
+
+* le **processeur** (**CPU**, Central Processing Unit en anglais) : le cerveau de l'ordinateur, il traite les instructions des programmes et effectue les calculs
+* la **mémoire morte** (**ROM**, Read-Only Memory en anglais) : là où sont stockées les données et les programmes !
+* la **mémoire vive** (**RAM**, Random-Access Memory en anglais) : la mémoire de "travail", ne conserve que les données quand l'ordinateur est allumé.
+
+D'autres composants peuvent être ajoutés, on en reparle très bientôt.
+
 ## Périphériques
-Un périphérique informatique est un dispositif connecté à un ordinateur, permettant de lui ajouter des fonctionnalités.
+Un périphérique informatique est un **dispositif connecté à un ordinateur**, permettant de lui ajouter des fonctionnalités.
+
 ### Types de périphériques
+
 Il existe plusieurs types de périphériques !
-* périphériques d'entrée : servent à transmettre des informations à un ordinateur.
-* périphériques de sortie : servent à faire sortir des informations d'un ordinateur.
-* périphériques d'entrée-sortie : vous vous en doutez, ils permettent de faire les deux !
-## Périphériques d'entrée
+
+* **périphériques d'entrée** : servent à transmettre des informations à un ordinateur.
+* **périphériques de sortie** : servent à faire sortir des informations d'un ordinateur.
+* **périphériques d'entrée-sortie** : vous vous en doutez, ils permettent de faire les deux !
+
+### Périphériques d'entrée 
+
 On trouve différents types de périphériques d'entrée :
-* dispositifs de saisie : clavier, pavé numérique
-* dispositifs de lecture : lecteur de disque optique (CD, DVD, etc.), lecteur de carte à puce, lecteur de code-barres, etc.
-* dispositifs de pointage : souris, trackpad (pavé tactile en français), trackpoint, tablette graphique
-* contrôleurs de jeu : manettes ou joysticks, pour les jeux-vidéos.
-* dispositifs d'acquisition d'image : scanner, webcam
-* dispositifs d'acquisition sonore : microphone
-## Périphériques de sortie
+
+* **dispositifs de saisie** : clavier, pavé numérique
+* **dispositifs de lecture** : lecteur de disque optique (CD, DVD, etc.), lecteur de carte à puce, lecteur de code-barres, etc.
+* **dispositifs de pointage** : souris, trackpad (pavé tactile en français), trackpoint, tablette graphique
+* **contrôleurs de jeu** : manettes ou joysticks, pour les jeux-vidéos.
+* **dispositifs d'acquisition d'image** : scanner, webcam
+* **dispositifs d'acquisition sonore** : microphone
+
+### Périphériques de sortie
 
 Un peu plus simple pour les périphériques de sortie, quelques exemples :
 * écran
 * imprimante
 * haut-parleurs
-## Périphériques d'entrée-sortie
+
+### Périphériques d'entrée-sortie
 
 Là encore, différents types de périphériques d'entrée-sortie :
-* mémoire de masse : lecteur de bande magnétique, lecteur de disquette, disque dur, graveur de disques optiques, clé USB
-* équipements réseau : modem, par exemple (on parle du réseau plus tard !)
-* périphériques d'interaction homme-machine : écran tactile, casque de réalité virtuelle
-* périphériques multifonctions : les imprimantes qui font également scanner, par exemple!
 
-# SOFTWARE
+* **mémoire de masse** : lecteur de bande magnétique, lecteur de disquette, disque dur, graveur de disques optiques, clé USB
+* **équipements réseau** : modem, par exemple (on parle du réseau plus tard !)
+* **périphériques d'interaction homme-machine** : écran tactile, casque de réalité virtuelle
+* **périphériques multifonctions** : les imprimantes qui font également scanner, par exemple!
 
-## Systèmes d’exploitation (OS : Microsoft Windows, Apple MacOS, GNU/Linux)
+## SOFTWARE
 
-Un système d'exploitation (souvent appelé OS — de l'anglais operating system), est le logiciel principal d'un ordinateur.
+## Systèmes d’exploitation (OS : Microsoft Windows, Apple MacOS, GNU/Linux) 🪟​🍏​🐧​
+
+Un système d'exploitation (souvent appelé **OS** — _de l'anglais operating system_), est le logiciel principal d'un ordinateur.
 
 Il offre une suite de service permettant la création de logiciels applicatifs, et sert d'intermédiaire entre ces logiciels et le matériel. Il offre une suite de service permettant la communication entre le matériel physique de l’ordi (à travers les drivers) et les logiciels/applications interne (Chrome, Microsoft…)
-![[Pasted image 20251116191539.png]]
-## Smatphones 
+
+![04-OS]()
+
+Il existe plusieurs systèmes d'exploitation, les plus courament rencontrés sur les ordinateurs modernes sont : Microsoft Windows 🪟, Apple MacOS ​🍏 et GNU/Linux 🐧​.
+
+### Smatphones 📳​
 
 ils ont aussi un système d’exploitation (Android, iOS, Windows Phone, ancien Blackberry OS)
+
 ## Composants d’un OS :
+
 ### Noyau
 
 Le Noyau (kernel) : est le composant principal d’un OS (c’est le chef d’orchestra). Il offre les fonctionnalités suivantes :
 
-·        exécution et ordonnancement des programmes
-
-·        utilisation et gestion des ressources de l'ordinateur, comme la mémoire
-
-·        gestion des périphériques
-
-·        manipulation des systèmes de fichiers (on en parle après)
-
-·        gestion et communication via le réseau
+* exécution et ordonnancement des programmes
+* utilisation et gestion des ressources de l'ordinateur, comme la mémoire
+* gestion des périphériques
+* manipulation des systèmes de fichiers (on en parle après)
+* gestion et communication via le réseau
 
 ### Interfaces 
 
 Pour exploiter les fonctionnalités du noyau, on peut passer par différentes interfaces :
 
-·        interface graphique (GUI, Graphical User Interface, en anglais)
-
-·        interface en ligne de commande (CLI, Command Line Interface, en anglais)
-
-·        interface de programmation (API, Application Programming Interface, en anglais)
+* **interface graphique** (GUI, Graphical User Interface, en anglais)
+* **interface en ligne de commande** (CLI, Command Line Interface, en anglais)
+* **interface de programmation** (API, Application Programming Interface, en anglais)
 
 L'interface graphique et l'interface en ligne de commande sont appelées des **interfaces homme-machine**, souvent abrégé **IHM**.
 
 Elles permettent à un homme (dans le sens "être humain") d'interagir avec la machine.
-![[Pasted image 20251116191635.png]]
+
+![05-Interfaces]()
+
 #### Interface Graphique 
 Ce sont les différents menus proposés par le OS pour le configurer et réaliser des tâches courantes. Par exemple, pour éteindre votre ordinateur, vous cliquez sur le
 
@@ -139,8 +170,10 @@ menu démarrer puis sur le bouton d'extinction.
 Moins connues du grand public, les interfaces en ligne de commande permettent aux utilisateur avancés (nous !) d’interagir avec le OS en lançant des commandes, instructions spécifiques, propres au système de OS utilisé. Par ex, pour éteindre l’ordi, on peut lancer la commande shutdown.
 
 Sur Windows, elle est accessible via un programme préinstallé qui s’appelle l’**invite de** **commande**. On appelle parfois cette interface le **terminal**.
-![[Pasted image 20251116191732.png]]
-**À retenir** _Raccourci clavier_ **:** Ctrl + R ou **Win + R** et taper **cmd**
+
+![06-Terminal]()
+
+💡​ **À retenir** _Raccourci clavier_ : `Ctrl + R` ou `Win + R` puis taper `cmd`.
 
 #### Interface de programmation 
 
