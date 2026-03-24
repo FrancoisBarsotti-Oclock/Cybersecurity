@@ -26,11 +26,11 @@
 
 Challenge A203 : Memtest, Anydest, Teamviewer.
 
-Atelier A204 : Atelier "Mme Michu", dépannage d'une VM simulant un labtop en panne.
+Atelier A204 : Atelier "Mme Michu", dépannage d'une VM simulant un ordinateur en panne.
 
 Challenge A206 : Test BIOS, et partitions sur USB.
 
-Challenge A207 : QCM certification ITIL.
+Challenge A207 : QCM 2, certification ITIL.
 
 Challenge A208 : Installation GLPI Agent et test de ticketing.
 
@@ -39,9 +39,9 @@ Challenge A301 : Mise en place d'un réseau et ping sur Packet Tracer.
 
 Challenge A303 : Création d’un plan d’adressage
 
-Challenge A304 : Config de Routeurs et LANs sur Packet Tracer
+Challenge A304 : Config de Routeurs et LANs sur Packet Tracer.
 
-Atelier A305 : Atelier Packet Tracer, de la création du plan d'adressage, à la config switch, routeurs, routes, DHCP, etc.
+Atelier A305 : Atelier Packet Tracer, création du plan d'adressage, config switch, routeurs, routes, DHCP, etc.
 
 Challenge A306 : DNS et SSH dans Packet Tracer
 
@@ -49,7 +49,7 @@ Challenge A307 : Self Hosting, NAT et redirection dans Packet Tracer.
 
 Atelier A308 : Installation de Proxmox sur un serveur OVH, configuration du NAT, installation et configuration du routeur pfSense, et VPN.
 
-Challenge A309 : Pratiquer les VLAN, Inter-VLAN et ACLs
+Challenge A309 : Pratiquer les VLAN, Inter-VLAN et ACLs.
 
 ### Challenges A4 (Windwos Server)
 Challenge A401 : Installation de Windows Server 2022 sur VMware.
@@ -64,7 +64,7 @@ Challenge A405 : Mappage de lecteurs, ressources, quotas, filtres, et audit.
 
 Atelier A406 : Atelier de mise en place et gestion de GPO.
 
-Challenge A408 : Enregistrement DNS, IIS et index.html
+Challenge A408 : Enregistrement DNS, IIS et index.html.
 
 Challenge A409 : Supression et récupération utilisateur dans l'AD.
 
