@@ -24,15 +24,17 @@
 
 👉 [Challenge A202](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenge_A202.md) : Diagnostic Ping VM.
 
-Challenge A203 : Memtest, Anydest, Teamviewer.
+Challenge A203 : MemTest86, Anydest, Teamviewer.
 
 Atelier A204 : Atelier "Mme Michu", dépannage d'une VM simulant un ordinateur en panne.
 
 Challenge A206 : Test BIOS, et partitions sur USB.
 
-Challenge A207 : QCM 2, certification ITIL.
+Challenge A207 : •	Automatisation des sauvegardes avec Veeam avec tests de restauration
 
-Challenge A208 : Installation GLPI Agent et test de ticketing.
+Challenge A208 : QCM 2, certification ITIL.
+
+👉 [Challenge A209 (CP1)]() : Mise en place d'un processus ITIL avec GLPI Agent pour la gestion de ticketing et le respect du Service Level Agreement (SLA).
 
 ### Challenges A3 (Réseau)
 Challenge A301 : Mise en place d'un réseau et ping sur Packet Tracer.
@@ -41,7 +43,7 @@ Challenge A303 : Création d’un plan d’adressage
 
 Challenge A304 : Config de Routeurs et LANs sur Packet Tracer.
 
-Atelier A305 : Atelier Packet Tracer, création du plan d'adressage, config switch, routeurs, routes, DHCP, etc.
+👉 [Atelier A305 (CP2)]() : Conception et implémentation d’une architecture réseau segmentée (VLAN Cisco) - (Atelier Packet Tracer, création du plan d'adressage, config switch, routeurs, routes, DHCP, etc).
 
 Challenge A306 : DNS et SSH dans Packet Tracer
 
@@ -62,7 +64,9 @@ Challenge A404 : Création de partages et droits.
 
 Challenge A405 : Mappage de lecteurs, ressources, quotas, filtres, et audit.
 
-Atelier A406 : Atelier de mise en place et gestion de GPO.
+👉 [Atelier A406 (CP3)]() : Administration et sécurisation des accès utilisateurs via Active Directory et GPO (Atelier de mise en place et gestion de GPO).
+
+👉 [Mini-atelier (CP9)]() : Définition et mise en œuvre d’une politique de mots de passe via GPO et sensibilisation des utilisateurs.
 
 Challenge A408 : Enregistrement DNS, IIS et index.html.
 
@@ -95,6 +99,10 @@ Challenge A509 : Atelier Installer et configurer un serveur Asterisk sur proxmox
 
 ### Challenges B1 (Virtualisation)
 👉 [Challenge B101](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B1/Challenge_B101.md) : Installation d'Hyperviseurs Types 1 é 2, imbrication.
+
+👉 [Mini-atelier CP4]() : Mise en place d’un cluster Proxmox en haute disponibilité (HA)
+
+👉 [Mini-atelier CP5]() : •	Étude comparative des solutions de virtualisation : VMware vs Proxmox
 
 👉 [Challenge B102](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B1/Challenge_B102.md) : Installation ESXi (vSphere)
 
@@ -164,13 +172,13 @@ Challenge C204 : Déploiement Openstack
 ### Challenges C3 (Sécurité systèmes & réseaux)
 👉 [Challenge C301](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C301.md): Segmentation VLAN & Contrôle d'accès (ACL)
 
-👉 [Challenge C302](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C302.md): Radius
+👉 [Challenge C302 (CP7)](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C302.md): Mise en œuvre d’une supervision proactive des services IT avec Zabbix - Supervision avancée avec Zabbix
 
 👉 [Challenge C302](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C303.md): Monter un serveur RADIUS et lier Authentification à AD.
 
 👉 [Challenge C303](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C303.md) : Déployer un VPN et authentifier les utilisateurs via RADIUS.
 
-👉 [Challenge C304](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C304.md) : 
+👉 [Challenge C304 (CP10)](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C3/Challenge_C304.md) : Mise en place d’un SIEM Wazuh pour la détection et le traitement des incidents de sécurité.
 
 👉 [Challenge C305]() : 
 
@@ -193,6 +201,8 @@ Challenge C204 : Déploiement Openstack
 
 👉 [Challenge C403](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C4/Challenge_C403.md) : Orchestration.
 
+👉 [Mini-atelier (CP6)]() : Migration d’applications vers une architecture conteneurisée avec Docker
+
 👉 [Challenge C405](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C4/Challenge_C405.md) : QCM 13, Orchestration.
 
 ### Challenges C5 (Pentesting)
@@ -206,3 +216,5 @@ Challenge C204 : Déploiement Openstack
 👉 [Challenge C504](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20C5/Challenge_C504.md) : Metasploit & Wi-Fi Hacking
 
 👉 [Challenge C505]() : QCM 14, Pentesting
+
+👉 [Mini-atelier (CP8)]() : Audit de sécurité réseau par scan actif avec Nmap
