@@ -30,7 +30,7 @@ Atelier A204 : Atelier "Mme Michu", dépannage d'une VM simulant un ordinateur e
 
 Challenge A206 : Test BIOS, et partitions sur USB.
 
-Challenge A207 : •	Automatisation des sauvegardes avec Veeam avec tests de restauration
+Challenge A207 : Automatisation des sauvegardes avec Veeam avec tests de restauration
 
 Challenge A208 : QCM 2, certification ITIL.
 
