@@ -115,6 +115,66 @@ sudo tar -xvf glpi-10.0.17.tgz -C /var/www/html
 ls /var/www/html
 ```
 
+Pour mieux protéger la VM Debian, j'ai lancé des règles iptables
+
+```nginx
+# Installation de la persistance
+# Installation du paquet pour sauvegarder les règles iptables au redémarrage
+sudo apt update
+sudo apt install iptables-persistent
+
+# Nettoyage des règles existantes
+# Vider toutes les chaînes de la table filter (INPUT, OUTPUT, FORWARD)
+sudo iptables -F
+
+# Supprimer les chaînes personnalisées
+sudo iptables -X
+
+# Vider les chaînes de la table nat
+sudo iptables -t nat -F
+sudo iptables -t nat -X
+
+# Politique par défaut
+# Bloquer tout le trafic entrant par défaut
+sudo iptables -P INPUT DROP
+
+# Bloquer le transit de paquets entre interfaces
+sudo iptables -P FORWARD DROP
+
+# Autoriser tout le trafic sortant
+sudo iptables -P OUTPUT ACCEPT
+
+# Autorisation du loopback
+# Autoriser les communications internes (127.0.0.1)
+sudo iptables -A INPUT -i lo -j ACCEPT
+
+# Autorisation des connexions déjà établies
+# Permettre les réponses aux connexions déjà sudo initiées (ex: réponses HTTP, DNS...)
+sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+# Autorisation des connexions SSH & HTTP/HTTPS
+sudo iptables -A INPUT -p tcp --dport 22 -s 10.42.0.0/24 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -s 10.42.0.0/24 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 443 -s 10.42.0.0/24 -j ACCEPT
+
+# Drop des paquets invalides
+# Rejeter les paquets dans un état de connexion invalide (protection supplémentaire)
+sudo iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
+
+#Vérification et sauvegarde
+# Afficher les règles actives avec statistiques
+sudo iptables -L -n -v
+
+# Sauvegarder les règles pour qu'elles persistent après redémarrage
+sudo netfilter-persistent save
+
+```
+
+![01-Vérification politiques iptables](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_01-V%C3%A9rification%20politiques%20iptables.png)
+
+
+
+
 
 
 ### 🚧 En construction 🚧
