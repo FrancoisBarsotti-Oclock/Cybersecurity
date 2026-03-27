@@ -186,7 +186,7 @@ Pendant l'installation on arrive à l'érreur classique due à un problème de p
 
 Pour la corriger, il faudra "refresh" après avoir fait deux choses:
 1. Changer le propriétaire des fichiers → <nom_utilisateur> (dans ce cas c'est `francois`) et le groupe utilisé par Apache → www-data en l'appliquant à tout le dossier récursivement (`-R`), pour que l'utilisateur puisse contrôler les fichiers et le serveur web puisse aussi y accéder via le groupe.
-2. Définir les permissions de récursivement (sur tous les dossiers, `-R`) pour que l'utilisateur et `www-data` aient accès complet tandis que les autres n'y aient aucun accès:
+2. Définir les permissions récursivement (sur tous les dossiers, `-R`) pour que l'utilisateur et `www-data` aient accès complet tandis que les autres n'y aient aucun accès:
     * **7 (user)** = lecture + écriture + exécution
     * **7 (group)** = lecture + écriture + exécution
     * **0 (others)** = aucun accès
@@ -232,7 +232,7 @@ Non seulement pour le super utilisateur mais aussi pour tous les autres utilisat
 
 ![13-Modif du mdp par défaut des utilisateurs](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_13-Modif%20du%20mdp%20par%20d%C3%A9faut%20des%20utilisateurs.png)
 
-## Étape 7: sécurité
+## Étape 7: Sécurité
 
 Après avoir modifié tous les mdp par défaut, on doit: 
 
