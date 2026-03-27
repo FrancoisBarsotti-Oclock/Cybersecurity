@@ -2,7 +2,9 @@
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 
-## Étape 1: VM Debian
+## Étape 1: Arhitecture 
+
+Dans un envirement virtuel Proxmox avec les deux machines suivantes:
 
 | **Élement** | **OS** | **IP** | **Rôle** |
 | :--: | :--: | :--: | :--: |
