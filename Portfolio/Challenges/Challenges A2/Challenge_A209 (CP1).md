@@ -56,6 +56,8 @@ sudo systemctl restart apache2
 https://ip_du_serveur
 ```
 
+![01-Apache HTTPS autosigné](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_01-01-Apache%20HTTPS%20autosign%C3%A9.png)
+
 ## Étape 4: MariaDB & MySQL
 
 ```nginx
@@ -96,6 +98,8 @@ Pour vérifier que PHP est opérationnel, on va créer un fichier très basique 
 ```nginx
 echo "<?php phpinfo(); ?>" | sudo tee -a /var/www/html/info.php
 ```
+
+![02-PHP fonctionnel](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_02-PHP%20fonctionnel.png)
 
 ## Étape 6: GLPI
 
@@ -170,7 +174,7 @@ sudo netfilter-persistent save
 
 ```
 
-![01-Vérification politiques iptables](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_01-V%C3%A9rification%20politiques%20iptables.png)
+![03-Vérification politiques iptables](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_03-V%C3%A9rification%20politiques%20iptables.png)
 
 
 
