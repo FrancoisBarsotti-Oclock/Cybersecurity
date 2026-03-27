@@ -203,6 +203,32 @@ Quand on nous demande la configuration de la connexion à la base de données, o
 
 ![07-Authentification GLPI](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_07-Authentification%20GLPI.png)
 
+Pour la suite, on peut créer une nouvelle base de données nommée `glpi` :
+
+![08-base de données glpi](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_08-base%20de%20donn%C3%A9es%20glpi.png)
+
+💡 Après avoir cliqué sur le bouton `Continuer`, l'initialisation de la base de données peut prendre plusieurs minutes. 
+
+> [!WARNING]
+> Ne pas recharger la page pendant l'initialisation de la base de données, pour éviter dévoir tout recommencer depuis le début de l'installation de GLPI. Il faudra attendre jusqu'à ce que GLPI nous dise que la base de données est bien créée et initialisée (avec un OK)
+
+![09-base de données créée et initialisée](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_09-base%20de%20donn%C3%A9es%20cr%C3%A9%C3%A9e%20et%20initialis%C3%A9e.png)
+
+Attention :  la première connexion à la base de données est par défaut avec `glpi` comme utilisateur et mot de passe:
+
+![10-Première connexion à base interne glpi](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_10-Premi%C3%A8re%20connexion%20%C3%A0%20base%20interne%20glpi.png)
+
+On aura réussi notre première connexion avec les récommandations initiales de sécurité
+
+![11-GLPI opérationnel](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_11-GLPI%20op%C3%A9rationnel.png)
+
+Alors, vite l'action à faire en urgence, suite à la première connexion, sera de remplacer le mot de passe (par défaut), par un mot de passe qui respecte les recommandations de l'ANSSI. 
+
+![12-Modif du mdp du super utilisateur](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_12-Modif%20du%20mdp%20du%20super%20utilisateur.png)
+
+Non seulement pour le super utilisateur mais aussi pour les autres utilisateurs
+
+![13-Modif du mdp par défaut des utilisateurs](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_13-Modif%20du%20mdp%20par%20d%C3%A9faut%20des%20utilisateurs.png)
 
 
 
