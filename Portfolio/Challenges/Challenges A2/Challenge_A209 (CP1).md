@@ -245,7 +245,7 @@ sudo rm install/install.php
 ls install/
 ```
 
-![13-Suppression du dossier glpi](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_13-Suppression%20du%20dossier%20glpi.png)
+![14-Suppression du dossier glpi](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_14-Suppression%20du%20dossier%20glpi.png)
 
 
 
