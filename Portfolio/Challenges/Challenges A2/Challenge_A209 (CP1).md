@@ -119,7 +119,7 @@ sudo tar -xvf glpi-10.0.17.tgz -C /var/www/html
 ls /var/www/html
 ```
 
-![03-GLPI HTTPS autosigné fonctionnel]()
+![03-GLPI HTTPS autosigné fonctionnel](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_03-GLPI%20HTTPS%20autosign%C3%A9%20fonctionnel.png)
 
 Pour mieux protéger la VM Debian, j'ai lancé des règles iptables
 
@@ -176,7 +176,7 @@ sudo netfilter-persistent save
 
 ```
 
-![03-Vérification politiques iptables]()
+![04-Vérification politiques iptables](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_04-V%C3%A9rification%20politiques%20iptables.png)
 
 
 
