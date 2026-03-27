@@ -232,7 +232,9 @@ Non seulement pour le super utilisateur mais aussi pour tous les autres utilisat
 
 ## Étape 7: sécurité
 
-Après avoir modifié tous les mdp par défaut, on doit supprimer le fichier `install/install.php` 
+Après avoir modifié tous les mdp par défaut, on doit: 
+
+### 1. supprimer le fichier `install/install.php` 
 
 ```nginx
 # Rentrer dans le dossier en question 
@@ -246,6 +248,122 @@ ls install/
 ```
 
 ![14-Suppression du dossier glpi](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_14-Suppression%20du%20dossier%20glpi.png)
+
+### 2. Faire pointer Apache sur le dossier `public/` uniquement 
+Ceci est pour que certains dossiers restent privés. cela corrige l'erreur: 
+>"La configuration du dossier racine du serveur web n'est pas sécurisée car elle permet l'accès à des fichiers non publics")
+
+```nginx
+# Modifier la config Apache pour http
+sudo nano /etc/apache2/sites-available/000-default.conf
+
+# Modifier la config Apache pour http
+sudo nano /etc/apache2/sites-available/default-ssl.conf
+```
+
+Remplacer `DocumentRoot /var/www/html` par `DocumentRoot /var/www/html/glpi/public` et rajouter trois lignes pour autoriser l'accès au bon dossier, comme il suit:
+
+```nginx
+DocumentRoot /var/www/html/glpi/public
+
+<Directory /var/www/html/glpi/public>
+    Require all granted
+    AllowOverride All
+
+    RewriteEngine On
+
+    RewriteCond %{HTTP:Authorization} ^(.+)$
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</Directory>
+```
+Si l'on lance une vérification à ce stade avec `sudo apache2ctl configtest` On verra qu'Apache ne connaît pas notre domaine et nous envite à rajouter un nom au serveur global, selon l'erreur: 
+
+>AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+>Syntax OK
+
+il faudra l'appeler `localhost`:
+
+```
+sudo nano /etc/apache2/apache2.conf
+
+# On rajoute le "ServerName"
+```
+
+Ensuite active le module de réécriture et redémarre Apache :
+
+```nginx
+sudo a2enmod rewrite
+sudo apache2ctl configtest
+sudo systemctl restart apache2
+```
+
+Jusqu'à présent nous avons toujours deux vhosts (le HTTP *80 et le HTTPS autosigné *443). Pour éviter un mélange de configs inutile on peut désactiver le HTTP *80:
+
+```nginx
+# désactivation dossier du HTTP
+sudo a2dissite 000-default.conf
+
+# Restart de service
+sudo systemctl reload apache2
+
+# Vérification pour y voir uniquement *:443
+apache2ctl -S
+```
+
+![15-Désactivation fichier HTTP](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_15-D%C3%A9sactivation%20fichier%20HTTP.png)
+
+💡 à savoir que, en production, on peut aussi juste rediriger HTTP vers HTTPS au lieu de désactiver:
+
+```nginx
+<VirtualHost *:80>
+    Redirect permanent / https://10.0.0.21/
+</VirtualHost>
+```
+
+### 3. Définir directive PHP `session.cookie_secure` & `session.cookie_httponly` à "ON"
+
+Il faut l’activer dans la configuration PHP, puisque GLPI recommande `session.cookie_secure=on` quand l’application est accessible uniquement en HTTPS. PHP précise aussi que ce réglage fait que le cookie de session n’est envoyé qu’en connexion sécurisée.
+→ Cela nous aide à résoudre l'erreur:
+>"La directive PHP "session.cookie_secure" devrait être définie à "on" quand GLPI est accessible via le protocole HTTPS."
+
+Pareil pour la directive "session.cookie_httponly"
+
+```nginx
+# Pour préparer la version PHP
+php -v
+
+# Pour éditer le bon phip.ini (version 8.2)
+sudo nano /etc/php/8.2/apache2/php.ini
+```
+
+On va chercher la ligne "session.cookie_secure =" pour y ajouter:
+
+```INI
+session.cookie_secure = On
+session.cookie_httponly = On
+session.cookie_samesite = Lax
+```
+
+Puis, on redémarre Apache et on vérifie les valeurs actives :
+
+```nginx
+sudo systemctl restart apache2
+grep -E "session.cookie_secure|session.cookie_httponly" /etc/php/8.2/apache2/php.ini
+```
+
+il devra retourner: session.cookie_secure => Off => Off
+
+![16-Activation cookie secure sur PHP](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_16-Activation%20cookie%20secure%20sur%20PHP.png)
+
+### 4. Constater que toutes les erreurs soient résolues
+
+Même si l'on constate que toutes les erreurs sont disparues du tableau de bord, rendez-vous sur la page `Configuration > Générale > Tous` pour voir que tout soit correct:
+
+![17-Sécurité GLPI garantie](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_17-S%C3%A9curit%C3%A9%20GLPI%20garantie.png)
+
 
 
 
