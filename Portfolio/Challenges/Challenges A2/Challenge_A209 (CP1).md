@@ -329,7 +329,7 @@ Il faut l’activer dans la configuration PHP, puisque GLPI recommande `session.
 → Cela nous aide à résoudre l'erreur:
 >"La directive PHP "session.cookie_secure" devrait être définie à "on" quand GLPI est accessible via le protocole HTTPS."
 
-Pareil pour la directive "session.cookie_httponly"
+Pareil pour la directive "session.cookie_httponly". Tous les deux empêcherot JavaScript d'accéder au cookie de session et protegéront contre XSS (vol de session).
 
 ```nginx
 # Pour préparer la version PHP
@@ -364,12 +364,22 @@ Même si l'on constate que toutes les erreurs sont disparues du tableau de bord,
 
 ![17-Sécurité GLPI garantie](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_17-S%C3%A9curit%C3%A9%20GLPI%20garantie.png)
 
+## Étape 8: Configuration GLPI
+
+### 1. Ajout d'une autre VM à être supervisée
+
+Pour surveiller la Windows 10 (10.0.0.22), il est nécessaire d'installer GLPI Agent for Windows
+
+Quand il s'agit d'une installation silencieuse, il faut configurer le Server URL / Target, en modifiant le fichier `C:\Program Files\GLPI-Agent\etc\agent.cfg` pour y rajouter: `server = https://10.0.0.21/`, puis redémarrer le service avec un `Restart-Service glpi-agent` sur PowerShell.
+
+Ainsi on pourra voir la machine rajoutée automatiquement dans le `GLPI > Parc > ordinateurs` 
+
+![18-Machine dans Parc](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_18-Machine%20dans%20Parc.png)
 
 
+Et on pourra la voir aussi répertoriée sur le tableau de bord
 
-
-
-### 🚧 En construction 🚧
+![19-Machine dans tableau de bord](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_19-Machine%20dans%20tableau%20de%20bord.png)
 
 ---
 
@@ -378,5 +388,7 @@ Même si l'on constate que toutes les erreurs sont disparues du tableau de bord,
 * 🎥​ [Tuto: Installer et configurer GLPI sous Debian 12](https://www.youtube.com/watch?v=4p-Zuuyr_Ts)
 * 📘 [Atelier S505](https://github.com/O-clock-Aldebaran/SA5-Atelier-LAMP)
 * [Site officiel GLPI](https://www.glpi-project.org//fr/)
+* [Installation de GLPI-Agent sur Windows](https://www.it-connect.fr/tuto-installer-configurer-gpo-agent-glpi-windows/)
 
+---
 
