@@ -226,9 +226,27 @@ Alors, vite l'action à faire en urgence, suite à la première connexion, sera 
 
 ![12-Modif du mdp du super utilisateur](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_12-Modif%20du%20mdp%20du%20super%20utilisateur.png)
 
-Non seulement pour le super utilisateur mais aussi pour les autres utilisateurs
+Non seulement pour le super utilisateur mais aussi pour tous les autres utilisateurs qu'y soient déjà créés par défaut avec l'installation (à chercher sur `Administration → Utilisateurs`)
 
 ![13-Modif du mdp par défaut des utilisateurs](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_13-Modif%20du%20mdp%20par%20d%C3%A9faut%20des%20utilisateurs.png)
+
+## Étape 7: sécurité
+
+Après avoir modifié tous les mdp par défaut, on doit supprimer le fichier `install/install.php` 
+
+```nginx
+# Rentrer dans le dossier en question 
+cd /var/www/html/glpi
+
+# le supprimer 
+sudo rm install/install.php
+
+# Vérifier
+ls install/
+```
+
+![13-Suppression du dossier glpi](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_13-Suppression%20du%20dossier%20glpi.png)
+
 
 
 
@@ -241,4 +259,6 @@ Non seulement pour le super utilisateur mais aussi pour les autres utilisateurs
 
 * 🎥​ [Tuto: Installer et configurer GLPI sous Debian 12](https://www.youtube.com/watch?v=4p-Zuuyr_Ts)
 * 📘 [Atelier S505](https://github.com/O-clock-Aldebaran/SA5-Atelier-LAMP)
+* [Site officiel GLPI](https://www.glpi-project.org//fr/)
+
 
