@@ -71,7 +71,7 @@ sudo mysql_secure_installation
 mysql -u root -p
 
 # Création d'un utilisateur (autre que root)
-CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'motdepasse';
+CREATE USER 'dbuser'@'localhost' IDENTIFIED BY '<un_motdepasse_fort>';
 GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 exit
@@ -178,6 +178,30 @@ sudo netfilter-persistent save
 
 ![04-Vérification politiques iptables](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_04-V%C3%A9rification%20politiques%20iptables.png)
 
+Pendant l'installation on arrive à l'érreur classique due à un problème de permissions dans le dossier `/var/www/html`
+
+![05-Problème de permission glpi](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_05-Probl%C3%A8me%20de%20permission%20glpi.png)
+
+Pour la corriger, il faudra "refresh" après avoir fait deux choses:
+1. Changer le propriétaire des fichiers → <nom_utilisateur> (dans ce cas c'est `francois`) et le groupe utilisé par Apache → www-data en l'appliquant à tout le dossier récursivement (`-R`), pour que l'utilisateur puisse contrôler les fichiers et le serveur web puisse aussi y accéder via le groupe.
+2. Définir les permissions de récursivement (sur tous les dossiers, `-R`) pour que l'utilisateur et `www-data` aient accès complet tandis que les autres n'y aient aucun accès:
+    * **7 (user)** = lecture + écriture + exécution
+    * **7 (group)** = lecture + écriture + exécution
+    * **0 (others)** = aucun accès
+
+```nginx
+sudo chown -R <nom_utilisateur>:www-data /var/www/html
+sudo chmod 770 -R /var/www/html
+```
+
+En continuant l'installation, on rencontre des Erreurs de sécurité à corriger plus loin
+
+
+![06-Erreurs de sécurité à corriger plus loin](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_06-Erreurs%20de%20s%C3%A9curit%C3%A9%20%C3%A0%20corriger%20plus%20loin.png)
+
+Quand on nous demande la configuration de la connexion à la base de données, on va s'appuyer sur l'utilisateur qu'on a créé en Étape 4 (MariaDB & MySQL); dans ce cas on saisit `localhost` comme adresse du serveur, `dbuser` comme nom d'utilisateur et le mot de passe fort que l'on avait choisi, en suivant les récommendations de l'ANSSI (dans mon cas, je le sauvegarde avec un gestionnaire de mot de passe):
+
+![07-Authentification GLPI](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_07-Authentification%20GLPI.png)
 
 
 
