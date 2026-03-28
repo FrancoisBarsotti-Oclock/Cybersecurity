@@ -55,9 +55,7 @@ free -h
 
 Pour l'installation et configuration du serveur Zabbix avec sa base de données, on se réfère à la [documentation officielle](https://www.zabbix.com/fr/integrations) et chercher la configuration souhaitée selon plateforme: `Get Zabbix > Packages Zabbix` → J’ai favorisé Zabbix 7.4 car la version 8.0 est toujours en beta.
 
-![01-Choix plateforme Zabbix]()
-
-
+![01-Choix plateforme Zabbix](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B301%20(CP7)/B301_CP7_01-Choix%20plateforme%20Zabbix.png)
 
 
 
