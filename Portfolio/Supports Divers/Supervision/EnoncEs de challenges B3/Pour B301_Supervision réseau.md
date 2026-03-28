@@ -112,7 +112,7 @@ sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabb
 **4.3** - Installez et configurez MySQL/MariaDB :
 ```bash
 sudo apt install mariadb-server -y
-sudo mysql_secure_installation
+sudo mariadb-secure-installation
 ```
 
 **4.4** - Créez la base de données Zabbix :
