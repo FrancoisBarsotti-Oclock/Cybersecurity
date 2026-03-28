@@ -16,6 +16,57 @@
 
 Voir 👉 [Cours B301](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B3%20(Supervision)/B301_Supervision%20%26%20Monitoring.md)
 
+## Étape 1: Architecture
+
+Dans un environnement virtuel Proxmox avec :
+
+| **Élement** | **OS** | **IP** | **Rôle** |
+| :--: | :--: | :--: | :--: |
+| **Zabbix** | Debian 13.1.2 | `10.0.0.100/16` | Serveur Zabbix |
+| -- | -- | -- | -- |
+
+## Étape 2: sudo & préparation pour Zabbix
+ 
+ Important pour ne pas avoir à administrer la VM en tant que `root`
+
+ ```nginx
+adduser francois
+apt update
+apt install sudo -y
+usermod -aG sudo <nom_utilisateur>
+su - <nom_utilisateur>
+```
+
+Mise à jour de la VM pour préparer l'environnement Zabbix
+
+ ```nginx
+# maj de la Debian
+sudo apt update
+sudo apt upgrade -y
+
+# Installation des prérequis de base
+sudo apt install wget curl gnupg2 -y
+
+# Vérification de la RAM
+free -h
+ ```
+
+## Étape 3: Installation de Zabbix Server
+
+Pour l'installation et configuration du serveur Zabbix avec sa base de données, on se réfère à la [documentation officielle](https://www.zabbix.com/fr/integrations) et chercher la configuration souhaitée selon plateforme: `Get Zabbix > Packages Zabbix` → J’ai favorisé Zabbix 7.4 car la version 8.0 est toujours en beta.
+
+![01-Choix plateforme Zabbix]()
+
+
+
+
+
+
+
 ### 🚧 En construction 🚧
 
 ---
+
+### 📚 Ressources & liens utiles:
+
+* [documentation officielle Zabbix](https://www.zabbix.com/fr/integrations) 
