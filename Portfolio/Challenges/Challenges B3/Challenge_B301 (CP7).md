@@ -70,7 +70,7 @@ sudo mariadb-secure-installation
 ```
 Une fois tout installé sur la partie MySQL, on peut vérifier ce qu'il y a dans la base de donnée créé par un `show databases` (toujours dans MariaDB)
 
-![02-Vérification database sur MariaDB]()
+![02-Vérification database sur MariaDB](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B301%20(CP7)/B301_CP7_02-V%C3%A9rification%20database%20sur%20MariaDB.png)
 
 Ne pas oublier de modifier la configuration Zabbix avec un `sudo nano /etc/zabbix/zabbix_server.conf` pour reécrire la ligne `DBPassword=MotDePasseSecurise` en le décommentant et en ajoutant le mot de passe que l'on avait mis pendant la configuration.
 
@@ -132,11 +132,36 @@ sudo nano /etc/apache2/sites-available/000-default.conf
 sudo systemctl reload apache2
 ```
 
-![03-HTTPS autosigné pour Zabbix]()
+![03-HTTPS autosigné pour Zabbix](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B301%20(CP7)/B301_CP7_03-HTTPS%20autosign%C3%A9%20pour%20Zabbix.png)
 
+## Étape 5: Configuration du frontend Zabbix
 
+On se connecte sur l'interface web de Zabbix (maintenant `https://ip_host/zabbix`) et on suit l'assistant de configuration. Bien retenir que le port par défaut MySQL est `3306` (si l'on ne le change pas lors de la conf).
 
+Pour ressoudre le problème de langue pré-requise (en_US), il faudra dépackager et rebbot Apache (bien rester en anglais car les traductions ne sont pas au point)
 
+```nginx
+sudo dpkg-reconfigure locales
+```
+
+![04-dpkg locales](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B301%20(CP7)/B301_CP7_04-dpkg%20locales.png)
+
+```nginx
+sudo systemctl restart apache2
+```
+
+![05-Conf Zabbix terminée](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B301%20(CP7)/B301_CP7_05-Conf%20Zabbix%20termin%C3%A9e.png)
+
+### Première connexion
+
+* Utilisateur: `Admin`
+* Mot de passe:  `zabbix`
+
+### Modification du mot de passe par défaut
+
+ *User settings → Profile*
+
+ ![06-Modif mdp](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B301%20(CP7)/B301_CP7_06-Modif%20mdp.png)
 
 
 ### 🚧 En construction 🚧
