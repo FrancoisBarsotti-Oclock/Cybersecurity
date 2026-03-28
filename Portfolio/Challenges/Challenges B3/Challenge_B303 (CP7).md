@@ -1,4 +1,4 @@
-# 🏆 Challenge B303: Agent Zabbix.
+# 🏆 Challenge B303 (CP7): Agent Zabbix.
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 

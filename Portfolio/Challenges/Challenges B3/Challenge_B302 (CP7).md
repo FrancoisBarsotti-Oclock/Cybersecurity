@@ -1,4 +1,4 @@
-# 🏆 Challenge B302: Supervision avancée avec Zabbix.
+# 🏆 Challenge B302 (CP7): Supervision avancée avec Zabbix.
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 

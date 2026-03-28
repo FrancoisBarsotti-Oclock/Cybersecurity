@@ -1,4 +1,4 @@
-# 🏆 Challenge B301: Supervision réseau.
+# 🏆 Challenge B301 (CP7): Supervision réseau.
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
 
