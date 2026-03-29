@@ -23,7 +23,7 @@ Dans un environnement virtuel Proxmox avec :
 | **Élement** | **OS** | **IP** | **Rôle** |
 | :--: | :--: | :--: | :--: |
 | **Zabbix** | Debian 13.1.2 | `10.0.0.100/16` | Serveur Zabbix |
-| -- | -- | -- | -- |
+| **Web-server-01** | Debian | `10.0.0.2416` | Serveur client |
 
 ## Étape 2: sudo & préparation pour Zabbix
  

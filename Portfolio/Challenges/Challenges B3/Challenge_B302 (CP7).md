@@ -13,6 +13,16 @@
 
 Voir 👉 [Cours B302](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B3%20(Supervision)/B302_Zabbix%20installation.md)
 
+## Étape 1 (6): Préparation du serveur client
+
+| **Élement** | **OS** | **IP** | **Rôle** |
+| :--: | :--: | :--: | :--: |
+| **Web-server-01** | Debian | `10.0.0.2416` | Serveur client |
+
+
+
+[Documentation officielle](https://www.zabbix.com/documentation/current/en)
+
 ### 🚧 En construction 🚧
 
 ---
