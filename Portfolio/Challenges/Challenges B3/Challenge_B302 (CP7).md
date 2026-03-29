@@ -44,8 +44,39 @@ On suit la [Documentation officielle d'installation Agent Zabbix](https://www.za
 
 ![01-Choix Agent Zabbix](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B302%20(CP7)/B302_CP7_01-Choix%20Agent%20Zabbix.png)
 
+### Configuration de l'agent
 
+avec `sudo nano /etc/zabbix/zabbix_agent.conf` on modifie les paramètres suivants:
 
+```nginx
+# Pour rappel: l'ip du serveur zabbix est 10.0.0.100 pour cet exo
+Server=adresse_ip_serveur_zabbix
+ServerActive=adresse_ip_serveur_zabbix
+Hostname=web-server-01
+```
+
+⚠️ IMPORTANT Le champ `Hostname` doit correspondre exactement (majuscules/minuscules incluses) au nom de l’hôte déclaré dans Zabbix.
+
+### Redémarrage de l'agent
+
+```nginx
+sudo systemctl restart zabbix-agent2
+sudo systemctl enable zabbix-agent2
+sudo systemctl status zabbix-agent2
+```
+Si cela ne passe pas la première fois, il faudra les relancer
+
+![02-Relance de systemctl](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B302%20(CP7)/B302_CP7_02-Relance%20de%20systemctl.png)
+
+### Vérification de l'écoute sur le port 10050
+
+```nginx
+sudo ss -tlnp | grep 10050
+```
+
+![03-Écoute sur le port 10050](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B302%20(CP7)/B302_CP7_03-%C3%89coute%20sur%20le%20port%2010050.png)
+
+## Étape 3 (7): Ajout de l’hôte dans Zabbix
 
 
 
