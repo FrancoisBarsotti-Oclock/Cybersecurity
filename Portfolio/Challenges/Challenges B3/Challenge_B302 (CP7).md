@@ -78,6 +78,30 @@ sudo ss -tlnp | grep 10050
 
 ## Étape 3 (7): Ajout de l’hôte dans Zabbix
 
+Si l'agent n'est pas disponible sur Zabbix après son rajout, il faudra vérifier la configuration de l'agent, le frewall et le réseau
+
+```nginx
+🔎 1. Vérifier l’agent Zabbix (pour voir s'il est running)
+sudo systemctl status zabbix-agent2
+```
+ ![04-Agent disponible](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B302%20(CP7)/B302_CP7_04-Agent%20disponible.png)
+
+ ## Étape 4(8): Création d’un dashboard
+
+![05-Dashboard François Corp](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B302%20(CP7)/B302_CP7_05-Dashboard%20Fran%C3%A7ois%20Corp.png)
+
+## Étape 5 (9): Configuration des alertes
+
+On édite la Discovery rule (Data collection > Discovery), active les actions (Alerts > Actions > Discovery Actions ) 
+
+![06-Monitored host](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B302%20(CP7)/B302_CP7_06-Monitored%20host.png)
+
+### Triggers
+On crée des triggers (Alerts > Actions > Trigger Actions) 
+
+
+
+
 
 
 ### 🚧 En construction 🚧
