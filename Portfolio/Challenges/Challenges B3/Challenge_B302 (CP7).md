@@ -13,15 +13,41 @@
 
 Voir 👉 [Cours B302](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20B%20(Technicien%20Infrastructure)/Saison_B3%20(Supervision)/B302_Zabbix%20installation.md)
 
-## Étape 1 (6): Préparation du serveur client
+## Étape 1 (0): Préparation du serveur client
 
 | **Élement** | **OS** | **IP** | **Rôle** |
 | :--: | :--: | :--: | :--: |
-| **Web-server-01** | Debian | `10.0.0.2416` | Serveur client |
+| **Web-server-01** | Debian 13.1.2 | `10.0.0.2416` | Serveur client |
+
+Dès fois, les pings ne sortent des Debian récentes (12/13), n'ayant pas les droits d'ouvrir un socket RAW, ce qui est nécessaire avec soit **setuid root** soit la capacité **CAP_NET_RAW**. Pour solutionner, il faut:
+
+```nginx
+# Vérifier les capabilities
+sudo getcap /bin/ping
+
+# si rien n'apparait
+sudo setcap cap_net_raw+ep /bin/ping
+
+# Normalement là on pourra ping, sinon il faudra remettre le setuid
+sudo chmod u+s /bin/ping
+```
+
+### installation d'un service web pour enrichir la suppervision
+
+```nginx
+sudo apt install apache2 -y
+sudo systemctl status apache2
+```
+## Étape 2 (6): Installation de l'agent Zabbix
+
+On suit la [Documentation officielle d'installation Agent Zabbix](https://www.zabbix.com/documentation/current/en)
+
+![01-Choix Agent Zabbix](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B302%20(CP7)/B302_CP7_01-Choix%20Agent%20Zabbix.png)
 
 
 
-[Documentation officielle](https://www.zabbix.com/documentation/current/en)
+
+
 
 ### 🚧 En construction 🚧
 
