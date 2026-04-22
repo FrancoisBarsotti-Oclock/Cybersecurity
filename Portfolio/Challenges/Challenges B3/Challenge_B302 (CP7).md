@@ -97,9 +97,7 @@ On édite la Discovery rule (Data collection > Discovery), active les actions (A
 ![06-Monitored host](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B302%20(CP7)/B302_CP7_06-Monitored%20host.png)
 
 ### Triggers
-On crée des triggers (Alerts > Actions > Trigger Actions) 
-
-
+On crée des triggers (Data Colelction > Templates) 
 
 
 
