@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendiendo el DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .ejemplo {
+            background-color: #f0f0f0;
+            border-left: 4px solid #007BFF;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #mensaje {
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exploration du DOM et du Code Source</h1>
+    <p>Cette page t'aidera à comprendre la différence entre le
+        <strong>code source HTML</strong> (ce que tu écris) et le
+        <strong>DOM</strong> (la représentation en direct dans le navigateur).
+    </p>
+    <div class="ejemplo">
+        <h2>Exemple 1: Élément statique</h2>
+        <p>Ce paragraphe se trouve dans le code source. Examine-le à l'aide des outils de développement.</p>
+    </div>
+    <div class="ejemplo">
+        <h2>Exemple 2: Manipulation dynamique</h2>
+        <p>Cliquez sur le bouton pour ajouter un nouvel élément au DOM :</p>
+        <button id="btnAgregar">Ajouter élément</button>
+        <div id="contenedor-dinamico"></div>
+    </div>
+    <div class="ejemplo">
+        <h2>Exemple 3: Changement de style et de contenu</h2>
+        <p>Cliquez pour modifier le texte et la couleur :</p>
+        <button id="btnCambiar">Changer le message</button>
+        <p id="mensaje">Message d'origine (en code source)</p>
+    </div>
+    <script>
+        // Código JavaScript que manipula el DOM
+        // Ejemplo 2: Agregar un nuevo elemento al DOM
+        document.getElementById('btnAgregar').addEventListener('click',
+            function () {
+                // Crear un nuevo elemento <p>
+                const nuevoParrafo = document.createElement('p');
+                nuevoParrafo.textContent = 'Este elemento fue añadido 
+dinámicamente al DOM. ¡No está en el código fuente original!';
+                nuevoParrafo.style.backgroundColor = '#d4edda';
+                nuevoParrafo.style.padding = '10px';
+                nuevoParrafo.style.borderRadius = '4px';
+
+                // Añadirlo al contenedor
+                document.getElementById('contenedor
+dinamico').appendChild(nuevoParrafo);
+});
+        // Ejemplo 3: Modificar un elemento existente
+        document.getElementById('btnCambiar').addEventListener('click',
+            function () {
+                const mensaje = document.getElementById('mensaje');
+                mensaje.textContent = '¡Este texto fue modificado a través del 
+                DOM!';
+                mensaje.style.color = 'red';
+                mensaje.style.fontSize = '1.2em';
+            });
+        actual
+        // También podemos mostrar un mensaje en consola para ver el DOM 
+        console.log('DOM actual:', document.body);
+    </script>
+    <footer>
+        <p><small>Observa la diferencia entre "Ver código fuente" y lo que
+                ves en las herramientas de desarrollador (DOM).</small></p>
+    </footer>
+</body>
+
+</html>
