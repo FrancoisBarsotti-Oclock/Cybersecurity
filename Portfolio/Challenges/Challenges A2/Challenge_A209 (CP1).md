@@ -383,6 +383,43 @@ Et on pourra la voir aussi répertoriée sur le tableau de bord
 
 ![19-Machine dans tableau de bord](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_19-Machine%20dans%20tableau%20de%20bord.png)
 
+## Étape 9: Configuration des niveaux de service (SLA) 
+
+Pour créer un SLA dans GLPI : `Configuration` → `Niveaux de service` → `Ajouter` on le nomme et l'ajoute
+
+![20-Création SLA]()
+
+### Création d'un calendrier adapté
+
+Comme le calendrier par défaut est 24h/24 - 7j/7, je crée un calendrier adapté aux heure de bureau avec les JF français.
+
+`Configuration` → `Intitulés` → `Calendrier` → `Ajouter` et je lui ai donné les pages horaires pour établir: de lundi au vendredi, 9h00 - 17h00:
+
+![21-Plage horaire]()
+
+
+#### tout en rajoutant les périodes de fermeture (JF, récurrents et non-récurrents).
+
+![22-Jours de fermeture]()
+
+Et on peut revenir au niveau de service créé pour le lier au nouveau calendrier que l'on vient de créer
+
+![23-Calendrier lié au niveau de service]()
+
+### Time To Own (TTO) de la SLA
+
+Je définis le temps de prise en charge ou délais maximum pour que le ticket soit pris en charge par un technicien après sa création
+
+
+
+### Time To Resolve (TTR) de la SLA
+
+Je définis le temps de résolution ou délais maximum pour résoudre complètement le ticket
+
+
+
+
+
 ---
 
 ### 📚 Ressources & liens utiles:
@@ -391,6 +428,8 @@ Et on pourra la voir aussi répertoriée sur le tableau de bord
 * 📘 [Atelier S505](https://github.com/O-clock-Aldebaran/SA5-Atelier-LAMP)
 * [Site officiel GLPI](https://www.glpi-project.org//fr/)
 * [Installation de GLPI-Agent sur Windows](https://www.it-connect.fr/tuto-installer-configurer-gpo-agent-glpi-windows/)
+* [Configuration des niveaux de service (SLA)](https://help.glpi-project.org/tutorials/fr/helpdesk/service_levels)
+* 🎥 [GLPI 10.0.x - Module Tickets, niveaux de service, SLA TTO et SLA TTR](https://www.youtube.com/watch?v=6iJQIIFwafU)
 
 ---
 
