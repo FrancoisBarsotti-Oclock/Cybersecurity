@@ -385,6 +385,8 @@ Et on pourra la voir aussi répertoriée sur le tableau de bord
 
 ## Étape 9: Configuration des niveaux de service (SLA) 
 
+j’ai configuré des SLA comprenant un TTO (Time To Own) pour garantir la prise en charge rapide des incidents, et un TTR (Time To Resolve) pour garantir leur résolution dans un délai contractuel. Ces deux indicateurs permettent de mesurer la qualité du support et d’assurer une traçabilité complète du respect des engagements.
+
 Pour créer un SLA dans GLPI : `Configuration` → `Niveaux de service` → `Ajouter` on le nomme et l'ajoute
 
 ![20-Création SLA](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_20-Cr%C3%A9ation%20SLA.png)
@@ -406,16 +408,15 @@ Et on peut revenir au niveau de service créé pour le lier au nouveau calendrie
 
 ![23-Calendrier lié au niveau de service](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_23-Calendrier%20li%C3%A9%20au%20niveau%20de%20service.png)
 
-### Time To Own (TTO) de la SLA
+### Time To Own (TTO) & Time To Resolve (TTR) de la SLA
 
-Je définis le temps de prise en charge ou délais maximum pour que le ticket soit pris en charge par un technicien après sa création
+Je définis le temps de prise en charge ou délais maximum pour que le ticket soit pris en charge par un technicien après sa création (TTO) et e temps de résolution ou délais maximum pour résoudre complètement le ticket (TTR) par niveau de priorité: basse, moyenne, haute et critique.
 
+![24-SLA TTO&TTR par priorité]()
 
+La personalisation de la matrice de calcul de la priorité se fait dans `Configuration` → `Générale` → `Assistance` pour qu'elle soit en adéquation avec notre SLA
 
-### Time To Resolve (TTR) de la SLA
-
-Je définis le temps de résolution ou délais maximum pour résoudre complètement le ticket
-
+![25-Matrice calcul de priorité]()
 
 
 
