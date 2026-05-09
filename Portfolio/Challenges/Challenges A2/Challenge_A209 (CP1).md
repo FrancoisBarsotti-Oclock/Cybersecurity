@@ -412,11 +412,11 @@ Et on peut revenir au niveau de service créé pour le lier au nouveau calendrie
 
 Je définis le temps de prise en charge ou délais maximum pour que le ticket soit pris en charge par un technicien après sa création (TTO) et e temps de résolution ou délais maximum pour résoudre complètement le ticket (TTR) par niveau de priorité: basse, moyenne, haute et critique.
 
-![24-SLA TTO&TTR par priorité]()
+![24-SLA TTO&TTR par priorité](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_24-SLA%20TTO%26TTR%20par%20priorit%C3%A9.png)
 
 La personalisation de la matrice de calcul de la priorité se fait dans `Configuration` → `Générale` → `Assistance` pour qu'elle soit en adéquation avec notre SLA
 
-![25-Matrice calcul de priorité]()
+![25-Matrice calcul de priorité](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_25-Matrice%20calcul%20de%20priorit%C3%A9.png)
 
 
 
