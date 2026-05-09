@@ -422,11 +422,11 @@ La personalisation de la matrice de calcul de la priorité se fait dans `Configu
 
 Pour établir des règles liées au niveau d'urgence/priorité des tickets, on peut bien automatiser leur attribution : `Administration` → `Règles` → `Règles métier pour les tickets`
 
-![26-Règles métier pour les tickets]()
+![26-Règles métier pour les tickets](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_26-R%C3%A8gles%20m%C3%A9tier%20pour%20les%20tickets.png)
 
 Pour la configuratoin de chaque règle on peut bien définir les critères et actions à déclancher automatiquement, non seulement selon niveau d'urgence/priorité mais aussi de complexité
 
-![27-Critères et Actions des règles]()
+![27-Critères et Actions des règles](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_27-Crit%C3%A8res%20et%20Actions%20des%20r%C3%A8gles.png)
 
 ## Étape 10: Cycle de vie d'un ticket
 
