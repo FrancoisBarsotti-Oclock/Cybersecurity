@@ -433,6 +433,12 @@ Pour la configuratoin de chaque règle on peut bien définir les critères et ac
 
 J'ai mis en place une base de connaissances afin de documenter les incidents récurrents, standardiser les procédures de résolution et assurer ansi la continuité de service.
 
+Pour créer la FAQ dans GLPI: `Outils` → B`ase de connaissances`
+
+![28-FAQ ajoutées]()
+
+Ci-dessous un résumé de quelques FAQ que j'ai pu ajouter :
+
 ### FAQ 1 — Le poste Windows ne remonte plus dans GLPI
 
 **Contenu**
@@ -440,6 +446,8 @@ J'ai mis en place une base de connaissances afin de documenter les incidents ré
 * Vérifier la connectivité HTTPS vers le serveur GLPI
 * Vérifier l’adresse IP du poste
 * Relancer l’inventaire manuellement
+
+![30-FAQ1]()
 
 ### FAQ 2 — GLPI inaccessible via HTTPS
 
@@ -449,6 +457,8 @@ J'ai mis en place une base de connaissances afin de documenter les incidents ré
 * Contrôler le certificat SSL
 * Vérifier les règles iptables
 
+![31-FAQ2]()
+
 ### FAQ 3 — Renouveler une adresse IP DHCP sous Windows
 
 **Contenu**
@@ -457,9 +467,20 @@ ipconfig /release
 ipconfig /renew
 ipconfig /flushdns
 ```
-* Explication APIPA (IP `169.254.x.x`).
+* Invitation à ouvrir le lien d'explication APIPA (IP `169.254.x.x`), si necéssaire.
 
-### FAQ 4 — Vérifier la connectivité réseau
+![32-FAQ3]()
+
+### FAQ 4 - APIPA
+
+* Explication
+* Causes possibles
+* Diagnostic
+* Solutions
+
+![33-FAQ4]()
+
+### FAQ 5 — Vérifier la connectivité réseau
 
 **Contenu**
 * ping passerelle
@@ -467,13 +488,16 @@ ipconfig /flushdns
 * test DNS
 * vérification câble/Wi-Fi
 
-### FAQ 5 — Vérification rapide des services Linux
+![34-FAQ5]()
+
+### FAQ 6 — Vérification rapide des services Linux
 
 **Contenu**
 ```bash
 systemctl status apache2
 systemctl status mariadb
 ```
+![35-FAQ6]()
 
 ## Étape 11: Cycle de vie d'un ticket
 
@@ -549,6 +573,7 @@ Le portail GLPI n’est plus accessible via HTTPS depuis les postes utilisateurs
 ### Ticket 3: Impossible d'accèder à internet depuis le poste Windows (Incidence réseau)
 
 **Qualification**
+* Catégorie: réseau
 * Impact : moyenne (utilisateur unique)
 * Urgence : moyenne
 * Priorité : moyenne
