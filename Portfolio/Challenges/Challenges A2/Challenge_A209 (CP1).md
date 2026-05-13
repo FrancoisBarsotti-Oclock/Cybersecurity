@@ -447,7 +447,7 @@ Ci-dessous un résumé de quelques FAQ que j'ai pu ajouter :
 * Vérifier l’adresse IP du poste
 * Relancer l’inventaire manuellement
 
-![30-FAQ1]()
+![29-FAQ1]()
 
 ### FAQ 2 — GLPI inaccessible via HTTPS
 
@@ -457,7 +457,7 @@ Ci-dessous un résumé de quelques FAQ que j'ai pu ajouter :
 * Contrôler le certificat SSL
 * Vérifier les règles iptables
 
-![31-FAQ2]()
+![30-FAQ2]()
 
 ### FAQ 3 — Renouveler une adresse IP DHCP sous Windows
 
@@ -469,7 +469,7 @@ ipconfig /flushdns
 ```
 * Invitation à ouvrir le lien d'explication APIPA (IP `169.254.x.x`), si necéssaire.
 
-![32-FAQ3]()
+![31-FAQ3]()
 
 ### FAQ 4 - APIPA
 
@@ -478,7 +478,7 @@ ipconfig /flushdns
 * Diagnostic
 * Solutions
 
-![33-FAQ4]()
+![32-FAQ4]()
 
 ### FAQ 5 — Vérifier la connectivité réseau
 
@@ -488,7 +488,7 @@ ipconfig /flushdns
 * test DNS
 * vérification câble/Wi-Fi
 
-![34-FAQ5]()
+![33-FAQ5]()
 
 ### FAQ 6 — Vérification rapide des services Linux
 
@@ -497,7 +497,7 @@ ipconfig /flushdns
 systemctl status apache2
 systemctl status mariadb
 ```
-![35-FAQ6]()
+![34-FAQ6]()
 
 ## Étape 11: Cycle de vie d'un ticket
 
