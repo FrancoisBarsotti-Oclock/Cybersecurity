@@ -429,7 +429,53 @@ Pour la configuratoin de chaque règle on peut bien définir les critères et ac
 
 ![27-Critères et Actions des règles](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_27-Crit%C3%A8res%20et%20Actions%20des%20r%C3%A8gles.png)
 
-## Étape 10: Cycle de vie d'un ticket
+## Étape 10: Création d'une mini FAQ
+
+J'ai mis en place une base de connaissances afin de documenter les incidents récurrents, standardiser les procédures de résolution et assurer ansi la continuité de service.
+
+### FAQ 1 — Le poste Windows ne remonte plus dans GLPI
+
+**Contenu**
+* Vérifier que le service GLPI-Agent est démarré
+* Vérifier la connectivité HTTPS vers le serveur GLPI
+* Vérifier l’adresse IP du poste
+* Relancer l’inventaire manuellement
+
+### FAQ 2 — GLPI inaccessible via HTTPS
+
+**Contenu**
+* Vérifier le service Apache
+* Vérifier le port 443
+* Contrôler le certificat SSL
+* Vérifier les règles iptables
+
+### FAQ 3 — Renouveler une adresse IP DHCP sous Windows
+
+**Contenu**
+```PowerShell
+ipconfig /release
+ipconfig /renew
+ipconfig /flushdns
+```
+* Explication APIPA (IP `169.254.x.x`).
+
+### FAQ 4 — Vérifier la connectivité réseau
+
+**Contenu**
+* ping passerelle
+* ping serveur GLPI
+* test DNS
+* vérification câble/Wi-Fi
+
+### FAQ 5 — Vérification rapide des services Linux
+
+**Contenu**
+```bash
+systemctl status apache2
+systemctl status mariadb
+```
+
+## Étape 11: Cycle de vie d'un ticket
 
 Pour la réprésentation d'un workflow ITIL simple, je crée les trois tickets suivants:
 
