@@ -431,7 +431,99 @@ Pour la configuratoin de chaque règle on peut bien définir les critères et ac
 
 ## Étape 10: Cycle de vie d'un ticket
 
+Pour la réprésentation d'un workflow ITIL simple, je crée les trois tickets suivants:
 
+### Ticket 1: Incident de supervision GLPI (Incident réseau)
+
+**Description**
+Le poste Windows 10 n’apparaît plus dans les remontées d’inventaire de GLPI.
+
+**Qualification**
+* Catégorie : Supervision / Inventaire
+* Impact : faible (poste utilisateur unique)
+* Urgence : moyenne
+* Priorité : moyenne
+
+**Diagnostic**
+* Absence de remontée d’inventaire automatique dans GLPI.
+* Vérification de l’état du service GLPI Agent sur le poste Windows.
+* Service détecté à l’état “arrêté”.
+* Contrôle de la connectivité réseau entre le client et le serveur GLPI.
+* Validation de l’accessibilité HTTPS du serveur GLPI (`https://10.0.0.21`).
+* Vérification des journaux GLPI-Agent.
+* Incident identifié comme une interruption du service d’inventaire local.
+
+**Résolution**
+* Redémarrage du service GLPI-Agent.
+* Vérification du démarrage automatique du service.
+* Test de communication HTTPS avec le serveur GLPI.
+* Relance manuelle de l’inventaire.
+* Validation de la remontée des informations dans GLPI.
+
+**Clôture**
+* inventaire fonctionnel.
+* Poste à nouveau visible dans GLPI.
+* Supervision rétablie.
+
+### Ticket 2: GLPI inaccessible via HTTPS (Incident critique)
+
+**Description**
+Le portail GLPI n’est plus accessible via HTTPS depuis les postes utilisateurs.
+
+**Qualification**
+* Catégorie : Infrastructure / Service Web
+* Impact : élevé (interruption du service ITSM)
+* Urgence : élevée
+* Priorité : critique
+
+**Diagnostic**
+* Échec d’accès à l’interface GLPI via navigateur web. 
+* Test de connectivité réseau effectué avec succès vers le serveur Debian.
+* Vérification de l’écoute des ports HTTPS (`443`) sur le serveur.
+* Contrôle de l’état du service Apache avec `systemctl status apache2`.
+* Service Apache détecté à l’état “inactive/failed”.
+* Analyse des journaux système et Apache (`journalctl` et `apache2/error.log`).
+* Vérification de la validité du certificat SSL auto-signé.
+* Incident identifié comme une interruption du service web Apache impactant l’accès HTTPS.
+
+**Résolution**
+* Relance du service Apache (`systemctl restart apache2`). 
+* Vérification du bon démarrage du service.
+* Contrôle de l’écoute du port HTTPS.
+* Validation du certificat SSL.
+* Test d’accès HTTPS depuis le poste client.
+* Vérification du bon fonctionnement de l’interface GLPI. 
+
+**Clôture**
+* Accès HTTPS restauré.
+* Interface GLPI accessible.
+* Service de gestion d’incidents à nouveau opérationnel.
+* Supervision et traitement des tickets rétablis.
+
+### Ticket 3: Impossible d'accèder à internet depuis le poste Windows (Incidence réseau)
+
+**Qualification**
+* Impact : moyenne (utilisateur unique)
+* Urgence : moyenne
+* Priorité : moyenne
+
+**Diagnostic**
+* Analyse de la configuration réseau du poste Windows par vérification de la connectivité avec `ping`.
+* Vérification de la pile TCP/IP via `ipconfig`.
+* Détection d'une adresse IP APIPA (`169.254.1.13`).
+* Absence de passarelle par défaut: impossible de joindre le réseau.
+* Échec du renouvellement DHCP: Bail expiré ou non renouvelé.
+* Vérification de l'accessibilité du serveur DHCP
+* Échec de la résolution DNS. 
+* incident identifié comme un problème d'attribution IP.
+
+**Résolution**
+* Redémarrage du service réseau. 
+* Renouvellement du bail DHCP (`ipconfig/release` puis `/renew`).
+* Vérification de la connectivité réseau et DNS.
+
+**Clôture**
+* accès restauré.
 
 
 ---
