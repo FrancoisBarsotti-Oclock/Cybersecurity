@@ -435,7 +435,7 @@ J'ai mis en place une base de connaissances afin de documenter les incidents ré
 
 Pour créer la FAQ dans GLPI: `Outils` → B`ase de connaissances`
 
-![28-FAQ ajoutées]()
+![28-FAQ ajoutées](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_28-FAQ%20ajout%C3%A9es.png)
 
 Ci-dessous un résumé de quelques FAQ que j'ai pu ajouter :
 
@@ -447,7 +447,7 @@ Ci-dessous un résumé de quelques FAQ que j'ai pu ajouter :
 * Vérifier l’adresse IP du poste
 * Relancer l’inventaire manuellement
 
-![29-FAQ1]()
+![29-FAQ1](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_29-FAQ1.png)
 
 ### FAQ 2 — GLPI inaccessible via HTTPS
 
@@ -457,7 +457,7 @@ Ci-dessous un résumé de quelques FAQ que j'ai pu ajouter :
 * Contrôler le certificat SSL
 * Vérifier les règles iptables
 
-![30-FAQ2]()
+![30-FAQ2](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_30-FAQ2.png)
 
 ### FAQ 3 — Renouveler une adresse IP DHCP sous Windows
 
@@ -469,7 +469,7 @@ ipconfig /flushdns
 ```
 * Invitation à ouvrir le lien d'explication APIPA (IP `169.254.x.x`), si necéssaire.
 
-![31-FAQ3]()
+![31-FAQ3](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_31-FAQ3.png)
 
 ### FAQ 4 - APIPA
 
@@ -478,7 +478,7 @@ ipconfig /flushdns
 * Diagnostic
 * Solutions
 
-![32-FAQ4]()
+![32-FAQ4](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_32-FAQ4.png)
 
 ### FAQ 5 — Vérifier la connectivité réseau
 
@@ -488,7 +488,7 @@ ipconfig /flushdns
 * test DNS
 * vérification câble/Wi-Fi
 
-![33-FAQ5]()
+![33-FAQ5](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_33-FAQ5.png)
 
 ### FAQ 6 — Vérification rapide des services Linux
 
@@ -497,7 +497,7 @@ ipconfig /flushdns
 systemctl status apache2
 systemctl status mariadb
 ```
-![34-FAQ6]()
+![34-FAQ6](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_34-FAQ6.png)
 
 ## Étape 11: Cycle de vie d'un ticket
 
