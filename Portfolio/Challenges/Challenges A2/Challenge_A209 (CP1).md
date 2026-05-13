@@ -1,6 +1,7 @@
 # 🏆 Challenge A209 (CP1): Mise en place d’un processus ITIL avec GLPI pour gérer les incidents et respecter les SLA.
 ### François BARSOTTI
 ## 🎯 Pitch et Contexte du challenge
+le but de cet exercise est de mettre en place un véritable processus de gestion d'incident inspiré des bonnes pratiques ITIL, avec priorisation, traçabilité et engagements de service, via l'installation de GLPI et tout ce qui y est impliqué.
 
 ## Étape 1: Arhitecture 
 
@@ -83,7 +84,7 @@ Vérifier que le service MariaDB sera bien lancé automatiquement au démarrage 
 
 ## Étape 5: PHP
 
-La plupart des applications web sont développées avec le langage PHP : c'est le cas de GLPI, il faut donc qu'on installe l'interpréteur PHP ! Pour cela, lancez les commandes suivantes :
+La plupart des applications web sont développées avec le langage PHP : c'est le cas de GLPI, il faut donc qu'on installe l'interpréteur PHP ! Pour cela, il faut lancer les commandes suivantes :
 
 ```nginx
 sudo apt install php libapache2-mod-php
@@ -95,7 +96,7 @@ sudo apt install php-{curl,gd,intl,memcache,xml,zip,mbstring,json,mysql,bz2,ldap
 sudo systemctl restart apache2
 ```
 
-Pour vérifier que PHP est opérationnel, on va créer un fichier très basique en PHP. Lancez la commande suivante :
+Pour vérifier que PHP est opérationnel, on va créer un fichier très basique en PHP. Alors, on lance la commande suivante :
 
 ```nginx
 echo "<?php phpinfo(); ?>" | sudo tee -a /var/www/html/info.php
@@ -294,7 +295,7 @@ sudo nano /etc/apache2/apache2.conf
 # On rajoute le "ServerName"
 ```
 
-Ensuite active le module de réécriture et redémarre Apache :
+Ensuite on active le module de réécriture et redémarre Apache :
 
 ```nginx
 sudo a2enmod rewrite
@@ -410,7 +411,7 @@ Et on peut revenir au niveau de service créé pour le lier au nouveau calendrie
 
 ### Time To Own (TTO) & Time To Resolve (TTR) de la SLA
 
-Je définis le temps de prise en charge ou délais maximum pour que le ticket soit pris en charge par un technicien après sa création (TTO) et e temps de résolution ou délais maximum pour résoudre complètement le ticket (TTR) par niveau de priorité: basse, moyenne, haute et critique.
+Je définis le temps de prise en charge ou délais maximum pour que le ticket soit pris en charge par un technicien après sa création (TTO) et le temps de résolution ou délais maximum pour résoudre complètement le ticket (TTR) par niveau de priorité: basse, moyenne, haute et critique.
 
 ![24-SLA TTO&TTR par priorité](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_24-SLA%20TTO%26TTR%20par%20priorit%C3%A9.png)
 
