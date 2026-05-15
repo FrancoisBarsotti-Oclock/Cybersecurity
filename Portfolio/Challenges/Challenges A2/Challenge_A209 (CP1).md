@@ -599,15 +599,15 @@ Le portail GLPI n’est plus accessible via HTTPS depuis les postes utilisateurs
 
 Au moment d'ouvrir les tickets, leurs règles métier ont été testées, et elles sont bien fonctionnelles
 
-![35-Règles attribution ticket]()
+![35-Règles attribution ticket](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_35-R%C3%A8gles%20attribution%20ticket.png)
 
 ### Et comme ça j'ai pu récréer un cycle de vie de ces trois tickets
 
-![36-Cycle de vie des tickets]()
+![36-Cycle de vie des tickets](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_36-Cycle%20de%20vie%20des%20tickets.png)
 
 ### Même information depuis le tableau de bord
 
-![37-Tableau de bord avec tickets]()
+![37-Tableau de bord avec tickets](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_37-Tableau%20de%20bord%20avec%20tickets.png)
 
 ---
 
