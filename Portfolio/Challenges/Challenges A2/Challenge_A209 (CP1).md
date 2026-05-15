@@ -605,6 +605,10 @@ Au moment d'ouvrir les tickets, leurs règles métier ont été testées, et ell
 
 ![36-Cycle de vie des tickets]()
 
+### Même information depuis le tableau de bord
+
+![37-Tableau de bord avec tickets]()
+
 ---
 
 ### 📚 Ressources & liens utiles:
