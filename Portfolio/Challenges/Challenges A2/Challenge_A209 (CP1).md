@@ -429,6 +429,7 @@ Pour la configuratoin de chaque règle on peut bien définir les critères et ac
 
 ![27-Critères et Actions des règles](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20A2/images%20A2/images%20A209%20CP1/A209_CP1_27-Crit%C3%A8res%20et%20Actions%20des%20r%C3%A8gles.png)
 
+
 ## Étape 10: Création d'une mini FAQ
 
 J'ai mis en place une base de connaissances afin de documenter les incidents récurrents, standardiser les procédures de résolution et assurer ansi la continuité de service.
@@ -512,7 +513,7 @@ Le poste Windows 10 n’apparaît plus dans les remontées d’inventaire de GLP
 * Catégorie : Supervision / Inventaire
 * Impact : faible (poste utilisateur unique)
 * Urgence : moyenne
-* Priorité : moyenne
+* Priorité : Basse
 
 **Diagnostic**
 * Absence de remontée d’inventaire automatique dans GLPI.
@@ -543,7 +544,7 @@ Le portail GLPI n’est plus accessible via HTTPS depuis les postes utilisateurs
 **Qualification**
 * Catégorie : Infrastructure / Service Web
 * Impact : élevé (interruption du service ITSM)
-* Urgence : élevée
+* Urgence : très haute
 * Priorité : critique
 
 **Diagnostic**
@@ -582,11 +583,11 @@ Le portail GLPI n’est plus accessible via HTTPS depuis les postes utilisateurs
 * Analyse de la configuration réseau du poste Windows par vérification de la connectivité avec `ping`.
 * Vérification de la pile TCP/IP via `ipconfig`.
 * Détection d'une adresse IP APIPA (`169.254.1.13`).
-* Absence de passarelle par défaut: impossible de joindre le réseau.
+* Absence de passerelle par défaut: impossible de joindre le réseau.
 * Échec du renouvellement DHCP: Bail expiré ou non renouvelé.
 * Vérification de l'accessibilité du serveur DHCP
 * Échec de la résolution DNS. 
-* incident identifié comme un problème d'attribution IP.
+* Incident identifié comme un problème d'attribution IP.
 
 **Résolution**
 * Redémarrage du service réseau. 
@@ -596,6 +597,13 @@ Le portail GLPI n’est plus accessible via HTTPS depuis les postes utilisateurs
 **Clôture**
 * accès restauré.
 
+Au moment d'ouvrir les tickets, leurs règles métier ont été testées, et elles sont bien fonctionnelles
+
+![35-Règles attribution ticket]()
+
+### Et comme ça j'ai pu récréer un cycle de vie de ces trois tickets
+
+![36-Cycle de vie des tickets]()
 
 ---
 
