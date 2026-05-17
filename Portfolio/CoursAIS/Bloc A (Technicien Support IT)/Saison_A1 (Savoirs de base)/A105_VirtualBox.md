@@ -26,12 +26,12 @@ Ce guide explique comment créer et configurer des VM Windows 10, Windows 11 et 
     * 📁 Explorateur → Affichage → Options → Affichage → décocher l’option 
     💡​ Cela émule le contenu d’un disque dur.
 
-    ![01-Options dossiers]()
+    ![01-Options dossiers](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A105/A105_01-Options%20dossiers.png)
 
 
 ## 🧱 1. Création d’une VM Windows 10
 
-![02-Win10 on VB]()
+![02-Win10 on VB](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A105/A105_02-Win10%20on%20VB.png)
 
 ### ⚙️ Configuration recommandée
 
@@ -42,7 +42,7 @@ Ce guide explique comment créer et configurer des VM Windows 10, Windows 11 et 
 | EFI | ❌ **Désactivé** |
 | Disque | 25–40 Go (VDI, dynamique) |
 
-![03-RAM Win10 on VB]()
+![03-RAM Win10 on VB](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A105/A105_03-RAM%20Win10%20on%20VB.png)
 
 ## 🧩 Étapes d’installation
 ### 1️⃣ Créer la VM
@@ -69,7 +69,7 @@ Paramètres → Stockage → Supprimer le disque du lecteur optique
 * Exécuter l’installeur
 * Redémarrer
 
-![04-Ma première Win10 VM]()
+![04-Ma première Win10 VM](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A105/A105_04-Ma%20premi%C3%A8re%20Win10%20VM.png)
 
 >### 📝 Astuce clavier VirtualBox  
 >Si la touche Host (Ctrl droit) ne fonctionne pas, utiliser la touche `²`.
@@ -115,7 +115,7 @@ Comme pour Windows 10.
 ### 🖥️ Plein écran & Additions invité
 Même procédure que Windows 10.
 
-![05-Ma première Win11 VM]()
+![05-Ma première Win11 VM](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A105/A105_05-Ma%20premi%C3%A8re%20Win11%20VM.png)
 
 ## 🐧 3. Création d’une VM Ubuntu 24.04
 ### ⚙️ Configuration recommandée
@@ -168,7 +168,7 @@ sudo ./VBoxLinuxAdditions.run
 ### 4️⃣ Redémarrer la VM
 * Machine → Redémarrer
 
-![06-Ma première Ubuntu VM]()
+![06-Ma première Ubuntu VM](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/CoursAIS/Bloc%20A%20(Technicien%20Support%20IT)/Saison_A1%20(Savoirs%20de%20base)/images%20A1/images%20A105/A105_06-Ma%20premi%C3%A8re%20Ubuntu%20VM.png)
 
 ## 👥 Créer un deuxième utilisateur Ubuntu
 1. Paramètres système → **Users**
