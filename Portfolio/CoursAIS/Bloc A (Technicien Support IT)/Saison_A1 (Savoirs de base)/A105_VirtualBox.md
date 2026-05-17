@@ -2,16 +2,15 @@
 ## Guide d'utilisation de VirtualBox
 ### Installation et création de machines virtuelles Windows 10, Windows 11 et Ubuntu
 
+### François BARSOTTI
+
 ## 📌 Introduction
 La virtualisation permet d’exécuter un système d’exploitation complet dans un environnement isolé.
 Elle est utile pour :
 
 * 🌐 Naviguer sans exposer son système principal (isolation des cookies, sandboxing)
-
 * 🛡️ Tester des logiciels sans risque
-
 * 🧪 Apprendre l’administration système
-
 * 🐧 Découvrir Linux ou pratiquer la cybersécurité
 
 Ce guide explique comment créer et configurer des VM Windows 10, Windows 11 et Ubuntu sous **VirtualBox**.
@@ -24,10 +23,16 @@ Ce guide explique comment créer et configurer des VM Windows 10, Windows 11 et 
 
 * Option Windows : **désactiver “Masquer les extensions des fichiers dont le type est connu”**
 
-    * 📁 Explorateur → Affichage → Options → Affichage → décocher l’option
+    * 📁 Explorateur → Affichage → Options → Affichage → décocher l’option 
+    💡​ Cela émule le contenu d’un disque dur.
+
+    ![01-Options dossiers]()
 
 
 ## 🧱 1. Création d’une VM Windows 10
+
+![02-Win10 on VB]()
+
 ### ⚙️ Configuration recommandée
 
 | **Ressource** | **Valeur** |
@@ -36,6 +41,8 @@ Ce guide explique comment créer et configurer des VM Windows 10, Windows 11 et 
 | CPU | **2 cœurs** |
 | EFI | ❌ **Désactivé** |
 | Disque | 25–40 Go (VDI, dynamique) |
+
+![03-RAM Win10 on VB]()
 
 ## 🧩 Étapes d’installation
 ### 1️⃣ Créer la VM
@@ -61,6 +68,8 @@ Paramètres → Stockage → Supprimer le disque du lecteur optique
 * Périphériques → **Insérer l’image CD des Additions invité**
 * Exécuter l’installeur
 * Redémarrer
+
+![04-Ma première Win10 VM]()
 
 >### 📝 Astuce clavier VirtualBox  
 >Si la touche Host (Ctrl droit) ne fonctionne pas, utiliser la touche `²`.
@@ -105,6 +114,8 @@ Comme pour Windows 10.
 
 ### 🖥️ Plein écran & Additions invité
 Même procédure que Windows 10.
+
+![05-Ma première Win11 VM]()
 
 ## 🐧 3. Création d’une VM Ubuntu 24.04
 ### ⚙️ Configuration recommandée
@@ -157,6 +168,8 @@ sudo ./VBoxLinuxAdditions.run
 ### 4️⃣ Redémarrer la VM
 * Machine → Redémarrer
 
+![06-Ma première Ubuntu VM]()
+
 ## 👥 Créer un deuxième utilisateur Ubuntu
 1. Paramètres système → **Users**
 2. Cliquer sur **Unlock** → entrer le mot de passe
@@ -181,3 +194,4 @@ Après installation des Additions invité :
 * **Presse-papiers partagé : Bidirectionnel**
 * **Glisser-déposer : Bidirectionnel**
 
+---
