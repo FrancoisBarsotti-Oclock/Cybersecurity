@@ -45,15 +45,15 @@ Valeur permettant de distinguer la partie réseau et la partie hôte d’une adr
 
 Service traduisant des noms de domaine en adresses IP.
 
-## DHCP
+## DHCP (Dynamic Host Configuration Protocol)
 
 Service attribuant automatiquement une configuration réseau aux machines.
 
-## NAT
+## NAT (Network Address Translation)
 
 Technique traduisant des IP privées en IP publiques.
 
-## VLAN
+## VLAN (Virtual Local Area Network)
 
 Segmentation logique d’un réseau permettant d’isoler des flux.
 
@@ -61,7 +61,7 @@ Segmentation logique d’un réseau permettant d’isoler des flux.
 
 Lien transportant plusieurs VLANs.
 
-## ACL
+## ACL (Access Control List)
 
 Liste de règles permettant d’autoriser ou bloquer du trafic réseau.
 
@@ -89,11 +89,11 @@ Serveur intermédiaire entre un client et Internet.
 
 Serveur recevant les requêtes clients puis les redirigeant vers des serveurs internes.
 
-## DMZ
+## DMZ (Demilitarized Zone)
 
 Zone réseau intermédiaire isolant les services exposés d’Internet.
 
-## VPN
+## VPN (Virtual Private Network)
 
 Tunnel chiffré permettant des communications sécurisées.
 
@@ -105,23 +105,23 @@ VPN reliant deux réseaux distants.
 
 VPN permettant à un utilisateur distant d’accéder à un réseau interne.
 
-## QoS
+## QoS (Quality of Service)
 
 Mécanisme priorisant certains flux réseau.
 
-## MTU
+## MTU (Maximum Transmission Unit)
 
 Taille maximale d’un paquet transmissible sur un réseau.
 
-## ICMP
+## ICMP (Internet Control Message Protocol)
 
 Protocole réseau utilisé notamment pour le diagnostic réseau (ping).
 
-## TCP
+## TCP (Transmission Control Protocol)
 
 Protocole orienté connexion garantissant la livraison des données.
 
-## UDP
+## UDP (User Datagram Protocol)
 
 Protocole rapide sans garantie de livraison.
 
@@ -133,7 +133,7 @@ Point logique utilisé par un service réseau pour communiquer.
 
 Association entre une adresse IP et un port.
 
-## CIDR
+## CIDR (Classless Inter-Domain Routing)
 
 Notation compacte utilisée pour représenter un réseau IP.
 
@@ -157,15 +157,15 @@ Serveur hébergeant Active Directory.
 
 Conteneur logique permettant d’organiser les objets AD.
 
-## GPO
+## GPO (Group Policy Object)
 
 Objet de stratégie de groupe permettant d’appliquer des configurations automatiquement.
 
-## LDAP
+## LDAP (Lightweight Directory Access Protocol)
 
 Protocole d’accès à l’annuaire Active Directory.
 
-## LDAPS
+## LDAPS (Lightweight Directory Access Protocol Secure)
 
 Version chiffrée de LDAP utilisant TLS.
 
@@ -173,19 +173,19 @@ Version chiffrée de LDAP utilisant TLS.
 
 Protocole principal d’authentification d’Active Directory.
 
-## NTLM
+## NTLM (NT LAN Manager)
 
 Ancien protocole d’authentification Windows.
 
-## DNS intégré AD
+## DNS (Domain Name System) intégré AD
 
 DNS utilisé par Active Directory pour localiser les services du domaine.
 
-## FSMO
+## FSMO (Flexible Single Master Operations)
 
 Rôles maîtres spécialisés dans Active Directory.
 
-## SYSVOL
+## SYSVOL (System Volume)
 
 Partage contenant scripts et GPO du domaine.
 
@@ -193,15 +193,15 @@ Partage contenant scripts et GPO du domaine.
 
 Shell d’administration orienté objets de Microsoft.
 
-## WinRM
+## WinRM (Windows Remote Management)
 
 Service permettant l’administration distante via PowerShell.
 
-## RDP
+## RDP (Remote Desktop Protocol)
 
 Protocole d’accès distant aux environnements Windows.
 
-## WSUS
+## WSUS (Windows Server Update Services)
 
 Serveur de gestion des mises à jour Windows.
 
@@ -221,7 +221,7 @@ Compte utilisé par une application ou un service.
 
 Compte disposant des privilèges administrateur du domaine.
 
-## SID
+## SID (Security Identifier)
 
 Identifiant unique attribué aux utilisateurs et groupes Windows.
 
@@ -265,7 +265,7 @@ Shell Linux très répandu.
 
 Programme en cours d’exécution.
 
-## PID
+## PID (Process Identifier)
 
 Identifiant unique d’un processus.
 
@@ -301,15 +301,15 @@ Commande permettant d’exécuter des actions administrateur.
 
 Compte administrateur principal sous Linux.
 
-## SSH
+## SSH (Secure Shell)
 
 Protocole d’administration distante sécurisé.
 
-## SCP
+## SCP (Secure Copy Protocol)
 
 Copie sécurisée de fichiers via SSH.
 
-## Rsync
+## Rsync (Remote Synchronization)
 
 Outil de synchronisation de fichiers.
 
@@ -317,7 +317,7 @@ Outil de synchronisation de fichiers.
 
 Planificateur de tâches Linux.
 
-## PAM
+## PAM (Pluggable Authentication Modules)
 
 Framework d’authentification Linux.
 
@@ -325,7 +325,7 @@ Framework d’authentification Linux.
 
 Mécanisme de contrôle d’accès renforcé sous Linux.
 
-## AppArmor
+## AppArmor (Application Armor)
 
 Mécanisme de confinement d’applications Linux.
 
@@ -337,7 +337,7 @@ Moteur de pare-feu intégré au noyau Linux.
 
 Outil historique de configuration du pare-feu Linux.
 
-## nftables
+## nftables (Netfilter Tables)
 
 Successeur moderne d’iptables.
 
@@ -385,15 +385,15 @@ Plateforme de virtualisation basée sur KVM et LXC.
 
 Hyperviseur desktop de VMware.
 
-## KVM
+## KVM (Kernel-based Virtual Machine)
 
 Hyperviseur intégré au noyau Linux.
 
-## ESXi
+## ESXi (Elastic Sky X Integrated)
 
 Hyperviseur bare-metal de VMware.
 
-## vCPU
+## vCPU 
 
 Processeur virtuel attribué à une VM.
 
@@ -405,11 +405,11 @@ Technique d’optimisation mémoire en virtualisation.
 
 Pont réseau reliant VM et réseau physique.
 
-## NAT virtualisé
+## NAT (Network Address Translation) virtualisé
 
 Accès Internet des VM via traduction d’adresse.
 
-## LXC
+## LXC (Linux Containers)
 
 Technologie de conteneurisation système Linux.
 
@@ -417,7 +417,7 @@ Technologie de conteneurisation système Linux.
 
 Mécanisme d’isolation Linux.
 
-## Cgroups
+## Cgroups (Control Groups)
 
 Mécanisme limitant les ressources d’un processus ou conteneur.
 
@@ -441,15 +441,15 @@ Infrastructure dédiée à une seule organisation.
 
 Architecture combinant cloud privé et cloud public.
 
-## IaaS
+## IaaS (Infrastructure as a Service)
 
 Modèle cloud fournissant infrastructure et virtualisation.
 
-## PaaS
+## PaaS (Platform as a Service)
 
 Modèle cloud fournissant plateforme et environnement d’exécution.
 
-## SaaS
+## SaaS (Software as a Service)
 
 Logiciel accessible directement via Internet.
 
@@ -465,7 +465,7 @@ Adaptation automatique des ressources selon la charge.
 
 Architecture garantissant la continuité de service.
 
-## SLA
+## SLA (Service Level Agreement)
 
 Contrat définissant le niveau de disponibilité garanti.
 
@@ -525,11 +525,11 @@ Plateforme de supervision open-source.
 
 Logiciel installé sur une machine pour remonter des informations.
 
-## SNMP
+## SNMP (Simple Network Management Protocol)
 
 Protocole de supervision réseau.
 
-## OID
+## OID (Object Identifier)
 
 Identifiant d’objet SNMP.
 
@@ -553,7 +553,7 @@ Surveillance des engagements de disponibilité.
 
 Fichiers enregistrant les événements système.
 
-## Syslog
+## Syslog (System Logging Protocol)
 
 Standard de centralisation des logs.
 
@@ -577,7 +577,7 @@ Temps pendant lequel un service reste opérationnel.
 
 # 7. Sécurité Systèmes & Réseaux
 
-## CIA
+## CIA (Confidentiality, Integrity, Availability)
 
 Modèle sécurité basé sur Confidentialité, Intégrité et Disponibilité.
 
@@ -593,19 +593,19 @@ Ensemble des points exploitables d’un système.
 
 Isolation logique ou physique des réseaux.
 
-## IDS
+## IDS (Intrusion Detection System)
 
 Système détectant les intrusions.
 
-## IPS
+## IPS (Intrusion Prevention System)
 
 Système détectant et bloquant les intrusions.
 
-## SIEM
+## SIEM (Security Information and Event Management)
 
 Plateforme centralisant et analysant les logs de sécurité.
 
-## WAF
+## WAF (Web Application Firewall)
 
 Pare-feu protégeant les applications web.
 
@@ -617,19 +617,19 @@ IDS/IPS open-source.
 
 Plateforme open-source de supervision sécurité.
 
-## IAM
+## IAM (Identity and Access Management)
 
 Gestion des identités et des accès.
 
-## MFA
+## MFA (Multi-Factor Authentication)
 
 Authentification multi-facteurs.
 
-## SSO
+## SSO (Single Sign-On)
 
 Authentification unique multi-applications.
 
-## OAuth 2.0
+## OAuth (Open Authorization) 2.0
 
 Framework d’autorisation basé sur des tokens.
 
@@ -637,11 +637,11 @@ Framework d’autorisation basé sur des tokens.
 
 Couche d’authentification basée sur OAuth2.
 
-## JWT
+## JWT (JSON Web Token)
 
 Token signé contenant des informations d’identité.
 
-## TLS
+## TLS (Transport Layer Security)
 
 Protocole sécurisant les communications réseau.
 
@@ -649,7 +649,7 @@ Protocole sécurisant les communications réseau.
 
 Document numérique permettant d’authentifier un service.
 
-## PKI
+## PKI (Public Key Infrastructure)
 
 Infrastructure de gestion des certificats numériques.
 
@@ -789,11 +789,11 @@ Obtention de droits plus élevés.
 
 Techniques permettant de conserver un accès.
 
-## OSINT
+## OSINT (Open Source Intelligence)
 
 Collecte d’informations depuis des sources publiques.
 
-## Nmap
+## Nmap (Network Mapper)
 
 Scanner réseau et de services.
 
@@ -825,31 +825,31 @@ Outil d’audit sécurité Active Directory.
 
 Outil d’extraction de mots de passe et tickets Kerberos.
 
-## XSS
+## XSS (Cross-Site Scripting)
 
 Injection de JavaScript dans une page web.
 
-## SQL Injection
+## SQL (Structured Query Language) Injection
 
 Injection de requêtes SQL malveillantes.
 
-## CSRF
+## CSRF (Cross-Site Request Forgery)
 
 Attaque forçant un utilisateur authentifié à exécuter une action.
 
-## SSRF
+## SSRF (Server-Side Request Forgery)
 
 Faille forçant un serveur à envoyer des requêtes internes.
 
-## LFI
+## LFI (Local File Inclusion)
 
 Inclusion de fichiers locaux.
 
-## RFI
+## RFI (Remote File Inclusion)
 
 Inclusion de fichiers distants.
 
-## RCE
+## RCE (Remote Code Execution)
 
 Exécution de code arbitraire à distance.
 
@@ -877,11 +877,11 @@ Utilisation d’un hash NTLM pour s’authentifier.
 
 Faux ticket Kerberos donnant un accès quasi illimité.
 
-## DoS
+## DoS (Denial of Service)
 
 Attaque visant à rendre un service indisponible.
 
-## DDoS
+## DDoS (Distributed Denial of Service)
 
 Déni de service distribué utilisant plusieurs machines.
 
@@ -933,11 +933,11 @@ Instruction exécutée selon un résultat logique.
 
 Expression régulière utilisée pour rechercher des motifs.
 
-## API
+## API (Application Programming Interface)
 
 Interface permettant à des applications de communiquer.
 
-## JSON
+## JSON (JavaScript Object Notation)
 
 Format de données structuré très utilisé par les APIs.
 
@@ -953,7 +953,7 @@ Système de gestion de versions.
 
 Plateforme d’hébergement Git.
 
-## CI/CD
+## CI (Continuous Integration) /CD (Continuous Delivery ou Continuous Deployment)
 
 Automatisation des tests, builds et déploiements.
 
@@ -961,7 +961,7 @@ Automatisation des tests, builds et déploiements.
 
 # 11. Gestion de projets & ITIL
 
-## ITIL
+## ITIL (Information Technology Infrastructure Library)
 
 Référentiel de bonnes pratiques de gestion des services IT.
 
@@ -977,7 +977,7 @@ Cause racine d’un ou plusieurs incidents.
 
 Modification contrôlée d’une infrastructure.
 
-## SLA
+## SLA (Service Level Agreement)
 
 Engagement contractuel sur la qualité de service.
 
@@ -989,11 +989,11 @@ Point de contact entre utilisateurs et équipe IT.
 
 Système de gestion des demandes et incidents.
 
-## GLPI
+## GLPI (Gestionnaire Libre de Parc Informatique)
 
 Outil ITSM et de gestion de parc informatique.
 
-## CMDB
+## CMDB (Configuration Management Database)
 
 Base recensant les équipements et relations d’infrastructure.
 
@@ -1001,7 +1001,7 @@ Base recensant les équipements et relations d’infrastructure.
 
 Transmission d’un ticket à un niveau supérieur.
 
-## KPI
+## KPI (Key Performance Indicator)
 
 Indicateur de performance.
 
@@ -1009,7 +1009,7 @@ Indicateur de performance.
 
 Suivi du cycle de vie des équipements.
 
-## CAB
+## CAB (Change Advisory Board)
 
 Comité validant les changements importants.
 
