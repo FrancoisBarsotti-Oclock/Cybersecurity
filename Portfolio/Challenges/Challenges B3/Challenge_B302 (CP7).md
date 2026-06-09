@@ -96,11 +96,54 @@ On édite la Discovery rule (Data collection > Discovery), active les actions (A
 
 ![06-Monitored host](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/blob/main/Portfolio/Challenges/Challenges%20B3/images_B3/images%20B302%20(CP7)/B302_CP7_06-Monitored%20host.png)
 
-### Triggers
-On crée des triggers (Data Colelction > Templates) 
+### Alertes
+On crée une vrai alerte (Data Colelction > Hosts → web-server-01 → Items → Create item) 
 
+| Champ               | Valeur                  |
+| ------------------- | ----------------------- |
+| Name                | HTTP Port 80            |
+| Type                | Simple check            |
+| Key                 | `net.tcp.service[http]` |
+| Type of information | Numeric (unsigned)      |
+| Update interval     | 30s                     |
 
+Après 1 ou 2 minutes nous devrions avoir 1 HTTP côté web-server (Monitoring → Latest data)
 
+## Item
+Dans ce cas il faut aussi créer l'item HTTP pour pouvoir l'utiliser dans la création du Trigger
+
+Data collection → Hosts → web-server-01 → Items → Create item
+
+| Champ               | Valeur                      |
+| ------------------- | --------------------------- |
+| Name                | HTTP Availability           |
+| Type                | Simple check                |
+| Key                 | `net.tcp.service[http,,80]` |
+| Type of information | Numeric (unsigned)          |
+| Update interval     | 30s                         |
+
+Après 1 ou 2 minutes nous devrions avoir `1 HTTP Available` côté web-server (Monitoring → Latest data)
+
+### Trigger
+
+On crée un trigger toujours sur web-server (Data collection → Hosts → Triggers → Create trigger)
+
+| Champ               | Valeur                      |
+| ------------------- | --------------------------- |
+| Name                | Service HTTP indisponible sur Web-server-01 |
+| Expression          | last(/web-server-01/net.tcp.service[http,,80])=0 |
+| Sévérité            | High |
+
+Ensuite on se rend sur Web-server pour désactiver apache2:
+
+```Bash
+sudo systemctl stop apache2
+sudo systemctl status apache2
+```
+
+Après 1 ou 2 minutes nous devrions avoir `0 HTTP Available` côté web-server (Monitoring → Latest data)
+
+Si c'est le cas, on peut aller voir l'alerte déclenchée côté Monitoring → Problems
 
 ### 🚧 En construction 🚧
 
