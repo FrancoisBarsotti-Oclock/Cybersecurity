@@ -17,7 +17,7 @@ Voir 👉 [Cours B302](https://github.com/FrancoisBarsotti-Oclock/Cybersecurity/
 
 | **Élement** | **OS** | **IP** | **Rôle** |
 | :--: | :--: | :--: | :--: |
-| **Web-server-01** | Debian 13.1.2 | `10.0.0.2416` | Serveur client |
+| **Web-server-01** | Debian 13.1.2 | `10.0.0.25/16` | Serveur client |
 
 Dès fois, les pings ne sortent des Debian récentes (12/13), n'ayant pas les droits d'ouvrir un socket RAW, ce qui est nécessaire avec soit **setuid root** soit la capacité **CAP_NET_RAW**. Pour solutionner, il faut:
 
