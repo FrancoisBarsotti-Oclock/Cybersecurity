@@ -25,7 +25,7 @@ Voir 👉 [Cours C103]()
 # :orange_book: Registre des risques - Modernisation infrastructure IT
 |**ID** | **Risque** | **Type** | **Probabilité** | **Impact** | **Criticité** |
 | -------- | :-------: | :-------: | :-------: | :-------: | :-------: |
-|R1  | Sous-cimensionnement des équipéments | Technique | Moyenne | Critique | :red_circle: **Élevée** |
+|R1  | Sous-dimensionnement des équipéments | Technique | Moyenne | Critique | :red_circle: **Élevée** |
 |R2 | Mauvaise configuration du firewall | Technique | Moyenne | Critique | :red_circle: **Élevée** |
 |R3 | Interruption prolongée du réseau lors du déploiement | Technique | Moyenne | Critique | :red_circle: **Élevée** |
 |R4 | Dépassement de budget | Organisationnel | Moyenne | Moyen | :orange_circle: **Moyenne** |
